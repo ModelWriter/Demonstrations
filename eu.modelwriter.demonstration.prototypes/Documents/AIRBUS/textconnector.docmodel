@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eu.modelwriter.architecture.textconnectors.docx.parser:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eu.modelwriter.architecture.textconnectors.docx.parser="eu.modelwriter.architecture.textconnectors.docx.parser.documentmodel">
+  <ownedParagraph Id="_ovrc8GFHEeW2AraIVvxZPA" name="Introduction" rawText="Introduction">
+    <ownedNode Id="_ovrc8WFHEeW2AraIVvxZPA" name="Purpose" rawText="Purpose">
+      <ownedNode Id="_ovrc82FHEeW2AraIVvxZPA" rawText="In SIDP, the design principles are divided into Mandatory Design Principles and recommendations. The MDP shall be identified with this format."/>
+      <ownedNode Id="_ovrc9GFHEeW2AraIVvxZPA" rawText="The mandatory design principles identified in the SIDP and listed in appendix 7.11 will be submitted to the V&amp;V process."/>
+    </ownedNode>
+    <ownedNode Id="_ovrc9WFHEeW2AraIVvxZPA" name="Definitions" rawText="Definitions">
+      <ownedNode Id="_ovsEAWFHEeW2AraIVvxZPA" rawText="The word SHALL in the text denotes a mandatory design principle of the SIDP to be applied. Departure from such a principle is not permissible without the formal agreement of the SIDP Responsible and System Responsible (e.g. TDD Responsible, System designers, DCS)."/>
+      <ownedNode Id="_ovsEAmFHEeW2AraIVvxZPA" rawText="The word SHOULD in the text denotes a recommendation or advice on implementing principles defined in the SIDP. Such recommendations or advice are expected be followed unless good reasons are stated for not doing so."/>
+      <ownedNode Id="_ovsEA2FHEeW2AraIVvxZPA" rawText="The word MUST in the text is used for legislative or regulatory requirements (e.g. Airworthiness or Health and Safety) and shall be complied with. It is not used to describe a principle defined in the SIDP."/>
+      <ownedNode Id="_ovsEBGFHEeW2AraIVvxZPA" rawText="The word WILL in the text denotes a provision or service or an intention in connection with a principle defined in the SIDP."/>
+      <ownedNode Id="_ovsEBWFHEeW2AraIVvxZPA" rawText="The word MAY in the text denotes a permissible practice or an alternative action in connection with a principle defined in the SIDP."/>
+    </ownedNode>
+    <ownedNode Id="_ovsEBmFHEeW2AraIVvxZPA" name="Nomenclature/Abbreviation" rawText="Nomenclature/Abbreviation">
+      <ownedNode Id="_ovsEB2FHEeW2AraIVvxZPA" name="1" rawText="A/C&#x9;Aircraft"/>
+      <ownedNode Id="_ovsECGFHEeW2AraIVvxZPA" name="2" rawText="ATA&#x9;Air Transport Association"/>
+    </ownedNode>
+    <ownedNode Id="_ovsECWFHEeW2AraIVvxZPA" name="Document Precedence" rawText="Document Precedence">
+      <ownedNode Id="_ovsECmFHEeW2AraIVvxZPA" rawText="Where conflict exists between this document and any of the referenced documents with regard to a safety related issue, guidance shall be formally requested from the System Responsible (e.g. TDD Responsible, System designers, DCS)."/>
+    </ownedNode>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsEC2FHEeW2AraIVvxZPA" name="Objectives" rawText="Objectives">
+    <ownedNode Id="_ovsEDGFHEeW2AraIVvxZPA" rawText="The objectives of this SIDP are common to all other SIDP documents."/>
+    <ownedNode Id="_ovsEDWFHEeW2AraIVvxZPA" name="1" rawText="Define the design principles for a given aircraft project."/>
+    <ownedNode Id="_ovsEDmFHEeW2AraIVvxZPA" name="2" rawText="Assure harmonization of standard items and design principles across aircraft projects."/>
+    <ownedNode Id="_ovsED2FHEeW2AraIVvxZPA" name="3" rawText="Consider experience and customer support aspects."/>
+    <ownedNode Id="_ovsEEGFHEeW2AraIVvxZPA" name="4" rawText="Provide a reference for engineering quality monitoring."/>
+    <ownedNode Id="_ovsEEWFHEeW2AraIVvxZPA" name="5" rawText="Provide a reference for design evolution monitoring (design reviews)."/>
+    <ownedNode Id="_ovsrEGFHEeW2AraIVvxZPA" name="6" rawText="Record technical decisions and best practice applicable to an aircraft project."/>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsrEWFHEeW2AraIVvxZPA" name="Reference Regulations/Documents" rawText="Reference Regulations/Documents">
+    <ownedNode Id="_ovsrEmFHEeW2AraIVvxZPA" name="Airworthiness Regulations" rawText="Airworthiness Regulations">
+      <ownedNode Id="_ovsrE2FHEeW2AraIVvxZPA" name="1" rawText="JAR 25.607&#x9;Fasteners"/>
+      <ownedNode Id="_ovsrFGFHEeW2AraIVvxZPA" name="2" rawText="REF&#x9;Title"/>
+    </ownedNode>
+    <ownedNode Id="_ovsrFWFHEeW2AraIVvxZPA" name="Others" rawText="Others">
+      <ownedNode Id="_ovsrFmFHEeW2AraIVvxZPA" name="1" rawText="A350XWB_SIDP V&amp;V Policy &#x9;PL0901917"/>
+    </ownedNode>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsrF2FHEeW2AraIVvxZPA" name="Responsibilities" rawText="Responsibilities">
+    <ownedNode Id="_ovsrGWFHEeW2AraIVvxZPA" rawText="The Program Chief Engineer is responsible for authorization of this SIDP and therefore validates its use on the aircraft program."/>
+    <ownedNode Id="_ovsrGmFHEeW2AraIVvxZPA" rawText="The responsibility for determining the suitability of the standard design principles described in this document for specific installations shall lie with the specific design teams deployed on the program."/>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsrG2FHEeW2AraIVvxZPA" name="Structures/Systems Configuration" rawText="Structures/Systems Configuration">
+    <ownedNode Id="_ovsrHGFHEeW2AraIVvxZPA" rawText="The whole A/C is affected by this SIDP."/>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsrHWFHEeW2AraIVvxZPA" name="Application Domain" rawText="Application Domain">
+    <ownedNode Id="_ovsrHmFHEeW2AraIVvxZPA" rawText="ATA 92, ATA 53, ATA 54, ATA 55, ATA 56 and ATA 57 are affected by this SIDP."/>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovsrH2FHEeW2AraIVvxZPA" name="Design Principles" rawText="Design Principles">
+    <ownedNode Id="_ovsrIGFHEeW2AraIVvxZPA" name="Design Principles Applicable to the Entire Design" rawText="Design Principles Applicable to the Entire Design">
+      <ownedNode Id="_ovsrIWFHEeW2AraIVvxZPA" name="General" rawText="General"/>
+      <ownedNode Id="_ovsrImFHEeW2AraIVvxZPA" name="SIDP92A001V-A-269" rawText="SIDP92A001V-A-269">
+        <ownedNode Id="_ovsrI2FHEeW2AraIVvxZPA" rawText="The effects of thermal variations, structural deformation, pressurization variation, etc., shall be taken into account."/>
+      </ownedNode>
+      <ownedNode Id="_ovsrJGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-280" rawText="SIDP92A001V-A-280">
+        <ownedNode Id="_ovsrJmFHEeW2AraIVvxZPA" rawText="Table 3. Operating conditions for items in direct contact with ATA92 bundles"/>
+        <ownedNode Id="_ovsrJ2FHEeW2AraIVvxZPA" rawText="Attachment devices placed inside boxes, which contain power cables, shall withstand."/>
+        <ownedNode Id="_ovsrKGFHEeW2AraIVvxZPA" rawText="- a minimum of 150°C for peak condition and"/>
+        <ownedNode Id="_ovsrKWFHEeW2AraIVvxZPA" rawText="- a minimum of 110°C for continuous operating condition."/>
+        <ownedNode Id="_ovsrKmFHEeW2AraIVvxZPA" rawText="Sufficient clearance should be provided near connections and attachment points in order to permit easy access (visual check, maintenance operations with standard tools)."/>
+        <ownedNode Id="_ovsrK2FHEeW2AraIVvxZPA" name="Bolted Fastenings" rawText="Bolted Fastenings"/>
+      </ownedNode>
+      <ownedNode Id="_ovtSIGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-356" rawText="SIDP92A001V-A-356">
+        <ownedNode Id="_ovtSIWFHEeW2AraIVvxZPA" name="Locking Of Bolted Fastenings" rawText="Locking Of Bolted Fastenings"/>
+      </ownedNode>
+      <ownedNode Id="_ovtSImFHEeW2AraIVvxZPA" name="SIDP92A001V-A-413" rawText="SIDP92A001V-A-413"/>
+      <ownedNode Id="_ovtSI2FHEeW2AraIVvxZPA" name="SIDP92A001V-A-424" rawText="SIDP92A001V-A-424">
+        <ownedNode Id="_ovtSJGFHEeW2AraIVvxZPA" name="Installation In Ceiling Area" rawText="Installation In Ceiling Area"/>
+      </ownedNode>
+      <ownedNode Id="_ovtSJWFHEeW2AraIVvxZPA" name="SIDP92A001V-A-3763" rawText="SIDP92A001V-A-3763">
+        <ownedNode Id="_ovtSJmFHEeW2AraIVvxZPA" name="Installation In Fuel Tanks" rawText="Installation In Fuel Tanks"/>
+      </ownedNode>
+      <ownedNode Id="_ovtSJ2FHEeW2AraIVvxZPA" name="SIDP92A001V-A-472" rawText="SIDP92A001V-A-472"/>
+      <ownedNode Id="_ovtSKGFHEeW2AraIVvxZPA" name="Positioning of Bundles in the Aircraft Considering Environmental Constraints" rawText="Positioning of Bundles in the Aircraft Considering Environmental Constraints">
+        <ownedNode Id="_ovtSKWFHEeW2AraIVvxZPA" name="General" rawText="General"/>
+        <ownedNode Id="_ovtSKmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-557" rawText="SIDP92A001V-A-557">
+          <ownedNode Id="_ovtSK2FHEeW2AraIVvxZPA" rawText="A spare conduit NSA935805 should be provided for M, S routes inside Fuselage in following cases."/>
+          <ownedNode Id="_ovtSLGFHEeW2AraIVvxZPA" name="1" rawText="Behind cabin monuments such as galleys, lavatories or Crew Rest Compartments"/>
+          <ownedNode Id="_ovtSLWFHEeW2AraIVvxZPA" name="2" rawText="Any other area where electrical routing modification leads to high maintenance workload."/>
+        </ownedNode>
+        <ownedNode Id="_ovtSLmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-579" rawText="SIDP92A001V-A-579">
+          <ownedNode Id="_ovtSL2FHEeW2AraIVvxZPA" rawText="When bundles are routed through structural holes, the diameter of structural hole should allow the free passage of the bundle/connectors."/>
+        </ownedNode>
+      </ownedNode>
+      <ownedNode Id="_ovt5MGFHEeW2AraIVvxZPA" name="Segregation or Clearances of Bundles to A/C Structure, other Systems or Between Routes" rawText="Segregation or Clearances of Bundles to A/C Structure, other Systems or Between Routes">
+        <ownedNode Id="_ovt5MWFHEeW2AraIVvxZPA" name="General Applications" rawText="General Applications">
+          <ownedNode Id="_ovt5MmFHEeW2AraIVvxZPA" name="Sagging (s)" rawText="Sagging (s)"/>
+          <ownedNode Id="_ovt5M2FHEeW2AraIVvxZPA" name="SIDP92A001V-A-784" rawText="SIDP92A001V-A-784">
+            <ownedNode Id="_ovt5NWFHEeW2AraIVvxZPA" rawText="Figure 8. Sagging application for horizontal bundles"/>
+          </ownedNode>
+        </ownedNode>
+        <ownedNode Id="_ovt5NmFHEeW2AraIVvxZPA" name="Clearance Values between Bundles and A/C Structure or other Systems" rawText="Clearance Values between Bundles and A/C Structure or other Systems">
+          <ownedNode Id="_ovt5OGFHEeW2AraIVvxZPA" rawText="The following clearance requirements are distinguished."/>
+          <ownedNode Id="_ovt5OWFHEeW2AraIVvxZPA" rawText="- Required Clearance (D)"/>
+          <ownedNode Id="_ovt5OmFHEeW2AraIVvxZPA" rawText="- Sagging (s)"/>
+          <ownedNode Id="_ovt5O2FHEeW2AraIVvxZPA" rawText="Each single requirement has to be analyzed and taken into account when applicable. "/>
+          <ownedNode Id="_ovugQGFHEeW2AraIVvxZPA" rawText="Note. A guidance for calculation of clearances can be found in Appendix E."/>
+          <ownedNode Id="_ovugQWFHEeW2AraIVvxZPA" name="Failure Mode &quot;Loss Of One Attachment Point&quot; (LOAP)" rawText=" Failure Mode &quot;Loss Of One Attachment Point&quot; (LOAP)"/>
+          <ownedNode Id="_ovugQmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-809" rawText="SIDP92A001V-A-809">
+            <ownedNode Id="_ovugRGFHEeW2AraIVvxZPA" rawText="Figure 12. Failure mode &quot;Loss of one attachment point&quot; in horizontal direction"/>
+          </ownedNode>
+          <ownedNode Id="_ovugRWFHEeW2AraIVvxZPA" name="SIDP92A001V-A-9039" rawText="SIDP92A001V-A-9039"/>
+        </ownedNode>
+        <ownedNode Id="_ovugRmFHEeW2AraIVvxZPA" name="Clearances Values between Bundles" rawText="Clearances Values between Bundles">
+          <ownedNode Id="_ovugSGFHEeW2AraIVvxZPA" rawText="- &quot;Open&quot; means that the bundle is not protected by any mean."/>
+          <ownedNode Id="_ovvHUGFHEeW2AraIVvxZPA" rawText="- &quot;OS&quot; means that the bundle is protected by EMI Open Sleeve (e.g. EN4674, ABS2418)."/>
+          <ownedNode Id="_ovvHUWFHEeW2AraIVvxZPA" rawText="Figure 16. Definition of criteria &quot;Facing&quot; and &quot;Not facing&quot;"/>
+          <ownedNode Id="_ovvHUmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-850" rawText="SIDP92A001V-A-850">
+            <ownedNode Id="_ovvHU2FHEeW2AraIVvxZPA" rawText="Figure 17. Co-routing at the back of mixed connector on equipment"/>
+          </ownedNode>
+          <ownedNode Id="_ovvHVGFHEeW2AraIVvxZPA" name="Minimum Clearances between Bundles Routed In Parallel" rawText="Minimum Clearances between Bundles Routed In Parallel">
+            <ownedNode Id="_ovvHVWFHEeW2AraIVvxZPA" name="General Clearances" rawText=" General Clearances"/>
+            <ownedNode Id="_ovvHVmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-941" rawText="SIDP92A001V-A-941">
+              <ownedNode Id="_ovvHV2FHEeW2AraIVvxZPA" name="1" rawText="both bundles are main longitudinal routes "/>
+              <ownedNode Id="_ovvHWGFHEeW2AraIVvxZPA" name="1" rawText="when the maximum coupling length defined in relaxed requirements -1005, -1034, -1048, -1063, -1078 is exceeded (in this case clearances given in SIDP92A001V-A-941 do only apply on the length exceeding the maximum coupling length)."/>
+              <ownedNode Id="_ovvHWWFHEeW2AraIVvxZPA" name="1" rawText="None of the considered bundle sections belong to &quot;Main Transverse Routing&quot;"/>
+              <ownedNode Id="_ovvHWmFHEeW2AraIVvxZPA" rawText="Table 12. Minimum distances between parallel running bundles (general rule)"/>
+            </ownedNode>
+          </ownedNode>
+          <ownedNode Id="_ovvHW2FHEeW2AraIVvxZPA" name="Minimum Clearance between Crossing Bundles" rawText="Minimum Clearance between Crossing Bundles">
+            <ownedNode Id="_ovvHXWFHEeW2AraIVvxZPA" rawText="Figure 22. Definition of &quot;Crossing Bundles&quot;"/>
+          </ownedNode>
+        </ownedNode>
+      </ownedNode>
+    </ownedNode>
+    <ownedNode Id="_ovvuYGFHEeW2AraIVvxZPA" name="Installation of Connection Elements and Feed Through Seals" rawText="Installation of Connection Elements and Feed Through Seals">
+      <ownedNode Id="_ovvuYWFHEeW2AraIVvxZPA" name="Positioning and Selection of Connection Elements/Feed through Seals in the Aircraft Considering Environmental Constraints" rawText="Positioning and Selection of Connection Elements/Feed through Seals in the Aircraft Considering Environmental Constraints">
+        <ownedNode Id="_ovvuY2FHEeW2AraIVvxZPA" rawText="- where to position them in the aircraft environment,"/>
+        <ownedNode Id="_ovvuZGFHEeW2AraIVvxZPA" rawText="- how to orientate them (if applicable) and"/>
+        <ownedNode Id="_ovvuZWFHEeW2AraIVvxZPA" rawText="- which type or standard to use for which purpose."/>
+        <ownedNode Id="_ovvuZmFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5605" rawText="SIDP92A001V-A-5605">
+          <ownedNode Id="_ovvuaGFHEeW2AraIVvxZPA" rawText="In landing gear bays, connections between harnesses shall be reduced to the minimum and sealed."/>
+        </ownedNode>
+        <ownedNode Id="_ovvuaWFHEeW2AraIVvxZPA" name="Positioning and Selection of Connectors" rawText="Positioning and Selection of Connectors">
+          <ownedNode Id="_ovvuamFHEeW2AraIVvxZPA" name="General" rawText="General">
+            <ownedNode Id="_ovvua2FHEeW2AraIVvxZPA" rawText="Connector breaks of dynamic bundles (e.g. control actuator) should be located at a convenient point, as close as possible to the hinge, in order to simplify maintenance operations."/>
+            <ownedNode Id="_ovvubGFHEeW2AraIVvxZPA" rawText="Table 62. Backshells for connectors"/>
+            <ownedNode Id="_ovvubWFHEeW2AraIVvxZPA" rawText="Connectors should not be installed vertically, as detailed in the figures below."/>
+            <ownedNode Id="_ovvubmFHEeW2AraIVvxZPA" rawText="Figure 213. Rectangular connector positioning"/>
+            <ownedNode Id="_ovwVcGFHEeW2AraIVvxZPA" rawText="Note. For protection of connectors, refer to chapter 7.3.4."/>
+          </ownedNode>
+          <ownedNode Id="_ovwVcWFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5699" rawText="SIDP92A001V-A-5699">
+            <ownedNode Id="_ovwVcmFHEeW2AraIVvxZPA" name="Circular Connectors" rawText=" Circular Connectors">
+              <ownedNode Id="_ovwVc2FHEeW2AraIVvxZPA" rawText="The main keyway of circular connectors should be at the top of the aircraft reference, as detailed in figure below. It should be specified in drawings. When the connector is installed in vertical axis (not recommended solution), the keyway should be at the aircraft forward reference."/>
+              <ownedNode Id="_ovwVdGFHEeW2AraIVvxZPA" rawText="Figure 214. Circular connector key way orientation"/>
+            </ownedNode>
+          </ownedNode>
+          <ownedNode Id="_ovwVdWFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5722" rawText="SIDP92A001V-A-5722">
+            <ownedNode Id="_ovwVdmFHEeW2AraIVvxZPA" name="Optical Connectors" rawText="Optical Connectors">
+              <ownedNode Id="_ovwVd2FHEeW2AraIVvxZPA" rawText="When installing optical cables, optical contact dimensions should be taken into account for connection positioning."/>
+            </ownedNode>
+          </ownedNode>
+          <ownedNode Id="_ovwVeGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5766" rawText="SIDP92A001V-A-5766">
+            <ownedNode Id="_ovwVeWFHEeW2AraIVvxZPA" name="Other Connectors" rawText=" Other Connectors"/>
+          </ownedNode>
+          <ownedNode Id="_ovwVemFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5801" rawText="SIDP92A001V-A-5801"/>
+        </ownedNode>
+        <ownedNode Id="_ovwVe2FHEeW2AraIVvxZPA" name="Positioning of Bonding/Current Return Brackets" rawText="Positioning of Bonding/Current Return Brackets">
+          <ownedNode Id="_ovw8gGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-5861" rawText="SIDP92A001V-A-5861">
+            <ownedNode Id="_ovw8gWFHEeW2AraIVvxZPA" rawText="Figure 220. Orientation of bonding/grounding point brackets"/>
+          </ownedNode>
+        </ownedNode>
+      </ownedNode>
+      <ownedNode Id="_ovw8gmFHEeW2AraIVvxZPA" name="Attachment of Connections Elements/Feed through Seals to A/C Structure" rawText="Attachment of Connections Elements/Feed through Seals to A/C Structure">
+        <ownedNode Id="_ovw8g2FHEeW2AraIVvxZPA" rawText="This chapter describes principles applicable for attachment of connection elements (e.g. connector housings, relays, terminal blocks) as well as feed through seals (e.g. pressure or fire seal) to the aircraft structure."/>
+        <ownedNode Id="_ovw8hGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-6318" rawText="SIDP92A001V-A-6318">
+          <ownedNode Id="_ovw8hWFHEeW2AraIVvxZPA" rawText="Table 66. Installation of electrical connections (VT or VC) on brackets on metallic surfaces"/>
+        </ownedNode>
+        <ownedNode Id="_ovw8hmFHEeW2AraIVvxZPA" name="Attachment of Connectors to A/C Structure" rawText="Attachment of Connectors to A/C Structure">
+          <ownedNode Id="_ovw8h2FHEeW2AraIVvxZPA" name="SIDP92A001V-A-6351" rawText="SIDP92A001V-A-6351"/>
+          <ownedNode Id="_ovw8iGFHEeW2AraIVvxZPA" name="SIDP92A001V-A-6362" rawText="SIDP92A001V-A-6362&#x9;"/>
+        </ownedNode>
+      </ownedNode>
+    </ownedNode>
+    <ownedNode Id="_ovxjkGFHEeW2AraIVvxZPA" name="Installation of Electrical Equipment" rawText="Installation of Electrical Equipment">
+      <ownedNode Id="_ovxjkWFHEeW2AraIVvxZPA" name="Positioning of Electrical Equipment in the Aircraft Considering Environmental Constraints" rawText="Positioning of Electrical Equipment in the Aircraft Considering Environmental Constraints">
+        <ownedNode Id="_ovxjk2FHEeW2AraIVvxZPA" rawText="- Equipment should not be installed in hazardous areas,"/>
+        <ownedNode Id="_ovxjlGFHEeW2AraIVvxZPA" rawText="Figure 254. Positioning of equipment"/>
+        <ownedNode Id="_ovxjlWFHEeW2AraIVvxZPA" rawText="- Heat dissipation of equipment should be considered,"/>
+        <ownedNode Id="_ovxjlmFHEeW2AraIVvxZPA" rawText="In case this principle is in contradiction with any EIRD, priority shall be given to the EIRD."/>
+        <ownedNode Id="_ovxjl2FHEeW2AraIVvxZPA" name="SIDP92A001V-A-7762" rawText="SIDP92A001V-A-7762"/>
+      </ownedNode>
+    </ownedNode>
+  </ownedParagraph>
+  <ownedParagraph Id="_ovxjmGFHEeW2AraIVvxZPA" name="Approval Sheet" rawText="Approval Sheet"/>
+  <ownedParagraph Id="_ovxjmWFHEeW2AraIVvxZPA" name="Record of Revisions" rawText="Record of Revisions"/>
+  <ownedParagraph Id="_ovxjmmFHEeW2AraIVvxZPA" name="Appendices" rawText="Appendices">
+    <ownedNode Id="_ovxjm2FHEeW2AraIVvxZPA" name="Appendix A.  Electrical Bundles Weight" rawText="Appendix A.  Electrical Bundles Weight">
+      <ownedNode Id="_ovyKoGFHEeW2AraIVvxZPA" rawText="● M route bundle weight can be estimated with M route bundle weight diagram."/>
+      <ownedNode Id="_ovyKoWFHEeW2AraIVvxZPA" rawText="Figure 265. M route bundle weight diagram"/>
+    </ownedNode>
+    <ownedNode Id="_ovyKomFHEeW2AraIVvxZPA" name="Appendix B. List of Approved Material, Standard Parts and Processes Prescribed" rawText="Appendix B. List of Approved Material, Standard Parts and Processes Prescribed">
+      <ownedNode Id="_ovyKo2FHEeW2AraIVvxZPA" rawText="Refer to SSL LS0701118"/>
+    </ownedNode>
+    <ownedNode Id="_ovyKpGFHEeW2AraIVvxZPA" name="Appendix C. Clamp Size" rawText="Appendix C. Clamp Size">
+      <ownedNode Id="_ovyKpWFHEeW2AraIVvxZPA" rawText="Clamp size for NSA935805"/>
+    </ownedNode>
+    <ownedNode Id="_ovyKpmFHEeW2AraIVvxZPA" name="Appendix D. List of VU" rawText="Appendix D. List of VU">
+      <ownedNode Id="_ovyKp2FHEeW2AraIVvxZPA" rawText="List of VU. TBD"/>
+    </ownedNode>
+    <ownedNode Id="_ovyKqGFHEeW2AraIVvxZPA" name="Appendix E. Loss of Attachment Point" rawText="&#xA;Appendix E. Loss of Attachment Point">
+      <ownedNode Id="_ovyKqWFHEeW2AraIVvxZPA" rawText="Visualization of &quot;loss of attachment point&quot;"/>
+    </ownedNode>
+    <ownedNode Id="_ovyKqmFHEeW2AraIVvxZPA" name="Appendix F. Mandatory Design Principles" rawText="Appendix F. Mandatory Design Principles">
+      <ownedNode Id="_ovyKq2FHEeW2AraIVvxZPA" rawText="All the requirements described in the SIDP92 are MANDATORY"/>
+      <ownedNode Id="_ovyKrGFHEeW2AraIVvxZPA" name="LIST OF DISTRIBUTION" rawText="LIST OF DISTRIBUTION"/>
+      <ownedNode Id="_ovyxsGFHEeW2AraIVvxZPA" name="To." rawText="To.">
+        <ownedNode Id="_ovyxsWFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+        <ownedNode Id="_ovyxsmFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+        <ownedNode Id="_ovzYwGFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+        <ownedNode Id="_ovzYwWFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+      </ownedNode>
+      <ownedNode Id="_ovzYwmFHEeW2AraIVvxZPA" name="Copy." rawText="Copy.">
+        <ownedNode Id="_ovzYw2FHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+        <ownedNode Id="_ovzYxGFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+        <ownedNode Id="_ovzYxWFHEeW2AraIVvxZPA" rawText="SIGLUM - NAME, Surname"/>
+      </ownedNode>
+    </ownedNode>
+  </ownedParagraph>
+</eu.modelwriter.architecture.textconnectors.docx.parser:Document>

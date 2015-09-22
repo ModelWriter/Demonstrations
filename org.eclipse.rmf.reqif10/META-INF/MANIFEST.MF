@@ -1,0 +1,446 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Built-By: hudsonbuild
+Bundle-SymbolicName: org.eclipse.rmf.reqif10;singleton:=true
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.7.0",org.ec
+ lipse.emf.ecore;bundle-version="2.7.0",org.eclipse.emf.ecore.xmi;bund
+ le-version="2.7.0";visibility:=reexport
+Bundle-Version: 0.12.0.201503190302
+Export-Package: org.eclipse.rmf.reqif10,org.eclipse.rmf.reqif10.impl,o
+ rg.eclipse.rmf.reqif10.util
+Bundle-ClassPath: .
+Build-Jdk: 1.7.0_75
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Bundle-ManifestVersion: 2
+
+Name: notice.html
+SHA1-Digest: Z5WKoRSIDCgQNswUpOU/oSPE2a0=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueImpl.class
+SHA1-Digest: RK5NShZX0PITZdchMjuRus9QmfM=
+
+Name: about.ini
+SHA1-Digest: Kr3dm+hjP50fxuEOHbyEku60tkE=
+
+Name: schema/xml.xsd
+SHA1-Digest: F3M2R8u4R3LNVybK+hrWCBRHPzI=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionDateImpl.class
+SHA1-Digest: guHuOthGajGr3n0j+/2g/uGzf90=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecElementWithAttributesImpl.class
+SHA1-Digest: 9HP952Vfr7youkPgGvuahc8t1Mo=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionInteger.class
+SHA1-Digest: 1RHAtzM6dRlzPB4CNwcue47ALw4=
+
+Name: org/eclipse/rmf/reqif10/AlternativeID.class
+SHA1-Digest: Fg4Dy2ikj9+OoY0mDveF6Mw3ljQ=
+
+Name: org/eclipse/rmf/reqif10/SpecRelationType.class
+SHA1-Digest: oatIwUAqcuEKcsg0pk626t8dSbY=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueInteger.class
+SHA1-Digest: VmLZwfpAGozHYLOVypAWgL0TqZU=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionSimpleImpl.class
+SHA1-Digest: tixSQicWmbucI91Ba/Xx14FfBEw=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFContentImpl.class
+SHA1-Digest: apG7LqbmruvH4ngIcN3nHHe0+fQ=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionReal.class
+SHA1-Digest: 5i/H6AtimUE5uiOeo4/DYQ8xcZ8=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFHeaderImpl.class
+SHA1-Digest: 6jJBDe88Ce6TbsKZIw2Lel7HVNU=
+
+Name: epl-v10.html
+SHA1-Digest: NWZsVPJAYSVwfmPtqxLykU2FynY=
+
+Name: schema/xhtml-attribs-1.xsd
+SHA1-Digest: 3LpEPhCv6imsHVdfjcgmGjyxOGg=
+
+Name: schema/xhtml-object-1.xsd
+SHA1-Digest: svb7aaMdNlr2KpxuwvKd+BZ0k8s=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionDate.class
+SHA1-Digest: 1PN1QOwsa2L5o64azKuTXP2lAlw=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIF10FactoryImpl.class
+SHA1-Digest: z0xBUrt1r1W629N9pl0NIWwiJ5U=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueSimple.class
+SHA1-Digest: UKdPGd7waxB/ZpblOmmGGss1SQE=
+
+Name: org/eclipse/rmf/reqif10/RelationGroup.class
+SHA1-Digest: ys22OTgcX2KE0AcnYkZ0E8F4YBc=
+
+Name: org/eclipse/rmf/reqif10/ReqIFToolExtension.class
+SHA1-Digest: FA1M9yvEOvsx1egq3Ixyoiv2PMs=
+
+Name: org/eclipse/rmf/reqif10/impl/XhtmlContentImpl.class
+SHA1-Digest: il2DhIEk2d0Q3M9HzLWI26Opj5k=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionImpl.class
+SHA1-Digest: i/XuwDo6vMH7jbgMdIXVRbrNSvs=
+
+Name: org/eclipse/rmf/reqif10/impl/RelationGroupTypeImpl.class
+SHA1-Digest: xK9rH2sjY37GsHrrcSAKzHwgnOY=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionInteger.class
+SHA1-Digest: kHfvRj2WiC+xrxMu8k9u/z/BFJk=
+
+Name: org/eclipse/rmf/reqif10/ReqIFHeader.class
+SHA1-Digest: BKTne2QSzy3SlmjHH5Z56oFystw=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Factory.class
+SHA1-Digest: itpY+XRf9HqMQk2+pf/uVc0mZQw=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinition.class
+SHA1-Digest: nwaIZtGZ7Fuutj5Y36b9DmYmHac=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueIntegerImpl.class
+SHA1-Digest: yFNmvUomf5Z/4wUV3Tv+55/7DS8=
+
+Name: schema/driver.xsd
+SHA1-Digest: puw0jlO4VksMdoFaNRnwQt1VSIw=
+
+Name: about.properties
+SHA1-Digest: o8erpABGyu6RyYI281e+CTAtKvg=
+
+Name: schema/xhtml-list-1.xsd
+SHA1-Digest: 12lNbd2uwpTVTa5Sm1yo8xyZg8o=
+
+Name: schema/xhtml-table-1.xsd
+SHA1-Digest: Oq8mJNnQcQPADhk2eJC4g2O+jtE=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10Switch.class
+SHA1-Digest: g8Hw+QJM/tn1rKZO+S3BFDCZCxg=
+
+Name: schema/xhtml-blkpres-1.xsd
+SHA1-Digest: f63qZwvPpCYTjtAtSqGt8O7uHjY=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionBooleanImpl.class
+SHA1-Digest: uRMqaqqhGjMVWAOoW0Zf+UOBWqY=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueString.class
+SHA1-Digest: cIC3uz3d0o/p/Whc6pUbmWmuybQ=
+
+Name: schema/xhtml-inlpres-1.xsd
+SHA1-Digest: 1DlKBlRTPPvZbZsiDyvuYBUMGYE=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionSimple.class
+SHA1-Digest: RXo9wuVjYzlR95aJLHXgAw/uIWo=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueRealImpl.class
+SHA1-Digest: T4XgmaolfFIJaeJb9qRbO2g3czg=
+
+Name: org/eclipse/rmf/reqif10/Specification.class
+SHA1-Digest: 1VJW/WH1huOm97AYzriAhA7dq60=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecObjectTypeImpl.class
+SHA1-Digest: ahc8mUQVjuch2xtyK/cAIXOJaxE=
+
+Name: schema/xhtml-blkphras-1.xsd
+SHA1-Digest: 4QE+XuETLuoKkKQsKenZCV1M+fw=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecificationTypeImpl.class
+SHA1-Digest: mB0dK+qdw6jauWqkOjF/ya0KvmI=
+
+Name: org/eclipse/rmf/reqif10/EmbeddedValue.class
+SHA1-Digest: UuyRfuLQt8BMpMC8mq3SU78nPJU=
+
+Name: schema/xhtml-pres-1.xsd
+SHA1-Digest: 3qGv6ElkRSFVJ24b0HhsejTgOJU=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueReal.class
+SHA1-Digest: WAtExh3Gyjd9wu92xcBValpgWoI=
+
+Name: org/eclipse/rmf/reqif10/SpecObjectType.class
+SHA1-Digest: ufvTXbzd38bS+M9OpKwKx2duDJw=
+
+Name: org/eclipse/rmf/reqif10/impl/RelationGroupImpl.class
+SHA1-Digest: HNHmjLp9WBP6yBbyRdr5kNE4FPM=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10AdapterFactory$1.class
+SHA1-Digest: nNmJ5vCII/WZMKueFgnL0bDd88U=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinition.class
+SHA1-Digest: HdztHLMzc3q9YvpjJ6bKUXXOVo8=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueDateImpl.class
+SHA1-Digest: DTzPMkXnrCCbqe1TMYvW1GJFS9s=
+
+Name: META-INF/maven/org.eclipse.rmf.plugins/org.eclipse.rmf.reqif10/p
+ om.xml
+SHA1-Digest: gXYoGQi1KJ/oTdNVyrnpOugnjcE=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueSimpleImpl.class
+SHA1-Digest: iISJNhDFP8vrK7NTw6M1xhlo56U=
+
+Name: org/eclipse/rmf/reqif10/ReqIFContent.class
+SHA1-Digest: z/DGANZx5rW67At0rSGvfbIQj+s=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIF10PackageImpl.class
+SHA1-Digest: 4zYURSwYsRkqtp3H2B1AWI/toSk=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueDate.class
+SHA1-Digest: ylTAMCPG9CG9Luaj/87hthD/Q3E=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionString.class
+SHA1-Digest: hYo2lbzt5srmg7/ifWQLF+Bs3eo=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionSimple.class
+SHA1-Digest: iBM77hUAx/Zvi9+V+WXm6vZ+wSw=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecHierarchyImpl.class
+SHA1-Digest: PzflapmeJmVzyFIwsh9beMp16wo=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionRealImpl.class
+SHA1-Digest: Q6x1iCR286oY1EwiJDv2pusjHy0=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Package.class
+SHA1-Digest: Kws2HNhEbm2OX161Al8Y8C3rHuw=
+
+Name: schema/xhtml-inlstruct-1.xsd
+SHA1-Digest: Z80PtiwSCiI3IBwlnYV9OYjbKoY=
+
+Name: schema/xhtml-framework-1.xsd
+SHA1-Digest: hsQyNlq2gYfMU9AYjvf2KJDKjUk=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionBooleanImpl.clas
+ s
+SHA1-Digest: cPBdyK3Iya3MlsddBLRskg4rr/Q=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecificationImpl.class
+SHA1-Digest: kLbhDT8n60qwR6YtR3fcFKMbHSU=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionXHTML.class
+SHA1-Digest: FfrfwcuAs+h6F0mdCnRwQYcdI5I=
+
+Name: about.html
+SHA1-Digest: +ZYLeZcdlJPWAZurv6Si01Btjho=
+
+Name: org/eclipse/rmf/reqif10/XhtmlContent.class
+SHA1-Digest: 1uOcA6VIUeko+OsJiyFtJaKuGec=
+
+Name: org/eclipse/rmf/reqif10/impl/EmbeddedValueImpl.class
+SHA1-Digest: H8b7CIYDa5GlcOGMGCPu0TsTUtg=
+
+Name: org/eclipse/rmf/reqif10/EnumValue.class
+SHA1-Digest: o83v+5+I+sLkEB2jhAnFPZjfpCY=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionBoolean.class
+SHA1-Digest: LXqcJm13uxotN7Omv8kyNp+Tr3o=
+
+Name: org/eclipse/rmf/reqif10/SpecObject.class
+SHA1-Digest: vscoHECrbuUXn90ksuTTfyQi1Vg=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueBoolean.class
+SHA1-Digest: mkNgYZvGCkAjgjXk4xUq7ZLrrdc=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionDateImpl.class
+SHA1-Digest: tjfj8laDG8MP3s53tHTLzw69LVE=
+
+Name: org/eclipse/rmf/reqif10/ReqIF.class
+SHA1-Digest: PEKeyL0BVhzm9T1zz49TxRc0DHc=
+
+Name: org/eclipse/rmf/reqif10/RelationGroupType.class
+SHA1-Digest: 0Xsjec6QdMY/BtqHKpF/2QtQo/o=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10AdapterFactory.class
+SHA1-Digest: 4Fk9C4zYSl+c5Anz5CrhFruCncQ=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionString.class
+SHA1-Digest: JRhHuS9E0VLxLmBfRitoAAYzN9k=
+
+Name: schema/xhtml-text-1.xsd
+SHA1-Digest: 2RJcw7f5cB4DyKIV3EevTYqfDXE=
+
+Name: org/eclipse/rmf/reqif10/AccessControlledElement.class
+SHA1-Digest: C/Sn6SVwnRyzx1G1t2A7N758F5g=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionXHTML.class
+SHA1-Digest: khFn0ZhILkDvG38OGABxumUyZdQ=
+
+Name: org/eclipse/rmf/reqif10/AttributeValue.class
+SHA1-Digest: xzWx+Gs7DdSkrXVeNYipdLxgi0s=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionBoolean.class
+SHA1-Digest: 1+fLeNjQFL+uPmDDOoDSlhFRE9A=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionStringImpl.class
+SHA1-Digest: 7haz2/JAxjuToidDevGdrw03Tkg=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionEnumerationImpl.c
+ lass
+SHA1-Digest: hOkthZ7+7EHFh9Jn94avVESi3IM=
+
+Name: org/eclipse/rmf/reqif10/impl/EnumValueImpl.class
+SHA1-Digest: 4e2hgXaTZTPMygK9lSA6MDewv1M=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFToolExtensionImpl.class
+SHA1-Digest: 4XnI5P4QDIfOs2EWnCfy75f/8dg=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueBooleanImpl.class
+SHA1-Digest: ObE1DxndYvZVLOSxJufxjCVIaRY=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Package$Literals.class
+SHA1-Digest: 5DWHQfiiIyeOeQqHl/vn40iOFo4=
+
+Name: org/eclipse/rmf/reqif10/SpecificationType.class
+SHA1-Digest: CZCewhj8oJEGoHcikhrJ16e/aSc=
+
+Name: schema/xhtml-edit-1.xsd
+SHA1-Digest: hWBP6zNlrM1llCk15HOp8Vm5v8Q=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionXHTMLImpl.class
+SHA1-Digest: zfWBCYh+fN++HfEhooj40XTliOI=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecTypeImpl.class
+SHA1-Digest: y46K50K3IfXeqECA7bol6e4d+2k=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFImpl.class
+SHA1-Digest: 2q3/3fHJtH+CxhF6WyMKWDKgr68=
+
+Name: org/eclipse/rmf/reqif10/impl/IdentifiableImpl.class
+SHA1-Digest: 5Bm5koUUZVPoM0ufj1poN8o3Qa4=
+
+Name: rmfFeature.png
+SHA1-Digest: +CXrAdYfxgklkJmeZBzByj8BAEQ=
+
+Name: about.mappings
+SHA1-Digest: OmW5Oben4dUQ0Ou+3zo+FbfuguE=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionStringImpl.class
+SHA1-Digest: SuJZ0ntCZWQXFvWZIgzixNiT8Yg=
+
+Name: schema/reqif.xsd
+SHA1-Digest: bxSaRG6fCK9+ba0/SPHpdsdyf+k=
+
+Name: org/eclipse/rmf/reqif10/SpecRelation.class
+SHA1-Digest: OvsAvV0N8Z61R0YITNnOsgI6cjw=
+
+Name: about_files/W3C_SoftwareNoticeAndLicense.html
+SHA1-Digest: 2ep4dPwUvLCasLRg3LmETDdvWio=
+
+Name: org/eclipse/rmf/reqif10/impl/AlternativeIDImpl.class
+SHA1-Digest: D9yG43TLxBOplnM8/0ayyLJCZj0=
+
+Name: schema/xhtml-param-1.xsd
+SHA1-Digest: hE/dIfGOXESRrsl/OPNZVVP50+s=
+
+Name: schema/xhtml-datatypes-1.xsd
+SHA1-Digest: cXa3eMHbjDcv3fRjhANgeEl8HI0=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionImpl.class
+SHA1-Digest: DMFEAfZgaaKgOgQVBJ7yHmHSh4k=
+
+Name: about_files/OMG_NoticeAndLicense.html
+SHA1-Digest: qVtu+V3FD04xq9nCGD0Nv2/oUhc=
+
+Name: org/eclipse/rmf/reqif10/SpecHierarchy.class
+SHA1-Digest: cK1sd/Pof2NPqlPUq1FRezbhZ90=
+
+Name: META-INF/maven/org.eclipse.rmf.plugins/org.eclipse.rmf.reqif10/p
+ om.properties
+SHA1-Digest: ByfUjkx6Zq7d1Z9rgVsKn8YyLWg=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecRelationTypeImpl.class
+SHA1-Digest: iPyMq6b7AVjrEHB1qXjhraL1Wp0=
+
+Name: schema/xhtml-hypertext-1.xsd
+SHA1-Digest: dct3RozWg3RWm1E0J1FuP1oc+UE=
+
+Name: schema/xhtml-inlstyle-1.xsd
+SHA1-Digest: jSqU5w9AZnoEy4xHIh2IPBSEOnw=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionEnumerationImpl.
+ class
+SHA1-Digest: ZhsKoNySZfPe5jMfS1CLL1WnABM=
+
+Name: model/reqif10.ecore
+SHA1-Digest: aF75l0RqnXMJENzeGVrZhc2vSaM=
+
+Name: plugin.properties
+SHA1-Digest: xcMd1BGoZ9Im1B+e30xgV7faLPg=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionIntegerImpl.class
+SHA1-Digest: FGi9DoYPjAPA6qYEPxGmXQezLFA=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionEnumeration.class
+SHA1-Digest: 1iNL/uf3BlrRvudwezWYiiEWOYo=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueEnumeration.class
+SHA1-Digest: CJsz4BZzart0VvBOYCYZ+g1rOV8=
+
+Name: model/reqif10.genmodel
+SHA1-Digest: x6DzuPqMcTeNDT51RkA5i9Pn6Y4=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueXHTMLImpl.class
+SHA1-Digest: xf7Gryc67gLEN3zFUQDhFSsSj4Q=
+
+Name: plugin.xml
+SHA1-Digest: LWT/t1GQ+gAJGrv6JtTDnjoJQs0=
+
+Name: org/eclipse/rmf/reqif10/SpecElementWithAttributes.class
+SHA1-Digest: zFsvOqVoBAS0GpCS4lP+9GK513s=
+
+Name: schema/xhtml-blkstruct-1.xsd
+SHA1-Digest: e35MLIwPbj4S+DwXhmnVf3jCAAI=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecRelationImpl.class
+SHA1-Digest: /GU2UuntTUwXeyAWAc8L2Tf49v0=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecObjectImpl.class
+SHA1-Digest: qC7ZO1QhdPASj4y5zxDJW2yfWuc=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionReal.class
+SHA1-Digest: NLZ0ToImGF4WvMRLRpZ7bxhJWRI=
+
+Name: org/eclipse/rmf/reqif10/SpecType.class
+SHA1-Digest: eyhxkaeN40+oQxkjvKmNP7mD2a4=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueXHTML.class
+SHA1-Digest: IZl0ytK+zXBEq1WTfUZqB4NFbaI=
+
+Name: org/eclipse/rmf/reqif10/Identifiable.class
+SHA1-Digest: k6uIjNVH3EFUQXXtx3XdUfuyuWs=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionEnumeration.class
+SHA1-Digest: suR9gbBIHRSkjmzyOqAE8ZikcPY=
+
+Name: org/eclipse/rmf/reqif10/impl/AccessControlledElementImpl.class
+SHA1-Digest: aIjMaHSjXH61vKzGwnG4/MVO9a0=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionXHTMLImpl.class
+SHA1-Digest: WoIsuRkRzSmIY6gFImMjJu9qDoY=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueStringImpl.class
+SHA1-Digest: egNbAr1GxEEUZC7Yd4uflbG9nQ4=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionRealImpl.class
+SHA1-Digest: A8Ngbbf6Bw4owmaRKmQkafJKlTg=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionSimpleImpl.class
+SHA1-Digest: +E8akHXsX5vE6AHIKTKpRiFHbHk=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueEnumerationImpl.class
+SHA1-Digest: Vs5Ggs0cYYfw5j5L/f1KcKxlN8U=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionDate.class
+SHA1-Digest: KQy/9Yd8A7/Wlz5UDPwXAbxTN8g=
+
+Name: schema/xhtml-inlphras-1.xsd
+SHA1-Digest: H0OEsYhD8KGPOGAibHc1qhonlcw=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionIntegerImpl.clas
+ s
+SHA1-Digest: 4y7GOUJMaVaQxNDglhQ2JbEvNg4=
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+
