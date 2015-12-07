@@ -6,7 +6,7 @@ sig Task {
 	precede: lone Task,
 }{ all t: Task | lone t.~task}
 
-one sig Project {
+one sig Project extends Requirement {
 	contract: some ContractRequirement }
 
 sig ContractRequirement extends Requirement {

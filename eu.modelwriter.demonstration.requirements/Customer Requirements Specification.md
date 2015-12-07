@@ -1,20 +1,19 @@
 # Customer Requirements Specification
 
-## UC-1 Create a new SpecObject 
-
+## UC-1 Create a new Spec Object 
 
 Note that the Specification Editor is the main interface for users. Therefore, creating SpecObjects in this editor is the main success scenario.
 	
 ### Precondition
-
+	
 ReqIF model exists and is open.
 	
-### Main Success Scenario
+### Main Success  Scenario
 
  1. We assume that a Specification exists and is open (not required for alternative scenario)
  2. Open a row's context menu (or in the empty editor space)
  3. Select the Child or Sibling submenu.	
- 4. Select the desired Spec Object Type (or none) from the submenu.	
+ 4. Select the desired SpecObject Type (or none) from the submenu.	
  5. This results in a new SpecHierarchy being created that is linked to a newly created SpecObject with the correct type.	
 
 ### Alternative 1: Create in Outline
@@ -27,7 +26,7 @@ It is also possible to create children of the "SpecObjects" folder in the outlin
 
 The keyboard shortcut Ctrl-Enter will create a SpecHierarchy sibling to the currently selected element and immediately go into edit mode in the currently selected column.	
 
-## UC-2 Edit SpecObject
+## UC-2 Edit Spec Object
 
 ### Precondition
 
@@ -45,7 +44,7 @@ A ReqIF model exists, is open and at least one SpecObject exisits.
 
 A selected element (no matter whether in Specification Editor or Outline or elsewhere) will be shown in the Properties View, where editing of all values is possible.
 	
-## UC-3 Delete SpecObject
+## UC-3 Delete  SpecObject
 
 ### Precondition
 
