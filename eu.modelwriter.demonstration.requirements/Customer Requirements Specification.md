@@ -8,7 +8,7 @@ Note that the Specification Editor is the main interface for users. Therefore, c
 	
 ReqIF model exists and is open.
 	
-### Main Success  Scenario
+### Main Success Scenario
 
  1. We assume that a Specification exists and is open (not required for alternative scenario)
  2. Open a row's context menu (or in the empty editor space)
@@ -44,7 +44,7 @@ A ReqIF model exists, is open and at least one SpecObject exisits.
 
 A selected element (no matter whether in Specification Editor or Outline or elsewhere) will be shown in the Properties View, where editing of all values is possible.
 	
-## UC-3 Delete  SpecObject
+## UC-3 Delete SpecObject
 
 ### Precondition
 

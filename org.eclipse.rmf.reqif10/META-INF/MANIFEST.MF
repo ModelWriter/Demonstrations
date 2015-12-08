@@ -1,0 +1,446 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.rmf.reqif10;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.rmf
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.7.0",org.ec
+ lipse.emf.ecore;bundle-version="2.7.0",org.eclipse.emf.ecore.xmi;bund
+ le-version="2.7.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.rmf.reqif10,org.eclipse.rmf.reqif10.impl,o
+ rg.eclipse.rmf.reqif10.util
+Bundle-Name: %pluginName
+Bundle-Version: 0.13.0.201509161042
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.1
+Build-Jdk: 1.7.0_80
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionReal.class
+SHA-256-Digest: XQmxLM0ycC2vpeSNLuoaVqjjNWbbDI2aMfA4tu6WnYs=
+
+Name: plugin.xml
+SHA-256-Digest: ihTqU0xcSUwb2Dw6xs173eEaoYi1Drnl93OrTGKJSdE=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionRealImpl.class
+SHA-256-Digest: NJNT17wC0xV2aMKtI+iQhv9VuD7A+IBMz/YdWFhVhPw=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueEnumeration.class
+SHA-256-Digest: l+oUXC0x0gKjT4G79EoNw1h3m4Tql8zVJM4r5sVM5Qs=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueDateImpl.class
+SHA-256-Digest: bapqATdOe6bYcxIFuv2zlf8iHG06e/k1sHBhC3v+Ty4=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionImpl.class
+SHA-256-Digest: 0BGbhWcuWApe2bP9bYzz95nWXKZAJpbgBNtmOTuGcBo=
+
+Name: schema/xhtml-blkphras-1.xsd
+SHA-256-Digest: lkMBLUV4XurASJWMJiTyWp3a1Xl8ack28eENMMZSnKo=
+
+Name: org/eclipse/rmf/reqif10/SpecificationType.class
+SHA-256-Digest: uR3i/DmNr504jwCxaG2DfdBTn4tWDGHm/EaGOmyV9vU=
+
+Name: org/eclipse/rmf/reqif10/AlternativeID.class
+SHA-256-Digest: PKQ0mxXFc501ppQ0xTL2HH4/skrrR6SGO4dCIv6DY00=
+
+Name: org/eclipse/rmf/reqif10/SpecElementWithAttributes.class
+SHA-256-Digest: X9P3j8+rpnFy6lDMenNUKRqHURrSAjVHDJ+/xYjvFjQ=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionSimple.class
+SHA-256-Digest: qBkYnAHebp1gfPGT2mvX8URqzK4Dp+jly8op620oDRI=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueBoolean.class
+SHA-256-Digest: 3nRQpupuunSUci8OOhY2U5P79ParpjF4QX+YbYK74KI=
+
+Name: about.ini
+SHA-256-Digest: IAyTny/xVjMM3OC3VVerz3r+K0kiq0IKyUloOaPGzOE=
+
+Name: org/eclipse/rmf/reqif10/SpecHierarchy.class
+SHA-256-Digest: zPKDa4uaQ6CN4a/qeTUM6K8naBs77GkyDAJPKjJ+lXw=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueIntegerImpl.class
+SHA-256-Digest: SMpDcBjBrTi2V269cl5fbzQPDw58hmdd8WUINy/28FI=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionBooleanImpl.class
+SHA-256-Digest: FctVTVZCffTiXFxZbs+ePqTySTcPKsH5tKLUMHpUVkU=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionIntegerImpl.class
+SHA-256-Digest: R9sZuNJF6tRj2mBinKcgxfVzpGOxjnOjT2Cu8OLgEAM=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueDate.class
+SHA-256-Digest: r8PGESFaA+G/jJuE6FctHI4gPFLmjhIXrdTdH2LYnpw=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionIntegerImpl.clas
+ s
+SHA-256-Digest: PvYal/nex+JVRN7m0zc6Y2H6gZMsf7v3vqoOJ3ycaFg=
+
+Name: org/eclipse/rmf/reqif10/Identifiable.class
+SHA-256-Digest: GzPZJ0na5Pw3LjDWzn3TgWeuxadNQZL5MP5/OXoERX0=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionEnumerationImpl.c
+ lass
+SHA-256-Digest: YXc59GnRrDF9QwbRElR1IynEMRybAeZ86TW4Bvd3bZU=
+
+Name: schema/xhtml-pres-1.xsd
+SHA-256-Digest: ST5+nD4wQQJw0eZ4wDsk4WBpRvCIu9WUi3h1GV+8LSI=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10AdapterFactory$1.class
+SHA-256-Digest: R/uLD2CingfRAw3dXg6A5bqtJ5ewA+OTUrOuzZAhhIo=
+
+Name: schema/xhtml-framework-1.xsd
+SHA-256-Digest: mLwz4ioRSnoxY1VK2rh+PbfMfovh0AIvBD3RzJA6DOA=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueXHTML.class
+SHA-256-Digest: 62LQN0tznIw5Kklt0//iK12O51sJveTFInIYIcQ7Ulw=
+
+Name: about_files/W3C_SoftwareNoticeAndLicense.html
+SHA-256-Digest: C/8YNZuRqulIe9/gXdPsCAEr0s5uqaqKQZbw2rNLZ+s=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueImpl.class
+SHA-256-Digest: ipBLBDTr2/bGfJG06f1d86VXnd9GzMcqARbEQpmppJA=
+
+Name: schema/xhtml-text-1.xsd
+SHA-256-Digest: hIqUAijxevmUm9vGxuSEN8JVg/avqwV4QqLeSd5DsOw=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecificationTypeImpl.class
+SHA-256-Digest: JsPcI8+4rQUk1EH/zGmenu5ZC3d5xftAqw84UdIbLwE=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueXHTMLImpl.class
+SHA-256-Digest: QccTovZp3ubPEhGBOoMzrhFV4Cj4DmeSYbYMtFIwjkA=
+
+Name: schema/xhtml-table-1.xsd
+SHA-256-Digest: 8l9bEsRypisAzACj8KrNAEKPFFIKGdIak4SjVoGKeuo=
+
+Name: org/eclipse/rmf/reqif10/SpecRelation.class
+SHA-256-Digest: kS0i6aBNIYSseemP38hO7drpy4UVf6jwvXYfYKva5Pk=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Factory.class
+SHA-256-Digest: plrRCSydGpwr9R2NB8PTbMMqZRuu+IWtTizVHXdL7EI=
+
+Name: org/eclipse/rmf/reqif10/Specification.class
+SHA-256-Digest: Hu0aVVOfw044/JkH4QITemS3bA6sB0x9XviHiMH8PjM=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionSimple.class
+SHA-256-Digest: xksY99YmVtoU8qWdzD/TTO3AsfIGU/FaPZYo/ZP33KU=
+
+Name: schema/xml.xsd
+SHA-256-Digest: YZYPsxMeOAIsqtU2Di8zozgleKs8gM1YvXQyDt5hsgw=
+
+Name: schema/xhtml-blkpres-1.xsd
+SHA-256-Digest: OtSqYUdM3Iw49WCWyZXSjZyhVR9NVRwpsHvORZTOge0=
+
+Name: org/eclipse/rmf/reqif10/ReqIFToolExtension.class
+SHA-256-Digest: lYp8GZBuK4or2NIw9qvfLoHOsCwOSg/gldhOpspPM2A=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecTypeImpl.class
+SHA-256-Digest: kCePxmQMAF+kaLetDUZWM0CjdN2sKsJugB7CS7TBfB8=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFToolExtensionImpl.class
+SHA-256-Digest: 6U760wcZVo4yXhNCzXpMhcgcPFjj9WNrkWvkozhD6uw=
+
+Name: schema/xhtml-list-1.xsd
+SHA-256-Digest: RdCHjiNHIjgS1ZBVCYMas83fmd7cSwX2E3qK9Mo3KS8=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionString.class
+SHA-256-Digest: 9K7Tcx6P59wvnqJDl2TVwBJjq7icsFjaPhH5umwcT4Y=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionXHTML.class
+SHA-256-Digest: igAiwtUHr0xrO18L1EmXqkoyJcgXNaOA+LvWEf6JmCI=
+
+Name: schema/xhtml-edit-1.xsd
+SHA-256-Digest: f45hj+WlKWlypwVxmhy9QeBNjRDi6/kc1xMSxH6MoSs=
+
+Name: org/eclipse/rmf/reqif10/SpecObjectType.class
+SHA-256-Digest: CfuaNp+BsmxD/d3AwAnDn+KzNc3GPNUE+5w1FD6ehjY=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionRealImpl.class
+SHA-256-Digest: xIZXgdpoQE08HdzvRTurMlUXprlVg/W3Fw4OaRVviNA=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionXHTML.class
+SHA-256-Digest: NQxAF08wSreDhzdU+Hi4szt2b/yf6wV/KC5R/AC4ZvQ=
+
+Name: about.mappings
+SHA-256-Digest: 2LmhL9th4nooewTTfuerqTfEkwq4xQ2Xif71B/qlQCo=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionDateImpl.class
+SHA-256-Digest: s77wqU+gwFBUAMu5PgUMHRBKug/0EhYfElUAE6NV/E4=
+
+Name: org/eclipse/rmf/reqif10/AccessControlledElement.class
+SHA-256-Digest: PRQXDsVzLGG8ak8qTI9z/mI43NJLDXfLltyPAlcQiyA=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Package.class
+SHA-256-Digest: 8/DDnwOWLjtiOUevnyKrhj8zyjWw7c4DBmQcR+q8VEg=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionBooleanImpl.clas
+ s
+SHA-256-Digest: yt/cVPYQDWg3x5kUGvKJ0jE9ayQWdm1RFIES+iZBP9g=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionSimpleImpl.class
+SHA-256-Digest: TXsy7rsib1mVHqGJOoptPQrhZSJTgI1Yu/YuG7Xk5VM=
+
+Name: schema/xhtml-hypertext-1.xsd
+SHA-256-Digest: XmsKL5K3guWyGuPgXMvozxXVwmN1i6rKcY7z2v+NBX8=
+
+Name: model/reqif10.genmodel
+SHA-256-Digest: qZ8+/JHwSSjNy2cEzEB7+dHnIdi8FxtQ/oc0AffGa2o=
+
+Name: org/eclipse/rmf/reqif10/impl/AlternativeIDImpl.class
+SHA-256-Digest: p2BDU18yeTsBU5gV3InQFflBhcJxIj2XARzyR/c58V4=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueEnumerationImpl.class
+SHA-256-Digest: DtDCmM9l90MEEwgQK+nuKjv1q8t0E3h9la1uxzsKrJc=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueInteger.class
+SHA-256-Digest: WA3N9tUJDQoxq2aN34fm4NeT+28HMhdN5SaeSfr9HiY=
+
+Name: org/eclipse/rmf/reqif10/SpecObject.class
+SHA-256-Digest: 3SEusFp78VL+M8MqGL8n8gEOdaylSyN9s5/W6oZulcg=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinition.class
+SHA-256-Digest: nFS0J4+Jbr0LN5X2xFwD3lmM/E0Lgo7eUbPJXO1kM2I=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionXHTMLImpl.class
+SHA-256-Digest: PgpPkT2fJS2Dhg7hk6tZEvcF4m2WWXXT7C/CgmUdnVE=
+
+Name: META-INF/maven/org.eclipse.rmf.plugins/org.eclipse.rmf.reqif10/p
+ om.properties
+SHA-256-Digest: 96qYT9Opr0W7rlLlzsrpe0gCO9n6Ida4tAX7e4vwHq4=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionBoolean.class
+SHA-256-Digest: IioLO6Oe5dgDYnW1zVCMtSurNNY+UhunEFl3XMcuT1U=
+
+Name: schema/reqif.xsd
+SHA-256-Digest: kkPzRVQPJds7U0A9qa2c1HRCd+8BSSrDWJk39TO6lMA=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueReal.class
+SHA-256-Digest: vVu6mBqMnVPCQ++wr+9Kg2QNjbDU2LVo34phGbyJoZY=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFImpl.class
+SHA-256-Digest: HS1samha+9l1l98F5f1s4VtQXLVCDCcMg67zHIsDcqw=
+
+Name: org/eclipse/rmf/reqif10/impl/EmbeddedValueImpl.class
+SHA-256-Digest: 92ID78JYNA/1+52C/7Bl/PX1rm+IxfnyKy5QqzMtxZM=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionSimpleImpl.class
+SHA-256-Digest: yf0fnXomYJjPNFl6nFOrUdBSjyJfz0PMpkxe+0xD2cI=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionStringImpl.class
+SHA-256-Digest: dFj1bjdUsz5hVhpIhB4UyuCmtIBFs89SiEkKoA9ATGA=
+
+Name: org/eclipse/rmf/reqif10/SpecType.class
+SHA-256-Digest: 9G1QWdL7PtvahMGKlCgFCbZpZEhCvK3RoMvpREJ/zuI=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionDateImpl.class
+SHA-256-Digest: PaC86nZG2ANPL40X5d7xp7Muf63hGJq2hE3lO7HNam8=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIF10FactoryImpl.class
+SHA-256-Digest: 5EQNkwjB+hYz4iPATbNHBgT9Vd2Bv65J/q2TA9lBHZY=
+
+Name: schema/xhtml-object-1.xsd
+SHA-256-Digest: 30/9TZiQdyodlpnzIXrF2sPq93JBNvXgkldjJp9mFNE=
+
+Name: about.properties
+SHA-256-Digest: cYETCXBoZZ7kL9SPrhRcZDUn01+nGQn6XW92BHt/JyM=
+
+Name: org/eclipse/rmf/reqif10/impl/AccessControlledElementImpl.class
+SHA-256-Digest: mlLJsnUNjjsNPaX4c17ZBTgt8VSh4nxo7Y/ApWa1ELk=
+
+Name: schema/xhtml-datatypes-1.xsd
+SHA-256-Digest: hYS7LBWt5KYQ0bvMfbGMiLRsdRfPJrR08O/s12ydNn0=
+
+Name: about_files/OMG_NoticeAndLicense.html
+SHA-256-Digest: 3hlKwepRNe80sJOSkXRNotHEQNR+Fa2RhmPh6eC5eNk=
+
+Name: org/eclipse/rmf/reqif10/RelationGroup.class
+SHA-256-Digest: QtO6bGsRDCLw0s7LSPoYujP+eJmtmYno6qy0khb41rg=
+
+Name: org/eclipse/rmf/reqif10/AttributeValue.class
+SHA-256-Digest: v+mSKkIbBRTzPIqHJkyUC6opaJDR0hqpK4GbIWOeOx8=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionXHTMLImpl.class
+SHA-256-Digest: DgmFDknQ5yxCnsGAOanfki2e6aifFeXGQ+/nXGcjH0M=
+
+Name: org/eclipse/rmf/reqif10/ReqIF.class
+SHA-256-Digest: x6VIfSFXllyjaEC4KiHXtID7wIfhtK62aYrYb5OkOI4=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinition.class
+SHA-256-Digest: sMwQB4QRz8uIfcgyo4QQQAwKr8BXPjWO5Z35Mzj5MPA=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionInteger.class
+SHA-256-Digest: SwdIwN8l4KJunXsULJewwis1t1IOkylwdIus7Ivle8U=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFContentImpl.class
+SHA-256-Digest: B+lWS1WMX9K4H0Z+EaaMrwS039db4Ckd3Gop9Z+tEMw=
+
+Name: schema/xhtml-attribs-1.xsd
+SHA-256-Digest: 6nmeCQ/4X0bcBuX+JNfk7VMPce7H0Ney8GmpD4dZPHI=
+
+Name: model/reqif10.ecore
+SHA-256-Digest: +HZP/6IO/79q4vLJ+MC+Nn+qXKPBvSRojyPdRxw5700=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionEnumerationImpl.
+ class
+SHA-256-Digest: NA2f4Sf44FBtuRSkoIq+TkXn1ymUZSYN6U1QNQGSYMo=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionEnumeration.class
+SHA-256-Digest: CPkqP0sOteZzXBK1AKbvlq3mFbwKYEXJLQYFZwiaU4k=
+
+Name: org/eclipse/rmf/reqif10/impl/DatatypeDefinitionStringImpl.class
+SHA-256-Digest: 7jdNzrzjDE/SzQl2EeibCMlOm2DSYfQem/DooBRFNYM=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueSimpleImpl.class
+SHA-256-Digest: IbM5sbwakDN7LZvhqJGbVGf8+hoGEc2qsQdSg3QAzRg=
+
+Name: rmfFeature.png
+SHA-256-Digest: HwjX7j58EM3QNcegveEf7SywnLsxTT5Ro1UTrLh0MX8=
+
+Name: notice.html
+SHA-256-Digest: X315zLynvdLZ4DaYSopgxruQUUEadA3FOPNviC+YO24=
+
+Name: plugin.properties
+SHA-256-Digest: 6whBkAavWRwybxBmeUIgxjBcVp8sH7xWapH4CSjxvRo=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionReal.class
+SHA-256-Digest: pDNGmYP2W1ZuREv/4dv/5ktdSqz1ubpXXwfWDlZfd7Y=
+
+Name: org/eclipse/rmf/reqif10/EnumValue.class
+SHA-256-Digest: lNyR6iUlON+Jtu0GNTyn8SBKjBLTFryClEP61FjYNFg=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionString.class
+SHA-256-Digest: XSckzCt/EI9dg+KRRiOKegqrB8xlymwezlabNzUKGz0=
+
+Name: org/eclipse/rmf/reqif10/ReqIFHeader.class
+SHA-256-Digest: PLWAlmKEecJKMbAxHv4B907u+JdD3fmF5Vpf1haHJyM=
+
+Name: org/eclipse/rmf/reqif10/EmbeddedValue.class
+SHA-256-Digest: HMdxkgVm/+ZvDmO0WWzDy41ReEjMvSRXYzXRoTWGFI8=
+
+Name: org/eclipse/rmf/reqif10/impl/RelationGroupImpl.class
+SHA-256-Digest: elblwquSGBpbUPZ2RxEVjov8hPZYWDkaSYycBcNfR78=
+
+Name: epl-v10.html
+SHA-256-Digest: pAdBtZNkzElEklXpub/h/P5qLnq003yonbO6y/sU6dI=
+
+Name: org/eclipse/rmf/reqif10/RelationGroupType.class
+SHA-256-Digest: nNEACDHl0z14MIog9Piv2jtIsW/EYv/hw4tApXDWc+c=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecElementWithAttributesImpl.class
+SHA-256-Digest: rCAOWbGXX8eY40Le4JX83fxgtziv+KzE04M2eawuWt4=
+
+Name: schema/xhtml-blkstruct-1.xsd
+SHA-256-Digest: zRv5jknLq/B8nCPVUqlJ6x2WwluFwdoq8KZQArjabKQ=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueSimple.class
+SHA-256-Digest: y8HVTL+KxoTOSLVPLz/fUIUtpQi4F3wfg7fGw+aul7w=
+
+Name: schema/xhtml-inlstruct-1.xsd
+SHA-256-Digest: P8hg5cPSjJ/Whz6oLHVWUWcKGc5dBi53/t7zFLmDRiA=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionDate.class
+SHA-256-Digest: Y4QJGwLXs9J5bfu7qdsZw8dZdJ2WKJDUKVkgDP5OI3A=
+
+Name: org/eclipse/rmf/reqif10/SpecRelationType.class
+SHA-256-Digest: xk/jd6yDMJYF8bwozq1TTfAk+cN5Kb2dzgc7BPqMuYA=
+
+Name: org/eclipse/rmf/reqif10/DatatypeDefinitionInteger.class
+SHA-256-Digest: BFccBMECx/oj5xInLTJNMzwClk6NRV+TUCNBqhjPVYY=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10Switch.class
+SHA-256-Digest: M0YINVYsWBi9aJ2MPS2zFMBVHI6CKZxDKOJIRp/whU4=
+
+Name: org/eclipse/rmf/reqif10/impl/EnumValueImpl.class
+SHA-256-Digest: XI+TPViUASQNyo4mGi9xy+w9Z5xM6wmUGngzG9EYm74=
+
+Name: org/eclipse/rmf/reqif10/util/ReqIF10AdapterFactory.class
+SHA-256-Digest: EV+XUqRlj4YMZUbIJOm+GlkSFta0xIU4VDUJ/StqkD4=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecObjectTypeImpl.class
+SHA-256-Digest: FkIHQmGA80xLxKw65yu4mxTaZTJNo81fXi4VyzHsTpw=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecObjectImpl.class
+SHA-256-Digest: Baq/paX/iCLTelw2nvJhFMUtDsgLAtCmc/1AB6AOjbY=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueStringImpl.class
+SHA-256-Digest: B2cNIzgLxnVtSyjf7xQRn7QjUGzrsDY3fSACVhyp26Q=
+
+Name: org/eclipse/rmf/reqif10/impl/XhtmlContentImpl.class
+SHA-256-Digest: 08ROQGy5If0jIQukINHRtqaR7mZGryQyqr+8UbYS0Dg=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueRealImpl.class
+SHA-256-Digest: TTce7ypvPFZHQ+IZdTzW7W9Yf4Lzg4XE+M4JXFGRIRs=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIF10PackageImpl.class
+SHA-256-Digest: yTda6bJ5BPAvDVZZdTq0N14gsCYB3hflfXp4suMUpys=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionEnumeration.class
+SHA-256-Digest: Mzc/490Q+0bAQCzrw577QDKGRvf1uyMz5Op8DZVNjg4=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecRelationImpl.class
+SHA-256-Digest: Tag0SDBy0ianj2PfQyURFNfuImpAW+3jUC6BFyTzzFI=
+
+Name: org/eclipse/rmf/reqif10/impl/IdentifiableImpl.class
+SHA-256-Digest: okR5QeFW6bIsjW/DwKcRF57JXyRwGnflHdpioHY0uCc=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecificationImpl.class
+SHA-256-Digest: 7UUSBjBhrKyCN5Qkhd23JbuKzOLi0cEb4zmXEREV16Q=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecRelationTypeImpl.class
+SHA-256-Digest: hvlkoWukXgNgONQ3kGUbdFAlFmt/Ug4LRaP8kL4tuDk=
+
+Name: schema/xhtml-inlpres-1.xsd
+SHA-256-Digest: XlnjpxMEDxcwVIBmJyuN6kfS6NmDd3jIApQOmaVJ0U0=
+
+Name: org/eclipse/rmf/reqif10/impl/RelationGroupTypeImpl.class
+SHA-256-Digest: ATy2bvLPsfNVpRlG6/ENUIrTW1LtpDblvy1SgRhvSkc=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeDefinitionImpl.class
+SHA-256-Digest: 3TECETZHRqlmfNkGLeLMhnNVb7efBfFzkDuzZ3IL37s=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionBoolean.class
+SHA-256-Digest: FIy01eYbxgK6RQF2AdEmo7VDCVPnxwZzi/3FTpTH4PI=
+
+Name: about.html
+SHA-256-Digest: trXGBWp47wLYAThvPE15xvY7HcCpBfjhNKJrnwB/9o0=
+
+Name: META-INF/maven/org.eclipse.rmf.plugins/org.eclipse.rmf.reqif10/p
+ om.xml
+SHA-256-Digest: cIoAT29OTGy7j/RQCSPtJFyBMCyRWp1v033PElhpRxk=
+
+Name: org/eclipse/rmf/reqif10/impl/SpecHierarchyImpl.class
+SHA-256-Digest: sJShZ1hi2oZ+KCJAha6DsYxGh0Mjwe1m63PjQ1K76q0=
+
+Name: org/eclipse/rmf/reqif10/XhtmlContent.class
+SHA-256-Digest: ybdu4OXwQVjmy1w9fh4NNpN/IHa8QI0NxLSQTIBGtsc=
+
+Name: org/eclipse/rmf/reqif10/impl/ReqIFHeaderImpl.class
+SHA-256-Digest: VzPghiHQAJcDov5yy5R1V2wqtpSpnqGnZFVP0MJ8Ab0=
+
+Name: org/eclipse/rmf/reqif10/impl/AttributeValueBooleanImpl.class
+SHA-256-Digest: W9nSjQT3AUKLNsBjKp8x0Y4Afy05kySdUcuXUs3aKoU=
+
+Name: schema/xhtml-param-1.xsd
+SHA-256-Digest: RATRN2Ix/xup3C+JS27dk0shbcwDCmcc5X/df/0NSpU=
+
+Name: schema/xhtml-inlphras-1.xsd
+SHA-256-Digest: jiHMd6Y9gq6OvbFUQQ4A8t85Q12UOq4nYyi7gospO38=
+
+Name: schema/xhtml-inlstyle-1.xsd
+SHA-256-Digest: rSOZU8aYTqn1KGWq500m9JpqIm7P8UOmbVHRpePLvnc=
+
+Name: org/eclipse/rmf/reqif10/AttributeValueString.class
+SHA-256-Digest: 7nNCCLTBOoWXstIut6E1qJpbCIebdSahH/Di21c6BZA=
+
+Name: org/eclipse/rmf/reqif10/ReqIF10Package$Literals.class
+SHA-256-Digest: 1/A5ExUNJPSnlRCSVHJw9ZJZE13YufNW0mfar1D1ukk=
+
+Name: org/eclipse/rmf/reqif10/ReqIFContent.class
+SHA-256-Digest: r90j12toBHlFBrqqB3Pmkeb7ntcFcBB9MYye60n3zwE=
+
+Name: org/eclipse/rmf/reqif10/AttributeDefinitionDate.class
+SHA-256-Digest: K9xsiLczsw5o3WsrLSw+zxr/4tPnBAxGtBkFdYCU5zY=
+
+Name: schema/driver.xsd
+SHA-256-Digest: SZW8l88Km4RiyilQBt1U2ahfuCDPn9bhNKUXQ/xE7/0=
+
