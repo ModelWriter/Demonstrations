@@ -1,57 +1,39 @@
-module Haveksan/Requirement
+module eu/modelwriter/actions/havelsan/alm
 
 abstract sig Requirement {}
 
-sig Task {
-	precede: lone Task,
-}{ all t: Task | lone t.~task}
-
 one sig Project extends Requirement {
-	contract: some ContractRequirement }
+	contract: some ContractRequirement}
 
 sig ContractRequirement extends Requirement {
 	system: set SystemRequirement,
-	relate: set ContractRequirement
-}{all c: ContractRequirement | one c.~contract}
+	contains: set ContractRequirement}
+fact {all c: ContractRequirement | one c.~contract => no c.~contains}
+fact {all c: ContractRequirement | no c.~contract => one c.~contains}
 
---@name: "System Requirement"
 sig SystemRequirement extends Requirement {
-	child: some Implementation
-}{ all s: SystemRequirement | one s.~system}
+	implementedBy: set Implementation,
+	requires: set SystemRequirement,
+	refines: set SystemRequirement} 
+fact { all s1, s2: SystemRequirement | s1.refines = s2 => s2.requires = s1 }
+fact { all s: SystemRequirement | one s.~system}
 
-abstract sig Implementation extends Requirement {
-	task: set Task
-}{ all i: Implementation | one i.~child}
+abstract sig Implementation {
+	verifiedBy: set Verification}
+fact {all i: Implementation | some i.~implementedBy}
 
---@context.editor: "ReqIFEditor"
-sig SoftwareRequirement extends Implementation {
-	test: some TestCase
-}
+sig Design, Software, Hardware extends Implementation {}
 
-sig HardwareRequirement extends Implementation {}
+abstract sig Verification {}
+sig Simulation, Analysis, Test extends Verification {}
+fact {all v: Verification | some verifiedBy.v}
 
-sig TestCase { }{ all t:TestCase  | one t.~test}
-
+fact noCycles {
+	no c: ContractRequirement | c in c.^contains
+	no s: SystemRequirement | s in s.^refines
+	no s: SystemRequirement | s in s.^requires}
 
 fact noSelfRelation{
-	no c: ContractRequirement | c in c.relate
-	no t: Task | t in t.precede }
-
-fact noCycles{no t:Task | t in t.^precede}
-
-fact realismConstraint {
-	some ContractRequirement
-	some HardwareRequirement
-	some SoftwareRequirement
-	some precede}
-
-/* Counterexample Finding */
-
-
-/* Instance Finding */
-pred example {
-	#ContractRequirement >1 and #SystemRequirement >2  and
-	#SoftwareRequirement >1 and #HardwareRequirement >1 and
-	#precede >1 and #task >10
-}
-run example for 11
+	no c: ContractRequirement | c in c.contains
+	no s: SystemRequirement | s in s.requires 
+	no s: SystemRequirement | s in s.refines}

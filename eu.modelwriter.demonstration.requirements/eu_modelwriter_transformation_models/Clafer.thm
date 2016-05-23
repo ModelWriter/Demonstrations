@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="boolean"/>
+   <type name="CElement"/>
+   <type name="Element"/>
+   <type name="false"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="true"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Blue">
+   <type name="string"/>
+</node>
+
+<node color="Gray">
+   <type name="Clafer"/>
+</node>
+
+<node color="Green">
+   <type name="ClaferModel"/>
+</node>
+
+<edge color="Blue">
+   <relation name="name"> <type name="CElement"/> <type name="string"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

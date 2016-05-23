@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="boolean"/>
+   <type name="CardAny"/>
+   <type name="CardEmpty"/>
+   <type name="CardInterval"/>
+   <type name="CardLone"/>
+   <type name="CardSome"/>
+   <type name="CCardinality"/>
+   <type name="CElement"/>
+   <type name="CInterval"/>
+   <type name="Element"/>
+   <type name="false"/>
+   <type name="GCardInterval"/>
+   <type name="GCardMux"/>
+   <type name="GCardOpt"/>
+   <type name="GCardOr"/>
+   <type name="GCardXor"/>
+   <type name="GroupCardinality"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="true"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Blue">
+   <type name="string"/>
+</node>
+
+<node color="Gray">
+   <type name="Clafer"/>
+</node>
+
+<node color="Green">
+   <type name="ClaferModel"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="cCardinality"> <type name="Clafer"/> <type name="CCardinality"/> </relation>
+   <relation name="cGroupCardinality"> <type name="Clafer"/> <type name="GroupCardinality"/> </relation>
+   <relation name="isAbstract"> <type name="Clafer"/> <type name="boolean"/> </relation>
+   <relation name="name"> <type name="Clafer"/> <type name="string"/> </relation>
+</edge>
+
+<edge visible="yes" attribute="yes">
+   <relation name="max"> <type name="CInterval"/> <type name="Int"/> </relation>
+   <relation name="min"> <type name="CInterval"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

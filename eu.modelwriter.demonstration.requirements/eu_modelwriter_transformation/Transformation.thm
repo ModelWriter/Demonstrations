@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="Clafer/CardAny"/>
+   <type name="Clafer/CardEmpty"/>
+   <type name="Clafer/CardInterval"/>
+   <type name="Clafer/CardLone"/>
+   <type name="Clafer/CardSome"/>
+   <type name="Clafer/CCardinality"/>
+   <type name="Clafer/CElement"/>
+   <type name="Clafer/CInterval"/>
+   <type name="Clafer/Clafer"/>
+   <type name="Clafer/ClaferModel"/>
+   <type name="Clafer/GCardInterval"/>
+   <type name="Clafer/GCardMux"/>
+   <type name="Clafer/GCardOpt"/>
+   <type name="Clafer/GCardOr"/>
+   <type name="Clafer/GCardXor"/>
+   <type name="Clafer/GroupCardinality"/>
+   <type name="Ecore/EAttribute"/>
+   <type name="Ecore/EBoolean"/>
+   <type name="Ecore/EClass"/>
+   <type name="Ecore/EClassifier"/>
+   <type name="Ecore/ECoreModel"/>
+   <type name="Ecore/EDataType"/>
+   <type name="Ecore/EEnum"/>
+   <type name="Ecore/EEnumLiteral"/>
+   <type name="Ecore/EInt"/>
+   <type name="Ecore/EModelElement"/>
+   <type name="Ecore/ENamedElement"/>
+   <type name="Ecore/EPackage"/>
+   <type name="Ecore/EReference"/>
+   <type name="Ecore/EString"/>
+   <type name="seq/Int"/>
+   <type name="Type/boolean"/>
+   <type name="Type/Element"/>
+   <type name="Type/false"/>
+   <type name="Type/true"/>
+</node>
+
+<node color="Blue">
+   <type name="Type/string"/>
+</node>
+
+<node color="Green">
+   <type name="Mapping"/>
+</node>
+
+<edge attribute="yes">
+   <relation name="name"> <type name="Clafer/Clafer"/> <type name="Type/string"/> </relation>
+   <relation name="name"> <type name="Ecore/ENamedElement"/> <type name="Type/string"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
