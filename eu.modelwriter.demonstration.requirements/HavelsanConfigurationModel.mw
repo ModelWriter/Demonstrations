@@ -1,39 +1,51 @@
 module eu/modelwriter/actions/havelsan/alm
 
-abstract sig Requirement {}
+abstract sig Artefact {
+	depends: set Artefact}
 
-one sig Project extends Requirement {
+one sig Specification extends Artefact {
 	contract: some ContractRequirement}
 
-sig ContractRequirement extends Requirement {
+sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement}
-fact {all c: ContractRequirement | one c.~contract => no c.~contains}
-fact {all c: ContractRequirement | no c.~contract => one c.~contains}
+fact {all c: ContractRequirement | 
+	one c.~contract => no c.~contains}
+fact {all c: ContractRequirement | 
+	no c.~contract => one c.~contains}
 
-sig SystemRequirement extends Requirement {
-	implementedBy: set Implementation,
+sig SystemRequirement extends Artefact {
+	satisfiedBy: set Implementation,
 	requires: set SystemRequirement,
 	refines: set SystemRequirement} 
-fact { all s1, s2: SystemRequirement | s1.refines = s2 => s2.requires = s1 }
+fact { all s, s': SystemRequirement 
+	| s' in s.refines => s in s'.requires}
 fact { all s: SystemRequirement | one s.~system}
 
-abstract sig Implementation {
+abstract sig Implementation extends Artefact {
 	verifiedBy: set Verification}
-fact {all i: Implementation | some i.~implementedBy}
+fact {all i: Implementation | some i.~satisfiedBy}
 
-sig Design, Software, Hardware extends Implementation {}
+sig Model extends Implementation {
+	transforms: set Model,
+	generates: set (Code + Component)}
 
-abstract sig Verification {}
+sig Code, Component extends Implementation {}
+
+abstract sig Verification extends Artefact  {}
 sig Simulation, Analysis, Test extends Verification {}
 fact {all v: Verification | some verifiedBy.v}
 
 fact noCycles {
+	no a: Artefact | a in a.^depends
 	no c: ContractRequirement | c in c.^contains
 	no s: SystemRequirement | s in s.^refines
-	no s: SystemRequirement | s in s.^requires}
+	no s: SystemRequirement | s in s.^requires
+	no m: Model | m in m.^transforms}
 
 fact noSelfRelation{
+	no a: Artefact | a in a.^depends
 	no c: ContractRequirement | c in c.contains
 	no s: SystemRequirement | s in s.requires 
-	no s: SystemRequirement | s in s.refines}
+	no s: SystemRequirement | s in s.refines
+	no m: Model | m in m.transforms}

@@ -1,6 +1,6 @@
-# Customer Requirements Specification
+# Customer Requirements  Specification
 
-## UC-1 Create a new SpecObject 
+## UC-1 Create a  new SpecObject 
 
 Note that the Specification Editor is the main interface for users. Therefore, creating SpecObjects in this editor is the main success scenario.
 	
@@ -8,7 +8,7 @@ Note that the Specification Editor is the main interface for users. Therefore, c
 	
 ReqIF model exists and is open.
 	
-### Main Success Scenario
+### Main Success  Scenario
 
  1. We assume that a Specification exists and is open (not required for alternative scenario)
  2. Open a row's context menu (or in the empty editor space)
@@ -26,7 +26,7 @@ It is also possible to create children of the "SpecObjects" folder in the outlin
 
 The keyboard shortcut Ctrl-Enter will create a SpecHierarchy sibling to the currently selected element and immediately go into edit mode in the currently selected column.	
 
-## UC-2 Edit Spec  Object
+## UC-2 Edit Spec Object
 
 ### Precondition
 
