@@ -10,12 +10,17 @@ sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement}
 fact {all c: ContractRequirement | 	one c.~contract => no c.~contains}
+
 fact {all c: ContractRequirement | 	no c.~contract => one c.~contains}
+
 
 sig SystemRequirement extends Artefact {
 	satisfiedBy: set Implementation,
 	requires: set SystemRequirement,
 	refines: set SystemRequirement} 
+
+-- Reason@requires
+-- Reason@refines
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires}
 fact { all s: SystemRequirement | one s.~system}
 
