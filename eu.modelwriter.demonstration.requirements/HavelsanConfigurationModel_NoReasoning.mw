@@ -1,4 +1,4 @@
-module eu/modelwriter/actions/havelsan/alm
+module eu/modelwriter/actions/havelsan/alm/noreasoning
 
 abstract sig Artefact {
 	depends: set Artefact}
