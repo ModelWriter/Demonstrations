@@ -1,4 +1,4 @@
-# Customer Requirements  Specification
+# Customer Requirements Specification
 
 ## UC-1 Create a  new SpecObject 
 
