@@ -3,9 +3,11 @@ module eu/modelwriter/actions/havelsan/alm/noreasoning
 abstract sig Artefact {
 	depends: set Artefact}
 
+-- root of the traceablity links in this scenario
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
 
+-- Locate@Text
 sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement}
@@ -13,12 +15,13 @@ fact {all c: ContractRequirement | 	one c.~contract => no c.~contains}
 
 fact {all c: ContractRequirement | 	no c.~contract => one c.~contains}
 
+-- Locate@ReqIF
 sig SystemRequirement extends Artefact {
 	satisfiedBy: set Implementation,
 	requires: set SystemRequirement,
 	refines: set SystemRequirement} 
 
--- Reason@requires
+-- Reason@require
 -- Reason@refines
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires}
 fact { all s: SystemRequirement | one s.~system}
@@ -27,10 +30,12 @@ abstract sig Implementation extends Artefact {
 	verifiedBy: set Verification}
 fact {all i: Implementation | some i.~satisfiedBy}
 
+-- Locate@EMF
 sig Model extends Implementation {
 	transforms: set Model,
 	generates: set (Code + Component)}
 
+-- Locate@Java
 sig Code, Component extends Implementation {}
 
 abstract sig Verification extends Artefact  {}
