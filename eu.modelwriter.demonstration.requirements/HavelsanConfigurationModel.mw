@@ -27,7 +27,7 @@ abstract sig Implementation extends Artefact {
 fact {all i: Implementation | some i.~satisfiedBy}
 
 sig Model extends Implementation {
-	transforms: set Model,
+	transforms, conforms: set Model,
 	generates: set (Code + Component)}
 
 sig Code, Component extends Implementation {}
