@@ -1,7 +1,10 @@
 module eu/modelwriter/actions/havelsan/alm
 
 abstract sig Artefact {
-	depends: set Artefact}
+	depends: set Artefact,
+	conflicts: set Artefact}
+-- Reason@conflicts
+fact {~conflicts in conflicts} 
 
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
@@ -20,11 +23,18 @@ sig SystemRequirement extends Artefact {
 
 -- Reason@requires
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires}
+
 fact { all s: SystemRequirement | one s.~system}
 
+-- Reason@system
+-- fact {all s, s': SystemRequirement | s in s'.refines => s in s'.refines.^~system}
+
 abstract sig Implementation extends Artefact {
-	verifiedBy: set Verification}
+	verifiedBy: set Verification,
+	fulfills: lone ContractRequirement}
 fact {all i: Implementation | some i.~satisfiedBy}
+-- Reason@fulfills
+fact {all i: Implementation, s: i.~satisfiedBy | i.fulfills = s.~system }
 
 sig Model extends Implementation {
 	transforms, conforms: set Model,
@@ -49,3 +59,12 @@ fact noSelfRelation{
 	no s: SystemRequirement | s in s.requires 
 	no s: SystemRequirement | s in s.refines
 	no m: Model | m in m.transforms}
+
+
+pred show{
+	#ContractRequirement > 1  and #contract > 1 and #contains > 1
+	and #Code > 1 and #requires > 2 and #depends < 2  and #SystemRequirement.refines >1 and #verifiedBy > 0
+	and #conflicts = 0 and #fulfills > 0 and #Implementation > 1}
+
+
+run show for 11
