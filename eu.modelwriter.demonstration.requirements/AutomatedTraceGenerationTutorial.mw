@@ -3,7 +3,7 @@ module eu/modelwriter/actions/havelsan/alm
 -- locate@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
 
 -- trace@Library
-one sig Library {
+one sig LibrarySystem {
 	-- @books
 	book: set Book,
 	-- @loans
