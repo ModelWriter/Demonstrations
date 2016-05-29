@@ -1,4 +1,4 @@
-module eu/modelwriter/actions/havelsan/alm
+module eu/modelwriter/prototype/autotracecreation/tutorial
 
 -- locate@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
 
