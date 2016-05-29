@@ -1,0 +1,19 @@
+module eu/modelwriter/actions/havelsan/alm
+
+-- locate@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
+
+-- trace@Library
+one sig Library {
+	-- @books
+	book: set Book,
+	-- @loans
+	loan: set Loan}
+
+-- trace@Book	
+sig Book {}
+
+-- trace@Loan
+sig Loan {}
+
+fact {all b: Book | one b.~book}
+fact {all b: Loan | one b.~loan}

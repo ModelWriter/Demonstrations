@@ -35,6 +35,7 @@ abstract sig Implementation extends Artefact {
 	verifiedBy: set Verification,
 	fulfills: lone ContractRequirement}
 fact {all i: Implementation | some i.~satisfiedBy}
+
 -- Reason@fulfills
 fact {all i: Implementation, s: i.~satisfiedBy | i.fulfills = s.~system }
 
