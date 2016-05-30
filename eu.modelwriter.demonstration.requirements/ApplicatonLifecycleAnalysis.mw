@@ -26,10 +26,8 @@ sig SystemRequirement extends Artefact {
 -- Reason@requires
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires}
 
+-- Reason@system
 fact { all s: SystemRequirement | one s.~system}
-
-//-- Reason@system
--- fact {all s, s': SystemRequirement | s in s'.refines => s in s'.refines.^~system}
 
 abstract sig Implementation extends Artefact {
 	verifiedBy: set Verification,

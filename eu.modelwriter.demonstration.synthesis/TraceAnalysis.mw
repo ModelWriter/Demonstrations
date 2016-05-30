@@ -17,3 +17,5 @@ sig Loan {}
 
 fact {all b: Book | one b.~book}
 fact {all b: Loan | one b.~loan}
+
+
