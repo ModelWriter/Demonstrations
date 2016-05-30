@@ -1,7 +1,19 @@
 module eu/modelwriter/prototype/autotracecreation/tutorial
 
--- locate@/eu.modelwriter.demonstration.aadl/Requirements/Requirements.ecore
+-- open@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
 
--- trace@Requirement
-some sig Requirement {}
+-- trace@Library
+one sig LibrarySystem {
+	-- trace@books
+	book: set Book,
+	-- trace@loans
+	loan: set Loan}
 
+-- trace@Book	
+sig Book {}
+
+-- trace@Loan
+sig Loan {}
+
+fact {all b: Book | one b.~book}
+fact {all b: Loan | one b.~loan}

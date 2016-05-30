@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Req:RequirementsModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Req="eu.modelwriter.demonstrations.metamodels.requirement" xsi:schemaLocation="eu.modelwriter.demonstrations.metamodels.requirement Requirements.ecore">
-  <requirements/>
+<Req:RequirementsModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Req="eu.modelwriter.demonstrations.metamodels.requirement" xsi:schemaLocation="eu.modelwriter.demonstrations.metamodels.requirement Requirements.ecore" name="My requirements">
+  <requirements name="A"/>
+  <requirements ID="1" name="B"/>
+  <requirements ID="2" name="C"/>
+  <relationships xsi:type="Req:Requires" source="//@requirements.0" target="//@requirements.1 //@requirements.2"/>
 </Req:RequirementsModel>

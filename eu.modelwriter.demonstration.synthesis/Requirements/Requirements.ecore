@@ -10,17 +10,15 @@
         eType="#//Relationship" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Requirement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Relationship">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Requirement"
-        transient="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Requirement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1"
-        eType="#//Requirement" transient="true"/>
+        eType="#//Requirement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Status">
     <eLiterals name="proposed"/>
