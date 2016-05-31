@@ -1,6 +1,6 @@
 # Customer Requirements Specification
 
-## UC-1 Create a  new SpecObject 
+## UC-1 Create a new SpecObject 
 
 Note that the Specification Editor is the main interface for users. Therefore, creating SpecObjects in this editor is the main success scenario.
 	
@@ -8,7 +8,7 @@ Note that the Specification Editor is the main interface for users. Therefore, c
 	
 ReqIF model exists and is open.
 	
-### Main Success  Scenario
+### Main Success Scenario
 
  1. We assume that a Specification exists and is open (not required for alternative scenario)
  2. Open a row's context menu (or in the empty editor space)
