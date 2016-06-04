@@ -200,7 +200,7 @@
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_ZMALoCWzEea9p-zTD1TJsA" type="4001" element="_ZKpgwCWzEea9p-zTD1TJsA" source="_ZLAGEyWzEea9p-zTD1TJsA" target="_ZK_fACWzEea9p-zTD1TJsA">
             <children xmi:type="notation:Node" xmi:id="_ZMALpCWzEea9p-zTD1TJsA" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZMALpSWzEea9p-zTD1TJsA" y="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZMALpSWzEea9p-zTD1TJsA" x="12" y="18"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_ZMAysCWzEea9p-zTD1TJsA" type="6002">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZMAysSWzEea9p-zTD1TJsA" y="-10"/>

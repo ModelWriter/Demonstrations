@@ -13,8 +13,7 @@ sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement}
 	
-fact {all c: ContractRequirement | 	one c.~contract => no c.~contains}
-
+fact {all c: ContractRequirement | one c.~contract => no c.~contains}
 fact {all c: ContractRequirement | 	no c.~contract => one c.~contains}
 
 -- Locate@ReqIF

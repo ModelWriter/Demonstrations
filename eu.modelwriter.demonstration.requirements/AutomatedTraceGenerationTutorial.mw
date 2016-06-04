@@ -4,9 +4,9 @@ module eu/modelwriter/prototype/autotracecreation/tutorial
 
 -- trace@Library
 one sig LibrarySystem {
-	-- trace@books
+	-- trace@Library.books
 	book: set Book,
-	-- trace@loans
+	-- trace@Library.loans
 	loan: set Loan}
 
 -- trace@Book	
