@@ -4,9 +4,9 @@ module eu/modelwriter/prototype/autotracecreation/tutorial
 
 -- trace@Requirement
 sig Requirement {
-	-- trace@Requires.source -> Requires.target
-	require: set Requirement,
-	-- trace@Refines.target
+	-- trace@Require.source -> Require.target
+	requires: set Requirement,
+	-- trace@Refine.source -> Refine.target
 	refines: set Requirement}
 
 

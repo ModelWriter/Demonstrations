@@ -3,5 +3,5 @@
   <requirements name="A"/>
   <requirements ID="1" name="B"/>
   <requirements ID="2" name="C"/>
-  <relationships xsi:type="Req:Requires" source="//@requirements.0" target="//@requirements.1 //@requirements.2"/>
+  <relationships xsi:type="Req:Require" source="//@requirements.0" target="//@requirements.1 //@requirements.2"/>
 </Req:RequirementsModel>

@@ -33,9 +33,9 @@
     <eLiterals name="critical" value="2"/>
     <eLiterals name="veryCritical" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Requires" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Refines" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PartiallyRefines" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Conflicts" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Contains" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Require" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Refine" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PartiallyRefine" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conflict" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Contain" eSuperTypes="#//Relationship"/>
 </ecore:EPackage>
