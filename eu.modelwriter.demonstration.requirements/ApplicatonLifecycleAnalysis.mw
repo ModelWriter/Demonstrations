@@ -53,14 +53,16 @@ fact noCycles {
 	no c: ContractRequirement | c in c.^contains
 	no s: SystemRequirement | s in s.^refines
 	no s: SystemRequirement | s in s.^requires
-	no m: Model | m in m.^transforms}
+	no m: Model | m in m.^transforms
+	no a: Artefact | a in a.^conflicts}
 
 fact noSelfRelation{
 	no a: Artefact | a in a.^depends
 	no c: ContractRequirement | c in c.contains
 	no s: SystemRequirement | s in s.requires 
 	no s: SystemRequirement | s in s.refines
-	no m: Model | m in m.transforms}
+	no m: Model | m in m.transforms
+	no a: Artefact | a in a.conflicts}
 
 
 pred show{

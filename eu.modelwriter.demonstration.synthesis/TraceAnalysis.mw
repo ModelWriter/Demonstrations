@@ -1,6 +1,6 @@
 module eu/modelwriter/prototype/autotracecreation/tutorial
 
--- open@/eu.modelwriter.demonstration.synthesis/Requirements/Requirements.ecore
+-- load@/eu.modelwriter.demonstration.synthesis/Requirements/Requirements.ecore
 
 -- trace@Requirement
 sig Requirement {

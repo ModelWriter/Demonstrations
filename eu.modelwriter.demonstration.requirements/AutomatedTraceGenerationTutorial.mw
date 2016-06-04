@@ -1,6 +1,6 @@
 module eu/modelwriter/prototype/autotracecreation/tutorial
 
--- open@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
+-- load@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
 
 -- trace@Library
 one sig LibrarySystem {
