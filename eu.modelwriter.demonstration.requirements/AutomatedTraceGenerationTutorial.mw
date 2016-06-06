@@ -2,17 +2,17 @@ module eu/modelwriter/prototype/autotracecreation/tutorial
 
 -- load@org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
 
--- trace@Library
+-- trace@Tutorial.Library
 one sig LibrarySystem {
-	-- trace@Library.books
+	-- trace@Tutorial.Library.books
 	book: set Book,
-	-- trace@Library.loans
+	-- trace@Tutorial.Library.loans
 	loan: set Loan}
 
--- trace@Book	
+-- trace@Tutorial.Book	
 sig Book {}
 
--- trace@Loan
+-- trace@Tutorial.Loan
 sig Loan {}
 
 fact {all b: Book | one b.~book}
