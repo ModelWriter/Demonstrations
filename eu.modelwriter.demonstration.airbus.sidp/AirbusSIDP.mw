@@ -1,32 +1,38 @@
 module eu/modelwriter/actions/airbus/sidp
 
+//Any kind of resource you can get from an engineering tool
 abstract sig Artefact {
 	depends: set Artefact}
 
-sig ATA{}
+//Air Transportation Standardized Classification
+sig ATA extends Artefact{}
 
-sig Program {}
+//Aircarft Program
+sig Program extends Artefact {}
 
-sig Installation extends Artefact{
-	program: set Program,
-	ata: ATA
+sig TechnicalDirective extends Artefact{	
+	ata: one ATA
 }
 
-sig TechnicalDirective extends Installation{}
-
-sig DesignPrinciple extends Installation {
+sig DesignPrinciple extends Artefact {
 	refines : set TechnicalDirective,
 	env: one Environment,
 	zone: set Zone,
 	object1: one Object1,
-	action: ActionVerb,
-	modality: AuxiliaryVerb
-	condition: Condition 
+	action: one ActionVerb,
+	modality: one AuxiliaryVerb,
+	condition: some Condition,
+	program: some Program,
+	ata: one ATA
 }
 
 sig DesginModel{
-	compliesWith: Installation
+	compliesWith: DesignPrinciple
 }
+
+sig ActionVerb {}
+
+sig AuxiliaryVerb{}
 
 sig Zone {}
 
@@ -34,20 +40,14 @@ sig Object1 {
 	component: set Component
 }
 
+sig Component{}
+
 sig Environment {}
 
-
-sig Con
-
---standardized chapter
-
-
-
-
-
+sig Condition {}
 
 
 pred show{}
 
 
-run show for 11
+run show for 3
