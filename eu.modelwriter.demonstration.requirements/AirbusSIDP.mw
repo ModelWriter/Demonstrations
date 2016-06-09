@@ -1,10 +1,27 @@
-module eu/modelwriter/actions/havelsan/alm
+module eu/modelwriter/actions/airbus/sidp
 
 abstract sig Artefact {
 	depends: set Artefact,
 	conflicts: set Artefact}
--- Reason@conflicts
+
 fact {~conflicts in conflicts} 
+
+
+sig Zone extends Artefact {
+
+}
+
+sig Environment extends Artefact {}
+
+sig Program extends Artefact {}
+
+sig ATA{}
+
+sig DesginModel{}
+
+sig DesignPrinciple {}
+
+
 
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
@@ -65,10 +82,7 @@ fact noSelfRelation{
 	no a: Artefact | a in a.conflicts}
 
 
-pred show{
-	#ContractRequirement > 1  and #contract > 1 and #contains > 1
-	and #Code > 1 and #requires > 2 and #depends < 2  and #SystemRequirement.refines >1 and #verifiedBy > 0
-	and #conflicts = 0 and #fulfills > 0 and #Implementation > 1}
+pred show{}
 
 
 run show for 11
