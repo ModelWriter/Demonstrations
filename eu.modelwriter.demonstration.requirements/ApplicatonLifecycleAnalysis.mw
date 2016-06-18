@@ -9,6 +9,7 @@ fact {~conflicts in conflicts}
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
 -- Locate@Text
+-- Discover@ContractRequirement expect 2
 sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement}

@@ -13,21 +13,6 @@ package org.eclipse.rmf.reqif10;
 
 import org.eclipse.emf.common.util.EList;
 
-/**
- * <!-- begin-user-doc --> A representation of the model object '<em><b>Specification</b></em>'. <!-- end-user-doc -->
- * <p>
- * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.rmf.reqif10.Specification#getType <em>Type</em>}</li>
- * <li>{@link org.eclipse.rmf.reqif10.Specification#getChildren <em>Children</em>}</li>
- * </ul>
- * </p>
- * 
- * @see org.eclipse.rmf.reqif10.ReqIF10Package#getSpecification()
- * @model extendedMetaData="name='SPECIFICATION' kind='elementOnly'" annotation=
- *        "http:///org/eclipse/sphinx/emf/serialization/XMLPersistenceMappingExtendedMetaData wrapperName='SPECIFICATION'"
- * @generated
- */
 public interface Specification extends SpecElementWithAttributes {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference. <!-- begin-user-doc -->
