@@ -1,4 +1,5 @@
-# 7.3.1	Positioning and Selection of Connection Elements
+# 7 Design Principle
+7.3.1	Positioning and Selection of Connection Elements
 
 ### SIDP92A001V-A-5605
 Electrical active items shall not be positioned under removable (e.g. screwed) pipes couplings or under hydraulic equipment (e.g. hydraulic union).
