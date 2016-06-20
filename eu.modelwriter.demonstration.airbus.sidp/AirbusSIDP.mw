@@ -4,14 +4,16 @@ module eu/modelwriter/actions/airbus/sidp
 abstract sig Artefact {
 	depends: set Artefact}
 
-//Air Transportation Standardized Classification
-sig ATA extends Artefact{}
-
 //Aircarft Program
-sig Program extends Artefact {}
+sig Program extends Artefact {
+	program: some ATA}
+
+//Air Transportation Standardized Classification
+sig ATA extends Artefact{
+	designRule : some DesignPrinciple
+}
 
 sig TechnicalDirective extends Artefact{	
-	ata: one ATA
 }
 
 sig DesignPrinciple extends Artefact {
@@ -22,11 +24,9 @@ sig DesignPrinciple extends Artefact {
 	action: one ActionVerb,
 	modality: one AuxiliaryVerb,
 	condition: some Condition,
-	program: some Program,
-	ata: one ATA
 }
 
-sig DesginModel{
+sig DesginModel extends Artefact{
 	compliesWith: DesignPrinciple
 }
 
