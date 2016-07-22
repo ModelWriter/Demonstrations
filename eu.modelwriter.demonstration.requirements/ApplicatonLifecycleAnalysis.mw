@@ -3,7 +3,7 @@ module eu/modelwriter/actions/havelsan/alm
 abstract sig Artefact {
 	depends: set Artefact,
 	conflicts: set Artefact}
--- Reason@conflicts
+-- Reason@Artefact.conflicts
 fact {~conflicts in conflicts} 
 
 one sig Specification extends Artefact {
@@ -23,9 +23,9 @@ sig SystemRequirement extends Artefact {
 	satisfiedBy: set Implementation,
 	requires: set SystemRequirement,
 	refines: set SystemRequirement}
--- Reason@system
+-- Reason@SystemRequirement.system
 fact { all s: SystemRequirement | one s.~system}
--- Reason@requires
+-- Reason@SystemRequirement.requires
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires }
 
 abstract sig Implementation extends Artefact {
@@ -33,7 +33,7 @@ abstract sig Implementation extends Artefact {
 	fulfills: lone ContractRequirement}
 fact {all i: Implementation | some i.~satisfiedBy}
 
--- Reason@fulfills
+-- Reason@Implementation.fulfills
 fact {all i: Implementation, s: i.~satisfiedBy | i.fulfills = s.~system }
 
 -- Locate@EMF
