@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jfb.examples.gmf.Agent:AgentViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.Agent="/MyTest/model/Agent.ecore">
+  <containsRole name="Buying" has="//@containsBehaviour.0 //@containsBehaviour.2"/>
+  <containsRole name="Selling" has="//@containsBehaviour.1"/>
+  <containsSWA name="InvestorA" includes="//@containsCapabilities.0" plays="//@containsRole.1 //@containsRole.0">
+    <contains name="Active"/>
+    <has name="Business and Trading"/>
+  </containsSWA>
+  <containsBehaviour name="Finding a seller" executes="//@containsCapabilities.0/@applies.0"/>
+  <containsBehaviour name="Finding a buyer" executes="//@containsCapabilities.0/@applies.1"/>
+  <containsBehaviour name="Finding proper stock" executes="//@containsCapabilities.0/@applies.0"/>
+  <containsCapabilities name="Stock">
+    <uses name="Sell available stock"/>
+    <uses name="Buy new stock" description=""/>
+    <applies name="StockFinder"/>
+    <applies name="InvestorFinder"/>
+    <includes name="My business history"/>
+    <includes name="Market fluctuation knowledge"/>
+  </containsCapabilities>
+</jfb.examples.gmf.Agent:AgentViewpoint>

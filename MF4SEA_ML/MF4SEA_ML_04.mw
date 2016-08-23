@@ -1,0 +1,78 @@
+module MF4SEA_ML
+
+sig SWA {
+	plays: Role,
+	applies: some Plan,
+	// from MAS&Org vp
+	cooperates: some SWA	
+}
+
+sig Role {
+	// name: one Name,
+	interacts_with: some SWS
+}
+
+sig Plan {
+	// disj name, type, description: one Name,
+	// priority: one Int
+}
+
+sig SS_RegisterPlan extends Plan{
+	advertises: some Interface
+}
+
+sig SS_FinderPlan extends Plan {
+	interacts_with: some SS_MatchmakerAgent,
+	discovers: set Interface
+}
+sig SS_AgreementPlan extends Plan{
+	negotiates: some Interface
+}
+
+sig SS_MatchmakerAgent extends SWA{
+	appliesSS_RegisterPlan : some SS_RegisterPlan,
+	//playsRegistrationRole: RegistrationRole
+}
+
+sig SS_ExecutorPlan extends Plan{
+	executes: some Process,
+	uses: some Grounding
+}
+
+sig SWS{
+	// name: one Name,
+	composed_of: some WebService
+}
+
+sig Interface{
+	// name: one Name,
+	presents: some SWS
+}
+
+sig Process {
+	described_by: some SWS
+}
+
+sig Grounding{
+	supports: some SWS,
+	calls: some WebService 
+}
+
+sig WebService extends Service{
+}
+
+sig Service{
+	// name: one Name
+}
+
+sig Environment{
+	// name: one Name,
+	hasService: set Service
+}
+
+fact Agent_SWS_Interaction{
+	all e: Environment | some ws:WebService |
+	ws in e.hasService => {some swa1, swa2:SWA, sws1,sws2:SWS, r:Role, f:SS_FinderPlan, i:Interface, x:Int | 
+		r in swa1.plays && sws1 in r.interacts_with && f in swa2.applies && i in f.discovers &&
+		i.presents= sws2 && #sws1 =x && x.plus[#sws2] >=1 }
+}

@@ -1,0 +1,104 @@
+module MF4SEA_ML
+
+abstract sig Artefact {
+	depends: set Artefact,
+	conflicts: set Artefact
+}
+
+-- Reason@Artefact.conflicts
+fact {
+	~conflicts in conflicts
+} 
+
+one sig Specification extends Artefact {
+	contract: some ContractRequirement
+}
+
+-- Locate@Text
+-- Discover@ContractRequirement expect 3
+sig ContractRequirement extends Artefact {
+	system: set SystemRequirement,
+	contains: set ContractRequirement
+} 
+
+-- Semantics@ContractRequirement
+fact {
+	all c: ContractRequirement | one c.~contract => no c.~contains 
+}
+
+fact {
+	all c: ContractRequirement | no c.~contract => one c.~contains 
+}
+
+-- Locate@ReqIF
+sig SystemRequirement extends Artefact {
+	satisfiedBy: set Implementation,
+	requires: set SystemRequirement,
+	refines: set SystemRequirement
+}
+
+-- Reason@ContractRequirement.system
+fact {
+	all s:SystemRequirement | one s.~system
+}
+
+-- Reason@SystemRequirement.requires
+fact { 
+	all s, s': SystemRequirement | s' in s.refines => s in s'.requires 
+}
+
+abstract sig Implementation extends Artefact {
+	verifiedBy: set Verification,
+	fulfills: lone ContractRequirement
+}
+
+fact {
+	all i: Implementation | some i.~satisfiedBy
+}
+
+-- Reason@Implementation.fulfills
+
+fact {
+	all i: Implementation, s: i.~satisfiedBy | i.fulfills = s.~system 
+}
+
+-- Locate@EMF
+sig Model extends Implementation {
+	transforms, conforms: set Model,
+	generates: set (Code + Component)
+}
+
+-- Locate@Java
+sig Code, Component extends Implementation {}
+
+abstract sig Verification extends Artefact  {}
+
+sig Simulation, Analysis, Test extends Verification {}
+
+fact {
+	all v: Verification | some verifiedBy.v
+}
+
+fact noCycles {
+	no a: Artefact | a in a.^depends
+	no c: ContractRequirement | c in c.^contains
+	no s: SystemRequirement | s in s.^refines
+	no s: SystemRequirement | s in s.^requires
+	no m: Model | m in m.^transforms
+	no a: Artefact | a in a.^conflicts}
+
+fact noSelfRelation{
+	no a: Artefact | a in a.^depends
+	no c: ContractRequirement | c in c.contains
+	no s: SystemRequirement | s in s.requires 
+	no s: SystemRequirement | s in s.refines
+	no m: Model | m in m.transforms
+	no a: Artefact | a in a.conflicts}
+
+
+pred show{
+	#ContractRequirement > 1  and #contract > 1 and #contains > 1
+	and #Code > 1 and #requires > 2 and #depends < 2  and #SystemRequirement.refines >1 and #verifiedBy > 0
+	and #conflicts = 0 and #fulfills > 0 and #Implementation > 1}
+
+run show for 11

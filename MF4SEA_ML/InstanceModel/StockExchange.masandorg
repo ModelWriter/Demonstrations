@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jfb.examples.gmf.MASandOrg:MASandOrgViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.MASandOrg="/MyTest/model/MASandOrg.ecore">
+  <containsSemanticWebOrganization name="StockSystem" has="//@containsRole.0" interacts_with="//@containsEnvironment.0">
+    <contains name="StockMarket" has="//@containsRole.1" interacts_with="//@containsEnvironment.2">
+      <contains name="TradingFloor"/>
+      <contains name="StockInfoSystem"/>
+    </contains>
+    <contains name="StockUsers" has="//@containsRole.2" interacts_with="//@containsEnvironment.1"/>
+  </containsSemanticWebOrganization>
+  <containsRole name="Exchanging"/>
+  <containsRole name="Managing"/>
+  <containsRole name="Interacting"/>
+  <containsSemanticWebAgent name="Broker1" works_in="//@containsSemanticWebOrganization.0/@contains.1" cooperates="//@containsSemanticWebAgent.2 //@containsSemanticWebAgent.1 //@containsSemanticWebAgent.3"/>
+  <containsSemanticWebAgent name="InvestorA" works_in="//@containsSemanticWebOrganization.0/@contains.1" cooperates="//@containsSemanticWebAgent.2 //@containsSemanticWebAgent.0"/>
+  <containsSemanticWebAgent name="TradeManager" works_in="//@containsSemanticWebOrganization.0/@contains.0/@contains.1 //@containsSemanticWebOrganization.0/@contains.0/@contains.0" cooperates="//@containsSemanticWebAgent.1 //@containsSemanticWebAgent.0 //@containsSemanticWebAgent.3 //@containsSemanticWebAgent.4 //@containsSemanticWebAgent.5"/>
+  <containsSemanticWebAgent name="InvestorB" works_in="//@containsSemanticWebOrganization.0/@contains.1" cooperates="//@containsSemanticWebAgent.0 //@containsSemanticWebAgent.2"/>
+  <containsSemanticWebAgent name="InvestorC" works_in="//@containsSemanticWebOrganization.0/@contains.1" cooperates="//@containsSemanticWebAgent.5 //@containsSemanticWebAgent.2"/>
+  <containsSemanticWebAgent name="Broker2" works_in="//@containsSemanticWebOrganization.0/@contains.1" cooperates="//@containsSemanticWebAgent.4 //@containsSemanticWebAgent.2"/>
+  <containsEnvironment name="Trading"/>
+  <containsEnvironment name="Communication"/>
+  <containsEnvironment name="BankingAndSecurity"/>
+</jfb.examples.gmf.MASandOrg:MASandOrgViewpoint>

@@ -1,0 +1,20 @@
+module MF4SEA_ML
+
+-- Load@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore
+
+-- Trace@tutorial.Book
+ -- Discover@A expect 1
+sig A {
+	-- Trace@tutorial.Book.copies
+	has : set B
+}
+
+-- Discover@B expect 1
+sig B {
+
+}
+
+-- Reason@A.has
+fact rule {
+	all a:A | some a.has
+}
