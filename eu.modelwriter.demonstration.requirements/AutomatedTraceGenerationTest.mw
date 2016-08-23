@@ -1,0 +1,36 @@
+module eu/modelwriter/prototype/autotracecreation/tutorial
+
+-- loadModel@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.ecore as Tutorial
+-- loadInstance@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Tutorial.xmi as Tutorial
+
+-- loadModel@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Test.ecore as Test
+-- loadInstance@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Test2.xmi as Test
+
+-- trace@Tutorial.Library
+one sig LibrarySystem {
+	-- trace@Tutorial.Library.books
+	book: set Book,
+	-- trace@Tutorial.Library.loans
+	loan: set Loan}
+
+-- trace@Test.Container
+one sig FooBarContainer {
+	--trace@Test.Container.fooz
+	fooz: set Foo,
+	--trace@Test.Container.barz
+	barz: set Bar}
+
+--trace@Test.Bar
+sig Bar {}
+
+--trace@Test.Foo
+sig Foo {}
+
+-- trace@Tutorial.Book
+sig Book {}
+
+-- trace@Tutorial.Loan
+sig Loan {}
+
+fact {all b: Book | one b.~book}
+fact {all b: Loan | one b.~loan}
