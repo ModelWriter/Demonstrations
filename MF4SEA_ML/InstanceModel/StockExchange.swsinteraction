@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jfb.examples.gmf.SWSInteraction:SWSInteractionViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.SWSInteraction="/viewPointsFull/model/SWSInteraction.ecore">
+<jfb.examples.gmf.SWSInteraction:SWSInteractionViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.SWSInteraction="/MF4SEA_ML/Metamodel/SWSInteraction.ecore">
   <containsSSRegisterPlan name="StockRecorder" advertises="//@containsInterface.1 //@containsInterface.0"/>
   <containsSSFinderPlan name="StockFinder" interacts_with="//@containsSSMatchmakerAgent.0" discovers="//@containsInterface.0 //@containsInterface.1"/>
   <containsSSFinderPlan name="InvestorFinder" interacts_with="//@containsSSMatchmakerAgent.0" discovers="//@containsInterface.1 //@containsInterface.0"/>

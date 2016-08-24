@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jfb.examples.gmf.MASandOrg:MASandOrgViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.MASandOrg="/MyTest/model/MASandOrg.ecore">
+<jfb.examples.gmf.MASandOrg:MASandOrgViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.MASandOrg="/MF4SEA_ML/Metamodel/MASandOrg.ecore">
   <containsSemanticWebOrganization name="StockSystem" has="//@containsRole.0" interacts_with="//@containsEnvironment.0">
     <contains name="StockMarket" has="//@containsRole.1" interacts_with="//@containsEnvironment.2">
       <contains name="TradingFloor"/>

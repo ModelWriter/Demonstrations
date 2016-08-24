@@ -176,7 +176,7 @@ fact Agent_SWSPlanOrdering {
 }
 
 // from MAS&Org vp
-fact MASInýt{
+fact MASInit{
 	#SWA>=2
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jfb.examples.gmf.Agent:AgentViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.Agent="/MyTest/model/Agent.ecore">
+<jfb.examples.gmf.Agent:AgentViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jfb.examples.gmf.Agent="/MF4SEA_ML/Metamodel/Agent.ecore">
   <containsRole name="Buying" has="//@containsBehaviour.0 //@containsBehaviour.2"/>
   <containsRole name="Selling" has="//@containsBehaviour.1"/>
   <containsSWA name="InvestorA" includes="//@containsCapabilities.0" plays="//@containsRole.1 //@containsRole.0">
