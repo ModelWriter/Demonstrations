@@ -6,12 +6,13 @@ module eu/modelwriter/prototype/autotracecreation/tutorial
 -- loadModel@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Test.ecore as Test
 -- loadInstance@/org.eclipse.ocl.examples.project.oclinecoretutorial/model/Test2.xmi as Test
 
--- trace@Tutorial.Library
+-- trace@Tutorial.Library 
 one sig LibrarySystem {
 	-- trace@Tutorial.Library.books
 	book: set Book,
 	-- trace@Tutorial.Library.loans
-	loan: set Loan}
+	loan: set Loan
+}
 
 -- trace@Test.Container
 one sig FooBarContainer {
@@ -27,10 +28,15 @@ sig Bar {}
 sig Foo {}
 
 -- trace@Tutorial.Book
-sig Book {}
+sig Book {
+	mappedBar: set Bar
+}
 
 -- trace@Tutorial.Loan
 sig Loan {}
+
+-- Reason@Book.mappedBar
+fact {all b: Book | one b.mappedBar}
 
 fact {all b: Book | one b.~book}
 fact {all b: Loan | one b.~loan}

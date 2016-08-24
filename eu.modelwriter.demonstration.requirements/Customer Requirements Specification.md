@@ -12,13 +12,12 @@ ReqIF model exists and is open.
 
  1. We assume that a Specification exists and is open (not required for alternative scenario)
  2. Open a row's context menu (or in the empty editor space)
- 3. Select the Child or Sibling submenu.	
+ 3. Select the Child or Sibling .
  4. Select the desired SpecObject Type (or none) from the submenu.	
  5. This results in a new SpecHierarchy being created that is linked to a newly created SpecObject with the correct type.	
 
 ### Alternative 1: Create in Outline
 
-The same workflow works for elements that are shown underneath "Specifications" in the outline.	
 
 It is also possible to create children of the "SpecObjects" folder in the outline, but in this case, no SpecHirarchy will be created.
 	
