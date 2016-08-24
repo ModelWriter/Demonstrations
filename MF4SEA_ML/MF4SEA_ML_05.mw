@@ -22,7 +22,7 @@ sig SWA {
 	-- trace@SWSInteraction.SemanticWebAgent.applies
 	applies: some Plan,
 	// from MAS&Org vp
-	cooperates: some SWA	
+	// cooperates: some SWA	
 }
 
 -- trace@SWSInteraction.SSMatchmakerAgent
@@ -42,7 +42,7 @@ sig Role {
 
 -- trace@SWSInteraction.RegistrationRole
 sig RegistrationRole extends Role{	
-	advertises: some SWS
+	// advertises: some SWS
 }
 
 -- trace@SWSInteraction.SWS
@@ -83,30 +83,36 @@ sig WebService extends Service{
 }
 
 -- trace@SWSInteraction.Plan
-sig Plan {
+abstract sig Plan {
 	// disj name, type, description: one Name,
 	// priority: one Int
 }
 
 -- trace@SWSInteraction.SS_RegisterPlan
 sig SS_RegisterPlan extends Plan{
+	-- trace@SWSInteraction.SS_RegisterPlan.advertises
 	advertises: some Interface
 }
 
 -- trace@SWSInteraction.SS_FinderPlan
 sig SS_FinderPlan extends Plan {
+	-- trace@SWSInteraction.SS_FinderPlan.interacts_with
 	interacts_with: some SS_MatchmakerAgent,
+	-- trace@SWSInteraction.SS_FinderPlan.discovers
 	discovers: set Interface
 }
 
 -- trace@SWSInteraction.SS_AgreementPlan
 sig SS_AgreementPlan extends Plan{
+	-- trace@SWSInteraction.SS_AgreementPlan.negotiates
 	negotiates: some Interface
 }
 
 -- trace@SWSInteraction.SS_ExecutorPlan
 sig SS_ExecutorPlan extends Plan{
+	-- trace@SWSInteraction.SS_ExecutorPlan.executes
 	executes: some Process,
+	-- trace@SWSInteraction.SS_ExecutorPlan.uses
 	uses: some Grounding
 }
 
@@ -192,10 +198,10 @@ pred irreflexive[r: univ -> univ] {
 //		no (^r & iden)
 // } 
 
-fact selfContainment { 
-	irreflexive[cooperates] 
+// fact selfContainment { 
+	// irreflexive[cooperates] 
 	// irreflexive[contains] && asymmetric[contains] && acyclic[contains]  // relation with SWO
-}
+// }
 
 // from Role vp
 fact RoleModularity {
