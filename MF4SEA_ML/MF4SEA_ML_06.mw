@@ -1,0 +1,135 @@
+// set of the relations such as name for main elements and set the elements such IOPE are omitted to make the model simpler.
+
+// Time and Order relations are omitted and replaced with subset relation to omit the 3rd arity in the relations 
+
+module MF4SEA_ML
+
+// sig Name{}
+
+-- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore as SWSInteraction
+//-- loadModel@/MF4SEA_ML/Metamodel/Agent.ecore as Agent
+//-- loadModel@/MF4SEA_ML/Metamodel/MASandOrg.ecore as MASandOrg
+
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction as SWSInteraction
+//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchangeInvestorA.agent as StockExchangeAgent
+//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.masandorg as StockExchangeMAS
+
+-- trace@SWSInteraction.SemanticWebAgent
+sig SWA {
+	// disj name, description, property, agent_type, agent_state : one Name,
+	-- trace@SWSInteraction.SemanticWebAgent.plays
+	plays: set Role,
+	-- trace@SWSInteraction.SemanticWebAgent.applies
+	applies: set Plan,
+	// from MAS&Org vp
+	// cooperates: set SWA	
+}
+
+-- trace@SWSInteraction.SSMatchmakerAgent
+sig SS_MatchmakerAgent extends SWA{
+	-- trace@SWSInteraction.SSMatchmakerAgent.appliesSS_RegPlan
+	appliesSS_RegisterPlan : set SS_RegisterPlan,
+	-- trace@SWSInteraction.SSMatchmakerAgent.playsRegRole
+	playsRegistrationRole: set RegistrationRole
+}
+
+-- trace@SWSInteraction.Role
+sig Role {
+	// name: one Name,
+	-- trace@SWSInteraction.Role.interacts_with
+	interacts_with: set SWS
+}
+
+-- trace@SWSInteraction.RegistrationRole
+sig RegistrationRole extends Role{	
+	// advertises: set SWS
+}
+
+-- trace@SWSInteraction.SWS
+sig SWS{
+	// name: one Name,
+	-- trace@SWSInteraction.SWS.is_composed_of
+	composed_of: set WebService
+}
+
+-- trace@SWSInteraction.Interface
+sig Interface{
+	// name: one Name,
+	-- trace@SWSInteraction.Interface.presents
+	presents: set SWS
+}
+
+-- trace@SWSInteraction.Process
+sig Process {
+	-- trace@SWSInteraction.Process.described_by
+	described_by: set SWS
+}
+
+-- trace@SWSInteraction.Grounding
+sig Grounding{
+	-- trace@SWSInteraction.Grounding.supports
+	supports: set SWS,
+	-- trace@SWSInteraction.Grounding.calls
+	calls: set WebService 
+}
+
+-- trace@SWSInteraction.Service
+sig Service{
+	// name: one Name
+}
+
+-- trace@SWSInteraction.WebService
+sig WebService extends Service{
+}
+
+-- trace@SWSInteraction.Plan
+abstract sig Plan {
+	// disj name, type, description: one Name,
+	// priority: one Int
+}
+
+-- trace@SWSInteraction.SS_RegisterPlan
+sig SS_RegisterPlan extends Plan{
+	-- trace@SWSInteraction.SS_RegisterPlan.advertises
+	advertises: set Interface
+}
+
+-- trace@SWSInteraction.SS_FinderPlan
+sig SS_FinderPlan extends Plan {
+	-- trace@SWSInteraction.SS_FinderPlan.interacts_with
+	interacts_with: set SS_MatchmakerAgent,
+	-- trace@SWSInteraction.SS_FinderPlan.discovers
+	discovers: set Interface
+}
+
+-- trace@SWSInteraction.SS_AgreementPlan
+sig SS_AgreementPlan extends Plan{
+	-- trace@SWSInteraction.SS_AgreementPlan.negotiates
+	negotiates: set Interface
+}
+
+-- trace@SWSInteraction.SS_ExecutorPlan
+sig SS_ExecutorPlan extends Plan{
+	-- trace@SWSInteraction.SS_ExecutorPlan.executes
+	executes: set Process,
+	-- trace@SWSInteraction.SS_ExecutorPlan.uses
+	uses: set Grounding
+}
+
+sig Environment{
+	// name: one Name,
+	hasService: set Service
+}
+
+///////////    FACTS    //////////////////////
+
+-- Reason@SWS.composed_of
+fact ServiceComposition{
+	all s:Service | s.~hasService != none
+	all wb:WebService | wb.~composed_of != none
+
+}
+
+pred show {}
+
+run show
