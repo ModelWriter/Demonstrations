@@ -1,0 +1,176 @@
+// set of the relations such as name for main elements and set the elements such IOPE are omitted to make the model simpler.
+
+// Time and Order relations are omitted and replaced with subset relation to omit the 3rd arity in the relations 
+
+module MF4SEA_ML
+
+// sig Name{}
+
+-- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore as SWSInteraction
+//-- loadModel@/MF4SEA_ML/Metamodel/Agent.ecore as Agent
+//-- loadModel@/MF4SEA_ML/Metamodel/MASandOrg.ecore as MASandOrg
+
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction as SWSInteraction
+//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchangeInvestorA.agent as StockExchangeAgent
+//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.masandorg as StockExchangeMAS
+
+-- trace@SWSInteraction.SemanticWebAgent
+-- Discover@SWA expect 2
+sig SWA {
+	// disj name, description, property, agent_type, agent_state : one Name,
+	-- trace@SWSInteraction.SemanticWebAgent.plays
+	plays: set Role,
+	-- trace@SWSInteraction.SemanticWebAgent.applies
+	applies: set Plan,
+	// from MAS&Org vp
+	// cooperates: set SWA	
+}
+
+-- trace@SWSInteraction.SSMatchmakerAgent
+sig SS_MatchmakerAgent extends SWA{
+	-- trace@SWSInteraction.SSMatchmakerAgent.appliesSS_RegPlan
+	appliesSS_RegisterPlan : set SS_RegisterPlan,
+	-- trace@SWSInteraction.SSMatchmakerAgent.playsRegRole
+	playsRegistrationRole: set RegistrationRole
+}
+
+-- trace@SWSInteraction.Role
+sig Role {
+	// name: one Name,
+	-- trace@SWSInteraction.Role.interacts_with
+	interacts_with: set SWS
+}
+
+-- trace@SWSInteraction.RegistrationRole
+sig RegistrationRole extends Role{	
+	// advertises: set SWS
+}
+
+-- trace@SWSInteraction.SWS
+sig SWS{
+	// name: one Name,
+	-- trace@SWSInteraction.SWS.is_composed_of
+	composed_of: set WebService
+}
+
+-- trace@SWSInteraction.Interface
+sig Interface{
+	// name: one Name,
+	-- trace@SWSInteraction.Interface.presents
+	presents: set SWS
+}
+
+-- trace@SWSInteraction.Process
+sig Process {
+	-- trace@SWSInteraction.Process.described_by
+	described_by: set SWS
+}
+
+-- trace@SWSInteraction.Grounding
+sig Grounding{
+	-- trace@SWSInteraction.Grounding.supports
+	supports: set SWS,
+	-- trace@SWSInteraction.Grounding.calls
+	calls: set WebService 
+}
+
+-- trace@SWSInteraction.Service
+sig Service{
+	// name: one Name
+}
+
+-- trace@SWSInteraction.WebService
+sig WebService extends Service{
+}
+
+-- trace@SWSInteraction.Plan
+abstract sig Plan {
+	// disj name, type, description: one Name,
+	// priority: one Int
+}
+
+-- trace@SWSInteraction.SS_RegisterPlan
+sig SS_RegisterPlan extends Plan{
+	-- trace@SWSInteraction.SS_RegisterPlan.advertises
+	advertises: set Interface
+}
+
+-- trace@SWSInteraction.SS_FinderPlan
+sig SS_FinderPlan extends Plan {
+	-- trace@SWSInteraction.SS_FinderPlan.interacts_with
+	interacts_with: set SS_MatchmakerAgent,
+	-- trace@SWSInteraction.SS_FinderPlan.discovers
+	discovers: set Interface
+}
+
+-- trace@SWSInteraction.SS_AgreementPlan
+sig SS_AgreementPlan extends Plan{
+	-- trace@SWSInteraction.SS_AgreementPlan.negotiates
+	negotiates: set Interface
+}
+
+-- trace@SWSInteraction.SS_ExecutorPlan
+sig SS_ExecutorPlan extends Plan{
+	-- trace@SWSInteraction.SS_ExecutorPlan.executes
+	executes: set Process,
+	-- trace@SWSInteraction.SS_ExecutorPlan.uses
+	uses: set Grounding
+}
+
+//sig Environment{
+	// name: one Name,
+	//hasService: set Service
+//}
+
+///////////    FACTS    //////////////////////
+
+-- Reason@SWS.composed_of
+fact ServiceComposition{
+	// all s:Service | s.~hasService != none
+	all wb:WebService | wb.~composed_of != none
+}
+
+-- Reason@SWA.plays
+fact Agent_SWS_Interaction{
+	all swa1, swa2 : SWA, sws1, sws2 : SWS, r : Role, f : SS_FinderPlan, i : Interface, x : Int | 
+		r in swa1.plays && sws1 in r.interacts_with && 
+		f in swa2.applies && i in f.discovers && i.presents= sws2 && 
+		#sws1 = x && x.plus[#sws2] >=1
+}
+
+-- Reason@SWA.applies
+fact InheritanceBreak {
+	no a:SWA, rp:SS_RegisterPlan | rp in a.applies
+}
+
+-- Reason@SS_FinderPlan.discovers
+fact InterfaceControl{
+  all f:SS_FinderPlan, r:SS_RegisterPlan, a:SS_AgreementPlan |
+    f.discovers in r.advertises && a.negotiates in f.discovers 
+  all i:Interface, p:Process, g:Grounding, e:SS_ExecutorPlan |
+	p in e.executes && g in e.uses && p.described_by in i.presents && g.supports in i.presents 
+}
+
+-- Reason@SS_MatchmakerAgent.appliesSS_RegisterPlan
+fact Agent_SWSPlanOrdering {
+	all swa:SWA, sm:SS_MatchmakerAgent |
+		(SS_FinderPlan in swa.applies => #(sm.appliesSS_RegisterPlan) >=1) &&
+		(SS_AgreementPlan in swa.applies => SS_FinderPlan in swa.applies)  &&
+		(SS_ExecutorPlan in swa.applies => SS_AgreementPlan in swa.applies)
+}
+
+// from MAS&Org vp
+-- Reason@SWA.applies
+fact MASInit{
+	#SWA>=2
+}
+
+// from Role vp
+-- Reason@SWA.plays
+fact RoleModularity {
+	all r:Role | r.~plays!= none // || r.~has!= none   // for relation with SWO in MAS&Org vp  
+}
+
+pred show {}
+
+run show

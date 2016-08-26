@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<te:Container
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:te="http://test.com/testing"
+    xsi:schemaLocation="http://test.com/testing Test.ecore">
+  <fooz/>
+  <barz/>
+  <barz/>
+</te:Container>

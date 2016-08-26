@@ -1,0 +1,12 @@
+module eu/modelwriter/actions/havelsan/alm
+
+sig A {
+	rel : set B
+}	
+
+-- Discover@B expect 2
+sig B {
+}
+
+-- Reason@A.rel
+fact { all a:A | some a.rel}
