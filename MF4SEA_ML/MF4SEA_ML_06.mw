@@ -6,13 +6,9 @@ module MF4SEA_ML
 
 // sig Name{}
 
--- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore as SWSInteraction
-//-- loadModel@/MF4SEA_ML/Metamodel/Agent.ecore as Agent
-//-- loadModel@/MF4SEA_ML/Metamodel/MASandOrg.ecore as MASandOrg
-
--- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction as SWSInteraction
-//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchangeInvestorA.agent as StockExchangeAgent
-//-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.masandorg as StockExchangeMAS
+-- loadAlias@SWSInteraction
+-- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction
 
 -- trace@SWSInteraction.SemanticWebAgent
 -- Discover@SWA expect 2
