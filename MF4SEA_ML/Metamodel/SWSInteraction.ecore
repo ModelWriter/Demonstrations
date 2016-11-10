@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SWSInteraction"
-    nsURI="/viewPointsFull/model/SWSInteraction.ecore" nsPrefix="jfb.examples.gmf.SWSInteraction">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SWSInteraction" nsURI="/viewPointsFull/model/SWSInteraction.ecore"
+    nsPrefix="jfb.examples.gmf.SWSInteraction">
   <eClassifiers xsi:type="ecore:EClass" name="Plan">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -14,133 +13,145 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="properties" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applies" upperBound="-1"
-        eType="#//Plan"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="plays" upperBound="-1"
-        eType="#//Role"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interacts_with" lowerBound="1"
-        eType="#//SWS"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SWS"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SSMatchmakerAgent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="appliesSS_RegPlan" lowerBound="1"
-        upperBound="-1" eType="#//SS_RegisterPlan"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="playsRegRole" eType="#//Role"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SS_RegisterPlan"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playsRegRole" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Role"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SS_RegisterPlan" eSuperTypes="#//Plan">
+  <eClassifiers xsi:type="ecore:EClass" name="SS_RegisterPlan" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan">
     <eStructuralFeatures xsi:type="ecore:EReference" name="advertises" upperBound="-1"
-        eType="#//Interface"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Interface"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SS_FinderPlan" eSuperTypes="#//Plan">
+  <eClassifiers xsi:type="ecore:EClass" name="SS_FinderPlan" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interacts_with" lowerBound="1"
-        eType="#//SSMatchmakerAgent"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SSMatchmakerAgent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="discovers" upperBound="-1"
-        eType="#//Interface"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Interface"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SS_AgreementPlan" eSuperTypes="#//Plan">
+  <eClassifiers xsi:type="ecore:EClass" name="SS_AgreementPlan" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan">
     <eStructuralFeatures xsi:type="ecore:EReference" name="negotiates" upperBound="-1"
-        eType="#//Interface"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Interface"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SS_ExecutorPlan" eSuperTypes="#//Plan">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executes" eType="#//Process"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="uses" lowerBound="1" eType="#//Grounding"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SS_ExecutorPlan" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executes" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Process"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uses" lowerBound="1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Grounding"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SWS">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="is_composed_of" lowerBound="1"
-        upperBound="-1" eType="#//WebService" containment="true"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//WebService"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
-        eType="#//Input" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
-        eType="#//Output" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="embodies" upperBound="-1"
-        eType="#//Precondition" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Precondition"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involves" upperBound="-1"
-        eType="#//Effect" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presents" eType="#//SWS"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Effect" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="presents" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SWS"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Process">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" lowerBound="1"
-        upperBound="-1" eType="#//SWS" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
-        eType="#//Input" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involves" upperBound="-1"
-        eType="#//Output" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="embodies" upperBound="-1"
-        eType="#//Precondition" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Precondition"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="embraces" upperBound="-1"
-        eType="#//Effect" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="described_by" eType="#//SWS"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Effect" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="described_by" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SWS"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Grounding">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" lowerBound="1" eType="#//WebService"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="supports" eType="#//SWS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calls" lowerBound="1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//WebService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supports" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SWS"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//ODM_OWLClass">
+  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//ODM_OWLClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//ODM_OWLClass">
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//ODM_OWLClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="oname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Precondition" eSuperTypes="#//ODM_OWLClass">
+  <eClassifiers xsi:type="ecore:EClass" name="Precondition" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//ODM_OWLClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Effect" eSuperTypes="#//ODM_OWLClass">
+  <eClassifiers xsi:type="ecore:EClass" name="Effect" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//ODM_OWLClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WebService" eSuperTypes="#//Service"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebService" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Service"/>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ODM_OWLClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RegistrationRole">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RegistrationRole" eSuperTypes="/MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="SWSInteractionViewpoint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsPlan" upperBound="-1"
-        eType="#//Plan" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Plan" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSSRegisterPlan"
-        upperBound="-1" eType="#//SS_RegisterPlan" containment="true"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SS_RegisterPlan"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSSFinderPlan" upperBound="-1"
-        eType="#//SS_FinderPlan" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SS_FinderPlan"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSSAgreementPlan"
-        upperBound="-1" eType="#//SS_AgreementPlan" containment="true"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SS_AgreementPlan"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsExecutorPlan" upperBound="-1"
-        eType="#//SS_ExecutorPlan" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SS_ExecutorPlan"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSWAgent" upperBound="-1"
-        eType="#//SemanticWebAgent" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SemanticWebAgent"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSSMatchmakerAgent"
-        upperBound="-1" eType="#//SSMatchmakerAgent" containment="true"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SSMatchmakerAgent"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsRole" upperBound="-1"
-        eType="#//Role" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Role" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsInterface" upperBound="-1"
-        eType="#//Interface" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Interface"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsProcess" upperBound="-1"
-        eType="#//Process" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Process" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsGrounding" upperBound="-1"
-        eType="#//Grounding" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Grounding"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsInput" upperBound="-1"
-        eType="#//Input" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Input" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsOutput" upperBound="-1"
-        eType="#//Output" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsPrecondition" upperBound="-1"
-        eType="#//Precondition" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Precondition"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsEffect" upperBound="-1"
-        eType="#//Effect" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//Effect" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsWebService" upperBound="-1"
-        eType="#//WebService" containment="true"/>
+        eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//WebService"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsSWS" lowerBound="1"
-        upperBound="-1" eType="#//SWS" containment="true"/>
+        upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//SWS"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsRegistrationRole"
-        lowerBound="1" upperBound="-1" eType="#//RegistrationRole" containment="true"/>
+        lowerBound="1" upperBound="-1" eType="ecore:EClass /MF4SEA_ML/Metamodel/SWSInteraction.ecore#//RegistrationRole"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
