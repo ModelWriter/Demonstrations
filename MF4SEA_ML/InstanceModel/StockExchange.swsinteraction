@@ -2,7 +2,7 @@
 <jfb.examples.gmf.SWSInteraction:SWSInteractionViewpoint
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:jfb.examples.gmf.SWSInteraction="/viewPointsFull/model/SWSInteraction.ecore">
+    xmlns:jfb.examples.gmf.SWSInteraction="/MF4SEA_ML/Metamodel/SWSInteraction.ecore">
   <containsSSRegisterPlan
       name="StockRecorder"
       advertises="//@containsInterface.1 //@containsInterface.0"/>
