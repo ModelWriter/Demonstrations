@@ -9,7 +9,7 @@ fact {~conflicts in conflicts}
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
 -- Locate@Text
--- Discover@ContractRequirement expect 3
+-- Discover@ContractRequirement 3
 sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement} 
@@ -33,6 +33,7 @@ fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires }
 abstract sig Implementation extends Artefact {
 	verifiedBy: set Verification,
 	fulfills: lone ContractRequirement}
+
 fact {all i: Implementation | some i.~satisfiedBy}
 
 -- Reason@Implementation.fulfills
