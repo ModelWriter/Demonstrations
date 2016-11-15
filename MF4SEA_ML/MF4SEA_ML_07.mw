@@ -3,7 +3,6 @@ open util/integer
 
 -- loadAlias@SWSInteraction
 -- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore
--- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange1.swsinteraction
 -- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction
 
 -- trace@SWSInteraction.Plan
@@ -166,30 +165,12 @@ fact Agent_SWS_Interaction{
 		#sws1 = x && x.plus[#sws2] >=1
 }
 
+fact MASInit{
+	#SemanticWebAgent >= 2
+}
+
 fact InheritanceBreak {
 	no a:SemanticWebAgent, rp:SS_RegisterPlan | rp in a.applies
-}
-
-fact InterfaceControl{
-  all f:SS_FinderPlan, r:SS_RegisterPlan, a:SS_AgreementPlan |
-    f.discovers in r.advertises && a.negotiates in f.discovers 
-  all i:Interface, p:Process, g:Grounding, e:SS_ExecutorPlan |
-	p in e.executes && g in e.uses && p.described_by in i.presents && g.supports in i.presents 
-}
-
-fact Agent_SWSPlanOrdering {
-	all swa:SemanticWebAgent, sm:SSMatchmakerAgent |
-		(SS_FinderPlan in swa.applies => #(sm.appliesSS_RegPlan) >=1) &&
-		(SS_AgreementPlan in swa.applies => SS_FinderPlan in swa.applies)  &&
-		(SS_ExecutorPlan in swa.applies => SS_AgreementPlan in swa.applies)
-}
-
-fact MASInit{
-	#SemanticWebAgent>=2
-}
-
-fact RoleModularity {
-	all r:Role | r.~plays!= none // || r.~has!= none   // for relation with SWO in MAS&Org vp  
 }
 
 pred show{}
