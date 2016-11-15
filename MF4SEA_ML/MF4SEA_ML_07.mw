@@ -1,7 +1,10 @@
 module MF4SEA_ML
+open util/integer
 
 -- loadAlias@SWSInteraction
 -- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange1.swsinteraction
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction
 
 -- trace@SWSInteraction.Plan
 sig Plan {
