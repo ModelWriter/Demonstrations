@@ -177,5 +177,12 @@ fact RegRoleModularity {
 	all r:RegistrationRole | some r.~plays // || r.~has!= none   // for relation with SWO in MAS&Org vp  
 }
 
+fact InterfaceControl{
+  all f:SS_FinderPlan, r:SS_RegisterPlan, a:SS_AgreementPlan |
+    f.discovers in r.advertises && a.negotiates in f.discovers 
+//  all i:Interface, p:Process, g:Grounding, e:SS_ExecutorPlan |
+//	p in e.executes && g in e.uses && p.described_by in i.presents && g.supports in i.presents 
+}
+
 pred show{}
 run show
