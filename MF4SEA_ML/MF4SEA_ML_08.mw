@@ -133,6 +133,8 @@ sig ODM_OWLClass {
 some sig RegistrationRole extends Role {
 }
 
+// Automatically generated facts (from Ecore stducture)
+
 fact {
 	all i:Input | one (Interface<:(i.~contains) + Process<:(i.~includes))
 }
@@ -152,6 +154,7 @@ fact {
 fact {
 	all e:Effect | one (Interface<:(e.~involves) + Process<:(e.~embraces))
 }
+
 // Customer Facts
 
 fact ServiceComposition{
