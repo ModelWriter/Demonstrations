@@ -153,10 +153,11 @@ fact {
 	all e:Effect | one (Interface<:(e.~involves) + Process<:(e.~embraces))
 }
 // Customer Facts
-//fact ServiceComposition{
+
+fact ServiceComposition{
 	// all s:Service | s.~hasService != none
-	//all wb:WebService | wb.~composed_of != none
-//}
+	all wb:WebService | wb.~is_composed_of != none
+}
 
 fact Agent_SWS_Interaction{
 	all swa1, swa2 : SemanticWebAgent, sws1, sws2 : SWS, r : Role, f : SS_FinderPlan, i : Interface, x : Int | 
