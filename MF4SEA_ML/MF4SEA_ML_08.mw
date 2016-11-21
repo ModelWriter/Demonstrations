@@ -181,9 +181,9 @@ fact InterfaceControl{
   all f:SS_FinderPlan, r:SS_RegisterPlan, a:SS_AgreementPlan |
     f.discovers in r.advertises && a.negotiates in f.discovers 
   all p:Process | some e:SS_ExecutorPlan | p in e.executes
-//	&& g in e.uses 
-//	&& p.described_by in i.presents
-//	&& g.supports in i.presents 
+  all g:Grounding | some e:SS_ExecutorPlan | g in e.uses  
+//  all p:Process, i:Interface | 
+//    p.described_by in i.presents && g.supports in i.presents 
 }
 
 pred show{}
