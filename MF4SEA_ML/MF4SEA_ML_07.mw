@@ -1,0 +1,177 @@
+module MF4SEA_ML
+open util/integer
+
+-- loadAlias@SWSInteraction
+-- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore
+-- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction
+
+-- trace@SWSInteraction.Plan
+sig Plan {
+}
+
+-- trace@SWSInteraction.SemanticWebAgent
+sig SemanticWebAgent {
+	-- trace@SWSInteraction.SemanticWebAgent.applies
+	applies: set Plan,
+	-- trace@SWSInteraction.SemanticWebAgent.plays
+	plays: set Role
+}
+
+-- trace@SWSInteraction.Role
+sig Role {
+	-- trace@SWSInteraction.Role.interacts_with
+	interacts_with: one SWS
+}
+
+-- trace@SWSInteraction.SSMatchmakerAgent
+sig SSMatchmakerAgent {
+	-- trace@SWSInteraction.SSMatchmakerAgent.appliesSS_RegPlan
+	appliesSS_RegPlan: some SS_RegisterPlan,
+	-- trace@SWSInteraction.SSMatchmakerAgent.playsRegRole
+	playsRegRole: some Role
+}
+
+-- trace@SWSInteraction.SS_RegisterPlan
+sig SS_RegisterPlan extends Plan {
+	-- trace@SWSInteraction.SS_RegisterPlan.advertises
+	advertises: set Interface
+}
+
+-- trace@SWSInteraction.SS_FinderPlan
+sig SS_FinderPlan extends Plan {
+	-- trace@SWSInteraction.SS_FinderPlan.interacts_with
+	interacts_with: one SSMatchmakerAgent,
+	-- trace@SWSInteraction.SS_FinderPlan.discovers
+	discovers: set Interface
+}
+
+-- trace@SWSInteraction.SS_AgreementPlan
+sig SS_AgreementPlan extends Plan {
+	-- trace@SWSInteraction.SS_AgreementPlan.negotiates
+	negotiates: set Interface
+}
+
+-- trace@SWSInteraction.SS_ExecutorPlan
+sig SS_ExecutorPlan extends Plan {
+	-- trace@SWSInteraction.SS_ExecutorPlan.executes
+	executes: lone Process,
+	-- trace@SWSInteraction.SS_ExecutorPlan.uses
+	uses: one Grounding
+}
+
+-- trace@SWSInteraction.SWS
+some sig SWS {
+	-- trace@SWSInteraction.SWS.is_composed_of
+	is_composed_of: some WebService
+}
+
+-- trace@SWSInteraction.Interface
+sig Interface {
+	-- trace@SWSInteraction.Interface.contains
+	contains: set Input,
+	-- trace@SWSInteraction.Interface.includes
+	includes: set Output,
+	-- trace@SWSInteraction.Interface.embodies
+	embodies: set Precondition,
+	-- trace@SWSInteraction.Interface.involves
+	involves: set Effect,
+	-- trace@SWSInteraction.Interface.presents
+	presents: lone SWS
+}
+
+-- trace@SWSInteraction.Process
+sig Process {
+	-- trace@SWSInteraction.Process.includes
+	includes: set Input,
+	-- trace@SWSInteraction.Process.involves
+	involves: set Output,
+	-- trace@SWSInteraction.Process.embodies
+	embodies: set Precondition,
+	-- trace@SWSInteraction.Process.embraces
+	embraces: set Effect,
+	-- trace@SWSInteraction.Process.described_by
+	described_by: lone SWS
+}
+
+-- trace@SWSInteraction.Grounding
+sig Grounding {
+	-- trace@SWSInteraction.Grounding.calls
+	calls: one WebService,
+	-- trace@SWSInteraction.Grounding.supports
+	supports: lone SWS
+}
+
+-- trace@SWSInteraction.Input
+sig Input extends ODM_OWLClass {
+}
+
+-- trace@SWSInteraction.Output
+sig Output extends ODM_OWLClass {
+}
+
+-- trace@SWSInteraction.Precondition
+sig Precondition extends ODM_OWLClass {
+}
+
+-- trace@SWSInteraction.Effect
+sig Effect extends ODM_OWLClass {
+}
+
+-- trace@SWSInteraction.WebService
+sig WebService extends Service {
+}
+
+-- trace@SWSInteraction.Service
+sig Service {
+}
+
+-- trace@SWSInteraction.ODM_OWLClass
+sig ODM_OWLClass {
+}
+
+-- trace@SWSInteraction.RegistrationRole
+some sig RegistrationRole extends Role {
+}
+
+fact {
+	all i:Input | one (Interface<:(i.~contains) + Process<:(i.~includes))
+}
+
+fact {
+	all w:WebService | one (SWS<:(w.~is_composed_of))
+}
+
+fact {
+	all p:Precondition | one (Interface<:(p.~embodies) + Process<:(p.~embodies))
+}
+
+fact {
+	all o:Output | one (Interface<:(o.~includes) + Process<:(o.~involves))
+}
+
+fact {
+	all e:Effect | one (Interface<:(e.~involves) + Process<:(e.~embraces))
+}
+// Customer Facts
+//fact ServiceComposition{
+	// all s:Service | s.~hasService != none
+	//all wb:WebService | wb.~composed_of != none
+//}
+
+fact Agent_SWS_Interaction{
+	all swa1, swa2 : SemanticWebAgent, sws1, sws2 : SWS, r : Role, f : SS_FinderPlan, i : Interface, x : Int | 
+		r in swa1.plays && sws1 in r.interacts_with && 
+		f in swa2.applies && i in f.discovers && i.presents= sws2 && 
+		#sws1 = x && x.plus[#sws2] >=1
+}
+
+fact MASInit{
+	#SemanticWebAgent >= 2
+}
+
+fact InheritanceBreak {
+	no a:SemanticWebAgent, rp:SS_RegisterPlan | rp in a.applies
+}
+
+pred show{}
+run show
