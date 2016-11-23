@@ -24,8 +24,10 @@ sig SystemRequirement extends Artefact {
 	requires: set SystemRequirement,
 	refines: set SystemRequirement}
 
+//fact {all s:SystemRequirement | one s.~system}
+
 -- Reason@ContractRequirement.system
-fact {all s:SystemRequirement | one s.~system}
+fact {all s:SystemRequirement, s': s.*~refines | s'.~system = s.~system}
 
 -- Reason@SystemRequirement.requires
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires }
