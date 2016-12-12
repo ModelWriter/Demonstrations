@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jfb.examples.gmf.SWSInteraction:SWSInteractionViewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jfb.examples.gmf.SWSInteraction="/MF4SEA_ML/Metamodel/SWSInteraction.ecore">
+  <containsPlan xsi:type="jfb.examples.gmf.SWSInteraction:SS_FinderPlan" name="SS_FinderPlan$2" interacts_with="//@containsSSMatchmakerAgent.1" discovers="//@containsInterface.0 //@containsInterface.1"/>
+  <containsPlan xsi:type="jfb.examples.gmf.SWSInteraction:SS_FinderPlan" name="SS_FinderPlan$3" interacts_with="//@containsSSMatchmakerAgent.2" discovers="//@containsInterface.0 //@containsInterface.1"/>
+  <containsSSRegisterPlan name="StockRecorder" advertises="//@containsInterface.1 //@containsInterface.0"/>
+  <containsSSFinderPlan name="StockFinder" interacts_with="//@containsSSMatchmakerAgent.0" discovers="//@containsInterface.0 //@containsInterface.1"/>
+  <containsSSFinderPlan name="InvestorFinder" interacts_with="//@containsSSMatchmakerAgent.0" discovers="//@containsInterface.1 //@containsInterface.0"/>
+  <containsSSAgreementPlan name="StockBargaining" negotiates="//@containsInterface.1 //@containsInterface.0"/>
+  <containsExecutorPlan name="DataProcess" executes="//@containsProcess.0" uses="//@containsGrounding.0"/>
+  <containsExecutorPlan name="StockOrder" executes="//@containsProcess.1" uses="//@containsGrounding.1"/>
+  <containsSWAgent name="InvestorC" applies="//@containsSSFinderPlan.0 //@containsSSFinderPlan.1 //@containsPlan.0 //@containsPlan.1 //@containsExecutorPlan.0 //@containsExecutorPlan.1" plays="//@containsRole.0 //@containsRole.2 //@containsRegistrationRole.0"/>
+  <containsSWAgent name="Broker2" applies="//@containsExecutorPlan.0 //@containsSSAgreementPlan.0 //@containsSSFinderPlan.0 //@containsSSFinderPlan.1 //@containsExecutorPlan.1" plays="//@containsRole.1"/>
+  <containsSWAgent name="InvestorB" applies="//@containsSSFinderPlan.0 //@containsSSFinderPlan.1" plays="//@containsRole.0 //@containsRole.2"/>
+  <containsSWAgent name="InvestorA" applies="//@containsSSFinderPlan.0 //@containsSSFinderPlan.1" plays="//@containsRole.0 //@containsRole.2"/>
+  <containsSWAgent name="Broker1" applies="//@containsSSFinderPlan.0 //@containsSSFinderPlan.1 //@containsSSAgreementPlan.0 //@containsExecutorPlan.0 //@containsExecutorPlan.1" plays="//@containsRole.1"/>
+  <containsSSMatchmakerAgent name="TradeManager" appliesSS_RegPlan="//@containsSSRegisterPlan.0" playsRegRole="//@containsRegistrationRole.0 //@containsRole.1"/>
+  <containsSSMatchmakerAgent name="SSMatchmakerAgent$1" appliesSS_RegPlan="//@containsSSRegisterPlan.0" playsRegRole="//@containsRole.0"/>
+  <containsSSMatchmakerAgent name="SSMatchmakerAgent$2" appliesSS_RegPlan="//@containsSSRegisterPlan.0" playsRegRole="//@containsRole.0"/>
+  <containsRole name="Selling" interacts_with="//@containsSWS.1"/>
+  <containsRole name="Lookup" interacts_with="//@containsSWS.0"/>
+  <containsRole name="Buying" interacts_with="//@containsSWS.1"/>
+  <containsInterface name="Info" presents="//@containsSWS.1">
+    <contains name="Data"/>
+    <includes name="Monitor"/>
+    <embodies name="Processing"/>
+    <involves name="Updating"/>
+  </containsInterface>
+  <containsInterface name="Trade" presents="//@containsSWS.0">
+    <contains name="SellerAndBuyer"/>
+    <includes name="Transaction"/>
+    <embodies name="Agreement"/>
+    <involves name="Exchange"/>
+  </containsInterface>
+  <containsProcess name="DataHandling" described_by="//@containsSWS.1">
+    <includes name="Arguments"/>
+    <involves name="Process"/>
+    <embodies name="ValidData"/>
+    <embraces name="Modifications"/>
+  </containsProcess>
+  <containsProcess name="Exchange" described_by="//@containsSWS.0">
+    <includes name="Argument"/>
+    <involves name="Transaction"/>
+    <embodies name="Agreement"/>
+    <embraces name="Exchange"/>
+  </containsProcess>
+  <containsGrounding name="InfoAccess" calls="//@containsSWS.1/@is_composed_of.1" supports="//@containsSWS.1"/>
+  <containsGrounding name="TradeAccess" calls="//@containsSWS.0/@is_composed_of.0" supports="//@containsSWS.0"/>
+  <containsSWS name="TradingService">
+    <is_composed_of name="TradingFloor"/>
+    <is_composed_of name="Financial"/>
+    <is_composed_of name="Exchange"/>
+  </containsSWS>
+  <containsSWS name="InfoService">
+    <is_composed_of name="Portal"/>
+    <is_composed_of name="Repository"/>
+    <is_composed_of name="Monitoring"/>
+  </containsSWS>
+  <containsRegistrationRole name="Managing" interacts_with="//@containsSWS.0"/>
+</jfb.examples.gmf.SWSInteraction:SWSInteractionViewpoint>
