@@ -4,39 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="swsInteraction" label="SWSInteraction" showOnStartup="true" domainClass="SWSInteractionViewpoint" enablePopupBars="true">
       <metamodel href="../../MF4SEA_ML/Metamodel/SWSInteraction.ecore#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="SemanticWebAgent" label="SemanticWebAgent" domainClass="SemanticWebAgent">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SemanticWebAgent.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="SSMatchmakerAgent" label="SSMatchmakerAgent" domainClass="SSMatchmakerAgent">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SSMatchmakerAgent.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="Grounding" domainClass="Grounding">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Grounding.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="Service" semanticCandidatesExpression="[/]" domainClass="Service">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Service.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="Plan" semanticCandidatesExpression="[eAllContents() -> selectByType(Plan)/]" domainClass="Plan">
+        <nodeMappings name="Plan" semanticCandidatesExpression="[eContents() -> selectByType(Plan)/]" domainClass="Plan">
           <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Plan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
@@ -44,39 +12,15 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="SS_AgreementPlan" domainClass="SS_AgreementPlan">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_AgreementPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+        <nodeMappings name="SemanticWebAgent" label="SemanticWebAgent" semanticCandidatesExpression="[eContents() -> selectByType(SemanticWebAgent)/]" domainClass="SemanticWebAgent">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SemanticWebAgent.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="SS_ExecutorPlan" domainClass="SS_ExecutorPlan">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_ExecutorPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="SS_FinderPlan" domainClass="SS_FinderPlan">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_FinderPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="SS_RegisterPlan" domainClass="SS_RegisterPlan">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_RegisterPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="Role" semanticCandidatesExpression="[eAllContents() -> selectByType(Role)/]" domainClass="Role">
+        <nodeMappings name="Role" semanticCandidatesExpression="[eContents() -> selectByType(Role)/]" domainClass="Role">
           <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Role.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
@@ -84,7 +28,55 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="RegistrationRole" domainClass="RegistrationRole">
+        <nodeMappings name="SSMatchmakerAgent" label="SSMatchmakerAgent" semanticCandidatesExpression="[eContents() -> selectByType(SSMatchmakerAgent)/]" domainClass="SSMatchmakerAgent">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SSMatchmakerAgent.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SS_RegisterPlan" semanticCandidatesExpression="[eContents() -> selectByType(SS_RegisterPlan)/]" domainClass="SS_RegisterPlan">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_RegisterPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SS_FinderPlan" semanticCandidatesExpression="[eContents() -> selectByType(SS_FinderPlan)/]" domainClass="SS_FinderPlan">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_FinderPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SS_AgreementPlan" semanticCandidatesExpression="[eContents() -> selectByType(SS_AgreementPlan)/]" domainClass="SS_AgreementPlan">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_AgreementPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="SS_ExecutorPlan" semanticCandidatesExpression="[eContents() -> selectByType(SS_ExecutorPlan)/]" domainClass="SS_ExecutorPlan">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_ExecutorPlan.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Grounding" semanticCandidatesExpression="[eContents() -> selectByType(Grounding)/]" domainClass="Grounding">
+          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Grounding.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="RegistrationRole" semanticCandidatesExpression="[eContents() -> selectByType(RegistrationRole)/]" domainClass="RegistrationRole">
           <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/RegistrationRole.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
@@ -92,15 +84,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="ODM_OWLClass" semanticCandidatesExpression="[eAllContents() -> selectByType(ODM_OWLClass)/]" domainClass="ODM_OWLClass">
-          <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/ODM_OWLClass.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <edgeMappings name="swa.applies" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SemanticWebAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Plan']" targetFinderExpression="feature:applies">
+        <edgeMappings name="swa.applies" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SemanticWebAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Plan'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_ExecutorPlan'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_FinderPlan'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_RegisterPlan']" targetFinderExpression="feature:applies">
           <style sizeComputationExpression="2" routingStyle="manhattan" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="applies">
@@ -109,7 +93,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="swa.plays" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SemanticWebAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Role']" targetFinderExpression="feature:plays">
+        <edgeMappings name="swa.plays" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SemanticWebAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Role'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='RegistrationRole']" targetFinderExpression="feature:plays">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="plays">
@@ -118,7 +102,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="role.interacts_with" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='RegistrationRole']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='SWS']" targetFinderExpression="feature:interacts_with">
+        <edgeMappings name="role.interacts_with" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Role'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='RegistrationRole']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='SWS']" targetFinderExpression="feature:interacts_with">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="interacts_with">
@@ -136,7 +120,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssma.playsRegRole" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SSMatchmakerAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Role']" targetFinderExpression="feature:playsRegRole">
+        <edgeMappings name="ssma.playsRegRole" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SSMatchmakerAgent']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Role'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='RegistrationRole']" targetFinderExpression="feature:playsRegRole">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="playsRegRole">
@@ -145,7 +129,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssrp.advertises" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']" targetFinderExpression="feature:advertises">
+        <edgeMappings name="ssrp.advertises" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_RegisterPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']" targetFinderExpression="feature:advertises">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="advertises">
@@ -154,7 +138,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssfp.interacts_with" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SSMatchmakerAgent']" targetFinderExpression="feature:interacts_with">
+        <edgeMappings name="ssfp.interacts_with" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_FinderPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SSMatchmakerAgent']" targetFinderExpression="feature:interacts_with">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="interacts_with">
@@ -163,7 +147,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssfp.discovers" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']" targetFinderExpression="feature:discovers">
+        <edgeMappings name="ssfp.discovers" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_FinderPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']" targetFinderExpression="feature:discovers">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="discovers">
@@ -181,7 +165,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssep.executes" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="feature:executes">
+        <edgeMappings name="ssep.executes" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_ExecutorPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="feature:executes">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="executes">
@@ -190,7 +174,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ssep.uses" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Grounding']" targetFinderExpression="feature:uses">
+        <edgeMappings name="ssep.uses" sourceMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_ExecutorPlan']" targetMapping="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='Grounding']" targetFinderExpression="feature:uses">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="uses">
@@ -235,7 +219,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="SWS" domainClass="SWS" childrenPresentation="List">
+        <containerMappings name="SWS" semanticCandidatesExpression="[eContents() -> selectByKind(SWS)/]" domainClass="SWS" childrenPresentation="List">
           <subNodeMappings name="WebService" semanticCandidatesExpression="[self.eContents()/]" domainClass="WebService">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/WebService.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -252,8 +236,8 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Interface" domainClass="Interface" reusedNodeMappings="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Precondition'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Output'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Input'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Effect']" childrenPresentation="List">
-          <subNodeMappings name="Input" semanticCandidatesExpression="[self.eContents()/]" domainClass="Input">
+        <containerMappings name="Interface" semanticCandidatesExpression="[eContents() -> selectByKind(Interface)/]" domainClass="Interface" childrenPresentation="List">
+          <subNodeMappings name="Input" semanticCandidatesExpression="[eContents() -> selectByType(Input)/]" domainClass="Input">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Input.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -261,7 +245,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Output" semanticCandidatesExpression="[self.eContents()/]" domainClass="Output">
+          <subNodeMappings name="Output" semanticCandidatesExpression="[eContents() -> selectByType(Output)/]" domainClass="Output">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Output.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -269,7 +253,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Precondition" semanticCandidatesExpression="[self.eContents()/]" domainClass="Precondition">
+          <subNodeMappings name="Precondition" semanticCandidatesExpression="[eContents() -> selectByType(Precondition)/]" domainClass="Precondition">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Precondition.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -277,7 +261,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Effect" semanticCandidatesExpression="[self.eContents()/]" domainClass="Effect">
+          <subNodeMappings name="Effect" semanticCandidatesExpression="[eContents() -> selectByType(Effect)/]" domainClass="Effect">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Effect.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -293,8 +277,8 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Process" domainClass="Process" childrenPresentation="List">
-          <subNodeMappings name="Input" semanticCandidatesExpression="[self.eContents()/]" domainClass="Input">
+        <containerMappings name="Process" semanticCandidatesExpression="[eContents() -> selectByKind(Process)/]" domainClass="Process" childrenPresentation="List">
+          <subNodeMappings name="Input" semanticCandidatesExpression="[eContents() -> selectByType(Input)/]" domainClass="Input">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Input.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -302,7 +286,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Output" semanticCandidatesExpression="[self.eContents()/]" domainClass="Output">
+          <subNodeMappings name="Output" semanticCandidatesExpression="[eContents() -> selectByType(Output)/]" domainClass="Output">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Output.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -310,7 +294,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Precondition" semanticCandidatesExpression="[self.eContents()/]" domainClass="Precondition">
+          <subNodeMappings name="Precondition" semanticCandidatesExpression="[eContents() -> selectByType(Precondition)/]" domainClass="Precondition">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Precondition.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -318,7 +302,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="Effect" semanticCandidatesExpression="[self.eContents()/]" domainClass="Effect">
+          <subNodeMappings name="Effect" semanticCandidatesExpression="[eContents() -> selectByType(Effect)/]" domainClass="Effect">
             <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/MF4SEA_ML.sirius.specification/icon/Effect.gif" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>bold</labelFormat>
@@ -362,7 +346,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="SS_RegisterPlan" precondition="[container.oclIsTypeOf(SWSInteractionViewpoint)/]" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_AgreementPlan']" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_RegisterPlan.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SS_RegisterPlan" precondition="[container.oclIsTypeOf(SWSInteractionViewpoint)/]" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@nodeMappings[name='SS_RegisterPlan']" iconPath="/MF4SEA_ML.sirius.specification/icon/SS_RegisterPlan.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -434,7 +418,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Input" precondition="[(container.oclIsKindOf(Interface)) or (container.oclIsKindOf(Process))/]" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Input'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Process']/@subNodeMappings[name='Input']" iconPath="/MF4SEA_ML.sirius.specification/icon/Input.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Input" precondition="[(container.oclIsKindOf(Interface)) or (container.oclIsKindOf(Process))/]" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Process']/@subNodeMappings[name='Input'] //@ownedViewpoints[name='SWSInteractionViewpoint']/@ownedRepresentations[name='swsInteraction']/@defaultLayer/@containerMappings[name='Interface']/@subNodeMappings[name='Input']" iconPath="/MF4SEA_ML.sirius.specification/icon/Input.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
