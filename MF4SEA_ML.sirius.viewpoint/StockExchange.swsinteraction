@@ -41,6 +41,7 @@
   </containsProcess>
   <containsGrounding name="InfoAccess" calls="//@containsSWS.1/@is_composed_of.1" supports="//@containsSWS.1"/>
   <containsGrounding name="TradeAccess" calls="//@containsSWS.0/@is_composed_of.0" supports="//@containsSWS.0"/>
+  <containsGrounding/>
   <containsSWS name="TradingService">
     <is_composed_of name="TradingFloor"/>
     <is_composed_of name="Financial"/>
