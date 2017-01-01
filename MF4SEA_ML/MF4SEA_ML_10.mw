@@ -3,7 +3,7 @@ open util/integer
 
 -- loadAlias@SWSInteraction
 -- loadModel@/MF4SEA_ML/Metamodel/SWSInteraction.ecore
--- loadInstance@/MF4SEA_ML/InstanceModel/StockExchange.swsinteraction
+-- loadInstance@/MF4SEA_ML.sirius.viewpoint/StockExchange3.swsinteraction
 
 -- trace@SWSInteraction.Plan
 sig Plan {
@@ -23,6 +23,7 @@ sig Role {
 	interacts_with: one SWS
 }
 
+-- discover@SSMatchmakerAgent  1
 -- trace@SWSInteraction.SSMatchmakerAgent
 sig SSMatchmakerAgent {
 	-- trace@SWSInteraction.SSMatchmakerAgent.appliesSS_RegPlan
@@ -37,6 +38,7 @@ sig SS_RegisterPlan extends Plan {
 	advertises: set Interface
 }
 
+-- discover@SS_FinderPlan 1
 -- trace@SWSInteraction.SS_FinderPlan
 sig SS_FinderPlan extends Plan {
 	-- trace@SWSInteraction.SS_FinderPlan.interacts_with
@@ -133,7 +135,12 @@ sig ODM_OWLClass {
 some sig RegistrationRole extends Role {
 }
 
+-- reason@SemanticWebAgent.applies
+fact{}
+
 // Automatically generated facts (from Ecore stducture)
+
+
 
 fact {
 	all i:Input | one (Interface<:(i.~contains) + Process<:(i.~includes))
