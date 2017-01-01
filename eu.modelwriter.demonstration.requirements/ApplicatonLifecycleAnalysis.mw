@@ -3,8 +3,8 @@ module eu/modelwriter/actions/havelsan/alm
 abstract sig Artefact {
 	depends: set Artefact,
 	conflicts: set Artefact}
--- Reason@Artefact.conflicts
-fact {~conflicts in conflicts} 
+//-- Reason@Artefact.conflicts
+//fact {~conflicts in conflicts} 
 
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
@@ -13,8 +13,9 @@ one sig Specification extends Artefact {
 sig ContractRequirement extends Artefact {
 	system: set SystemRequirement,
 	contains: set ContractRequirement} 
+fact { all s: SystemRequirement | lone s.~system}
 
--- Semantics@ContractRequirement
+-- Semantics@ContractRequirement.contains
 fact {all c: ContractRequirement | one c.~contract => no c.~contains }
 fact {all c: ContractRequirement | no c.~contract => one c.~contains }
 
@@ -24,10 +25,11 @@ sig SystemRequirement extends Artefact {
 	requires: set SystemRequirement,
 	refines: set SystemRequirement}
 
-//fact {all s:SystemRequirement | one s.~system}
-
 -- Reason@ContractRequirement.system
 fact {all s:SystemRequirement, s': s.*~refines | s'.~system = s.~system}
+
+//fact {all s :SystemRequirement  | one s.~system  => no s.~refines }
+//fact {all s :SystemRequirement  | no s.~system  => one s.~refines }
 
 -- Reason@SystemRequirement.requires
 fact { all s, s': SystemRequirement | s' in s.refines => s in s'.requires }
@@ -40,6 +42,9 @@ fact {all i: Implementation | some i.~satisfiedBy}
 
 -- Reason@Implementation.fulfills
 fact {all i: Implementation, s: i.~satisfiedBy | i.fulfills = s.~system }
+
+//-- Reason@Implementation.fulfills
+//fact {all i: Implementation | i.fulfills = i.~satisfiedBy.(^~refines + ~system).(^~contains + ~system) }
 
 -- Locate@EMF
 sig Model extends Implementation {
@@ -62,7 +67,7 @@ fact noCycles {
 	no a: Artefact | a in a.^conflicts}
 
 fact noSelfRelation{
-	no a: Artefact | a in a.^depends
+	no a: Artefact | a in a.depends
 	no c: ContractRequirement | c in c.contains
 	no s: SystemRequirement | s in s.requires 
 	no s: SystemRequirement | s in s.refines
