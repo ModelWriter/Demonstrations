@@ -28,11 +28,20 @@
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Car"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Owner">
+    <eTypeParameters name="K"/>
+    <eTypeParameters name="V">
+      <eBounds eClassifier="#//Car"/>
+      <eBounds eClassifier="#//Person"/>
+    </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cars">
       <eGenericType eClassifier="#//ArrayList">
         <eTypeArguments eClassifier="#//Car"/>
       </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attr1">
+      <eGenericType eTypeParameter="#//Owner/K"/>
     </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>
