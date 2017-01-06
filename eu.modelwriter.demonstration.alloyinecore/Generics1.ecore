@@ -22,9 +22,9 @@
     <eOperations name="hasNext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArrayList">
-    <eTypeParameters name="E"/>
+    <eTypeParameters name="V"/>
     <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eTypeParameter="#//ArrayList/E"/>
+      <eTypeArguments eTypeParameter="#//ArrayList/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Car"/>
@@ -32,7 +32,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Owner">
     <eTypeParameters name="K"/>
     <eTypeParameters name="V">
-      <eBounds eClassifier="#//Car"/>
       <eBounds eClassifier="#//Person"/>
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cars">
@@ -40,8 +39,35 @@
         <eTypeArguments eClassifier="#//Car"/>
       </eGenericType>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attr1">
-      <eGenericType eTypeParameter="#//Owner/K"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner">
+      <eGenericType eTypeParameter="#//Owner/V"/>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Canvas">
+    <eOperations name="draw" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="shapes" lowerBound="1">
+        <eGenericType eClassifier="#//List">
+          <eTypeArguments>
+            <eUpperBound eClassifier="#//Shape"/>
+          </eTypeArguments>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
+    <eOperations name="create">
+      <eTypeParameters name="V">
+        <eBounds eClassifier="#//Shape"/>
+      </eTypeParameters>
+      <eParameters name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="create">
+      <eParameters name="arg">
+        <eGenericType eClassifier="#//ArrayList">
+          <eTypeArguments>
+            <eLowerBound eClassifier="#//Canvas"/>
+          </eTypeArguments>
+        </eGenericType>
+      </eParameters>
+    </eOperations>
   </eClassifiers>
 </ecore:EPackage>
