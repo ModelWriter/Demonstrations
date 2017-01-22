@@ -73,6 +73,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="ecore:EClass My.ecore#//B"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MyException">
     <eTypeParameters name="T"/>
