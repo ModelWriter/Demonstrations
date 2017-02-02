@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generics" nsURI="eu.modelwriter.generics" nsPrefix="gns">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generics" nsURI="eu.modelwriter.generics" nsPrefix="gns">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package generics : gns = 'eu.modelwriter.generics'&#xA;{&#xA;    abstract class List&lt;E>&#xA;    {&#xA;        operation add(element : E);&#xA;        operation iterator() : Iterator&lt;E>[?];&#xA;    }&#xA;    invariant quantifier: all d : List | not (d in d.^contents);&#xA;    invariant test1: contents in Dir -> (Dir + File);&#xA;    class Iterator&lt;E>&#xA;    {&#xA;        operation next() : E[?] throws MyException&lt;E>;&#xA;        operation hasNext() : Boolean;&#xA;    }&#xA;    class ArrayList&lt;V> extends List&lt;V>;&#xA;    class Car;&#xA;    abstract class Person;&#xA;    class Owner&lt;K, V extends Person &amp; Car>&#xA;    {&#xA;        property cars : ArrayList&lt;Car>[?];&#xA;        property owner : V[?];&#xA;    }&#xA;    abstract class Shape;&#xA;    class Canvas&#xA;    {&#xA;        operation draw(shapes : List&lt;? extends Shape>) : Boolean[?];&#xA;        operation &lt;V extends Shape> create(name : String);&#xA;        operation create(arg : ArrayList&lt;? super Canvas>[?]);&#xA;        property ref : List&lt;?>[?];&#xA;    }&#xA;    class MyException&lt;T>;&#xA;}"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true">
     <eTypeParameters name="E"/>
     <eOperations name="add">
       <eParameters name="element" lowerBound="1">
-        <eGenericType eTypeParameter="#//List/E"/>
+        <eGenericType eTypeParameter="//List/E"/>
       </eParameters>
     </eOperations>
     <eOperations name="iterator">
-      <eGenericType eClassifier="#//Iterator">
-        <eTypeArguments eTypeParameter="#//List/E"/>
+      <eGenericType eClassifier="//Iterator">
+        <eTypeArguments eTypeParameter="//List/E"/>
       </eGenericType>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Iterator">
     <eTypeParameters name="E"/>
     <eOperations name="next">
-      <eGenericType eTypeParameter="#//Iterator/E"/>
-      <eGenericExceptions eClassifier="#//MyException">
-        <eTypeArguments eTypeParameter="#//Iterator/E"/>
+      <eGenericType eTypeParameter="//Iterator/E"/>
+      <eGenericExceptions eClassifier="//MyException">
+        <eTypeArguments eTypeParameter="//Iterator/E"/>
       </eGenericExceptions>
     </eOperations>
-    <eOperations name="hasNext" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="hasNext" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArrayList">
     <eTypeParameters name="V"/>
-    <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eTypeParameter="#//ArrayList/V"/>
+    <eGenericSuperTypes eClassifier="//List">
+      <eTypeArguments eTypeParameter="//ArrayList/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Car"/>
@@ -35,46 +39,49 @@
   <eClassifiers xsi:type="ecore:EClass" name="Owner">
     <eTypeParameters name="K"/>
     <eTypeParameters name="V">
-      <eBounds eClassifier="#//Person"/>
-      <eBounds eClassifier="#//Car"/>
+      <eBounds eClassifier="//Person"/>
+      <eBounds eClassifier="//Car"/>
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cars">
-      <eGenericType eClassifier="#//ArrayList">
-        <eTypeArguments eClassifier="#//Car"/>
+      <eGenericType eClassifier="//ArrayList">
+        <eTypeArguments eClassifier="//Car"/>
       </eGenericType>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner">
-      <eGenericType eTypeParameter="#//Owner/V"/>
+      <eGenericType eTypeParameter="//Owner/V"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Canvas">
-    <eOperations name="draw" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+    <eOperations name="draw">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eParameters name="shapes" lowerBound="1">
-        <eGenericType eClassifier="#//List">
+        <eGenericType eClassifier="//List">
           <eTypeArguments>
-            <eUpperBound eClassifier="#//Shape"/>
+            <eUpperBound eClassifier="//Shape"/>
           </eTypeArguments>
         </eGenericType>
       </eParameters>
     </eOperations>
     <eOperations name="create">
       <eTypeParameters name="V">
-        <eBounds eClassifier="#//Shape"/>
+        <eBounds eClassifier="//Shape"/>
       </eTypeParameters>
-      <eParameters name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="name" lowerBound="1">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
     </eOperations>
     <eOperations name="create">
       <eParameters name="arg">
-        <eGenericType eClassifier="#//ArrayList">
+        <eGenericType eClassifier="//ArrayList">
           <eTypeArguments>
-            <eLowerBound eClassifier="#//Canvas"/>
+            <eLowerBound eClassifier="//Canvas"/>
           </eTypeArguments>
         </eGenericType>
       </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref">
-      <eGenericType eClassifier="#//List">
+      <eGenericType eClassifier="//List">
         <eTypeArguments/>
       </eGenericType>
     </eStructuralFeatures>
