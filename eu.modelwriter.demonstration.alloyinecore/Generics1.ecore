@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="generics" nsURI="eu.modelwriter.generics" nsPrefix="gns">
-  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package generics : gns = 'eu.modelwriter.generics'&#xA;{&#xA;    abstract class List&lt;E>&#xA;    {&#xA;        operation add(element : E);&#xA;        operation iterator() : Iterator&lt;E>[?];&#xA;    }&#xA;    invariant quantifier: all d : List | not (d in d.^contents);&#xA;    invariant test1: contents in Dir -> (Dir + File);&#xA;    class Iterator&lt;E>&#xA;    {&#xA;        operation next() : E[?] throws MyException&lt;E>;&#xA;        operation hasNext() : Boolean;&#xA;    }&#xA;    class ArrayList&lt;V> extends List&lt;V>;&#xA;    class Car;&#xA;    abstract class Person;&#xA;    class Owner&lt;K, V extends Person &amp; Car>&#xA;    {&#xA;        property cars : ArrayList&lt;Car>[?];&#xA;        property owner : V[?];&#xA;    }&#xA;    abstract class Shape;&#xA;    class Canvas&#xA;    {&#xA;        operation draw(shapes : List&lt;? extends Shape>) : Boolean[?];&#xA;        operation &lt;V extends Shape> create(name : String);&#xA;        operation create(arg : ArrayList&lt;? super Canvas>[?]);&#xA;        property ref : List&lt;?>[?];&#xA;    }&#xA;    class MyException&lt;T>;&#xA;}"/>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="test1"/>
+    <details key="formula" value="contents in Dir -> (Dir + File)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Instance" value="Instance.requirements"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Arc" value="Architecture.ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="My" value="My.ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+      <details key="callable" value="false"/>
+      <details key="name" value="quantifier"/>
+      <details key="formula" value="all d : List | not (d in d.^contents)"/>
+    </eAnnotations>
     <eTypeParameters name="E"/>
-    <eOperations name="add">
-      <eParameters name="element" lowerBound="1">
+    <eOperations name="add" ordered="false" lowerBound="1">
+      <eParameters name="element" ordered="false" lowerBound="1">
         <eGenericType eTypeParameter="//List/E"/>
       </eParameters>
     </eOperations>
-    <eOperations name="iterator">
+    <eOperations name="iterator" ordered="false">
       <eGenericType eClassifier="//Iterator">
         <eTypeArguments eTypeParameter="//List/E"/>
       </eGenericType>
@@ -18,13 +37,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Iterator">
     <eTypeParameters name="E"/>
-    <eOperations name="next">
+    <eOperations name="next" ordered="false">
       <eGenericType eTypeParameter="//Iterator/E"/>
       <eGenericExceptions eClassifier="//MyException">
         <eTypeArguments eTypeParameter="//Iterator/E"/>
       </eGenericExceptions>
     </eOperations>
-    <eOperations name="hasNext" lowerBound="1">
+    <eOperations name="hasNext" ordered="false" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eOperations>
   </eClassifiers>
@@ -37,25 +56,27 @@
   <eClassifiers xsi:type="ecore:EClass" name="Car"/>
   <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Owner">
+    <eAnnotations/>
     <eTypeParameters name="K"/>
     <eTypeParameters name="V">
       <eBounds eClassifier="//Person"/>
       <eBounds eClassifier="//Car"/>
     </eTypeParameters>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cars">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cars" ordered="false">
       <eGenericType eClassifier="//ArrayList">
         <eTypeArguments eClassifier="//Car"/>
       </eGenericType>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="owner">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" ordered="false" upperBound="-1">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/nullable"/>
       <eGenericType eTypeParameter="//Owner/V"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Canvas">
-    <eOperations name="draw">
+    <eOperations name="draw" ordered="false">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="shapes" lowerBound="1">
+      <eParameters name="shapes" ordered="false" lowerBound="1">
         <eGenericType eClassifier="//List">
           <eTypeArguments>
             <eUpperBound eClassifier="//Shape"/>
@@ -63,16 +84,14 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eOperations name="create">
-      <eTypeParameters name="V">
-        <eBounds eClassifier="//Shape"/>
-      </eTypeParameters>
-      <eParameters name="name" lowerBound="1">
+    <eOperations name="create" ordered="false" lowerBound="1">
+      <eTypeParameters name="V"/>
+      <eParameters name="name" ordered="false" lowerBound="1">
         <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eParameters>
     </eOperations>
-    <eOperations name="create">
-      <eParameters name="arg">
+    <eOperations name="create" ordered="false" lowerBound="1">
+      <eParameters name="arg" ordered="false">
         <eGenericType eClassifier="//ArrayList">
           <eTypeArguments>
             <eLowerBound eClassifier="//Canvas"/>
@@ -80,7 +99,7 @@
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" ordered="false">
       <eGenericType eClassifier="//List">
         <eTypeArguments/>
       </eGenericType>
