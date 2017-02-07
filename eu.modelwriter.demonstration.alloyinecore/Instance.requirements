@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Req:RequirementsModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Req="eu.modelwriter.demonstrations.alloyinecore.requirement" xsi:schemaLocation="eu.modelwriter.demonstrations.alloyinecore.requirement Requirements.ecore" name="My requirements">
-  <requirements name="A" reason="">
-    <parts name="PartofA"/>
-    <parts/>
+<Req:RequirementsModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Req="eu.modelwriter.demonstrations.alloyinecore.requirement"
+    xmlns:tt="test/test"
+    xsi:schemaLocation="eu.modelwriter.demonstrations.alloyinecore.requirement Requirements.ecore test/test Requirements.ecore#//test"
+    name="My requirements">
+  <requirements
+      name="A"
+      reason="">
+    <parts xsi:type="tt:PartTypeA"
+        name="s"/>
+    <parts xsi:type="tt:PartTypeB"
+        name="s"/>
   </requirements>
-  <requirements ID="1" name="B"/>
-  <composedOf name="D"/>
-  <requirements name="E"/>
-  <relationships xsi:type="Req:Require" source="A" target="B C"/>
-  <composedOf ID="2" name="C"/>
+  <requirements
+      name="D"/>
+  <requirements
+      ID="1"
+      name="B"/>
+  <requirements
+      name="E"/>
+  <requirements
+      name="D"/>
+  <relationships
+      xsi:type="Req:Require"
+      source="A"
+      target="B C"/>
+  <composedOf
+      ID="2"
+      name="C"/>
 </Req:RequirementsModel>
