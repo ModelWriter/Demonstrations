@@ -1,0 +1,19 @@
+package filesystem : fsys  = 'eu.modelwriter.examples.filesystem' {
+    abstract class Object
+    {
+    	public property name: Name[1];
+    	invariant: Object in Root.*content;
+    }
+    private class Name { }
+    public class File extends Object{ }
+    public class Dir extends Object {
+		public property content: Object[*];
+    	invariant: all d: Dir | not (d in d.^content);
+    	invariant: one Dir;
+    }
+    public class Root extends Dir { 
+    	invariant: all o: Object - Root | one o.~content;
+    }
+    invariant: all disj a, b: Object - Root | 
+    	a.~content = b.~content => a.name != b.name;  	
+}
