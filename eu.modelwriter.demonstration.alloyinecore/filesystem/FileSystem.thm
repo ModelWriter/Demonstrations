@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view useOriginalAtomNames="yes">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="Object"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<node showinattr="yes">
+   <set name="this/File" type="Object"/>
+   <set name="this/FSObject" type="Object"/>
+   <set name="this/Root" type="Object"/>
+</node>
+
+<node showinattr="yes" color="Blue">
+   <set name="this/Link" type="Object"/>
+</node>
+
+<node showinattr="yes" color="Gray">
+   <set name="this/Dir" type="Object"/>
+</node>
+
+<node showinattr="yes" color="Green">
+   <set name="this/Executable" type="Object"/>
+</node>
+
+<node visible="no" showinattr="yes">
+   <set name="this/Name" type="Object"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="name"> <type name="Object"/> <type name="Object"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes" constraint="no">
+   <relation name="depend"> <type name="Object"/> <type name="Object"/> </relation>
+   <relation name="link"> <type name="Object"/> <type name="Object"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
