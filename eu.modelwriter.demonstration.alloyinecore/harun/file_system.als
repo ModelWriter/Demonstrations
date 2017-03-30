@@ -32,3 +32,4 @@ fact { all f:Folder | f !in f.contents}
 fact { all o:Object - Root | Root in o.^~contents }
 
 run { } for 5
+--harun
