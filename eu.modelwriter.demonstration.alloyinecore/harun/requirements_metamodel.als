@@ -1,61 +1,122 @@
-abstract sig Object {
-	name: Name
-}
+open util/relation
 
-one sig RequirementsModel extends Object {
-	includes: set ModelObject
-}
+one sig Model {
+	has: set Requirement,
 
-abstract sig ModelObject extends Object {
+	requires: Requirement -> Requirement,
+	refines: Requirement -> Requirement,
+	contains: Requirement -> Requirement,
+	partiallyRefines: Requirement -> Requirement,
+	conflicts: Requirement -> Requirement,
+	equals: Requirement -> Requirement
 }{
-	all o: ModelObject | one o.~includes
+	irreflexive[requires]
+	antisymmetric[requires]
+	transitive[requires]
+
+	irreflexive[refines]
+	antisymmetric[refines]
+	transitive[refines]
+
+	irreflexive[contains]
+	antisymmetric[contains]
+	transitive[contains]
+
+	irreflexive[partiallyRefines]
+	antisymmetric[partiallyRefines]
+	transitive[partiallyRefines]
+
+	irreflexive[conflicts]
+	symmetric[conflicts]
+
+	reflexive[equals, Requirement]
+	symmetric[equals]
+	transitive[equals]
+
+
+	no requires & refines
+	no requires & contains
+	no requires & partiallyRefines
+	no requires & conflicts
+	no requires & equals
+
+	no refines & contains
+	no refines & partiallyRefines
+	no refines & conflicts
+	no refines & equals
+
+	no contains & partiallyRefines
+	no contains & conflicts
+	no contains & equals
+
+	no partiallyRefines & conflicts
+	no partiallyRefines & equals
+
+	no conflicts & equals
+
+	no requires & ~refines
+	no requires & ~contains
+	no requires & ~partiallyRefines
+	no requires & ~conflicts
+	no requires & ~equals
+
+	no refines & ~contains
+	no refines & ~partiallyRefines
+	no refines & ~conflicts
+	no refines & ~equals
+
+	no contains & ~partiallyRefines
+	no contains & ~conflicts
+	no contains & ~equals
+
+	no partiallyRefines & ~conflicts
+	no partiallyRefines & ~equals
+
+	no conflicts & ~equals
 }
 
-sig Requirement extends ModelObject {
-	id: ID,
-	description: Description,
-	priority: Priority,
-	reason: Reason,
-	status: Status,
+sig Requirement {
 
-	source: Relationship,
-	target: Relationship
 }
 
-abstract sig Relationship extends Object {} { all r:Relationship | some r.~source + r.~target }
+fact all_reqs_in_model {
+	Requirement = Model.has
+}
 
-lone sig Requires extends Relationship {}
-lone sig Refines extends Relationship {}
-lone sig PartiallyRefines extends Relationship {}
-lone sig Conflicts extends Relationship {}
-lone sig Contains extends Relationship {}
-lone sig Equals extends Relationship {}
+fact equals_facts{
+	all a,b: Model.has {
+		b in a.(Model.equals) => a.(Model.conflicts) = b.(Model.conflicts)
+		b in a.(Model.equals) => a.(Model.requires) = b.(Model.requires)
+		b in a.(Model.equals) => a.(Model.equals) = b.(Model.equals)
+		b in a.(Model.equals) => a.(Model.refines) = b.(Model.refines)
+		b in a.(Model.equals) => a.(Model.partiallyRefines) = b.(Model.partiallyRefines)
+		b in a.(Model.equals) => a.(Model.contains) = b.(Model.contains)
 
-abstract sig StringR {}
-abstract sig Integer {}
+		b in a.(Model.equals) => a.~(Model.conflicts) = b.~(Model.conflicts)
+		b in a.(Model.equals) => a.~(Model.requires) = b.~(Model.requires)
+		b in a.(Model.equals) => a.~(Model.equals) = b.~(Model.equals)
+		b in a.(Model.equals) => a.~(Model.refines) = b.~(Model.refines)
+		b in a.(Model.equals) => a.~(Model.partiallyRefines) = b.~(Model.partiallyRefines)
+		b in a.(Model.equals) => a.~(Model.contains) = b.~(Model.contains)
+	}
+}
 
-sig ID extends Integer {} { all i:ID | one i.~id }
-sig Name extends StringR {}{ all n:Name | one n.~name }
-sig Description extends StringR {} { all d:Description | one d.~description }
-sig Reason extends StringR {} { all r:Reason | one r.~reason }
+fact req_ref_fact{
+	all a,b,c: Model.has {
+		b in a.(Model.requires) && c in b.(Model.refines) => c in a.(Model.requires)
+		b in a.(Model.refines) && c in b.(Model.requires) => c in a.(Model.requires)
+	}
+}
 
-abstract sig Priority {}{ all p:Priority | some p.~priority }
-abstract sig Status {}{ all s:Status | some s.~status }
+fact ref_con_fact {
+	all a,b,c: Model.has {
+		b in a.(Model.refines) && c in b.(Model.contains) => c in a.(Model.refines)
+		b in a.(Model.partiallyRefines) && c in b.(Model.contains) => c in a.(Model.partiallyRefines)
+		b in a.(Model.refines) && c in b.(Model.partiallyRefines) => c in a.(Model.partiallyRefines)
+		b in a.(Model.partiallyRefines) && c in b.(Model.refines) => c in a.(Model.partiallyRefines)
+	}
+}
 
-fact { all r:Requirement | r.target!=r.source }
+run { } for exactly 3 Requirement
 
-lone sig Proposed extends Status {}
-lone sig Analyzed extends Status {}
-lone sig Accepted extends Status {}
-lone sig Rejected extends Status {}
-lone sig Replaced extends Status {}
 
-lone sig Neutral extends Priority {}
-lone sig LowCritical extends Priority {}
-lone sig Critical extends Priority {}
-lone sig VeryCritical extends Priority {}
-
-fact { all s:Status | some s.~status }
-fact { all p:Priority | some p.~priority } 
-
-run {} for exactly 2 Requirement, 9 StringR, 2 Integer, 1 Priority, 1 Status

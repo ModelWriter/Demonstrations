@@ -31,5 +31,10 @@ fact { all f:Object - Root | one f.~contents }
 fact { all f:Folder | f !in f.contents}
 fact { all o:Object - Root | Root in o.^~contents }
 
-run { } for 5
---harun
+run standart5 { } for 5
+
+assert same_named {
+	some n:Name | #n.~name > 1
+}
+
+check same_named for 10
