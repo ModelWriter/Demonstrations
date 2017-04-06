@@ -112,8 +112,11 @@ pred equals_facts[m:Model] {
 
 pred req_ref_facts[m:Model] {
 	all a,b,c: m.has {
-		b in a.(m.requires) && c in b.(m.refines) => c in a.(m.requires)
-		b in a.(m.refines) && c in b.(m.requires) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.refines) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.contains) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.contains) && c in a.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.contains) && c in b.(m.refines) && c !in a.(m.contains) + a.(m.refines) + a.(m.partiallyRefines) => c in a.(m.requires)
 	}
 }
 
@@ -130,6 +133,20 @@ pred req_conf_facts[m:Model] {
 	all a,b,c: m.has {
 		b in a.(m.requires) && c in b.(m.conflicts) => c in a.(m.conflicts)
 		b in a.(m.refines) && c in b.(m.conflicts) => c in a.(m.conflicts)
+	}
+}
+
+pred relation_facts[m,m' : Model] {
+	all a,c: m'.has {
+		c in a.(m'.requires) => c in a.*(m'.equals).*(m.requires).*(m.contains).*(m.refines).*(m.contains).*(m.requires).*(m'.equals)
+		c in a.(m'.refines) => c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).*(m.contains).*(m'.equals)
+		c in a.(m'.equals) => c in a.*(m.equals).*(~(m.equals)).*(m.equals)
+		c in a.(m'.contains) => c in a.*(m'.equals).*(m.contains).*(m'.equals)
+		c in a.(m'.partiallyRefines) => c in a.*(m'.equals).*(m.refines).*(m.partiallyRefines).*(m.refines).*(m.contains).*(m'.equals)
+		c in a.(m'.conflicts) => 	c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).(m.conflicts).*(m'.equals) 	|| 
+												c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).~(m.conflicts).*(m'.equals) ||
+										 		c in a.*(m'.equals).(m.conflicts).*~(m.requires).*(~(m.refines)).*(~(m.requires)).*(m'.equals) || 
+												c in a.*(m'.equals).~(m.conflicts).*~(m.requires).*(~(m.refines)).*(~(m.requires)).*(m'.equals) 
 	}
 }
 
@@ -153,7 +170,7 @@ pred func_definitions[m:Model] {
 	irreflexive[m.conflicts]
 	symmetric[m.conflicts]
 
-	reflexive[m.equals, Requirement]
+	reflexive[m.equals, Requirement] // Makalede non-reflexive denmiş ama mantıken yanlış ve uygulamasında sonuç vermiyor.
 	symmetric[m.equals]
 	transitive[m.equals]
 }
@@ -175,6 +192,7 @@ pred generateSolution {
 		req_ref_facts[m1]
 		equals_facts[m1]
 		functional_facts[m1]
+		relation_facts[m0,m1]
 	}
 }
 // Preds end
@@ -277,6 +295,21 @@ pred figure15 {
 	generateSolution
 }
 
+
+pred deneme { 
+	let m0 = models/first {
+		Requirement = PR20_StaticWagon + PR26_RearWiper + PR25_Wiper
+
+		m0.contains = PR20_StaticWagon -> PR26_RearWiper
+		m0.refines = PR26_RearWiper -> PR25_Wiper
+		no m0.partiallyRefines
+		no m0.equals
+		no m0.requires
+		no m0.conflicts
+	}
+	generateSolution
+}
+
 run figure3 for exactly 3 Requirement, 2 Model
 run figure4 for exactly 2 Requirement, 2 Model // Sonuç vermemeli
 run figure7 for exactly 12 Requirement, 2 Model
@@ -284,6 +317,8 @@ run figure8 for exactly 3 Requirement, 2 Model
 run figure9 for exactly 6 Requirement, 2 Model // Sonuç vermemeli
 run figure13 for exactly 4 Requirement, 2 Model
 run figure15 for exactly 3 Requirement, 2 Model
+run deneme for exactly 3 Requirement, 2 Model
+
 
 
 
