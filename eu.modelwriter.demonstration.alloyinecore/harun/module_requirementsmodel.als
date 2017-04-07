@@ -5,6 +5,9 @@ open util/relation
 open util/ordering[Model] as models
 
 abstract sig Model {
+	optional: set Requirement,
+	mandatory: set Requirement,
+
 	requires: Requirement -> Requirement,
 	refines: Requirement -> Requirement,
 	contains: Requirement -> Requirement,
@@ -144,13 +147,14 @@ private pred func_definitions[m:Model] {
 	irreflexive[m.conflicts]
 	symmetric[m.conflicts]
 
-	reflexive[m.equals, Requirement] // It was said non-reflexive in the article but it is logically wrong and gives no result.
+	reflexive[m.equals, Requirement] // It was said non-reflexive in the article but it was logically wrong and gave no result.
 	symmetric[m.equals]
 	transitive[m.equals]
 }
 
 /** Takes the given model, places the relations into the second model and infers new relations. */
 fact generateSolution {
+	all m:Model |  m.mandatory = Requirement - m.optional
 	one m0:Model, m1: models/next[m0] {
 
 		m0 = GivenModel
@@ -174,6 +178,27 @@ fact generateSolution {
 
 /***********************************************************************************************************/
 /***********************************************************************************************************/
+
+/** Defines given requirements as optional and rest as mandatory. */
+pred Optional[r: set Requirement] {
+	all m:Model | r = m.optional
+}
+
+
+/** Defines all requirements as mandatory and makes sure there are no optional requirements. */
+pred NoOptional {
+	all m:Model | no m.optional
+}
+
+/** Defines given requirements as mandatory and rest as optional. */
+pred Mandatory[r: set Requirement] {
+	all m:Model | r = m.mandatory
+}
+
+/** Defines all requirements as optional and makes sure there are no mandatory requirements. */
+pred NoMandatory {
+	all m:Model | no m.mandatory
+}
 
 /** Makes sure that r1 requires r2 */
 pred Requires[r1,r2: Requirement] { 
@@ -259,42 +284,42 @@ pred Contains[r: Requirement -> Requirement]{
 	}
 }
 
-/** Makes sure that there is no requires relation in the user defined model */
+/** Makes sure that there are no requires relations in the user defined model */
 pred NoRequires {
 	let m0 = models/first {
 		no m0.requires
 	}
 }
 
-/** Makes sure that there is no refines relation in the user defined model */
+/** Makes sure that there are no refines relations in the user defined model */
 pred NoRefines {
 	let m0 = models/first {
 		no m0.refines
 	}
 }
 
-/** Makes sure that there is no partially refines relation in the user defined model */
+/** Makes sure that there are no partially refines relations in the user defined model */
 pred NoPartiallyRefines {
 	let m0 = models/first {
 		no m0.partiallyRefines
 	}
 }
 
-/** Makes sure that there is no conflicts relation in the user defined model */
+/** Makes sure that there are no conflicts relations in the user defined model */
 pred NoConflicts {
 	let m0 = models/first {
 		no m0.conflicts
 	}
 }
 
-/** Makes sure that there is no equals relation in the user defined model */
+/** Makes sure that there are no equals relations in the user defined model */
 pred NoEquals {
 	let m0 = models/first {
 		no m0.equals
 	}
 }
 
-/** Makes sure that there is no contains relation in the user defined model */
+/** Makes sure that there are no contains relations in the user defined model */
 pred NoContains {
 	let m0 = models/first {
 		no m0.contains

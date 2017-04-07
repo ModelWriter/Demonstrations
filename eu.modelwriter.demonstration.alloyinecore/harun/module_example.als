@@ -36,6 +36,8 @@ pred figure3 {
 	Model/NoEquals
 	Model/NoContains
 	Model/NoConflicts
+
+	Model/NoOptional
 }
 
 pred figure4 { 
@@ -47,6 +49,8 @@ pred figure4 {
 	Model/NoEquals
 	Model/NoContains
 	Model/NoConflicts
+
+	Model/NoOptional
 }
 
 pred figure7 { 
@@ -58,6 +62,8 @@ pred figure7 {
 	Model/NoPartiallyRefines
 	Model/NoEquals
 	Model/NoContains
+
+	Model/Optional[PR20_StaticWagon + PR21_Cabriolet + PR22_RoofControl + PR23_ManualControl + PR24_SensorControl + PR26_RearWiper + PR28_FrontIntervalWiper + PR30_RainSensor]
 }
 
 pred figure8 { 
@@ -69,6 +75,8 @@ pred figure8 {
 	Model/NoEquals
 	Model/NoContains
 	Model/NoRefines
+
+	Model/NoMandatory
 }
 
 pred figure9 { 
@@ -80,28 +88,8 @@ pred figure9 {
 	Model/NoPartiallyRefines
 	Model/NoEquals
 	Model/NoContains
-}
 
-pred figure13 { 
-	Requirement = PR20_StaticWagon + PR26_RearWiper + PR25_Wiper + PR5_ManualGear
-
-	Model/Contains[PR20_StaticWagon -> PR26_RearWiper + PR20_StaticWagon -> PR25_Wiper]
-	Model/Refines[PR26_RearWiper -> PR5_ManualGear + PR5_ManualGear -> PR25_Wiper]
-	Model/NoPartiallyRefines
-	Model/NoEquals
-	Model/NoRequires
-	Model/NoConflicts
-}
-
-pred figure15 { 
-	Requirement = PR20_StaticWagon + PR26_RearWiper + PR25_Wiper
-
-	Model/Requires[PR20_StaticWagon -> PR26_RearWiper]
-	Model/Refines[PR26_RearWiper -> PR25_Wiper]
-	Model/NoPartiallyRefines
-	Model/NoEquals
-	Model/NoContains
-	Model/NoConflicts
+	Model/Mandatory[PR8_Engine + PR4_GearBox]
 }
 
 run figure3 for exactly 3 Requirement
@@ -109,6 +97,4 @@ run figure4 for exactly 2 Requirement // No Result
 run figure7 for exactly 12 Requirement
 run figure8 for exactly 3 Requirement
 run figure9 for exactly 6 Requirement // No Result
-run figure13 for exactly 4 Requirement
-run figure15 for exactly 3 Requirement
 
