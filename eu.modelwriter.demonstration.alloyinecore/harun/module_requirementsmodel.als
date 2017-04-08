@@ -2,9 +2,10 @@
 module module_requirementsmodel[exactly Requirement]
 
 open util/relation
-open util/ordering[Model] as models
+open util/ordering[RequirementsModel] as models
+open module_featuremodel[Requirement] as FeatureModel
 
-abstract sig Model {
+abstract sig RequirementsModel {
 	optional: set Requirement,
 	mandatory: set Requirement,
 
@@ -17,10 +18,10 @@ abstract sig Model {
 }
 
 /** GivenModel is the model that user defines and InferredModel is the model that program infers. */
-one sig GivenModel, InferredModel extends Model {}
+one sig GivenModel, InferredModel extends RequirementsModel {}
 
 /** There must be one relation between two requirements */
-private pred functional_facts[m:Model]{
+private pred functional_facts[m:RequirementsModel]{
 	no m.requires & m.refines
 	no m.requires & m.contains
 	no m.requires & m.partiallyRefines
@@ -63,7 +64,7 @@ private pred functional_facts[m:Model]{
 }
 
 /** If a requirement equals to an other requirement, then these requirements have exactly the same relations */
-private pred equals_facts[m:Model] {
+private pred equals_facts[m:RequirementsModel] {
 	all a,b: Requirement {
 		b in a.(m.equals) => a.(m.conflicts) = b.(m.conflicts)
 		b in a.(m.equals) => a.(m.requires) = b.(m.requires)
@@ -82,7 +83,7 @@ private pred equals_facts[m:Model] {
 }
 
 /** Defines, under what conditions program should infer that one requirement requires another. */
-private pred req_ref_facts[m:Model] {
+private pred req_ref_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.requires) && c in b.(m.refines) &&  c !in a.(m.contains) => c in a.(m.requires)
 		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
@@ -93,7 +94,7 @@ private pred req_ref_facts[m:Model] {
 }
 
 /** Defines, under what conditions program should infer that one requirement refines or partially refines another. */
-private pred ref_cont_facts[m:Model] {
+private pred ref_cont_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.refines)
 		b in a.(m.partiallyRefines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
@@ -103,7 +104,7 @@ private pred ref_cont_facts[m:Model] {
 }
 
 /** Defines, under what conditions program should infer that one requirement conflicts another. */
-private pred req_conf_facts[m:Model] {
+private pred req_conf_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.requires) && c in b.(m.conflicts) => c in a.(m.conflicts)
 		b in a.(m.refines) && c in b.(m.conflicts) => c in a.(m.conflicts)
@@ -112,7 +113,7 @@ private pred req_conf_facts[m:Model] {
 }
 
 /** Defines, what conditions are required to infer relations. It is to assure that program doesn't infer irrelevant relations and gives only the accurate solutions. */
-private pred relation_facts[m,m' : Model] {
+private pred relation_facts[m,m' : RequirementsModel] {
 	all a,c: Requirement {
 		c in a.(m'.requires) => c in a.*(m'.equals).*(m.requires).*(m.contains).*(m.refines).*(m.contains).*(m.requires).*(m'.equals)
 		c in a.(m'.refines) => c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).*(m.contains).*(m'.equals)
@@ -127,7 +128,7 @@ private pred relation_facts[m,m' : Model] {
 }
 
 /** The definitions of relations. */
-private pred func_definitions[m:Model] {
+private pred func_definitions[m:RequirementsModel] {
 	irreflexive[m.requires]
 	antisymmetric[m.requires]
 	transitive[m.requires]
@@ -154,8 +155,8 @@ private pred func_definitions[m:Model] {
 
 /** Takes the given model, places the relations into the second model and infers new relations. */
 fact generateSolution {
-	all m:Model |  m.mandatory = Requirement - m.optional
-	one m0:Model, m1: models/next[m0] {
+	all m:RequirementsModel |  m.mandatory = Requirement - m.optional
+	one m0:RequirementsModel, m1: models/next[m0] {
 
 		m0 = GivenModel
 
@@ -181,23 +182,23 @@ fact generateSolution {
 
 /** Defines given requirements as optional and rest as mandatory. */
 pred Optional[r: set Requirement] {
-	all m:Model | r = m.optional
+	all m:RequirementsModel | r = m.optional
 }
 
 
 /** Defines all requirements as mandatory and makes sure there are no optional requirements. */
 pred NoOptional {
-	all m:Model | no m.optional
+	all m:RequirementsModel | no m.optional
 }
 
 /** Defines given requirements as mandatory and rest as optional. */
 pred Mandatory[r: set Requirement] {
-	all m:Model | r = m.mandatory
+	all m:RequirementsModel | r = m.mandatory
 }
 
 /** Defines all requirements as optional and makes sure there are no mandatory requirements. */
 pred NoMandatory {
-	all m:Model | no m.mandatory
+	all m:RequirementsModel | no m.mandatory
 }
 
 /** Makes sure that r1 requires r2 */
@@ -324,4 +325,20 @@ pred NoContains {
 	let m0 = models/first {
 		no m0.contains
 	}
+}
+
+/** Takes a feature model and converts it into this requirements model */
+pred Convert[fm: FeatureModel/Model] {
+	this/Requires[fm.requires + fm.mandatory]
+	Refines[~(fm.(optional + alternative + mandatoryOr + optionalOr))]
+//	let rel = Requirement -> Requirement {
+		/** To do: Find which requirements conflict */
+		//Conflicts[fm.excludes + rel]
+		NoConflicts // For now
+//	}
+	Mandatory[fm.root.*(fm.mandatory + fm.mandatoryOr)]
+
+	NoContains
+	NoPartiallyRefines
+	NoEquals
 }
