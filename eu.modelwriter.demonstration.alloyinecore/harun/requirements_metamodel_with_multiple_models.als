@@ -140,7 +140,7 @@ pred relation_facts[m,m' : Model] {
 	all a,c: m'.has {
 		c in a.(m'.requires) => c in a.*(m'.equals).*(m.requires).*(m.contains).*(m.refines).*(m.contains).*(m.requires).*(m'.equals)
 		c in a.(m'.refines) => c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).*(m.contains).*(m'.equals)
-		c in a.(m'.equals) => c in a.*(m.equals).*(~(m.equals)).*(m.equals)
+		c in a.(m'.equals) => c in a.*(m.equals + ~(m.equals))
 		c in a.(m'.contains) => c in a.*(m'.equals).*(m.contains).*(m'.equals)
 		c in a.(m'.partiallyRefines) => c in a.*(m'.equals).*(m.refines).*(m.partiallyRefines).*(m.refines).*(m.contains).*(m'.equals)
 		c in a.(m'.conflicts) => 	c in a.*(m'.equals).*(m.requires).*(m.refines).*(m.requires).(m.conflicts).*(m'.equals) 	|| 

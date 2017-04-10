@@ -46,15 +46,14 @@ pred init {
 
 pred convert_to_requirements_model {
 	init_feature_model
-	RequirementsModel/Convert[FeatureModel/Model]
+	RequirementsModel/Convert[FeatureModel/GivenFeatureModel]
 }
 
 run init
 run convert_to_requirements_model
 
-assert semanticly_equals {
-	init
-	let fm = FeatureModel/Model, rm = RequirementsModel/GivenModel {
+assert semanticly_equals { // transform "init" or "convert_to_requirements_model" into a fact to make this work
+	let fm = FeatureModel/GivenFeatureModel, rm = RequirementsModel/GivenModel {
 		fm.(requires + mandatory + optional) in rm.(requires + refines + contains)
 		all f: Feature, f': f.(rm.conflicts) | f.~(fm.(alternative + mandatoryOr + optionalOr)) = f'.~(fm.(alternative + mandatoryOr + optionalOr)) || f in f'.(fm.excludes) +  f'.~(fm.excludes)
 		all f: Feature, f': f.(rm.refines) | f in f'.(fm.(alternative + mandatoryOr + optionalOr))
