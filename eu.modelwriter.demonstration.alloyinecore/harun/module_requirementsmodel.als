@@ -331,11 +331,10 @@ pred NoContains {
 pred Convert[fm: FeatureModel/Model] {
 	this/Requires[fm.requires + fm.mandatory]
 	Refines[~(fm.(optional + alternative + mandatoryOr + optionalOr))]
-//	let rel = Requirement -> Requirement {
-		/** To do: Find which requirements conflict */
-		//Conflicts[fm.excludes + rel]
-		NoConflicts // For now
-//	}
+
+	all r: ran[fm.alternative] | r.(GivenModel.conflicts) = (r.~(fm.alternative).(fm.alternative) - r) + r.(fm.excludes)
+	all r: ran[GivenModel.conflicts] + dom[GivenModel.conflicts] | r in ran[fm.alternative] + ran[fm.excludes] + dom[fm.excludes]
+	
 	Mandatory[fm.root.*(fm.mandatory + fm.mandatoryOr)]
 
 	NoContains

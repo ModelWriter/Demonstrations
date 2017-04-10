@@ -1,5 +1,7 @@
 module module_featuremodel[exactly Feature]
 
+open util/relation
+
 one sig Model {
 	root: Feature,
 
@@ -11,6 +13,54 @@ one sig Model {
 
 	requires: Feature -> Feature,
 	excludes: Feature -> Feature
+}
+
+fact {
+	func_def[Model]
+	Model.root.*(Model.(mandatory + optional + alternative + mandatoryOr + optionalOr + requires + excludes)) = Feature
+}
+
+pred func_def[m: Model] {
+	no m.mandatory & m.optional
+	no m.mandatory & m.alternative
+	no m.mandatory & m.mandatoryOr
+	no m.mandatory & m.optionalOr
+	no m.mandatory & m.requires
+	no m.mandatory & m.excludes
+
+	no m.optional & m.alternative
+	no m.optional & m.mandatoryOr
+	no m.optional & m.optionalOr
+	no m.optional & m.requires
+	no m.optional & m.excludes
+
+	no m.alternative & m.mandatoryOr
+	no m.alternative & m.optionalOr
+	no m.alternative & m.requires
+	no m.alternative & m.excludes
+
+	no m.mandatoryOr & m.optionalOr
+	no m.mandatoryOr & m.requires
+	no m.mandatoryOr & m.excludes
+
+	no m.optionalOr & m.requires
+	no m.optionalOr & m.excludes
+
+	no m.requires & m.excludes
+
+	irreflexive[m.mandatory]
+	irreflexive[m.optional]
+	irreflexive[m.alternative]
+	irreflexive[m.mandatoryOr]
+	irreflexive[m.optionalOr]
+	irreflexive[m.requires]
+	irreflexive[m.excludes]
+	antisymmetric[m.mandatory]
+	antisymmetric[m.optional]
+	antisymmetric[m.alternative]
+	antisymmetric[m.mandatoryOr]
+	antisymmetric[m.optionalOr]
+	antisymmetric[m.requires]
 }
 
 pred Root[f: Feature] {
@@ -100,11 +150,3 @@ pred NoRequires {
 pred NoExcludes {
 	no Model.excludes
 }
-
-
-
-
-
-
-
-
