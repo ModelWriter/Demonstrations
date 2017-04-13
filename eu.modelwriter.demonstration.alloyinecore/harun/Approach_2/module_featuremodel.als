@@ -6,8 +6,6 @@ open util/relation
 one sig Root in Feature {}
 
 abstract sig FeatureModel {
-	//root: Feature,
-
 	mandatory: Feature -> Feature,
 	optional: Feature -> Feature,
 	alternative: Feature -> Feature,
@@ -55,6 +53,33 @@ private pred func_definitions[m: FeatureModel] {
 
 	no m.requires & m.excludes
 
+	no m.mandatory & ~(m.optional)
+	no m.mandatory & ~(m.alternative)
+	no m.mandatory & ~(m.mandatoryOr)
+	no m.mandatory & ~(m.optionalOr)
+	no m.mandatory & ~(m.requires)
+	no m.mandatory & ~(m.excludes)
+
+	no m.optional & ~(m.alternative)
+	no m.optional & ~(m.mandatoryOr)
+	no m.optional & ~(m.optionalOr)
+	no m.optional & ~(m.requires)
+	no m.optional & ~(m.excludes)
+
+	no m.alternative & ~(m.mandatoryOr)
+	no m.alternative & ~(m.optionalOr)
+	no m.alternative & ~(m.requires)
+	no m.alternative & ~(m.excludes)
+
+	no m.mandatoryOr & ~(m.optionalOr)
+	no m.mandatoryOr & ~(m.requires)
+	no m.mandatoryOr & ~(m.excludes)
+
+	no m.optionalOr & ~(m.requires)
+	no m.optionalOr & ~(m.excludes)
+
+	no m.requires & ~(m.excludes)
+
 	irreflexive[m.mandatory]
 	irreflexive[m.optional]
 	irreflexive[m.alternative]
@@ -71,7 +96,6 @@ private pred func_definitions[m: FeatureModel] {
 }
 
 pred Root[f: Feature] {
-	//all m: FeatureModel | m.root = f
 	Root = f
 }
 

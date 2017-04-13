@@ -1,7 +1,10 @@
-open module_featuremodel[Feature] as FeatureModel
-open module_model[Feature] as Model
+open module_featuremodel[Object] as FeatureModel
+open module_sysmlmodel[Object] as SysmlModel
+open module_model[Object] as Model
 
-abstract sig Feature {}
+abstract sig Object {}
+abstract sig Feature extends Object {}
+abstract sig Requirement extends Object {}
 
 one sig Chassis extends Feature {}
 one sig Wiper extends Feature {}
@@ -16,8 +19,15 @@ one sig IntervalWiper extends Feature {}
 one sig AutoRoofControl extends Feature {}
 one sig RainSensor extends Feature {}
 
-pred init_feature_model {
-	FeatureModel/Root[Chassis]
+one sig SR9 extends Requirement {}
+one sig SR10 extends Requirement {}
+one sig SR11 extends Requirement{}
+one sig SR12 extends Requirement {}
+one sig SR13 extends Requirement {}
+one sig SR14 extends Requirement {}
+
+fact init_feature_model {
+	Model/FeatureModel/Root[Chassis]
 
 	FeatureModel/Mandatory[Chassis -> Wiper + Cabriolet -> RoofControl + RainSensorWiper -> RainSensor]
 	FeatureModel/NoOptional
@@ -28,9 +38,17 @@ pred init_feature_model {
 	FeatureModel/NoExcludes
 }
 
-fact convert_to_requirements_model {	init_feature_model }
+fact init_sysml_model {
+	SysmlModel/DeriveReqt[(SR13 + SR14) -> SR10 + SR14 -> SR11]
+	SysmlModel/ComposedBy[(SR10 + SR11) -> SR9]
+	SysmlModel/Copy[SR12 -> SR14]
+	SysmlModel/NoRefines
+}
+
+fact {
+	Model/ConvertBothModels
+}
 
 run {}
 
-check Model/semantically_equals
-
+check Model/semantically_equals_feature_model
