@@ -1,4 +1,5 @@
-module module_sysmlmodel[exactly Requirement]
+/** Takes a user defined signature and defines the relations according to it. */
+module sysml_model[Requirement]
 
 open util/relation
 
@@ -9,6 +10,7 @@ abstract sig SysmlModel {
 	copy: Requirement -> Requirement
 }
 
+/** EmptySysmlModel is the model that has no relations, GivenSysmlModel is the model that user defines */
 one sig EmptySysmlModel, GivenSysmlModel extends SysmlModel {}
 
 fact {
@@ -97,9 +99,3 @@ pred NoComposedBy {
 pred NoCopy {
 	no GivenSysmlModel.copy
 }
-
-
-
-
-
-

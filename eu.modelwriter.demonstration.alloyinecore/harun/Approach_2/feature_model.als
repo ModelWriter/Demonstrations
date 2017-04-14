@@ -1,5 +1,5 @@
 /** Takes a user defined signature and defines the relations according to it. */
-module module_featuremodel[Feature]
+module feature_model[Feature]
 
 open util/relation
 
@@ -16,7 +16,7 @@ abstract sig FeatureModel {
 	excludes: Feature -> Feature
 }
 
-/** EmptyFeatureModel is the model that has no relations but root, GivenFeatureModel is the model that user defines */
+/** EmptyFeatureModel is the model that has no relations, GivenFeatureModel is the model that user defines */
 one sig EmptyFeatureModel, GivenFeatureModel extends FeatureModel {}
 
 fact {
@@ -99,7 +99,7 @@ pred Root[f: Feature] {
 	Root = f
 }
 
-pred Mandatory[f1, f2: Feature] {
+pred Mandatory[f1, f2: one Feature] {
 	f1 -> f2 in GivenFeatureModel.mandatory
 }
 

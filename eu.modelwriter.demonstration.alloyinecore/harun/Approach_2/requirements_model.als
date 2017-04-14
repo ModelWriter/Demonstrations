@@ -1,5 +1,5 @@
 /** Takes a user defined signature and defines the relations according to it. */
-module module_requirementsmodel[exactly Requirement]
+module requirements_model[Requirement]
 
 open util/relation
 
@@ -58,7 +58,7 @@ private pred functional_facts[m:RequirementsModel]{
 	no m.conflicts & ~(m.equals)
 }
 
-/** If a requirement equals to an other requirement, then these requirements have exactly the same relations */
+/** If a requirement equals to another requirement, then these requirements have exactly the same relations */
 private pred equals_facts[m:RequirementsModel] {
 	all a,b: Requirement {
 		b in a.(m.equals) => a.(m.conflicts) = b.(m.conflicts)
@@ -78,7 +78,7 @@ private pred equals_facts[m:RequirementsModel] {
 }
 
 /** Defines, under what conditions program should infer that one requirement requires another. */
-private pred requires_facts[m:RequirementsModel] {
+private pred infer_requires_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.requires) && c in b.(m.refines) &&  c !in a.(m.contains) => c in a.(m.requires)
 		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
@@ -89,7 +89,7 @@ private pred requires_facts[m:RequirementsModel] {
 }
 
 /** Defines, under what conditions program should infer that one requirement refines or partially refines another. */
-private pred refines_facts[m:RequirementsModel] {
+private pred infer_refines_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.refines)
 		b in a.(m.partiallyRefines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
@@ -99,49 +99,49 @@ private pred refines_facts[m:RequirementsModel] {
 }
 
 /** Defines, under what conditions program should infer that one requirement conflicts another. */
-private pred conflicts_facts[m:RequirementsModel] {
+private pred infer_conflicts_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
 		b in a.(m.requires + m.refines + m.contains) && c in b.(m.conflicts) => c in a.(m.conflicts)
 	}
 }
 
-/** Defines, what conditions are required to infer relations. It is to assure that program doesn't infer irrelevant relations and gives only the accurate solutions. */
+/** Defines, what conditions are required to infer relations. It assures that program doesn't infer irrelevant relations and gives only the accurate solutions. */
 private pred relation_facts[m,m': RequirementsModel] {
 	all a,c: Requirement {
-		c in a.(m'.requires) => c in a.*(m'.equals).*(m.requires + m.contains + m.refines).*(m'.equals)
-		c in a.(m'.refines) => c in a.*(m'.equals).*(m.requires + m.refines).*(m.contains).*(m'.equals)
-		c in a.(m'.equals) => c in a.*(m.equals).*(~(m.equals)).*(m.equals)
-		c in a.(m'.contains) => c in a.*(m'.equals).*(m.contains).*(m'.equals)
-		c in a.(m'.partiallyRefines) => c in a.*(m'.equals).*(m.refines + m.partiallyRefines).*(m.contains).*(m'.equals)
-		c in a.(m'.conflicts) => 	c in a.*(m'.equals).*(m.requires + m.refines + m.contains).(m.conflicts + ~(m.conflicts)).*(m'.equals) || 
-										 		c in a.*(m'.equals).(m.conflicts + ~(m.conflicts)).*~(m.requires + m.refines + m.contains).*(m'.equals)
+		c in a.(m'.equals) => c in a.*(m.equals + ~(m.equals))
+		c in a.(m'.requires) => c in a.*(m.requires + m.contains + m.refines + m'.equals) // If "a" requires "c" in the inferred model, then we must somehow reach "c" from "a" in the given model by using requires, contains and refines relations.
+		c in a.(m'.refines) => c in a.*(m.requires + m.refines + m'.equals).*(m.contains + m'.equals) // Same logic here.
+		c in a.(m'.contains) => c in a.*(m.contains + m'.equals) // Same logic here.
+		c in a.(m'.partiallyRefines) => c in a.*(m.(refines + partiallyRefines) + m'.equals).*(m.contains + m'.equals) // Same logic here.
+		c in a.(m'.conflicts) => 	c in a.(m.requires + m.refines + m.contains + m'.equals).(m.conflicts + ~(m.conflicts)).*(m'.equals) || // If a conflicts with c in the inferred model, then in the given model, either a conflicts with c or what is required by a, conflicts with c.
+										 		c in a.*(m'.equals).(m.conflicts + ~(m.conflicts)).*~(m.requires + m.refines + m.contains + m'.equals)	// Reverse logic here.
 	}
 }
 
 /** The definitions of relations. */
-private pred func_definitions[m:RequirementsModel] {
-	irreflexive[m.requires]
-	antisymmetric[m.requires]
-	transitive[m.requires]
+private pred relation_properties[m':RequirementsModel] {
+	irreflexive[m'.requires]
+	antisymmetric[m'.requires]
+	transitive[m'.requires]
 
-	irreflexive[m.refines]
-	antisymmetric[m.refines]
-	transitive[m.refines]
+	irreflexive[m'.refines]
+	antisymmetric[m'.refines]
+	transitive[m'.refines]
 
-	irreflexive[m.contains]
-	antisymmetric[m.contains]
-	transitive[m.contains]
+	irreflexive[m'.contains]
+	antisymmetric[m'.contains]
+	transitive[m'.contains]
 
-	irreflexive[m.partiallyRefines]
-	antisymmetric[m.partiallyRefines]
-	transitive[m.partiallyRefines]
+	irreflexive[m'.partiallyRefines]
+	antisymmetric[m'.partiallyRefines]
+	transitive[m'.partiallyRefines]
 
-	irreflexive[m.conflicts]
-	symmetric[m.conflicts]
+	irreflexive[m'.conflicts]
+	symmetric[m'.conflicts]
 
-	reflexive[m.equals, Requirement] // It was said non-reflexive in the article but it was logically wrong and gave no result.
-	symmetric[m.equals]
-	transitive[m.equals]
+	reflexive[m'.equals, Requirement] // It was said non-reflexive in the article but it was logically wrong and gave no result.
+	symmetric[m'.equals]
+	transitive[m'.equals]
 }
 
 /** Takes the given model, places the relations into the second model and infers new relations. */
@@ -153,10 +153,10 @@ fact generateSolution {
 	GivenModel.conflicts in InferredModel.conflicts
 	GivenModel.equals in InferredModel.equals
 
-	func_definitions[InferredModel]
-	conflicts_facts[InferredModel]
-	refines_facts[InferredModel]
-	requires_facts[InferredModel]
+	relation_properties[InferredModel]
+	infer_conflicts_facts[InferredModel]
+	infer_refines_facts[InferredModel]
+	infer_requires_facts[InferredModel]
 	equals_facts[InferredModel]
 	functional_facts[InferredModel]
 	relation_facts[GivenModel, InferredModel]
