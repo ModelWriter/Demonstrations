@@ -84,15 +84,23 @@ private pred infer_requires_facts[m:RequirementsModel] {
 		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
 		b in a.(m.requires) && c in b.(m.contains) &&  c !in a.(m.contains) => c in a.(m.requires)
 		b in a.(m.contains) && c in a.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.contains) && c in b.(m.refines) && c !in a.(m.contains + m.refines + m.partiallyRefines) => c in a.(m.requires)
 	}
 }
 
-/** Defines, under what conditions program should infer that one requirement refines or partially refines another. */
+/** Defines, under what conditions program should infer that one requirement refines another. */
 private pred infer_refines_facts[m:RequirementsModel] {
+	//all a,b,c: Requirement {
+	//	
+	//}
+}
+
+/** Defines, under what conditions program should infer that one requirement partially refines another. */
+private pred infer_partiallyrefines_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
-		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.refines)
+		b in a.(m.contains) && c in b.(m.refines) => c in a.(m.partiallyRefines)
+		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
 		b in a.(m.partiallyRefines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
+		b in a.(m.contains) && c in b.(m.partiallyRefines) => c in a.(m.partiallyRefines)
 		b in a.(m.refines) && c in b.(m.partiallyRefines) => c in a.(m.partiallyRefines)
 		b in a.(m.partiallyRefines) && c in b.(m.refines) => c in a.(m.partiallyRefines)
 	}
@@ -156,6 +164,7 @@ fact generateSolution {
 	relation_properties[InferredModel]
 	infer_conflicts_facts[InferredModel]
 	infer_refines_facts[InferredModel]
+	infer_partiallyrefines_facts[InferredModel]
 	infer_requires_facts[InferredModel]
 	equals_facts[InferredModel]
 	functional_facts[InferredModel]
