@@ -1,0 +1,129 @@
+module RequirementsModel
+
+open util/relation
+
+sig Requirement {
+	requires: set Requirement,
+	refines: set Requirement,
+	contains: set Requirement,
+	partiallyRefines: set Requirement,
+	conflicts: set Requirement,
+	equals: set Requirement
+}
+
+fact functional_facts {
+	no requires & refines
+	no requires & contains
+	no requires & partiallyRefines
+	no requires & conflicts
+	no requires & equals
+
+	no refines & contains
+	no refines & partiallyRefines
+	no refines & conflicts
+	no refines & equals
+
+	no contains & partiallyRefines
+	no contains & conflicts
+	no contains & equals
+
+	no partiallyRefines & conflicts
+	no partiallyRefines & equals
+
+	no conflicts & equals
+
+	no requires & ~refines
+	no requires & ~contains
+	no requires & ~partiallyRefines
+	no requires & ~conflicts
+	no requires & ~equals
+
+	no refines & ~contains
+	no refines & ~partiallyRefines
+	no refines & ~conflicts
+	no refines & ~equals
+
+	no contains & ~partiallyRefines
+	no contains & ~conflicts
+	no contains & ~equals
+
+	no partiallyRefines & ~conflicts
+	no partiallyRefines & ~equals
+
+	no conflicts & ~equals
+}
+
+fact relation_properties {
+	irreflexive[requires]
+	antisymmetric[requires]
+	transitive[requires]
+
+	irreflexive[refines]
+	antisymmetric[refines]
+	transitive[refines]
+
+	irreflexive[contains]
+	antisymmetric[contains]
+	transitive[contains]
+
+	irreflexive[partiallyRefines]
+	antisymmetric[partiallyRefines]
+	transitive[partiallyRefines]
+
+	irreflexive[conflicts]
+	symmetric[conflicts]
+
+	reflexive[equals, Requirement]
+	symmetric[equals]
+	transitive[equals]
+}
+
+/** If a requirement equals to another requirement, then these requirements have exactly the same relations */
+fact equals_facts {
+	all a,b: Requirement {
+		b in a.equals => a.conflicts = b.conflicts
+		b in a.equals => a.requires = b.requires
+		b in a.equals => a.equals = b.equals
+		b in a.equals => a.refines = b.refines
+		b in a.equals => a.partiallyRefines = b.partiallyRefines
+		b in a.equals => a.contains = b.contains
+                                    
+		b in a.equals => a.~conflicts = b.~conflicts
+		b in a.equals => a.~requires = b.~requires
+		b in a.equals => a.~equals = b.~equals
+		b in a.equals => a.~refines = b.~refines
+		b in a.equals => a.~partiallyRefines = b.~partiallyRefines
+		b in a.equals => a.~contains = b.~contains
+	}
+}
+
+
+/** Defines, under what conditions program should infer that one requirement requires another. */
+fact infer_requires_facts {
+	all a,b,c: Requirement {
+		b in a.requires && c in b.refines && c !in a.contains => c in a.requires
+		b in a.refines && c in b.requires && c !in a.contains => c in a.requires
+		b in a.requires && c in b.contains && c !in a.contains => c in a.requires
+		b in a.contains && c in a.requires && c !in a.contains => c in a.requires
+	}
+}
+
+/** Defines, under what conditions program should infer that one requirement partially refines another. */
+fact infer_partiallyrefines_facts {
+	all a,b,c: Requirement {
+		b in a.contains && c in b.refines => c in a.partiallyRefines
+		b in a.refines && c in b.contains => c in a.partiallyRefines
+		b in a.partiallyRefines && c in b.contains => c in a.partiallyRefines
+		b in a.contains && c in b.partiallyRefines => c in a.partiallyRefines
+		b in a.refines && c in b.partiallyRefines => c in a.partiallyRefines
+		b in a.partiallyRefines && c in b.refines => c in a.partiallyRefines
+	}
+}
+
+/** Defines, under what conditions program should infer that one requirement conflicts another. */
+fact infer_conflicts_facts {
+	all a,b,c: Requirement {
+		b in a.(requires + refines + contains) && c in b.conflicts => c in a.conflicts
+	}
+}
+

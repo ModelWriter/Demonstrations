@@ -1,0 +1,95 @@
+/** Takes a user defined signature and defines the relations according to it. */
+module feature_model
+
+open util/relation
+
+sig Feature {
+	mandatory: set Feature,
+	optional: set Feature,
+	alternative: set Feature,
+ 	mandatoryOr: set Feature,
+	optionalOr: set Feature,
+
+	requires: set Feature,
+	excludes: set Feature
+}
+
+one sig Root extends Feature {}
+
+/** Any feature, connected to this model, must be reachable from the root. */
+fact {
+	Feature in Root.*(mandatory + optional + alternative + mandatoryOr + optionalOr + requires + excludes)
+}
+
+fact func_definitions {
+	no mandatory & optional
+	no mandatory & alternative
+	no mandatory & mandatoryOr
+	no mandatory & optionalOr
+	no mandatory & requires
+	no mandatory & excludes
+
+	no optional & alternative
+	no optional & mandatoryOr
+	no optional & optionalOr
+	no optional & requires
+	no optional & excludes
+
+	no alternative & mandatoryOr
+	no alternative & optionalOr
+	no alternative & requires
+	no alternative & excludes
+
+	no mandatoryOr & optionalOr
+	no mandatoryOr & requires
+	no mandatoryOr & excludes
+
+	no optionalOr & requires
+	no optionalOr & excludes
+
+	no requires & excludes
+
+	no mandatory & optional
+	no mandatory & alternative
+	no mandatory & mandatoryOr
+	no mandatory & optionalOr
+	no mandatory & requires
+	no mandatory & excludes
+
+	no optional & alternative
+	no optional & mandatoryOr
+	no optional & optionalOr
+	no optional & requires
+	no optional & excludes
+
+	no alternative & mandatoryOr
+	no alternative & optionalOr
+	no alternative & requires
+	no alternative & excludes
+
+	no mandatoryOr & optionalOr
+	no mandatoryOr & requires
+	no mandatoryOr & excludes
+
+	no optionalOr & requires
+	no optionalOr & excludes
+
+	no requires & excludes
+}
+
+fact relation_properties {
+	irreflexive[mandatory]
+	irreflexive[optional]
+	irreflexive[alternative]
+	irreflexive[mandatoryOr]
+	irreflexive[optionalOr]
+	irreflexive[requires]
+	irreflexive[excludes]
+	antisymmetric[mandatory]
+	antisymmetric[optional]
+	antisymmetric[alternative]
+	antisymmetric[mandatoryOr]
+	antisymmetric[optionalOr]
+	antisymmetric[requires]
+}
+
