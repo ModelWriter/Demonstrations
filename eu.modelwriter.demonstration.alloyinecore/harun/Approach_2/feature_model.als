@@ -152,7 +152,7 @@ pred Requires[r: Feature -> Feature] {
 }
 
 pred Excludes[r: Feature -> Feature] {
-	r = GivenFeatureModel.excludes
+	r + ~r = GivenFeatureModel.excludes
 }
 
 pred NoMandatory {
