@@ -21,8 +21,7 @@ one sig EmptyFeatureModel, GivenFeatureModel extends FeatureModel {}
 fact {
 	func_definitions[GivenFeatureModel]
 	NoRelations[EmptyFeatureModel]
-	all f: ran[FeatureModel.(requires + excludes)] | some f.~(FeatureModel.(mandatory + optional + alternative + _or))
-	let rel = FeatureModel.(mandatory + optional + alternative + _or + requires + excludes) | Root.*rel = ran[rel] + dom[rel] // Any feature, connected to this model, must be reachable from the root.
+	Root.*(FeatureModel.(mandatory + optional + alternative + _or ) )= Feature // Any feature, connected to this model, must be reachable from the root.
 }
 
 private pred func_definitions[m: FeatureModel] {
@@ -79,20 +78,22 @@ private pred func_definitions[m: FeatureModel] {
 	antisymmetric[m.requires]
 }
 
-/** Possible Instances Extension */
+/** Possible Extensions for Configuration */
+
 // There are instances that includes features.
 sig Instance {
 	includes: set Feature
 }
 
-// There are not two equal instances.
+// All configurations are unique
 fact all_instances_unique {
-	all i: Instance, i': Instance-i | i.includes != i'.includes
+--	all disj i, i': Instance | i.includes != i'.includes
+	all i, i': Instance | i !=i' implies i.includes != i'.includes
 }
 
-fact diversity_rules {
+fact configuration_rules {
 	all i: Instance {
-		 Root in i.includes																																														/** root */
+		Root in i.includes																																														/** root */
 		all f1: Feature, f2: f1.(FeatureModel.optional) | f2 in i.includes => f1 in i.includes 																				/** optional */
 		all f1: Feature, f2: f1.(FeatureModel.mandatory) | f2 in i.includes <=> f1 in i.includes 																			/** mandatory */
 		all f1: Feature | f1 in i.includes and some f1.(FeatureModel._or) <=> some f1.(FeatureModel._or) & i.includes 								/** or */
@@ -103,6 +104,7 @@ fact diversity_rules {
 	}
 }
 /** Possible Instances Extension */
+
 
 pred Root[f: Feature] {
 	Root = f
