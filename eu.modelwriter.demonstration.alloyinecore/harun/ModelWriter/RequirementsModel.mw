@@ -99,6 +99,7 @@ fact equals_facts {
 
 
 /** Defines, under what conditions program should infer that one requirement requires another. */
+-- Reason@Requirement.requires
 fact infer_requires_facts {
 	all a,b,c: Requirement {
 		b in a.requires && c in b.refines && c !in a.contains => c in a.requires

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="RelationModel/FeatureModel/FeatureModel"/> <type name="RelationModel/FeatureModel/Instance"/> <type name="RelationModel/RequirementsModel/RequirementsModel"/> <type name="RelationModel/SysmlModel/SysmlModel"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="AutoRoofControl"/>
+   <type name="Cabriolet"/>
+   <type name="Chassis"/>
+   <type name="FrontWiper"/>
+   <type name="Int"/>
+   <type name="IntervalWiper"/>
+   <type name="ManualControl"/>
+   <type name="RainSensor"/>
+   <type name="RainSensorWiper"/>
+   <type name="RearWiper"/>
+   <type name="RoofControl"/>
+   <type name="StaticWagon"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="Wiper"/>
+   <type name="RelationModel/ModelObject"/>
+   <type name="seq/Int"/>
+   <type name="RelationModel/FeatureModel/EmptyFeatureModel"/>
+   <type name="RelationModel/FeatureModel/FeatureModel"/>
+   <type name="RelationModel/FeatureModel/GivenFeatureModel"/>
+   <type name="RelationModel/FeatureModel/Instance"/>
+   <type name="RelationModel/RequirementsModel/EmptyModel"/>
+   <type name="RelationModel/RequirementsModel/GivenModel"/>
+   <type name="RelationModel/RequirementsModel/InferredModel"/>
+   <type name="RelationModel/RequirementsModel/RequirementsModel"/>
+   <type name="RelationModel/SysmlModel/EmptySysmlModel"/>
+   <type name="RelationModel/SysmlModel/GivenSysmlModel"/>
+   <type name="RelationModel/SysmlModel/SysmlModel"/>
+   <set name="RelationModel/Mandatory" type="RelationModel/ModelObject"/>
+   <set name="RelationModel/Optional" type="RelationModel/ModelObject"/>
+   <set name="RelationModel/FeatureModel/Root" type="RelationModel/ModelObject"/>
+</node>
+
+<node color="White">
+   <set name="includes" type="RelationModel/ModelObject"/>
+</node>
+
+<edge visible="no">
+   <relation name="depend"> <type name="RelationModel/ModelObject"/> <type name="RelationModel/ModelObject"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

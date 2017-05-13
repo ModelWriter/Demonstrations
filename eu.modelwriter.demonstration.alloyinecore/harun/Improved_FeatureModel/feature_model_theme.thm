@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="FeatureModel/FeatureModel"/> <type name="FeatureModel/Instance"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="AutoRoofControl"/>
+   <type name="Cabriolet"/>
+   <type name="Chassis"/>
+   <type name="Feature"/>
+   <type name="FrontWiper"/>
+   <type name="Int"/>
+   <type name="IntervalWiper"/>
+   <type name="ManualControl"/>
+   <type name="RainSensor"/>
+   <type name="RainSensorWiper"/>
+   <type name="RearWiper"/>
+   <type name="RoofControl"/>
+   <type name="StaticWagon"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="Wiper"/>
+   <type name="FeatureModel/EmptyFeatureModel"/>
+   <type name="FeatureModel/FeatureModel"/>
+   <type name="FeatureModel/GivenFeatureModel"/>
+   <type name="FeatureModel/Instance"/>
+   <type name="seq/Int"/>
+   <set name="FeatureModel/Root" type="Feature"/>
+</node>
+
+<node color="White">
+   <set name="includes" type="Feature"/>
+</node>
+
+</view>
+
+</alloy>
