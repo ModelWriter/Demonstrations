@@ -87,17 +87,17 @@ private pred func_definitions[m: FeatureModel] {
 
 /** Possible Instances Extension */
 // There are instances that includes features.
-sig Instance {
+sig Configuration {
 	includes: set Feature
 }
 
 // There are not two equal instances.
-fact all_instances_unique {
-	all i: Instance, i': Instance-i | i.includes != i'.includes
+fact all_configurations_unique {
+	all i: Configuration, i': Configuration-i | i.includes != i'.includes
 }
 
 fact diversity_rules {
-	all i: Instance {
+	all i: Configuration {
 		 Root in i.includes																																														/** root */
 		all f1: Feature, f2: f1.(FeatureModel.optional) | f2 in i.includes => f1 in i.includes 																				/** optional */
 		all f1: Feature, f2: f1.(FeatureModel.mandatory) | f2 in i.includes <=> f1 in i.includes 																			/** mandatory */

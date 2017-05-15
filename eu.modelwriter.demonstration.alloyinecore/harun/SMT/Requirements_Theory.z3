@@ -242,10 +242,10 @@
 (assert 
   (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
     ( and 
-      (=> (and (requires r1 r2) (refines r2 r3) (not (contains r1 r3))) (requires r1 r3))
-      (=> (and (refines r1 r2) (requires r2 r3) (not (contains r1 r3))) (requires r1 r3))
-      (=> (and (requires r1 r2) (contains r2 r3) (not (contains r1 r3))) (requires r1 r3))
-      (=> (and (contains r1 r2) (requires r2 r3) (not (contains r1 r3))) (requires r1 r3))
+      (=> (and (requires r1 r2) (refines r2 r3)) (requires r1 r3))
+      (=> (and (refines r1 r2) (requires r2 r3)) (requires r1 r3))
+      (=> (and (requires r1 r2) (contains r2 r3)) (requires r1 r3))
+      (=> (and (contains r1 r2) (requires r2 r3)) (requires r1 r3))
     )
   )
 )

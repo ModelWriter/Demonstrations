@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="Combined/FeatureModel/Configuration"/> <type name="Combined/FeatureModel/FeatureModel"/> <type name="Combined/RequirementsModel/RequirementsModel"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="A"/>
+   <type name="B"/>
+   <type name="C"/>
+   <type name="D"/>
+   <type name="E"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="Combined/Feature"/>
+   <type name="seq/Int"/>
+   <type name="Combined/FeatureModel/Configuration"/>
+   <type name="Combined/FeatureModel/EmptyFeatureModel"/>
+   <type name="Combined/FeatureModel/FeatureModel"/>
+   <type name="Combined/FeatureModel/GivenFeatureModel"/>
+   <type name="Combined/RequirementsModel/EmptyModel"/>
+   <type name="Combined/RequirementsModel/GivenModel"/>
+   <type name="Combined/RequirementsModel/InferredModel"/>
+   <type name="Combined/RequirementsModel/RequirementsModel"/>
+   <set name="Combined/Mandatory" type="Combined/Feature"/>
+   <set name="Combined/Optional" type="Combined/Feature"/>
+   <set name="Combined/FeatureModel/Root" type="Combined/Feature"/>
+</node>
+
+<node color="White">
+   <set name="includes" type="Combined/Feature"/>
+</node>
+
+<edge visible="no">
+   <relation name="depend"> <type name="Combined/Feature"/> <type name="Combined/Feature"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

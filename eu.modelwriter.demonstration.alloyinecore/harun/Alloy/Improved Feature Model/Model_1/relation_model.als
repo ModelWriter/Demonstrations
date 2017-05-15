@@ -15,8 +15,7 @@ pred ConvertFeatureModel {
 		RequirementsModel/Requires[fm.requires + fm.mandatory]
 		RequirementsModel/Refines[~(fm.(optional + alternative + mandatoryOr + optionalOr))]
 
-		all r: ran[fm.alternative] | r.(RequirementsModel/GivenModel.conflicts) = (r.~(fm.alternative).(fm.alternative) - r) + r.(fm.excludes) // for all features which are in the range of "alternative", these features conflict with the features which have the same range of "~alternative" and the features which are in its "excludes" relation.                 
-		all r: ran[RequirementsModel/GivenModel.conflicts] + dom[RequirementsModel/GivenModel.conflicts] | r in ran[fm.alternative] + ran[fm.excludes] + dom[fm.excludes] // for all features in the 'domain and range' of "conflicts", these features ar in the 'range' of "alternative" or in the 'range or domain' of "excludes"
+		all f: ModelObject | f.(RequirementsModel/GivenModel.conflicts) =  f.(fm.excludes) + (f.~(fm.alternative).(fm.alternative) - f)
 
 		RequirementsModel/NoContains
 		RequirementsModel/NoPartiallyRefines
@@ -50,8 +49,7 @@ pred ConvertBothModels {
 		RequirementsModel/Contains[~(sm.composedBy)]
 		RequirementsModel/Equals[sm.copy]
 		RequirementsModel/NoPartiallyRefines
-		all r: ran[fm.alternative] | r.(RequirementsModel/GivenModel.conflicts) = (r.~(fm.alternative).(fm.alternative) - r) + r.(fm.excludes) // for all features which are in the range of "alternative", these features conflict with the features which have the same range of "~alternative" and the features which are in its "excludes" relation.                 
-		all r: ran[RequirementsModel/GivenModel.conflicts] + dom[RequirementsModel/GivenModel.conflicts] | r in ran[fm.alternative] + ran[fm.excludes] + dom[fm.excludes] // for all features in the 'domain and range' of "conflicts", these features are in the 'range' of "alternative" or in the 'range or domain' of "excludes"
+		all f: ModelObject | f.(RequirementsModel/GivenModel.conflicts) =  f.(fm.excludes) + (f.~(fm.alternative).(fm.alternative) - f)
 		Optional = FeatureModel/Root.*(fm.mandatory + fm.mandatoryOr).(fm.alternative + fm.optional + fm.optionalOr).*(fm.mandatory + fm.mandatoryOr + fm.alternative + fm.optional + fm.optionalOr) // all features which are reachable from Root with at least one "fm.alternative", "fm.optional" or "fm.optionalOr" are optional and the rest are mandatory.
 		Mandatory = FeatureModel/Root.*(fm.mandatory + fm.mandatoryOr)
 	}
@@ -65,8 +63,7 @@ pred ConvertBothModels[rel: ModelObject -> ModelObject] {
 		RequirementsModel/Contains[~(sm.composedBy)]
 		RequirementsModel/Equals[sm.copy]
 		RequirementsModel/NoPartiallyRefines // Neither sysml model nor feature model uses partially refines relation of requirements model.
-		all r: ran[fm.alternative] | r.(RequirementsModel/GivenModel.conflicts) = (r.~(fm.alternative).(fm.alternative) - r) + r.(fm.excludes) // for all features which are in the range of "alternative", these features conflict with the features which have the same range of "~alternative" and the features which are in its "excludes" relation.                 
-		all r: ran[RequirementsModel/GivenModel.conflicts] + dom[RequirementsModel/GivenModel.conflicts] | r in ran[fm.alternative] + ran[fm.excludes] + dom[fm.excludes] // for all features in the 'domain and range' of "conflicts", these features ar in the 'range' of "alternative" or in the 'range or domain' of "excludes"
+		all f: ModelObject | f.(RequirementsModel/GivenModel.conflicts) =  f.(fm.excludes) + (f.~(fm.alternative).(fm.alternative) - f)
 		Optional = FeatureModel/Root.*(fm.mandatory + fm.mandatoryOr).(fm.alternative + fm.optional + fm.optionalOr).*(fm.mandatory + fm.mandatoryOr + fm.alternative + fm.optional + fm.optionalOr) // all features which are reachable from Root with at least one "fm.alternative", "fm.optional" or "fm.optionalOr" are optional and the rest are mandatory.
 		Mandatory = FeatureModel/Root.*(fm.mandatory + fm.mandatoryOr)
 	}
