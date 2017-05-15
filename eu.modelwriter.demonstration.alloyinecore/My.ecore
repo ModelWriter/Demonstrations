@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="ASCII"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="BookStorePackage" nsURI="http:///com.ibm.dynamic.example.bookstore.ecore"
-    nsPrefix="bookStore">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="BookStorePackage" nsURI="http:///com.ibm.dynamic.example.bookstore.ecore" nsPrefix="bookStore">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Req" value="Requirements.ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Instance" value="Instance.requirements"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="import Req : 'Requirements.ecore';&#xA;import Instance : 'Instance.requirements';&#xA;import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package BookStorePackage : bookStore = 'http:///com.ibm.dynamic.example.bookstore.ecore'&#xA;{&#xA;    class A&#xA;    {&#xA;        attribute owner : String[+] { !unique };&#xA;        property ref2 : A;&#xA;        operation method() : String;&#xA;    }&#xA;    package pack : p = 'bla bla'&#xA;    {&#xA;        public class B&#xA;        {&#xA;            public attribute instance : Req::Priority[?];&#xA;            annotation 'ferhat'&#xA;            {&#xA;                reference BookStorePackage::A::owner;&#xA;                reference Instance::B;&#xA;                reference Instance::@requirements.0::@parts.1;&#xA;                reference Instance::@requirements.0::@parts.0;&#xA;                reference Instance::@relationships.0;&#xA;            }&#xA;        }&#xA;    }&#xA;}"/>
+    <details key="source_hash" value="-142516796"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="A">
-    <eOperations name="method" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" ordered="false"
-        unique="false" lowerBound="1" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref2" ordered="false" lowerBound="1"
-        eType="#//pack/B"/>
+    <eOperations name="method" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" ordered="false" unique="false" lowerBound="1" upperBound="-1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref2" ordered="false" lowerBound="1" eType="//A"/>
   </eClassifiers>
   <eSubpackages name="pack" nsURI="bla bla" nsPrefix="p">
     <eClassifiers xsi:type="ecore:EClass" name="B">
-      <eAnnotations source="ferhat" references="#//A/owner Instance.requirements#B Instance.requirements#//@requirements.0/@parts.1 Instance.requirements#//@requirements.0/@parts.0 Instance.requirements#//@relationships.0"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="instance" ordered="false"
-          eType="ecore:EEnum Requirements.ecore#//Priority"/>
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+        <details key="visibility" value="public"/>
+      </eAnnotations>
+      <eAnnotations source="ferhat">
+        <references href="#//A/owner"/>
+        <references href="Instance.requirements#B"/>
+        <references href="Instance.requirements#//@requirements.0/@parts.1"/>
+        <references href="Instance.requirements#//@requirements.0/@parts.0"/>
+        <references href="Instance.requirements#//@relationships.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="instance" ordered="false">
+        <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+          <details key="visibility" value="public"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EEnum" href="Requirements.ecore#//Priority"/>
+      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ImmutableList" nsURI="eu.modelwriter.immutableList" nsPrefix="List">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="package  ImmutableList : List = 'eu.modelwriter.immutableList' {&#xA;&#x9;&#xA;&#x9;class List{&#xA;&#x9;}&#xA;&#xA;}"/>
+    <details key="source_hash" value="252507746"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="List"/>
+</ecore:EPackage>

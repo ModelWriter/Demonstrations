@@ -2,14 +2,24 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ArchitectureMetamodel" nsURI="eu.modelwriter.demonstrations.metamodels.architecture"
     nsPrefix="arch">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package ArchitectureMetamodel : arch = 'eu.modelwriter.demonstrations.metamodels.architecture'&#xA;{&#xA;    class ArchitectureMetamodel&#xA;    {&#xA;        attribute name : String[?];&#xA;        property elements : ArhitecturalElement[*] { ordered composes };&#xA;    }&#xA;    public class ArhitecturalElement&#xA;    {&#xA;        attribute id : Integer[?];&#xA;        attribute name : String[?];&#xA;    }&#xA;    class Component extends ArhitecturalElement&#xA;    {&#xA;        property subComponents : Component[*] { ordered composes };&#xA;    }&#xA;}"/>
+    <details key="source_hash" value="557183308"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ArchitectureMetamodel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//ArhitecturalElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArhitecturalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//ArhitecturalElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subComponents" upperBound="-1"

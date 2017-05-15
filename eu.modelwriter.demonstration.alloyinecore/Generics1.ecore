@@ -15,15 +15,19 @@
     <details key="Arc" value="Architecture.ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
-    <details key="My" value="My.ecore"/>
+    <details key="FO" value="test/FordOtosan.ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="import Req : 'Requirements.ecore';&#xA;import Instance : 'Instance.requirements';&#xA;import Arc : 'Architecture.ecore';&#xA;import My : 'My.ecore';&#xA;import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package generics : gns = 'eu.modelwriter.generics'&#xA;{&#xA;    abstract class List&lt;E>&#xA;    {&#xA;        private property content : E[*];&#xA;&#x9;&#x9;private property iterator: Iterator&lt;E>[1];&#xA;        operation add(element : E);&#xA;        operation iterator() : Iterator&lt;E>[?];&#xA;        invariant quantifier : all d : List | not (d in d.^content);&#xA;    }&#xA;    public class Iterator&lt;E>&#xA;    {&#xA;        public operation next() : E[?] throws MyException&lt;E>;&#xA;        public operation hasNext() : Boolean&#xA;        {&#xA;            body : next; &#xA;        }&#xA;    }&#xA;    class ArrayList&lt;V> extends List&lt;V>;&#xA;    class Car;&#xA;    abstract class Person;&#xA;    class Owner&lt;K, V extends Person &amp; Car>&#xA;    {&#xA;        public property cars : ArrayList&lt;Car>[?];&#xA;        private property owner : K;&#xA;        annotation;&#xA;    }&#xA;    abstract class Shape extends Person, ArrayList;&#xA;    class Canvas&#xA;    {&#xA;        property ref : List&lt;?>[?];&#xA;        operation draw(shapes : List&lt;? super Shape>) : Boolean[?];&#xA;        operation &lt;V> create(name : String);&#xA;        operation create(arg : ArrayList&lt;? super Car>[?])&#xA;        {&#xA;            requires : one ArrayList;&#xA;        }&#xA;    }&#xA;    class MyException&lt;T>;&#xA;    enum BookCategory&#xA;    {&#xA;        literal Mystery = 0;&#xA;        literal ScienceFiction = 1;&#xA;        literal Biography = 2;&#xA;    }&#xA;    invariant test1 : contents in Dir -> (Dir + File);&#xA;}"/>
+    <details key="source" value="import Req : 'Requirements.ecore';&#xA;import Instance : 'Instance.requirements';&#xA;import Arc : 'Architecture.ecore';&#xA;import FO : 'test/FordOtosan.ecore';&#xA;import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package generics : gns = 'eu.modelwriter.generics'&#xA;{&#x9;&#xA;    public abstract class List&lt;E>&#xA;    {&#xA;        private property content : E[*];&#xA;        private property iterator : Iterator&lt;E>;&#xA;        operation add(element : E);&#xA;        invariant quantifier : all d : List | not (d in d.^content);&#xA;    }&#xA;    public class Iterator&lt;E>&#xA;    {&#xA;        public operation next() : E[?];&#xA;        public operation hasNext() : Boolean&#xA;        {&#xA;            body : next;&#xA;        }&#xA;    }&#xA;    class ArrayList&lt;V> extends List&lt;V>;&#xA;    class Car extends Arc::ArhitecturalElement&#xA;    {&#xA;        private attribute year : Req::Status;&#xA;    }&#xA;    abstract class Geometry;&#xA;    class Owner&lt;K, V extends Geometry &amp; Car>&#xA;    {&#xA;        public property cars : ArrayList&lt;Car>[?];&#xA;        private property owner : K;&#xA;        annotation 'test'&#xA;        (&#xA;            'key' = 'value'&#xA;        );&#xA;    }&#xA;    abstract class Shape extends Geometry&#xA;    {&#xA;        attribute Type : ShapeType[?];&#xA;    }&#xA;    class Canvas&lt;V>&#xA;    {&#xA;        property ref : List&lt;?>[?] { composes };&#xA;        operation draw(shapes : List&lt;? super Shape>) : Boolean[?];&#xA;        static operation &lt;V> create(name : Canvas&lt;?>) : Ecore::EBoolean;&#xA;        operation create(arg : ArrayList&lt;? super Car>[?])&#xA;        {&#xA;            requires : one ArrayList;&#xA;        }&#xA;    }&#xA;    class MyException&lt;T>;&#xA;    enum ShapeType&#xA;    {&#xA;        literal Arc = 0;&#xA;        literal Oval = 1;&#xA;        literal Rectangle = 2;&#xA;    }&#xA;    invariant test1 : contents in Dir -> (Dir + File);&#xA;    package test : t = 'test'&#xA;    {&#xA;        public class ArrayList&lt;V> extends generics::List&lt;V>;&#xA;    }&#xA;}"/>
+    <details key="source_hash" value="-1972547625"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
       <details key="name" value="quantifier"/>
@@ -35,18 +39,16 @@
         <eGenericType eTypeParameter="//List/E"/>
       </eParameters>
     </eOperations>
-    <eOperations name="iterator" ordered="false">
-      <eGenericType eClassifier="//Iterator">
-        <eTypeArguments eTypeParameter="//List/E"/>
-      </eGenericType>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false" upperBound="-1">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
         <details key="visibility" value="private"/>
       </eAnnotations>
       <eGenericType eTypeParameter="//List/E"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="iterator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iterator" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+        <details key="visibility" value="private"/>
+      </eAnnotations>
       <eGenericType eClassifier="//Iterator">
         <eTypeArguments eTypeParameter="//List/E"/>
       </eGenericType>
@@ -62,9 +64,6 @@
         <details key="visibility" value="public"/>
       </eAnnotations>
       <eGenericType eTypeParameter="//Iterator/E"/>
-      <eGenericExceptions eClassifier="//MyException">
-        <eTypeArguments eTypeParameter="//Iterator/E"/>
-      </eGenericExceptions>
     </eOperations>
     <eOperations name="hasNext" ordered="false" lowerBound="1">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -82,13 +81,23 @@
       <eTypeArguments eTypeParameter="//ArrayList/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Car"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Car">
+    <eSuperTypes href="Architecture.ecore#//ArhitecturalElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+        <details key="visibility" value="private"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EEnum" href="Requirements.ecore#//Status"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Geometry" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Owner">
-    <eAnnotations/>
+    <eAnnotations source="test">
+      <details key="key" value="value"/>
+    </eAnnotations>
     <eTypeParameters name="K"/>
     <eTypeParameters name="V">
-      <eBounds eClassifier="//Person"/>
+      <eBounds eClassifier="//Geometry"/>
       <eBounds eClassifier="//Car"/>
     </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cars" ordered="false">
@@ -106,8 +115,11 @@
       <eGenericType eTypeParameter="//Owner/K"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true" eSuperTypes="//Person //ArrayList"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true" eSuperTypes="//Geometry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" ordered="false" eType="//ShapeType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Canvas">
+    <eTypeParameters name="V"/>
     <eOperations name="draw" ordered="false">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eParameters name="shapes" ordered="false" lowerBound="1">
@@ -119,9 +131,13 @@
       </eParameters>
     </eOperations>
     <eOperations name="create" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/static"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eTypeParameters name="V"/>
       <eParameters name="name" ordered="false" lowerBound="1">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eGenericType eClassifier="//Canvas">
+          <eTypeArguments/>
+        </eGenericType>
       </eParameters>
     </eOperations>
     <eOperations name="create" ordered="false" lowerBound="1">
@@ -131,14 +147,12 @@
       <eParameters name="arg" ordered="false">
         <eGenericType eClassifier="//ArrayList">
           <eTypeArguments>
-            <eLowerBound>
-              <eClassifier xsi:type="ecore:EClass" href="Requirements.ecore#//Requirement"/>
-            </eLowerBound>
+            <eLowerBound eClassifier="//Car"/>
           </eTypeArguments>
         </eGenericType>
       </eParameters>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" ordered="false">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" ordered="false" containment="true">
       <eGenericType eClassifier="//List">
         <eTypeArguments/>
       </eGenericType>
@@ -147,9 +161,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="MyException">
     <eTypeParameters name="T"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="BookCategory">
-    <eLiterals name="Mystery"/>
-    <eLiterals name="ScienceFiction" value="1"/>
-    <eLiterals name="Biography" value="2"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ShapeType">
+    <eLiterals name="Arc"/>
+    <eLiterals name="Oval" value="1"/>
+    <eLiterals name="Rectangle" value="2"/>
   </eClassifiers>
+  <eSubpackages name="test" nsURI="test" nsPrefix="t">
+    <eClassifiers xsi:type="ecore:EClass" name="ArrayList">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+        <details key="visibility" value="public"/>
+      </eAnnotations>
+      <eTypeParameters name="V"/>
+      <eGenericSuperTypes eClassifier="//List">
+        <eTypeArguments eTypeParameter="//test/ArrayList/V"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+  </eSubpackages>
 </ecore:EPackage>
