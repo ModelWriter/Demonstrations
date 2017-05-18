@@ -80,7 +80,7 @@ private pred func_definitions[m: FeatureModel] {
 	antisymmetric[m._or]
 	antisymmetric[m.requires]
 
-	all f: Feature - Root | f in Root.(m.depend)
+	all f: Feature | f in Root.(m.depend)
 	partialOrder[m.depend, Feature]
 	all f: Feature - Root | one f.~(m.(mandatory + optional + alternative + _or))
 }
