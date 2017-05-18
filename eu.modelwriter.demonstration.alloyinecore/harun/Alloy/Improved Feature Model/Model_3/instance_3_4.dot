@@ -1,0 +1,16 @@
+digraph "graph" {
+graph [fontsize=12]
+node [fontsize=12]
+edge [fontsize=12]
+rankdir=TB;
+"N4" -> "N3" [uuid = "<A, B>", color = "#e41a1c", fontcolor = "#e41a1c", style = "solid", label = "_or", dir = "forward", weight = "1"]
+"N4" -> "N2" [uuid = "<A, C>", color = "#e41a1c", fontcolor = "#e41a1c", style = "solid", label = "_or", dir = "forward", weight = "1"]
+"N3" -> "N1" [uuid = "<B, D>", color = "#a65628", fontcolor = "#a65628", style = "solid", label = "alternative", dir = "forward", weight = "1"]
+"N3" -> "N0" [uuid = "<B, E>", color = "#a65628", fontcolor = "#a65628", style = "solid", label = "alternative", dir = "forward", weight = "1"]
+"N3" -> "N2" [uuid = "<B, C>", color = "#ff7f00", fontcolor = "#ff7f00", style = "solid", label = "excludes", dir = "both", weight = "1"]
+"N0" [uuid="E", label="E\n(Combined/Optional)", color="#ffd700", fontcolor = "#000000", shape = "box", style = "filled, solid"]
+"N1" [uuid="D", label="D\n(Combined/Optional)", color="#ffd700", fontcolor = "#000000", shape = "box", style = "filled, solid"]
+"N2" [uuid="C", label="C\n(includes, Combined/Optional)", color="#ffffff", fontcolor = "#000000", shape = "box", style = "filled, solid"]
+"N3" [uuid="B", label="B\n(Combined/Optional)", color="#ffd700", fontcolor = "#000000", shape = "box", style = "filled, solid"]
+"N4" [uuid="A", label="A\n(includes, Combined/Mandatory, Combined/FeatureModel/Root)", color="#ffffff", fontcolor = "#000000", shape = "box", style = "filled, solid"]
+}
