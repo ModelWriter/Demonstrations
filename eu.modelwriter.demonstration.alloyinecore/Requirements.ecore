@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RequirementsMetamodel" nsURI="eu.modelwriter.demonstrations.alloyinecore.requirement"
-    nsPrefix="Req">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="RequirementsMetamodel" nsURI="eu.modelwriter.demonstrations.alloyinecore.requirement" nsPrefix="Req">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package RequirementsMetamodel : Req = 'eu.modelwriter.demonstrations.alloyinecore.requirement'&#xA;{&#xA;    class RequirementsModel&#xA;    {&#xA;        attribute name : String[?];&#xA;        attribute status : Status[?];&#xA;        property requirements : Requirement[*] { ordered composes };&#xA;        property relationships : Relationship[*] { ordered composes };&#xA;        property composedOf : Requirement[*] { ordered composes };&#xA;    }&#xA;    public class Requirement&#xA;    {&#xA;        attribute ID : Integer[?];&#xA;        attribute name : String { id };&#xA;        attribute description : String[?];&#xA;        attribute reason : String[?];&#xA;        property parts : RequirementsMetamodel::test::RequirementPart[*] { ordered composes };&#xA;        property mainRelationship : Relationship[?];&#xA;    }&#xA;    abstract class Relationship&#xA;    {&#xA;        property source : Requirement[?];&#xA;        property target : Requirement[*] { ordered };&#xA;    }&#xA;    public enum Status&#xA;    {&#xA;        literal proposed = 0;&#xA;        literal analyzed = 1;&#xA;        literal accepted = 2;&#xA;        literal rejected = 3;&#xA;        literal replaced = 4;&#xA;    }&#xA;    public enum Priority&#xA;    {&#xA;        literal neutral = 0;&#xA;        literal lowCritical = 1;&#xA;        literal critical = 2;&#xA;        literal veryCritical = 3;&#xA;    }&#xA;    class Require extends Relationship;&#xA;    class Refine extends Relationship;&#xA;    class PartiallyRefine extends Relationship;&#xA;    class Conflict extends Relationship;&#xA;    class Contain extends Relationship;&#xA;    package test : tt = 'test/test'&#xA;    {&#xA;        public abstract class RequirementPart&#xA;        {&#xA;            attribute name : String[?];&#xA;        }&#xA;        class PartTypeA extends RequirementPart;&#xA;        class PartTypeB extends RequirementPart;&#xA;    }&#xA;}"/>
+    <details key="source_hash" value="-1365725947"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementsModel">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
-        eType="#//Requirement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relationships" upperBound="-1"
-        eType="#//Relationship" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="composedOf" upperBound="-1"
-        eType="#//Requirement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" ordered="false" eType="//Status"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1" eType="//Requirement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relationships" upperBound="-1" eType="//Relationship" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composedOf" upperBound="-1" eType="//Requirement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Requirement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" ordered="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1"
-        eType="#//test/RequirementPart" containment="true"/>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1" iD="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" ordered="false">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1" eType="//test/RequirementPart" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainRelationship" ordered="false" eType="//Relationship"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relationship" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false"
-        eType="#//Requirement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1"
-        eType="#//Requirement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" ordered="false" eType="//Requirement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1" eType="//Requirement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Status">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
     <eLiterals name="proposed"/>
     <eLiterals name="analyzed" value="1"/>
     <eLiterals name="accepted" value="2"/>
@@ -39,22 +50,29 @@
     <eLiterals name="replaced" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Priority">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
     <eLiterals name="neutral"/>
     <eLiterals name="lowCritical" value="1"/>
     <eLiterals name="critical" value="2"/>
     <eLiterals name="veryCritical" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Require" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Refine" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PartiallyRefine" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Conflict" eSuperTypes="#//Relationship"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Contain" eSuperTypes="#//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Require" eSuperTypes="//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Refine" eSuperTypes="//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PartiallyRefine" eSuperTypes="//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conflict" eSuperTypes="//Relationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Contain" eSuperTypes="//Relationship"/>
   <eSubpackages name="test" nsURI="test/test" nsPrefix="tt">
     <eClassifiers xsi:type="ecore:EClass" name="RequirementPart" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+        <details key="visibility" value="public"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PartTypeA" eSuperTypes="#//test/RequirementPart"/>
-    <eClassifiers xsi:type="ecore:EClass" name="PartTypeB" eSuperTypes="#//test/RequirementPart"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PartTypeA" eSuperTypes="//test/RequirementPart"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PartTypeB" eSuperTypes="//test/RequirementPart"/>
   </eSubpackages>
 </ecore:EPackage>

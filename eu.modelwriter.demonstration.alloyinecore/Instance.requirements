@@ -9,7 +9,8 @@
     name="My requirements">
   <requirements
       name="A"
-      reason="">
+      reason=""
+      mainRelationship="//@relationships.1">
     <parts xsi:type="tt:PartTypeA"
         name="s"/>
     <parts xsi:type="tt:PartTypeB"
@@ -22,12 +23,12 @@
       name="B"/>
   <requirements
       name="E"/>
-  <requirements
-      name="D"/>
   <relationships
       xsi:type="Req:Require"
       source="A"
       target="B C"/>
+  <relationships
+      xsi:type="Req:Refine"/>
   <composedOf
       ID="2"
       name="C"/>

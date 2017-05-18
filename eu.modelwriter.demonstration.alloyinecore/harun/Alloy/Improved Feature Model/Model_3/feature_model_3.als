@@ -19,13 +19,14 @@ abstract sig FeatureModel {
 /** EmptyFeatureModel is the model that has no relations, GivenFeatureModel is the model that user defines */
 one sig EmptyFeatureModel, GivenFeatureModel extends FeatureModel {}
 
+/** Abstract Syntax */
 fact {
-	func_definitions[GivenFeatureModel]
+	well_formedness[GivenFeatureModel]
 	NoRelations[EmptyFeatureModel]
 	//Root.*FeatureModel.(mandatory + optional + alternative + _or + requires + excludes)  =  Feature// Any feature, connected to this model, must be reachable from the root.
 }
 
-private pred func_definitions[m: FeatureModel] {
+private pred well_formedness[m: FeatureModel] {
 	m.(mandatory + optional + alternative + _or) in m.depend
 
 	no m.mandatory & m.optional
@@ -85,7 +86,7 @@ private pred func_definitions[m: FeatureModel] {
 	all f: Feature - Root | one f.~(m.(mandatory + optional + alternative + _or))
 }
 
-/** Possible Instances Extension */
+/** Configuration Semantics */
 // There are instances that includes features.
 sig Configuration {
 	includes: set Feature
@@ -108,7 +109,9 @@ fact diversity_rules {
 		all f1: Feature, f2: f1.(FeatureModel.excludes) | !(f1 in i.includes and f2 in i.includes) 																			/** excludes */
 	}
 }
-/** Possible Instances Extension */
+
+
+/** Predicates to define partial configurations */
 
 pred Root[f: Feature] {
 	Root = f
