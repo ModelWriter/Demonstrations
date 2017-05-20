@@ -82,26 +82,24 @@ private pred equals_facts[m:RequirementsModel] {
 /** Defines, under what conditions program should infer that one requirement requires another. */
 private pred infer_requires_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
-		b in a.(m.requires) && c in b.(m.refines) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.requires) && c in b.(m.contains) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.contains) && c in a.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.refines) && c !in a.(m.refines) && c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.refines) && c in b.(m.requires) && c !in a.(m.refines) && c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.contains) && c !in a.(m.refines) && c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.contains) && c in b.(m.requires) && c !in a.(m.refines) && c !in a.(m.contains) => c in a.(m.requires)
 	}
 }
 
 /** Defines, under what conditions program should infer that one requirement refines another. */
 private pred infer_refines_facts[m:RequirementsModel] {
-	//all a,b,c: Requirement {
-	//	
-	//}
+	all a,b,c: Requirement {
+		b in a.(m.contains) && c in b.(m.refines) => c in a.(m.refines)
+		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.refines)
+	}
 }
 
 /** Defines, under what conditions program should infer that one requirement partially refines another. */
 private pred infer_partiallyrefines_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
-		b in a.(m.contains) && c in b.(m.refines) => c in a.(m.partiallyRefines)
-		b in a.(m.refines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
-		b in a.(m.partiallyRefines) && c in b.(m.contains) => c in a.(m.partiallyRefines)
 		b in a.(m.contains) && c in b.(m.partiallyRefines) => c in a.(m.partiallyRefines)
 		b in a.(m.refines) && c in b.(m.partiallyRefines) => c in a.(m.partiallyRefines)
 		b in a.(m.partiallyRefines) && c in b.(m.refines) => c in a.(m.partiallyRefines)
@@ -120,9 +118,9 @@ private pred relation_facts[m,m': RequirementsModel] {
 	all a,c: Requirement {
 		c in a.(m'.equals) => c in a.*(m.equals + ~(m.equals))
 		c in a.(m'.requires) => c in a.*(m.requires + m.contains + m.refines + m'.equals) // If "a" requires "c" in the inferred model, then we must somehow reach "c" from "a" in the given model by using requires, contains and refines relations.
-		c in a.(m'.refines) => c in a.*(m.requires + m.refines + m'.equals).*(m.contains + m'.equals) // Same logic here.
+		c in a.(m'.refines) => c in a.*(m.contains + m.refines + m'.equals) // Same logic here.
 		c in a.(m'.contains) => c in a.*(m.contains + m'.equals) // Same logic here.
-		c in a.(m'.partiallyRefines) => c in a.*(m.(refines + partiallyRefines) + m'.equals).*(m.contains + m'.equals) // Same logic here.
+		c in a.(m'.partiallyRefines) => c in a.*(m.(contains + refines) + m'.equals).*(m.(partiallyRefines + refines) + m'.equals) // Same logic here.
 		c in a.(m'.conflicts) => 	c in a.(m.requires + m.refines + m.contains + m'.equals).(m.conflicts + ~(m.conflicts)).*(m'.equals) || // If a conflicts with c in the inferred model, then in the given model, either a conflicts with c or what is required by a, conflicts with c.
 										 		c in a.*(m'.equals).(m.conflicts + ~(m.conflicts)).*~(m.requires + m.refines + m.contains + m'.equals)	// Reverse logic here.
 	}

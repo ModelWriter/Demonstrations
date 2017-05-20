@@ -80,10 +80,10 @@ private pred equals_facts[m:RequirementsModel] {
 /** Defines, under what conditions program should infer that one requirement requires another. */
 private pred infer_requires_facts[m:RequirementsModel] {
 	all a,b,c: Requirement {
-		b in a.(m.requires) && c in b.(m.refines) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.refines) && c in b.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.requires) && c in b.(m.contains) &&  c !in a.(m.contains) => c in a.(m.requires)
-		b in a.(m.contains) && c in a.(m.requires) &&  c !in a.(m.contains) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.refines) => c in a.(m.requires)
+		b in a.(m.refines) && c in b.(m.requires) => c in a.(m.requires)
+		b in a.(m.requires) && c in b.(m.contains) => c in a.(m.requires)
+		b in a.(m.contains) && c in b.(m.requires) => c in a.(m.requires)
 	}
 }
 
