@@ -1,0 +1,157 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:mm="http://trese.ewi.utwente.nl/2008/requirements_core.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="res://Requirement/12">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall use a serial bus to transfer data</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Serial Bus</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</mm:ID>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/2">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System initial check-up</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System Init</mm:name>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/13">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall sense the rain intensity via a sensor on the windshiled</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Sensor on Windshield</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</mm:ID>
+    <mm:refines rdf:resource="res://Requirement/10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/1">
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall automatically wipe the windshield of the car whenever necessary or desired by the user</mm:description>
+    <mm:contains rdf:resource="res://Requirement/2"/>
+    <mm:contains rdf:resource="res://Requirement/5"/>
+    <mm:contains rdf:resource="res://Requirement/3"/>
+    <mm:contains rdf:resource="res://Requirement/6"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:contains rdf:resource="res://Requirement/4"/>
+    <mm:contains rdf:resource="res://Requirement/7"/>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatic Wiping</mm:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/11">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to actuate based on automatic and manual input</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actuation Function</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:requires rdf:resource="res://Requirement/14"/>
+    <mm:requires rdf:resource="res://Requirement/15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/10">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</mm:ID>
+    <mm:requires rdf:resource="res://Requirement/15"/>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensing Function</mm:name>
+    <mm:requires rdf:resource="res://Requirement/14"/>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to sense rain intensity</mm:description>
+    <mm:requires rdf:resource="res://Requirement/12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/9">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</mm:ID>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:contains rdf:resource="res://Requirement/11"/>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core Functions</mm:name>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identified core functions</mm:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:contains rdf:resource="res://Requirement/10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/16">
+    <mm:requires rdf:resource="res://Requirement/15"/>
+    <mm:requires rdf:resource="res://Requirement/14"/>
+    <mm:requires rdf:resource="res://Requirement/13"/>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sensor shall be calibrated for the characteristics of the windshield and the parameters (windshield and sensor) shall be used to calibrate the sensor.</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System Calibration</mm:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</mm:ID>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/15">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A software solution shall be implemented to process driver and sensor input</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Sensing Software</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/8">
+    <mm:refines rdf:resource="res://Requirement/7"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The more rain, the faster the wiping</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faster with Greater Rain Intensity</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</mm:ID>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/14">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Electronic Control Unit dedicated to this purpose will serve as the processor for the input</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use Dedicated ECU</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</mm:ID>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/7">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The wiping speed should adjust according to rain intensity</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speed Adjustment to Rain Intensity</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:requires rdf:resource="res://Requirement/9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/4">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The driver should be able to stop the wiping manually</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manual Disablement</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/3">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall automatically stop wiping the windshield when it is not longer necessary</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatic Disablement</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:requires rdf:resource="res://Requirement/9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/5">
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall automatically start wiping the windshield when it is necessary</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatic Enablement</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <mm:requires rdf:resource="res://Requirement/9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/6">
+    <mm:refines rdf:resource="res://Requirement/8"/>
+    <mm:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</mm:status>
+    <mm:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</mm:priority>
+    <mm:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall offer three different wiping speeds from which the driver can choose</mm:description>
+    <mm:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wiping Speed Selection</mm:name>
+    <mm:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</mm:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+</rdf:RDF>

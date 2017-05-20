@@ -1,0 +1,1126 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://trese.ewi.utwente.nl/2008/requirements_core.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="res://Requirement/28">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/26"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preventing viewing others grades</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/27"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall prevent students from viewing grades of others</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/1">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide static course information</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing static course information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/47">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide an export to commonly used calendar formats (allowing users to import scheduled lectures into a personal calendar)</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exporting to calendar formats</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:refines rdf:resource="res://Requirement/46"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/113">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statistics per course</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics per course</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">113</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/110"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/10">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/11"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing history of attended courses</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide the history of attended courses.</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/9">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:requires rdf:resource="res://Requirement/1"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing course history</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide the history of a course over the years</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/103">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have no maximum for the number of course participants ever</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying maximum number of students</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/60"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">103</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/14">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to let students submit textual content</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submitting textual content</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/72">
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">72</j.0:ID>
+    <j.0:contains rdf:resource="res://Requirement/76"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing students teams</j.0:name>
+    <j.0:contains rdf:resource="res://Requirement/77"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:contains rdf:resource="res://Requirement/74"/>
+    <j.0:contains rdf:resource="res://Requirement/75"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:contains rdf:resource="res://Requirement/78"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to manage students teams</j.0:description>
+    <j.0:contains rdf:resource="res://Requirement/79"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/120">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:refines rdf:resource="res://Requirement/121"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">120</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synchronizing information with university systems</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall automatically synchronize with secondary university systems</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/71">
+    <j.0:refines rdf:resource="res://Requirement/70"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">71</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Setting visibility of archived items </j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to set the visibility of archived items (enabling them to gradually expose content to students)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/66">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">66</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/29"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewing personal information </j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to view all personal information (including pictures) of people in the system</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/53">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to upload course material for lectures</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">53</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/68"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uploading course material</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/86">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewing all grades</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">86</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to view all grades of all students in the course</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/33">
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have its  expected downtime announced at least 48 hours in advance</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Downtime announcing</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">33</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/30"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/92">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extensibility and evolvability</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">92</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be easily extensible and evolvable</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/2">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to store static course information</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storing static course information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/1"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/112">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics per student</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/110"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">112</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statistics per student</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/29">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide a user-customizable visibility policy for the personal information</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:conflicts rdf:resource="res://Requirement/66"/>
+    <j.0:refines rdf:resource="res://Requirement/27"/>
+    <j.0:requires rdf:resource="res://Requirement/8"/>
+    <j.0:conflicts rdf:resource="res://Requirement/107"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing policy for personal information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">29</j.0:ID>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/11">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/1"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable students to subscribe/unsuscribe to courses</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subscribing/unsuscribing to courses</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/102">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to specify the minimum number of students for a course (if there are too little subscriptions in a semester, that course will not be given during that semester)</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying minimum number of students </j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">102</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:partially_refines rdf:resource="res://Requirement/100"/>
+    <j.0:conflicts rdf:resource="res://Requirement/60"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/73">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to enter grades for teams (so each team member will get that grade)</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">73</j.0:ID>
+    <j.0:partially_refines rdf:resource="res://Requirement/72"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entering grades for teams </j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/15">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to let students upload files</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uploading files</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/46">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be highly interoperable</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interoperability</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">46</j.0:ID>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/121">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">121</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interoperability with university systems</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be interoperable with secondary university systems</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/67">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/75"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planning meeting with students</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable teachers to plan meetings with students or students teams</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/52">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to prepare lecture schedules (roster)</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">52</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preparing lecture schedules </j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/32">
+    <j.0:refines rdf:resource="res://Requirement/30"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</j.0:ID>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Downtime maximum</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have downtime at most 4 hours/month</j.0:description>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/91">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Limiting storage space</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">91</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow maintainers to limit the total available space for specific courses</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/87">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Importing roster information</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">87</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to import BOZ roster information into the course roster</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/12">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable students to subscribe/unsuscribe to exams</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subscribing/unsuscribing to exams</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/115">
+    <j.0:requires rdf:resource="res://Requirement/113"/>
+    <j.0:requires rdf:resource="res://Requirement/111"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">115</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/110"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statistics using combinations of the possibilities mentioned above</j.0:description>
+    <j.0:requires rdf:resource="res://Requirement/112"/>
+    <j.0:requires rdf:resource="res://Requirement/114"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/49">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to create entirely new courses</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">49</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/48"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating new courses</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/108">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retrieving lecturer information</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/109"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">108</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to retrieve all lecturer information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/26">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/28"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewing course grade statistics</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/6"/>
+    <j.0:conflicts rdf:resource="res://Requirement/85"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow students to view course grade statistics per semester</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/16">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The messaging system can be used to message individuals, teams or all course participants at once</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Messaging to subjects</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <j.0:requires rdf:resource="res://Requirement/8"/>
+    <j.0:refines rdf:resource="res://Requirement/7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/59">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing static course information</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">59</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/100"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teacher to manage static course information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/101">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to appoint (principal) lecturers to courses</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appointing lecturers</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">101</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:partially_refines rdf:resource="res://Requirement/100"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/7">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing messaging system</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide a messaging system</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/51">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow lecturers to register assistant lectures</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Registering assistant lecturers</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">51</j.0:ID>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/21">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/119"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Editing personal information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system allow students to edit their personal information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/68">
+    <j.0:contains rdf:resource="res://Requirement/52"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">68</j.0:ID>
+    <j.0:contains rdf:resource="res://Requirement/70"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing dynamic course information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to manage dynamic course information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/122">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allowing enrollment exceptions</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/92"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">122</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to make exceptions with regard to students enrolment to courses</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/80">
+    <j.0:partially_refines rdf:resource="res://Requirement/68"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing grade statistics </j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide grade statistics (averages, standard deviation, per department, per year)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/98">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to create new courses</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating courses</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/48"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">98</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/31">
+    <j.0:refines rdf:resource="res://Requirement/30"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">31</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No unexpected downtime</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall not have unexpected downtime</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/90">
+    <j.0:requires rdf:resource="res://Requirement/53"/>
+    <j.0:requires rdf:resource="res://Requirement/15"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Limiting size uploads</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">90</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow maintainers to limit the size of files being uploaded by teachers and by students</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/88">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating back-ups</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">88</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow maintainers to create back-ups of the entire system</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/41">
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Descriptive UI </j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">41</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a descriptive UI (all UI elements should have a descriptive text)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/78">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to assign (assistant) teachers to teams</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">78</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assigning teachers to teams</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/114">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statictics per department</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics per department</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">114</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/110"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/13">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to provide a collaboration environment in a course (so students can share files and notes within a team)</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing collaboration environment</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:requires rdf:resource="res://Requirement/17"/>
+    <j.0:requires rdf:resource="res://Requirement/14"/>
+    <j.0:requires rdf:resource="res://Requirement/15"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/48">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to create courses</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/98"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating courses</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/109">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entering lecturer information</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">109</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to enter lecturer information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/61">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">61</j.0:ID>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to specify enrolment policies (based on grade, first-come first-serve, based on department)</j.0:description>
+    <j.0:contains rdf:resource="res://Requirement/62"/>
+    <j.0:contains rdf:resource="res://Requirement/63"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying enrolment policies</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/104"/>
+    <j.0:partially_refines rdf:resource="res://Requirement/59"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:contains rdf:resource="res://Requirement/64"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/27">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protecting privacy</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall protect the user's privacy</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/100">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to update static course information</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Updating static course information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:conflicts rdf:resource="res://Requirement/59"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/58">
+    <j.0:refines rdf:resource="res://Requirement/56"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">58</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One-click mail of grades</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide a "one-click" function which will mail all students of the course their grades (no template should be entered or altered)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/17">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow students to create teams</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating teams</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">17</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/8">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/11"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retrieving contact information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable students to retrieve contact information of students and teachers of subscribed courses.</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/50">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to recreate a course (copied from a previous period)</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/48"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recreating courses</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/99">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall aloow B.O.Z. to delete courses</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deleting courses</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">99</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/70">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">70</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing archive</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to manage the archive</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/20">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Searching dynamic course information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall facilitate searches within all dynamic information and files</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/89">
+    <j.0:requires rdf:resource="res://Requirement/88"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restoring back-ups</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/30"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">89</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow maintainers to restore partial and complete back-ups of a specific date</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/30">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/89"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Availability</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have high availability</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/60">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:conflicts rdf:resource="res://Requirement/103"/>
+    <j.0:requires rdf:resource="res://Requirement/11"/>
+    <j.0:conflicts rdf:resource="res://Requirement/102"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to limit the number of students subscribing to a course</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:partially_refines rdf:resource="res://Requirement/59"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Limiting number of students</j.0:name>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/79">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to name and rename teams</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">79</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naming/renaming teams</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/40">
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intuitive UI</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a UI which is intuitive (the behaviour of the system is according to the intuition of a standard end user)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/69">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">69</j.0:ID>
+    <j.0:partially_refines rdf:resource="res://Requirement/68"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Posting news messages</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to </j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/76">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to remove students from teams</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">76</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Removing students from teams</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/18">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teams are created by students inviting other students in the same course using the messaging system</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inviting to teams</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/7"/>
+    <j.0:refines rdf:resource="res://Requirement/17"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:conflicts rdf:resource="res://Requirement/74"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/43">
+    <j.0:refines rdf:resource="res://Requirement/42"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessible by disabled users</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">43</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be accessible by disabled (blind) users, who should be able to navigate the system and have access to all content and functionality</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/106">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:refines rdf:resource="res://Requirement/104"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">106</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying course prerequisites: department</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to specify the department as prerequisite of a course</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/57">
+    <j.0:refines rdf:resource="res://Requirement/56"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">57</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using mail merge templates</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall support the use of mail merge templates, to customize mass mailings (example: "Dear [Firstname], your grade is: [Grade]")</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/62">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to specify enrolment policies based on grade</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying grade-based enrolment policies</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">62</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/81">
+    <j.0:requires rdf:resource="res://Requirement/80"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">81</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparing grade statistics </j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable teachers to compare grade statistics with other courses</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/116">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z to calculate the number of passed students per chair per time-period</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating passed students</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">116</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/5">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/4"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storing dynamic course information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to store dynamic course information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/38">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a single login to access all content</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single login to all content</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/96">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be interoperable with secondary university systems</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interoperability</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">96</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/23">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/119"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resetting password</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide a password reset function, which resets the password and mails it to the student</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/37">
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a maximum of 3 clicks to reach any content</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximum clicks to content</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">37</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/19">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall facilitate searches in all static information of courses</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Searching static course information</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/77">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to delete teams</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">77</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deleting teams</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/42">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">42</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessibility</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a high accessibility</j.0:description>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/117">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evaluating courses</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/7"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">117</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to evaluate courses through students by means of a web-survey</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://trese.ewi.utwente.nl/2008/requirements_core/new_model.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/63">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to specify enrolment policies based on first-come first-serve</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">63</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying fcfs enrolment policies</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/56">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">56</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mailing to students</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable teachers to mail multiple students at once</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/107">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retrieving student information</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/29"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">107</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to retrieve all study and personal information of students</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/82">
+    <j.0:partially_refines rdf:resource="res://Requirement/68"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">82</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system allow teachers to duplicate courses and import materials from other courses into other course, but only from their own courses</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplicating courses / importing materials </j.0:name>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/83">
+    <j.0:conflicts rdf:resource="res://Requirement/84"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewing dynamic course information</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">83</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to view dynamic course information of courses given by other teachers</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/22">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</j.0:ID>
+    <j.0:conflicts rdf:resource="res://Requirement/119"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changing password</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow students to change their password</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/36">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have bilingual support (Dutch and English)</j.0:description>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</j.0:ID>
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bilingual support </j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/97">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only BOZ to manage courses</j.0:description>
+    <j.0:contains rdf:resource="res://Requirement/100"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">97</j.0:ID>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:contains rdf:resource="res://Requirement/98"/>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <j.0:contains rdf:resource="res://Requirement/99"/>
+    <j.0:requires rdf:resource="res://Requirement/1"/>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing courses</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/6">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/5"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/4"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representing dynamic course information</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be able to represent dynamic course information</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/39">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have a consistent UI (in all views and dialogs, the UI elements behave and are places in a similar way)</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consistent UI</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/35"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">39</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/74">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to create new teams</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">74</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creating teams</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/45">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:refines rdf:resource="res://Requirement/44"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changing study information of others</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only students to change study information of others</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/118">
+    <j.0:conflicts rdf:resource="res://Requirement/65"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subscribing students manually</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/122"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">118</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to manually subscribe students to courses , bypassing requirements and enrolment policies</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/93">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be easily testable</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testability</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">93</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/64">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">64</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying department-based enrolment policies</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to specify enrolment policies based on department</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/55">
+    <j.0:refines rdf:resource="res://Requirement/54"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">55</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying/changing grading policy</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to specify and change the grading policy (weights of grades, determining when a student passes the course)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/111">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics per year</j.0:name>
+    <j.0:refines rdf:resource="res://Requirement/110"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">111</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statistics per year</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://trese.ewi.utwente.nl/2008/requirements_core/file:///C:\Documents and Settings\GoknilA.EWI\My Documents\Deneme.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/104">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to specify the course prerequisites for students</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying course prerequisites</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/61"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">104</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:partially_refines rdf:resource="res://Requirement/100"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/35">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have bilingual support (Dutch and English)</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bilingual support </j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/84">
+    <j.0:conflicts rdf:resource="res://Requirement/85"/>
+    <j.0:conflicts rdf:resource="res://Requirement/83"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing dynamic content visibility</j.0:name>
+    <j.0:partially_refines rdf:resource="res://Requirement/68"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">84</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to manage the dynamic content visibility (visible for students and teachers, visible for teachers, visible to self only)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/25">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/24"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customizing notification</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow students to customize the notification behaviour</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/3">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">They system shall be able to represent static course information</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representing static course information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:refines rdf:resource="res://Requirement/1"/>
+    <j.0:requires rdf:resource="res://Requirement/2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/94">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be scalable</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scalability</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">94</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/119">
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:conflicts rdf:resource="res://Requirement/23"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">119</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:conflicts rdf:resource="res://Requirement/21"/>
+    <j.0:conflicts rdf:resource="res://Requirement/22"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Not changing information in other systems</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall not allow users to change information which is contained and maintained by secondary university systems</j.0:description>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/44">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security</j.0:name>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">44</j.0:ID>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be secure</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/75">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow teachers to </j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">75</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inserting students into teams</j.0:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/65">
+    <j.0:conflicts rdf:resource="res://Requirement/118"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preventing subscribtions not-qualified students</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall prevent students from subscribing to a course they do not qualify for (not completing required courses, or not from the right department(s))</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/54">
+    <j.0:refines rdf:resource="res://Requirement/68"/>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">54</j.0:ID>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Managing grades</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall enable teachers to manage grades (insert, update, calculate final grade)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/110">
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calculating grade statistics</j.0:name>
+    <j.0:requires rdf:resource="res://Requirement/4"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">110</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow B.O.Z. to calculate grade statistics</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/105">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifying course prerequisites: completed courses</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow only B.O.Z. to specify completed courses as prerequisites of a course</j.0:description>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">105</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/104"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/34">
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall have downtime only during low-intensity hours</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Downtime scheduling</j.0:name>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:refines rdf:resource="res://Requirement/30"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">34</j.0:ID>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/85">
+    <j.0:conflicts rdf:resource="res://Requirement/84"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewing grades</j.0:name>
+    <j.0:conflicts rdf:resource="res://Requirement/26"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">85</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall allow students to view only their grade</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/95">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall be easily maintainable</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintainability</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">95</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/4">
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall provide dynamic course information</j.0:description>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providing dynamic course information</j.0:name>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</j.0:ID>
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+  </rdf:Description>
+  <rdf:Description rdf:about="res://Requirement/24">
+    <rdf:type rdf:resource="http://trese.ewi.utwente.nl/2008/requirements_core.owl#Requirement"/>
+    <j.0:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</j.0:ID>
+    <j.0:requires rdf:resource="res://Requirement/7"/>
+    <j.0:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notifying students</j.0:name>
+    <j.0:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The system shall notify students of events (posted new messages, team invites and scheduled exams)</j.0:description>
+    <j.0:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neutral</j.0:priority>
+    <j.0:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</j.0:status>
+  </rdf:Description>
+</rdf:RDF>
