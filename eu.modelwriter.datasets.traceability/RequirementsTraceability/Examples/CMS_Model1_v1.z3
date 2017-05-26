@@ -103,7 +103,7 @@
 (assert (!(conflicts Requirement60 Requirement103):named conf_60_103))
 (assert (!(conflicts Requirement60 Requirement102):named conf_60_102))
 (assert (!(requires Requirement60 Requirement11):named requ_60_11))
-(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
+ (assert (!(p_refines Requirement60 Requirement59):named part_60_59))
 (assert (!(refines Requirement40 Requirement35):named refi_40_35))
 (assert (!(p_refines Requirement69 Requirement68):named part_69_68))
 (assert (!(conflicts Requirement18 Requirement74):named conf_18_74))
