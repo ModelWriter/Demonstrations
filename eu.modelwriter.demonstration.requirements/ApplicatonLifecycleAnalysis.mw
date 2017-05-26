@@ -2,12 +2,12 @@ module eu/modelwriter/actions/havelsan/alm
 
 abstract sig Artefact {
 	depends: set Artefact,
-	conflicts: set Artefact}
-//-- Reason@Artefact.conflicts
-//fact {~conflicts in conflicts} 
+	conflicts: set Artefact} 
 
+-- Locate@File
 one sig Specification extends Artefact {
 	contract: some ContractRequirement}
+	
 -- Locate@Text
 -- Discover@ContractRequirement 3
 sig ContractRequirement extends Artefact {
@@ -65,6 +65,8 @@ fact noCycles {
 	no s: SystemRequirement | s in s.^requires
 	no m: Model | m in m.^transforms
 	no a: Artefact | a in a.^conflicts}
+
+fact noSelfRelation{ no conflicts}
 
 fact noSelfRelation{
 	no a: Artefact | a in a.depends
