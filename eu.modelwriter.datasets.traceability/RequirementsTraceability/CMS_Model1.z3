@@ -1,9 +1,11 @@
-;Requirements_Theory Begin
+(set-logic UF)
+(set-info :source | Requirement Traceability Core Theory |)
+(set-info :smt-lib-version 2.0)
+(set-info :category "crafted")
 (set-option :print-success false)
 (set-option :produce-models true)
 (set-option :produce-unsat-cores true)
 (set-option :produce-assignments true)
-(set-logic UF)
 
 ; Example Begin
 
@@ -101,7 +103,7 @@
 (assert (!(conflicts Requirement60 Requirement103):named conf_60_103))
 (assert (!(conflicts Requirement60 Requirement102):named conf_60_102))
 (assert (!(requires Requirement60 Requirement11):named requ_60_11))
-;(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
+(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
 (assert (!(refines Requirement40 Requirement35):named refi_40_35))
 (assert (!(p_refines Requirement69 Requirement68):named part_69_68))
 (assert (!(conflicts Requirement18 Requirement74):named conf_18_74))
@@ -156,8 +158,12 @@
 (assert (!(conflicts Requirement85 Requirement26):named conf_85_26))
 (assert (!(conflicts Requirement85 Requirement84):named conf_85_84))
 (assert (!(requires Requirement24 Requirement7):named requ_24_7))
+;(assert (!(not (requires Requirement24 Requirement7)):named requ_24_7_1))
+;(assert (!(requires Requirement100 Requirement60):named requ_100_60))
 
 ; Example End
+
+; Requirements_Theory Begin
 
 ; Non-reflexive requires
 (assert
@@ -174,8 +180,8 @@
 )
 
 ; Transitive requires
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (requires r1 r2) (requires r2 r3))
       (requires r1 r3)
     )
@@ -197,8 +203,8 @@
 )
 
 ; Transitive contains
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (contains r1 r2) (contains r2 r3))
       (contains r1 r3)
     )
@@ -220,8 +226,8 @@
 )
 
 ; Transitive refines
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (refines r1 r2) (refines r2 r3))
       (refines r1 r3)
     )
@@ -243,8 +249,8 @@
 )
 
 ; Transitive p_refines
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (p_refines r1 r2) (p_refines r2 r3))
       (p_refines r1 r3)
     )
@@ -280,8 +286,8 @@
 )
 
 ; Transitive _equals
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (_equals r1 r2) (_equals r2 r3))
       (_equals r1 r3)
     )
@@ -297,67 +303,67 @@
       (=> (requires r1 r2) (not (p_refines r1 r2)))
       (=> (requires r1 r2) (not (_equals r1 r2)))
       (=> (requires r1 r2) (not (conflicts r1 r2)))
-      
+
       (=> (requires r1 r2) (not (refines r2 r1)))
       (=> (requires r1 r2) (not (contains r2 r1)))
       (=> (requires r1 r2) (not (p_refines r2 r1)))
       (=> (requires r1 r2) (not (_equals r2 r1)))
       (=> (requires r1 r2) (not (conflicts r2 r1)))
-      
+
       (=> (refines r1 r2) (not (requires r1 r2)))
       (=> (refines r1 r2) (not (contains r1 r2)))
       (=> (refines r1 r2) (not (p_refines r1 r2)))
       (=> (refines r1 r2) (not (_equals r1 r2)))
       (=> (refines r1 r2) (not (conflicts r1 r2)))
-      
+
       (=> (refines r1 r2) (not (requires r2 r1)))
       (=> (refines r1 r2) (not (contains r2 r1)))
       (=> (refines r1 r2) (not (p_refines r2 r1)))
       (=> (refines r1 r2) (not (_equals r2 r1)))
       (=> (refines r1 r2) (not (conflicts r2 r1)))
-      
+
       (=> (contains r1 r2) (not (requires r1 r2)))
       (=> (contains r1 r2) (not (refines r1 r2)))
       (=> (contains r1 r2) (not (p_refines r1 r2)))
       (=> (contains r1 r2) (not (_equals r1 r2)))
       (=> (contains r1 r2) (not (conflicts r1 r2)))
-      
+
       (=> (contains r1 r2) (not (requires r2 r1)))
       (=> (contains r1 r2) (not (refines r2 r1)))
       (=> (contains r1 r2) (not (p_refines r2 r1)))
       (=> (contains r1 r2) (not (_equals r2 r1)))
       (=> (contains r1 r2) (not (conflicts r2 r1)))
-      
+
       (=> (p_refines r1 r2) (not (requires r1 r2)))
       (=> (p_refines r1 r2) (not (refines r1 r2)))
       (=> (p_refines r1 r2) (not (contains r1 r2)))
       (=> (p_refines r1 r2) (not (_equals r1 r2)))
       (=> (p_refines r1 r2) (not (conflicts r1 r2)))
-      
+
       (=> (p_refines r1 r2) (not (requires r2 r1)))
       (=> (p_refines r1 r2) (not (refines r2 r1)))
       (=> (p_refines r1 r2) (not (contains r2 r1)))
       (=> (p_refines r1 r2) (not (_equals r2 r1)))
       (=> (p_refines r1 r2) (not (conflicts r2 r1)))
-      
+
       (=> (_equals r1 r2) (not (requires r1 r2)))
       (=> (_equals r1 r2) (not (refines r1 r2)))
       (=> (_equals r1 r2) (not (contains r1 r2)))
       (=> (_equals r1 r2) (not (p_refines r1 r2)))
       (=> (_equals r1 r2) (not (conflicts r1 r2)))
-      
+
       (=> (_equals r1 r2) (not (requires r2 r1)))
       (=> (_equals r1 r2) (not (refines r2 r1)))
       (=> (_equals r1 r2) (not (contains r2 r1)))
       (=> (_equals r1 r2) (not (p_refines r2 r1)))
       (=> (_equals r1 r2) (not (conflicts r2 r1)))
-      
+
       (=> (conflicts r1 r2) (not (requires r1 r2)))
       (=> (conflicts r1 r2) (not (refines r1 r2)))
       (=> (conflicts r1 r2) (not (contains r1 r2)))
       (=> (conflicts r1 r2) (not (p_refines r1 r2)))
       (=> (conflicts r1 r2) (not (_equals r1 r2)))
-      
+
       (=> (conflicts r1 r2) (not (requires r2 r1)))
       (=> (conflicts r1 r2) (not (refines r2 r1)))
       (=> (conflicts r1 r2) (not (contains r2 r1)))
@@ -368,15 +374,15 @@
 )
 
 ; _equals facts
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
-    ( and 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
+    ( and
       (=> (and (_equals r1 r2) (requires r2 r3)) (requires r1 r3))
       (=> (and (_equals r1 r2) (refines r2 r3)) (refines r1 r3))
       (=> (and (_equals r1 r2) (p_refines r2 r3)) (p_refines r1 r3))
       (=> (and (_equals r1 r2) (contains r2 r3)) (contains r1 r3))
       (=> (and (_equals r1 r2) (conflicts r2 r3)) (conflicts r1 r3))
-      
+
       (=> (and (requires r1 r2) (_equals r2 r3)) (requires r1 r3))
       (=> (and (refines r1 r2) (_equals r2 r3)) (refines r1 r3))
       (=> (and (p_refines r1 r2) (_equals r2 r3)) (p_refines r1 r3))
@@ -387,9 +393,9 @@
 )
 
 ; infer requires facts
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
-    ( and 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
+    ( and
       (=> (and (requires r1 r2) (refines r2 r3) (not (refines r1 r3)) (not (contains r1 r3))) (requires r1 r3))
       (=> (and (refines r1 r2) (requires r2 r3) (not (refines r1 r3)) (not (contains r1 r3))) (requires r1 r3))
       (=> (and (requires r1 r2) (contains r2 r3) (not (refines r1 r3)) (not (contains r1 r3))) (requires r1 r3))
@@ -399,9 +405,9 @@
 )
 
 ; infer refines facts
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
-    ( and 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
+    ( and
       (=> (and (contains r1 r2) (refines r2 r3)) (refines r1 r3))
       (=> (and (refines r1 r2) (contains r2 r3)) (refines r1 r3))
     )
@@ -409,9 +415,9 @@
 )
 
 ; infer p_refines facts
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
-    ( and 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
+    ( and
       (=> (and (contains r1 r2) (p_refines r2 r3)) (p_refines r1 r3))
       (=> (and (refines r1 r2) (p_refines r2 r3)) (p_refines r1 r3))
       (=> (and (p_refines r1 r2) (refines r2 r3)) (p_refines r1 r3))
@@ -420,15 +426,17 @@
 )
 
 ; infer conflicts facts
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+(assert
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement))
     (=> (and (or (requires r1 r2) (refines r1 r2) (contains r1 r2)) (conflicts r2 r3)) (conflicts r1 r3))
   )
 )
 
+
+
 ; Requirements_Theory End
 
 (check-sat)
-(get-model)
+;(get-model)
 (get-unsat-core)
 (exit)
