@@ -7,7 +7,7 @@
 
 ; Example Begin
 
-(declare-datatypes () ((Requirement Requirement28 Requirement1 Requirement47 Requirement113 Requirement10 Requirement9 Requirement103 Requirement14 Requirement72 Requirement120 Requirement71 Requirement66 Requirement53 Requirement86 Requirement33 Requirement92 Requirement2 Requirement112 Requirement29 Requirement11 Requirement102 Requirement73 Requirement15 Requirement46 Requirement121 Requirement67 Requirement52 Requirement32 Requirement91 Requirement87 Requirement12 Requirement115 Requirement49 Requirement108 Requirement26 Requirement16 Requirement59 Requirement101 Requirement7 Requirement51 Requirement21 Requirement68 Requirement122 Requirement80 Requirement98 Requirement31 Requirement90 Requirement88 Requirement41 Requirement78 Requirement114 Requirement13 Requirement48 Requirement109 Requirement61 Requirement27 Requirement100 Requirement58 Requirement17 Requirement8 Requirement50 Requirement99 Requirement70 Requirement20 Requirement89 Requirement30 Requirement60 Requirement79 Requirement40 Requirement69 Requirement76 Requirement18 Requirement43 Requirement106 Requirement57 Requirement62 Requirement81 Requirement116 Requirement5 Requirement38 Requirement96 Requirement23 Requirement37 Requirement19 Requirement77 Requirement42 Requirement117 Requirement63 Requirement56 Requirement107 Requirement82 Requirement83 Requirement22 Requirement36 Requirement97 Requirement6 Requirement39 Requirement74 Requirement45 Requirement118 Requirement93 Requirement64 Requirement55 Requirement111 Requirement104 Requirement35 Requirement84 Requirement25 Requirement3 Requirement94 Requirement119 Requirement44 Requirement75 Requirement65 Requirement54 Requirement110 Requirement105 Requirement34 Requirement85 Requirement95 Requirement4 Requirement24)))
+(declare-datatypes () ((Requirement Requirement28 Requirement1 Requirement47 Requirement113 Requirement10 Requirement9 Requirement103 Requirement14 Requirement72 Requirement120 Requirement71 Requirement66 Requirement53 Requirement86 Requirement33 Requirement92 Requirement2 Requirement112 Requirement29 Requirement11 Requirement102 Requirement73 Requirement15 Requirement46 Requirement121 Requirement67 Requirement52 Requirement32 Requirement91 Requirement87 Requirement12 Requirement115 Requirement49 Requirement108 Requirement26 Requirement16 Requirement59 Requirement101 Requirement7 Requirement51 Requirement21 Requirement68 Requirement122 Requirement80 Requirement98 Requirement31 Requirement90 Requirement88 Requirement41 Requirement78 Requirement114 Requirement13 Requirement48 Requirement109 Requirement61 Requirement27 Requirement100 Requirement58 Requirement17 Requirement8 Requirement50 Requirement99 Requirement70 Requirement20 Requirement89 Requirement30 Requirement60 Requirement79 Requirement40 Requirement69 Requirement76 Requirement18 Requirement43 Requirement106 Requirement57 Requirement62 Requirement81 Requirement116 Requirement5 Requirement38 Requirement96 Requirement23 Requirement37 Requirement19 Requirement77 Requirement42 Requirement117 Requirement63 Requirement56 Requirement107 Requirement82 Requirement83 Requirement22 Requirement36 Requirement97 Requirement6 Requirement39 Requirement74 Requirement45 Requirement118 Requirement93 Requirement64 Requirement55 Requirement111 Requirement104 Requirement35 Requirement84 Requirement25 Requirement3 Requirement94 Requirement119 Requirement44 Requirement75 Requirement65 Requirement54 Requirement110 Requirement105 Requirement34 Requirement85 Requirement95 Requirement4 Requirement24 Requirement123)))
 
 (declare-fun requires (Requirement Requirement) Bool)
 (declare-fun contains (Requirement Requirement) Bool)
@@ -16,6 +16,16 @@
 (declare-fun conflicts (Requirement Requirement) Bool)
 (declare-fun _equals (Requirement Requirement) Bool)
 
+;;;
+;(assert (!(conflicts Requirement98 Requirement48):named conf_98_48))
+;(assert (!(conflicts Requirement48 Requirement98):named conf_48_98))
+;(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
+;;;
+
+(assert (!(contains Requirement123 Requirement97):named cont_123_97))
+(assert (!(contains Requirement123 Requirement98):named cont_123_98))
+(assert (!(contains Requirement123 Requirement99):named cont_123_99))
+(assert (!(contains Requirement123 Requirement100):named cont_123_100))
 (assert (!(conflicts Requirement28 Requirement26):named conf_28_26))
 (assert (!(refines Requirement28 Requirement27):named refi_28_27))
 (assert (!(refines Requirement47 Requirement46):named refi_47_46))
@@ -25,12 +35,6 @@
 (assert (!(requires Requirement9 Requirement4):named requ_9_4))
 (assert (!(conflicts Requirement103 Requirement60):named conf_103_60))
 (assert (!(requires Requirement14 Requirement2):named requ_14_2))
-(assert (!(contains Requirement72 Requirement76):named cont_72_76))
-(assert (!(contains Requirement72 Requirement77):named cont_72_77))
-(assert (!(contains Requirement72 Requirement74):named cont_72_74))
-(assert (!(contains Requirement72 Requirement75):named cont_72_75))
-(assert (!(contains Requirement72 Requirement78):named cont_72_78))
-(assert (!(contains Requirement72 Requirement79):named cont_72_79))
 (assert (!(refines Requirement120 Requirement121):named refi_120_121))
 (assert (!(refines Requirement71 Requirement70):named refi_71_70))
 (assert (!(conflicts Requirement66 Requirement29):named conf_66_29))
@@ -71,11 +75,8 @@
 (assert (!(p_refines Requirement101 Requirement100):named part_101_100))
 (assert (!(requires Requirement51 Requirement48):named requ_51_48))
 (assert (!(conflicts Requirement21 Requirement119):named conf_21_119))
-(assert (!(contains Requirement68 Requirement70):named cont_68_70))
-(assert (!(contains Requirement68 Requirement84):named cont_68_84))
 (assert (!(refines Requirement122 Requirement92):named refi_122_92))
 (assert (!(p_refines Requirement80 Requirement68):named part_80_68))
-;(assert (!(conflicts Requirement98 Requirement48):named conf_98_48))
 (assert (!(refines Requirement31 Requirement30):named refi_31_30))
 (assert (!(requires Requirement90 Requirement53):named requ_90_53))
 (assert (!(requires Requirement90 Requirement15):named requ_90_15))
@@ -84,11 +85,7 @@
 (assert (!(requires Requirement13 Requirement15):named requ_13_15))
 (assert (!(requires Requirement13 Requirement14):named requ_13_14))
 (assert (!(requires Requirement13 Requirement17):named requ_13_17))
-;(assert (!(conflicts Requirement48 Requirement98):named conf_48_98))
 (assert (!(conflicts Requirement61 Requirement104):named conf_61_104))
-(assert (!(contains Requirement61 Requirement62):named cont_61_62))
-(assert (!(contains Requirement61 Requirement63):named cont_61_63))
-(assert (!(contains Requirement61 Requirement64):named cont_61_64))
 (assert (!(p_refines Requirement61 Requirement59):named part_61_59))
 (assert (!(conflicts Requirement100 Requirement59):named conf_100_59))
 (assert (!(refines Requirement58 Requirement56):named refi_58_56))
@@ -101,7 +98,6 @@
 (assert (!(conflicts Requirement60 Requirement103):named conf_60_103))
 (assert (!(conflicts Requirement60 Requirement102):named conf_60_102))
 (assert (!(requires Requirement60 Requirement11):named requ_60_11))
-;(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
 (assert (!(refines Requirement40 Requirement35):named refi_40_35))
 (assert (!(p_refines Requirement69 Requirement68):named part_69_68))
 (assert (!(conflicts Requirement18 Requirement74):named conf_18_74))
@@ -125,9 +121,6 @@
 (assert (!(refines Requirement36 Requirement35):named refi_36_35))
 (assert (!(requires Requirement97 Requirement4):named requ_97_4))
 (assert (!(requires Requirement97 Requirement1):named requ_97_1))
-(assert (!(contains Requirement97 Requirement100):named cont_97_100))
-(assert (!(contains Requirement97 Requirement98):named cont_97_98))
-(assert (!(contains Requirement97 Requirement99):named cont_97_99))
 (assert (!(requires Requirement6 Requirement5):named requ_6_5))
 (assert (!(refines Requirement6 Requirement4):named refi_6_4))
 (assert (!(refines Requirement39 Requirement35):named refi_39_35))
@@ -178,29 +171,6 @@
   (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
     (=> (and (requires r1 r2) (requires r2 r3))
       (requires r1 r3)
-    )
-  )
-)
-
-; Non-reflexive contains
-(assert
-  (forall ((r Requirement))
-    (not (contains r r))
-  )
-)
-
-; Non-Symmetric contains
-(assert
-  (forall ((r1 Requirement)(r2 Requirement))
-    (=> (contains r1 r2) (not (contains r2 r1)))
-  )
-)
-
-; Transitive contains
-(assert 
-  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
-    (=> (and (contains r1 r2) (contains r2 r3))
-      (contains r1 r3)
     )
   )
 )
