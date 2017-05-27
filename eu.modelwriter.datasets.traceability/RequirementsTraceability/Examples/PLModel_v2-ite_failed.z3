@@ -337,6 +337,6 @@ false)))
 ; Requirements_Theory End
 
 (check-sat)
-(get-model)
+;(get-model)
 (get-unsat-core)
 (exit)

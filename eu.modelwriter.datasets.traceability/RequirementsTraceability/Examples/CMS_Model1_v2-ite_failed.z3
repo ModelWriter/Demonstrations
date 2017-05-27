@@ -7,10 +7,25 @@
 
 ; Example Begin
 
-(declare-datatypes () ((Requirement Requirement28 Requirement1 Requirement47 Requirement113 Requirement10 Requirement9 Requirement103 Requirement14 Requirement72 Requirement120 Requirement71 Requirement66 Requirement53 Requirement86 Requirement33 Requirement92 Requirement2 Requirement112 Requirement29 Requirement11 Requirement102 Requirement73 Requirement15 Requirement46 Requirement121 Requirement67 Requirement52 Requirement32 Requirement91 Requirement87 Requirement12 Requirement115 Requirement49 Requirement108 Requirement26 Requirement16 Requirement59 Requirement101 Requirement7 Requirement51 Requirement21 Requirement68 Requirement122 Requirement80 Requirement98 Requirement31 Requirement90 Requirement88 Requirement41 Requirement78 Requirement114 Requirement13 Requirement48 Requirement109 Requirement61 Requirement27 Requirement100 Requirement58 Requirement17 Requirement8 Requirement50 Requirement99 Requirement70 Requirement20 Requirement89 Requirement30 Requirement60 Requirement79 Requirement40 Requirement69 Requirement76 Requirement18 Requirement43 Requirement106 Requirement57 Requirement62 Requirement81 Requirement116 Requirement5 Requirement38 Requirement96 Requirement23 Requirement37 Requirement19 Requirement77 Requirement42 Requirement117 Requirement63 Requirement56 Requirement107 Requirement82 Requirement83 Requirement22 Requirement36 Requirement97 Requirement6 Requirement39 Requirement74 Requirement45 Requirement118 Requirement93 Requirement64 Requirement55 Requirement111 Requirement104 Requirement35 Requirement84 Requirement25 Requirement3 Requirement94 Requirement119 Requirement44 Requirement75 Requirement65 Requirement54 Requirement110 Requirement105 Requirement34 Requirement85 Requirement95 Requirement4 Requirement24 Requirement123)))
+(declare-datatypes () ((Requirement Requirement28 Requirement1 Requirement47 Requirement113 Requirement10 Requirement9 Requirement103 Requirement14 Requirement72 Requirement120 Requirement71 Requirement66 Requirement53 Requirement86 Requirement33 Requirement92 Requirement2 Requirement112 Requirement29 Requirement11 Requirement102 Requirement73 Requirement15 Requirement46 Requirement121 Requirement67 Requirement52 Requirement32 Requirement91 Requirement87 Requirement12 Requirement115 Requirement49 Requirement108 Requirement26 Requirement16 Requirement59 Requirement101 Requirement7 Requirement51 Requirement21 Requirement68 Requirement122 Requirement80 Requirement98 Requirement31 Requirement90 Requirement88 Requirement41 Requirement78 Requirement114 Requirement13 Requirement48 Requirement109 Requirement61 Requirement27 Requirement100 Requirement58 Requirement17 Requirement8 Requirement50 Requirement99 Requirement70 Requirement20 Requirement89 Requirement30 Requirement60 Requirement79 Requirement40 Requirement69 Requirement76 Requirement18 Requirement43 Requirement106 Requirement57 Requirement62 Requirement81 Requirement116 Requirement5 Requirement38 Requirement96 Requirement23 Requirement37 Requirement19 Requirement77 Requirement42 Requirement117 Requirement63 Requirement56 Requirement107 Requirement82 Requirement83 Requirement22 Requirement36 Requirement97 Requirement6 Requirement39 Requirement74 Requirement45 Requirement118 Requirement93 Requirement64 Requirement55 Requirement111 Requirement104 Requirement35 Requirement84 Requirement25 Requirement3 Requirement94 Requirement119 Requirement44 Requirement75 Requirement65 Requirement54 Requirement110 Requirement105 Requirement34 Requirement85 Requirement95 Requirement4 Requirement24)))
 
 (declare-fun requires (Requirement Requirement) Bool)
-(declare-fun contains (Requirement Requirement) Bool)
+(define-fun contains ((x!0 Requirement) (x!1 Requirement)) Bool 
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement76)) true
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement77)) true
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement74)) true
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement75)) true
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement78)) true
+(ite ( and (= x!0 Requirement72) (= x!1 Requirement79)) true
+(ite ( and (= x!0 Requirement68) (= x!1 Requirement70)) true
+(ite ( and (= x!0 Requirement68) (= x!1 Requirement84)) true
+(ite ( and (= x!0 Requirement61) (= x!1 Requirement62)) true
+(ite ( and (= x!0 Requirement61) (= x!1 Requirement63)) true
+(ite ( and (= x!0 Requirement61) (= x!1 Requirement64)) true
+(ite ( and (= x!0 Requirement97) (= x!1 Requirement100)) true
+(ite ( and (= x!0 Requirement97) (= x!1 Requirement98)) true
+(ite ( and (= x!0 Requirement97) (= x!1 Requirement99)) true
+false)))))))))))))))
 (declare-fun refines (Requirement Requirement) Bool)
 (declare-fun p_refines (Requirement Requirement) Bool)
 (declare-fun conflicts (Requirement Requirement) Bool)
@@ -22,10 +37,6 @@
 ;(assert (!(p_refines Requirement60 Requirement59):named part_60_59))
 ;;;
 
-(assert (!(contains Requirement123 Requirement97):named cont_123_97))
-(assert (!(contains Requirement123 Requirement98):named cont_123_98))
-(assert (!(contains Requirement123 Requirement99):named cont_123_99))
-(assert (!(contains Requirement123 Requirement100):named cont_123_100))
 (assert (!(conflicts Requirement28 Requirement26):named conf_28_26))
 (assert (!(refines Requirement28 Requirement27):named refi_28_27))
 (assert (!(refines Requirement47 Requirement46):named refi_47_46))
@@ -344,13 +355,11 @@
       (=> (and (_equals r1 r2) (requires r2 r3)) (requires r1 r3))
       (=> (and (_equals r1 r2) (refines r2 r3)) (refines r1 r3))
       (=> (and (_equals r1 r2) (p_refines r2 r3)) (p_refines r1 r3))
-      (=> (and (_equals r1 r2) (contains r2 r3)) (contains r1 r3))
       (=> (and (_equals r1 r2) (conflicts r2 r3)) (conflicts r1 r3))
       
       (=> (and (requires r1 r2) (_equals r2 r3)) (requires r1 r3))
       (=> (and (refines r1 r2) (_equals r2 r3)) (refines r1 r3))
       (=> (and (p_refines r1 r2) (_equals r2 r3)) (p_refines r1 r3))
-      (=> (and (contains r1 r2) (_equals r2 r3)) (contains r1 r3))
       (=> (and (conflicts r1 r2) (_equals r2 r3)) (conflicts r1 r3))
     )
   )
@@ -399,6 +408,6 @@
 ; Requirements_Theory End
 
 (check-sat)
-(get-model)
+;(get-model)
 (get-unsat-core)
 (exit)

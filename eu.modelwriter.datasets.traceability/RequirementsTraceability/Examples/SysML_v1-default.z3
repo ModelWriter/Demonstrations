@@ -63,6 +63,29 @@
   )
 )
 
+; Non-reflexive contains
+(assert
+  (forall ((r Requirement))
+    (not (contains r r))
+  )
+)
+
+; Non-Symmetric contains
+(assert
+  (forall ((r1 Requirement)(r2 Requirement))
+    (=> (contains r1 r2) (not (contains r2 r1)))
+  )
+)
+
+; Transitive contains
+(assert 
+  (forall ((r1 Requirement) (r2 Requirement) (r3 Requirement)) 
+    (=> (and (contains r1 r2) (contains r2 r3))
+      (contains r1 r3)
+    )
+  )
+)
+
 ; Non-reflexive refines
 (assert
   (forall ((r Requirement))
@@ -287,5 +310,5 @@
 ; Requirements_Theory End
 
 (check-sat)
-(get-model)
+;(get-model)
 ;(get-unsat-core)
