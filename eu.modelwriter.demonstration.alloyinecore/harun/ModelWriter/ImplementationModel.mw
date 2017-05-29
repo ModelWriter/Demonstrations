@@ -2,6 +2,7 @@ module RequirementsModel
 
 open util/relation
 
+-- Locate@Text
 sig Requirement {
 	requires: set Requirement,
 	refines: set Requirement,
@@ -11,19 +12,27 @@ sig Requirement {
 	equals: set Requirement
 }
 
+sig ContractReq, SystemReq extends Requirement {}
+
+-- Locate@File
 sig Specification extends Requirement {}
 
-sig Implementation {
+-- Locate@Java
+abstract sig Implementation {
 	satisfy: set Requirement,
 	refines: set Implementation,
+	requires: set Implementation,
 }
 
+sig Model, Code extends Implementation {}
+
+-- ConsistencyRules
 fact functional_facts {
-	no requires & refines
-	no requires & contains
-	no requires & partiallyRefines
-	no requires & conflicts
-	no requires & equals
+	no Requirement<:requires & refines
+	no Requirement<:requires & contains
+	no Requirement<:requires & partiallyRefines
+	no Requirement<:requires & conflicts
+	no Requirement<:requires & equals
 
 	no refines & contains
 	no refines & partiallyRefines
@@ -39,11 +48,11 @@ fact functional_facts {
 
 	no conflicts & equals
 
-	no requires & ~refines
-	no requires & ~contains
-	no requires & ~partiallyRefines
-	no requires & ~conflicts
-	no requires & ~equals
+	no Requirement<:requires & ~refines
+	no Requirement<:requires & ~contains
+	no Requirement<:requires & ~partiallyRefines
+	no Requirement<:requires & ~conflicts
+	no Requirement<:requires & ~equals
 
 	no refines & ~contains
 	no refines & ~partiallyRefines
@@ -60,9 +69,10 @@ fact functional_facts {
 	no conflicts & ~equals
 }
 
+-- Properties of Relation Types
 fact relation_properties {
-	irreflexive[requires]
-	antisymmetric[requires]
+	irreflexive[Requirement<:requires]
+	antisymmetric[Requirement<:requires]
 
 	irreflexive[Requirement<:refines]
 	antisymmetric[Requirement<:refines]
@@ -86,7 +96,7 @@ fact { transitive[equals] }
 fact{ transitive[contains] }
 
 -- Reason@Requirement.requires
-fact{ transitive[requires] }
+fact{ transitive[Requirement<:requires] }
 
 -- Reason@Requirement.refines
 fact{ transitive[Requirement<:refines] }
@@ -94,6 +104,7 @@ fact{ transitive[Requirement<:refines] }
 -- Reason@Requirement.partiallyRefines
 fact{ transitive[partiallyRefines] }
 
+-- Full Semantics of Equal
 fact equals_facts {
 	all a,b: Requirement {
 		b in a.equals => a.conflicts = b.conflicts
