@@ -56,3 +56,7 @@ A ReqIF model exists, is open and at least one SpecObject exists.
 ### Alternative 1: Delete in SpecObjects folder in Outline
 
 If the SpecObject is deleted from the SpecObjects folder in the ouline, it will be removed, no matter what. This may result in SpecHierarchies that are not referencing any SpecObjects.	
+
+## UC-4 Yet Another Requirement
+
+A ReqIF model exists, is open and at least one SpecObject exists.
