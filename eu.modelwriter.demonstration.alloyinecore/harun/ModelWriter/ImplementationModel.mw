@@ -11,6 +11,14 @@ sig Requirement {
 	equals: set Requirement
 }
 
+sig Specification extends Requirement {}
+
+sig Implementation {
+	satisfy: set Requirement,
+	refines: set Implementation,
+}
+
+
 fact functional_facts {
 	no requires & refines
 	no requires & contains
