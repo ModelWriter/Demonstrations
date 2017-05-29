@@ -11,6 +11,14 @@ sig Requirement {
 	equals: set Requirement
 }
 
+sig Specification extends Requirement {}
+
+sig Implementation {
+	satisfy: set Requirement,
+	refines: set Implementation,
+}
+
+
 fact functional_facts {
 	no requires & refines
 	no requires & contains
@@ -56,29 +64,37 @@ fact functional_facts {
 fact relation_properties {
 	irreflexive[requires]
 	antisymmetric[requires]
-	transitive[requires]
 
-	irreflexive[refines]
-	antisymmetric[refines]
-	transitive[refines]
+	irreflexive[Requirement<:refines]
+	antisymmetric[Requirement<:refines]
 
 	irreflexive[contains]
 	antisymmetric[contains]
-	transitive[contains]
 
 	irreflexive[partiallyRefines]
 	antisymmetric[partiallyRefines]
 	transitive[partiallyRefines]
 
 	irreflexive[conflicts]
-	symmetric[conflicts]
-
-	reflexive[equals, Requirement]
+	
 	symmetric[equals]
-	transitive[equals]
 }
 
-/** If a requirement equals to another requirement, then these requirements have exactly the same relations */
+-- Reason@Requirement.equals
+fact { transitive[equals] }
+
+-- Reason@Requirement.contains
+fact{ transitive[contains] }
+
+-- Reason@Requirement.requires
+fact{ transitive[requires] }
+
+-- Reason@Requirement.refines
+fact{ transitive[Requirement<:refines] }
+
+-- Reason@Requirement.partiallyRefines
+fact{ transitive[partiallyRefines] }
+
 fact equals_facts {
 	all a,b: Requirement {
 		b in a.equals => a.conflicts = b.conflicts
@@ -97,8 +113,6 @@ fact equals_facts {
 	}
 }
 
-
-/** Defines, under what conditions program should infer that one requirement requires another. */
 -- Reason@Requirement.requires
 fact infer_requires_facts {
 	all a,b,c: Requirement {
@@ -109,7 +123,7 @@ fact infer_requires_facts {
 	}
 }
 
-/** Defines, under what conditions program should infer that one requirement partially refines another. */
+-- Reason@Requirement.partiallyRefines
 fact infer_partiallyrefines_facts {
 	all a,b,c: Requirement {
 		b in a.contains && c in b.refines => c in a.partiallyRefines
@@ -121,10 +135,11 @@ fact infer_partiallyrefines_facts {
 	}
 }
 
-/** Defines, under what conditions program should infer that one requirement conflicts another. */
+-- Reason@Requirement.conflicts
 fact infer_conflicts_facts {
 	all a,b,c: Requirement {
 		b in a.(requires + refines + contains) && c in b.conflicts => c in a.conflicts
 	}
+	symmetric[conflicts]
 }
 
