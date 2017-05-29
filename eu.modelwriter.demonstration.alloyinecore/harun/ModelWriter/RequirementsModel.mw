@@ -111,7 +111,7 @@ fact infer_requires_facts {
 		b in a.requires && c in b.refines && c !in a.contains => c in a.requires
 		b in a.refines && c in b.requires && c !in a.contains => c in a.requires
 		b in a.requires && c in b.contains && c !in a.contains => c in a.requires
-		b in a.contains && c in a.requires && c !in a.contains => c in a.requires
+		b in a.contains && c in b.requires && c !in a.contains => c in a.requires
 	}
 }
 
