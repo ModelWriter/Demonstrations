@@ -1,108 +1,76 @@
-module RequirementsModel
+module TraceabilityModel
 
 open util/relation
 
--- Locate@Text
-sig Requirement {
-	requires: set Requirement,
-	refines: set Requirement,
-	contains: set Requirement,
-	partiallyRefines: set Requirement,
-	conflicts: set Requirement,
-	equals: set Requirement
+abstract sig Artefact {
+	requires: set Artefact,
+	refines: set Artefact,
+	contains: set Artefact,
+	partiallyRefines: set Artefact,
+	conflicts: set Artefact,
 }
-
-sig ContractReq, SystemReq extends Requirement {}
 
 -- Locate@File
-sig Specification extends Requirement {}
+sig Specification extends Artefact {}
+
+-- Locate@Text
+sig Requirement extends Artefact { 
+	equals: set Requirement,
+}
+
+-- Locate@Text
+sig LowLevelReq, HighLevelReq extends Requirement { }
+
+abstract sig Implementation extends Artefact {
+	satisfies: set Requirement,
+	partiallySatisfies: set Requirement,
+}
+
+-- Locate@Model
+sig Model extends Implementation {}
 
 -- Locate@Java
-abstract sig Implementation {
-	satisfy: set Requirement,
-	refines: set Implementation,
-	requires: set Implementation,
-}
-
-sig Model, Code extends Implementation {}
-
--- ConsistencyRules
-fact functional_facts {
-	no Requirement<:requires & refines
-	no Requirement<:requires & contains
-	no Requirement<:requires & partiallyRefines
-	no Requirement<:requires & conflicts
-	no Requirement<:requires & equals
-
-	no refines & contains
-	no refines & partiallyRefines
-	no refines & conflicts
-	no refines & equals
-
-	no contains & partiallyRefines
-	no contains & conflicts
-	no contains & equals
-
-	no partiallyRefines & conflicts
-	no partiallyRefines & equals
-
-	no conflicts & equals
-
-	no Requirement<:requires & ~refines
-	no Requirement<:requires & ~contains
-	no Requirement<:requires & ~partiallyRefines
-	no Requirement<:requires & ~conflicts
-	no Requirement<:requires & ~equals
-
-	no refines & ~contains
-	no refines & ~partiallyRefines
-	no refines & ~conflicts
-	no refines & ~equals
-
-	no contains & ~partiallyRefines
-	no contains & ~conflicts
-	no contains & ~equals
-
-	no partiallyRefines & ~conflicts
-	no partiallyRefines & ~equals
-
-	no conflicts & ~equals
-}
+sig Code extends Implementation {}
 
 -- Properties of Relation Types
 fact relation_properties {
-	irreflexive[Requirement<:requires]
-	antisymmetric[Requirement<:requires]
+	irreflexive[requires]
+	antisymmetric[requires]
 
-	irreflexive[Requirement<:refines]
-	antisymmetric[Requirement<:refines]
+	irreflexive[refines]
+	antisymmetric[refines]
 
 	irreflexive[contains]
 	antisymmetric[contains]
 
 	irreflexive[partiallyRefines]
 	antisymmetric[partiallyRefines]
-	transitive[partiallyRefines]
 
 	irreflexive[conflicts]
 	
 	symmetric[equals]
+	
+	irreflexive[satisfies]
+	antisymmetric[satisfies]
 }
 
--- Reason@Requirement.equals
+-- Reason@Artefact.equals
 fact { transitive[equals] }
 
--- Reason@Requirement.contains
+-- Reason@Artefact.contains
 fact{ transitive[contains] }
 
--- Reason@Requirement.requires
-fact{ transitive[Requirement<:requires] }
+-- Reason@Artefact.requires
+fact{ transitive[requires] }
 
--- Reason@Requirement.refines
-fact{ transitive[Requirement<:refines] }
+-- Reason@Artefact.refines
+fact{ transitive[refines] }
 
--- Reason@Requirement.partiallyRefines
+-- Reason@Artefact.partiallyRefines
 fact{ transitive[partiallyRefines] }
+
+-- Reason@Implementation.satisfies
+fact { transitive[satisfies] }
 
 -- Full Semantics of Equal
 fact equals_facts {
@@ -125,7 +93,7 @@ fact equals_facts {
 
 -- Reason@Requirement.requires
 fact infer_requires_facts {
-	all a,b,c: Requirement {
+	all a,b,c: Artefact {
 		b in a.requires && c in b.refines && c !in a.contains => c in a.requires
 		b in a.refines && c in b.requires && c !in a.contains => c in a.requires
 		b in a.requires && c in b.contains && c !in a.contains => c in a.requires
@@ -135,7 +103,7 @@ fact infer_requires_facts {
 
 -- Reason@Requirement.partiallyRefines
 fact infer_partiallyrefines_facts {
-	all a,b,c: Requirement {
+	all a,b,c: Artefact {
 		b in a.contains && c in b.refines => c in a.partiallyRefines
 		b in a.refines && c in b.contains => c in a.partiallyRefines
 		b in a.partiallyRefines && c in b.contains => c in a.partiallyRefines
@@ -147,9 +115,72 @@ fact infer_partiallyrefines_facts {
 
 -- Reason@Requirement.conflicts
 fact infer_conflicts_facts {
-	all a,b,c: Requirement {
+	all a,b,c: Artefact {
 		b in a.(requires + refines + contains) && c in b.conflicts => c in a.conflicts
 	}
 	symmetric[conflicts]
 }
 
+-- Reason@Implementation.satisfies
+fact infer_satisfies_facts {
+	all a,b : Requirement, c: Implementation {
+		b in a.refines && b in c.satisfies => a in c.satisfies
+		b in a.refines && a in c.satisfies => b in c.satisfies
+	}
+}
+
+-- Reason@Implementation.partiallySatisfies
+fact infer_partiallysatisfies_facts {
+	all a,b : Requirement, c: Implementation {
+		b in c.satisfies && b in a.contains => a in c.partiallySatisfies
+	}
+}
+
+-- pairwise asymmetry among relations
+fact Consistency_Rules {
+	no requires & refines
+	no requires & contains
+	no requires & partiallyRefines
+	no requires & conflicts
+	no requires & equals
+
+	no refines & contains
+	no refines & partiallyRefines
+	no refines & conflicts
+	no refines & equals
+
+	no contains & partiallyRefines
+	no contains & conflicts
+	no contains & equals
+
+	no partiallyRefines & conflicts
+	no partiallyRefines & equals
+
+	no conflicts & equals
+
+	no requires & ~refines
+	no requires & ~contains
+	no requires & ~partiallyRefines
+	no requires & ~conflicts
+	no requires & ~equals
+
+	no refines & ~contains
+	no refines & ~partiallyRefines
+	no refines & ~conflicts
+	no refines & ~equals
+
+	no contains & ~partiallyRefines
+	no contains & ~conflicts
+	no contains & ~equals
+
+	no partiallyRefines & ~conflicts
+	no partiallyRefines & ~equals
+
+	no conflicts & ~equals
+}
+
+fact { 
+	contains in (((Requirement + Specification) <: contains & contains :> Requirement) + (Implementation <: contains & contains :> Implementation))
+	refines in ((Requirement <: refines & refines :> Requirement) + (Implementation <: refines & refines :> Implementation))
+	requires in ((Requirement <: requires & requires :> Requirement) + (Implementation <: requires & requires :> Implementation))
+}
