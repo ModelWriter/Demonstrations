@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsys:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fsys="eu.modelwriter.examples.reqmodel"
+    xsi:schemaLocation="eu.modelwriter.examples.reqmodel ReqModel.ecore">
+  <have req="//@have.1"/>
+  <have req="//@have.2"/>
+  <have req="//@have.3"/>
+  <have req="//@have.4"/>
+  <have req="//@have.5"/>
+  <have req="//@have.0"/>
+</fsys:Model>

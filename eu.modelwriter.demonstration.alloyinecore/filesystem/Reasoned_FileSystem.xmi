@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsys:FileSystem xmlns:aie="http://modelwriter.eu/aie" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsys="eu.modelwriter.examples.filesystem" xsi:schemaLocation="eu.modelwriter.examples.filesystem FileSystem.ecore">
+  <names/>
+  <root aie:name="FSObject_6" n="EString_0" name="//@names.0">
+    <content aie:name="FSObject_5" xsi:type="fsys:Link" n="EString_0" num="246.04477407132785" name="//@names.0" link="//@root"/>
+  </root>
+</fsys:FileSystem>

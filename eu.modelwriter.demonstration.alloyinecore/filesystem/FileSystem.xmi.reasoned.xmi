@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsys:FileSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsys="eu.modelwriter.examples.filesystem" xsi:schemaLocation="eu.modelwriter.examples.filesystem /eu.modelwriter.demonstration.alloyinecore/filesystem/FileSystem.ecore">
+  <names/>
+  <root n="EString_0" name="//@names.0">
+    <content xsi:type="fsys:Dir" n="EString_0" obj="15307" name="//@names.0">
+      <content xsi:type="fsys:Dir" n="EString_0" obj="15307" name="//@names.0">
+        <content xsi:type="fsys:Dir" n="EString_0" obj="15307" name="//@names.0"/>
+      </content>
+    </content>
+  </root>
+</fsys:FileSystem>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsys:FileSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fsys="eu.modelwriter.examples.filesystem"
+    xmlns:aie="http://modelwriter.eu/aie"
+    xsi:schemaLocation="eu.modelwriter.examples.filesystem
+    					FileSystem.ecore
+    					http://modelwriter.eu/aie
+    					NewXMLSchema.xsd">
+    					
+    <root>
+    	<n>abc</n>
+    	<n>def</n>
+    	<content
+    		aie:name="zzz"
+        	xsi:type="fsys:Dir"/>
+    	<content
+        	xsi:type="fsys:File"/>
+  	</root>
+
+</fsys:FileSystem>
