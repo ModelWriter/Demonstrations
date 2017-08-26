@@ -4,4 +4,4 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:fsys="eu.modelwriter.examples.filesystem"
-    xsi:schemaLocation="eu.modelwriter.examples.filesystem FileSystem.ecore"/>
+    xsi:schemaLocation="eu.modelwriter.examples.filesystem path	/eu.modelwriter.demonstration.alloyinecore/filesystem/FileSystem.ecore"/>

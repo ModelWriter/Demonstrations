@@ -21,8 +21,8 @@
     <details key="formula" value="some content"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;class FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;public property names : Name[*] { composes };&#xA;&#x9;&#x9;public property root : Root { composes };&#xA;&#x9;}&#xA;    class Name [0,2];&#xA;    abstract class FSObject [5]&#xA;    {&#xA;    &#x9;public attribute n : String;&#xA;    &#x9;public attribute num : Real;&#xA;    &#x9;public attribute obj : UnlimitedNatural;&#xA;        public property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;        invariant : all f: FSObject | one f.name;&#xA;        invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        public property depend : File[*];&#xA;        invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    public class File extends FSObject, Executable;&#xA;    public class Dir extends FSObject&#xA;    {&#xA;        public property content : FSObject[*] { composes };&#xA;        invariant : all d: Dir | not (d in d.^content);&#xA;    }&#xA;    public class Link extends FSObject&#xA;    {&#xA;        public property link : FSObject;&#xA;        invariant : all l: Link | not (l in l.^link);&#xA;        invariant : all l: Link | one l.link;&#xA;    }&#xA;    public class Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;        invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : one FileSystem;&#xA;    invariant : all n: Name | n in FileSystem.names;&#xA;    invariant : Root = FileSystem.root;&#xA;    invariant : some content;&#xA;}"/>
-    <details key="source_hash" value="-1643384264"/>
+    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;class FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;public property names : Name[*] { composes };&#xA;&#x9;&#x9;public property root : Root { composes };&#xA;&#x9;}&#xA;    class Name [0,2];&#xA;    abstract class FSObject [5]&#xA;    {&#xA;    &#x9;public attribute n : String;&#xA;    &#x9;public attribute num : Real;&#xA;    &#x9;public attribute obj : UnlimitedNatural;&#xA;        public property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;        invariant : all f: FSObject | one f.name;&#xA;        invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        public property depend : File[*];&#xA;        invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    public class File extends FSObject;&#xA;    public class ExecutableFile extends File, Executable;&#xA;    public class Dir extends FSObject&#xA;    {&#xA;        public property content : FSObject[*] { composes };&#xA;        invariant : all d: Dir | not (d in d.^content);&#xA;    }&#xA;    public class Link extends FSObject&#xA;    {&#xA;        public property link : FSObject;&#xA;        invariant : all l: Link | not (l in l.^link);&#xA;        invariant : all l: Link | one l.link;&#xA;    }&#xA;    public class Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;        invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : one FileSystem;&#xA;    invariant : all n: Name | n in FileSystem.names;&#xA;    invariant : Root = FileSystem.root;&#xA;    invariant : some content;&#xA;}"/>
+    <details key="source_hash" value="1580867405"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="FileSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" upperBound="-1" eType="//Name" containment="true">
@@ -107,7 +107,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="//FSObject //Executable">
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="//FSObject">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="//File //Executable">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
