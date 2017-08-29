@@ -1,0 +1,63 @@
+
+/** Type System (unary) **/
+no (Name & Executable) 
+no (Name & FileSystem) 
+no (Name & FSObject)
+no (Executable & FileSystem) 
+no (FileSystem & FSObject) 
+Executable = ExecutableFile 
+ExecutableFile in Executable
+
+/** Composition **/ 
+(all n: Name | lone (n . ~names))
+(all r: Root | lone (r . ~root)) 
+
+/** Type System (unary) **/
+FSObject = File + Link + Dir
+File in FSObject
+Link in FSObject 
+Dir in FSObject 
+no (File & Link) 
+no (File & Dir)  
+no (Link & Dir)  
+ExecutableFile in File  
+Root in Dir 
+
+/** Composition **/ 
+(all f: FSObject | lone (f . ~content)) 
+
+/** User Formula **/
+FSObject in (Root . *content)
+
+/** Relational Multiplicities **/
+(all f: FSObject | one (f . name)) 
+(all f: FSObject | one (f . n)) 
+
+/** Acyclic **/
+(all e: Executable | !(e in (e . ^depend))) 
+(all d: Dir | !(d in (d . ^content))) 
+(all l: Link | !(l in (l . ^link))) 
+
+/** Relational Multiplicities **/
+(all l: Link | one (l . link)) 
+
+/** User Formula **/
+no (Root . ~content) 
+one Root 
+(all a: FSObject - Root, b: FSObject - Root | 
+  !(a = b) => 
+  ((a . ~content) = (b . ~content) => 
+   !((a . name) = (b . name)))) 
+one FileSystem 
+(all n: Name | n in (FileSystem . names)) 
+Root = (FileSystem . root) 
+some content 
+
+/** Type System (binary) **/
+n in (FSObject -> EString)  
+root in (FileSystem -> Root)  
+names in (FileSystem -> Name)  
+depend in (Executable -> File) 
+link in (Link -> FSObject)  
+content in (Dir -> FSObject) 
+name in (FSObject -> Name)
