@@ -13,8 +13,8 @@
     <details key="formula" value="some content"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;class FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;public property names : Name[*] { composes };&#xA;&#x9;&#x9;public property root : Root { composes };&#xA;&#x9;&#x9;invariant : all n: Name | n in FileSystem.names;&#xA;&#x9;&#x9;invariant : one FileSystem;&#xA;&#x9;}&#xA;    class Name [2];&#xA;    abstract class FSObject [5]&#xA;    {&#xA;    &#x9;public attribute n : String;&#xA;        public property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;        invariant : all f: FSObject | one f.name;&#xA;        invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        public property depend : File[*] { acyclic };&#xA; --     invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    public class File extends FSObject;&#xA;    public class ExecutableFile extends File, Executable;&#xA;    public class Dir extends FSObject&#xA;    {&#xA;        public property content : FSObject[*] { composes, acyclic };&#xA; --     invariant : all d: Dir | not (d in d.^content);&#xA;    }&#xA;    public class Link extends FSObject&#xA;    {&#xA;        public property link : FSObject { acyclic };&#xA;--      invariant : all l: Link | not (l in l.^link);&#xA;        invariant : all l: Link | one l.link;&#xA;    }&#xA;    public class Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;        invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : Root = FileSystem.root;&#xA;    invariant : some content;&#xA;}"/>
-    <details key="source_hash" value="-1059181993"/>
+    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;class FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;public property names : Name[1..*] { composes };&#xA;&#x9;&#x9;public property root : Root { composes };&#xA;--&#x9;&#x9;invariant : all f: FileSystem | one f.root;&#xA;--&#x9;&#x9;invariant : all f: FileSystem | some f.names;&#xA;&#x9;&#x9;invariant : all n: Name | n in FileSystem.names;&#xA;&#x9;&#x9;invariant : one FileSystem;&#xA;&#x9;}&#xA;    class Name [2];&#xA;    abstract class FSObject [5]&#xA;    {&#xA;    &#x9;public attribute n : String;&#xA;        public property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;--      invariant : all f: FSObject | one f.name;&#xA;        invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        public property depend : File[*] { acyclic };&#xA;--      invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    public class File extends FSObject;&#xA;    public class ExecutableFile extends File, Executable;&#xA;    public class Dir extends FSObject&#xA;    {&#xA;        public property content : FSObject[*] { composes, acyclic };&#xA; --     invariant : all d: Dir | not (d in d.^content);&#xA;    }&#xA;    public class Link extends FSObject&#xA;    {&#xA;        public property link : FSObject [?] { acyclic };&#xA;--      invariant : all l: Link | not (l in l.^link);&#xA;--      invariant : all l: Link | lone l.link;&#xA;    }&#xA;    public class Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;        invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : Root = FileSystem.root;&#xA;    invariant : some content;&#xA;}"/>
+    <details key="source_hash" value="837457654"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="FileSystem">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
@@ -25,7 +25,7 @@
       <details key="callable" value="false"/>
       <details key="formula" value="one FileSystem"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" upperBound="-1" eType="//Name" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" lowerBound="1" upperBound="-1" eType="//Name" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
         <details key="visibility" value="public"/>
       </eAnnotations>
@@ -60,10 +60,6 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
       <details key="formula" value="FSObject in Root.*content"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="all f: FSObject | one f.name"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
@@ -114,11 +110,7 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="all l: Link | one l.link"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" lowerBound="1" eType="//FSObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" eType="//FSObject">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
         <details key="visibility" value="public"/>
       </eAnnotations>
