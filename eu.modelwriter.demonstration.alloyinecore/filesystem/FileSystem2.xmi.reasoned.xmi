@@ -3,10 +3,13 @@
   <names/>
   <names/>
   <root n="root" name="//@names.0">
-    <content xsi:type="fsys:File" n="EString_3" name="//@names.1"/>
-    <content xsi:type="fsys:Dir" n="EString_3" name="//@names.0">
-      <content xsi:type="fsys:File" n="EString_3" name="//@names.0"/>
-      <content xsi:type="fsys:ExecutableFile" n="EString_3" name="//@names.1" depend="//@root/@content.1/@content.0 //@root/@content.0"/>
+    <content xsi:type="fsys:File" n="EString_5" name="//@names.0"/>
+    <content xsi:type="fsys:Dir" n="root" name="//@names.1">
+      <content xsi:type="fsys:Dir" n="EString_5" name="//@names.0">
+        <content xsi:type="fsys:Dir" n="EString_5" name="//@names.0">
+          <content xsi:type="fsys:Dir" n="EString_5" name="//@names.1"/>
+        </content>
+      </content>
     </content>
   </root>
 </fsys:FileSystem>
