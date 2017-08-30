@@ -9,10 +9,13 @@
     <details key="formula" value="Root = FileSystem.root"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;class one FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;public property names : Name[1..*] { composes, unique };&#xA;&#x9;&#x9;public property root : Root { composes, unique };&#xA;--&#x9;&#x9;invariant : all f: FileSystem | one f.root;&#xA;--&#x9;&#x9;invariant : all f: FileSystem | some f.names;&#xA;--&#x9;&#x9;invariant : all n: Name | lone n.~names;&#xA;--&#x9;&#x9;invariant : all r: Root | lone r.~root;&#xA;&#x9;&#x9;invariant : all n: Name | n in FileSystem.names;&#xA;&#x9;&#x9;invariant : one FileSystem;&#xA;&#x9;}&#xA;    class Name [2]; &#xA;    abstract class FSObject [6]&#xA;    {&#xA;    &#x9;public attribute n : String;&#xA;        public property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;--      invariant : all f: FSObject | one f.name;&#xA;        invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        public property depend : File[*] { acyclic };&#xA;--      invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    public class File extends FSObject;&#xA;    public class ExecutableFile extends File, Executable;&#xA;    public class Dir extends FSObject&#xA;    {&#xA;        public property some content : FSObject[*] { composes, acyclic };&#xA;--      invariant : all d: Dir | not (d in d.^content);&#xA;--&#x9;&#x9;invariant : all f: FSObject | lone f.~content;&#xA;&#x9;&#x9;invariant : some content;&#xA;    }&#xA;    public class Link extends FSObject&#xA;    {&#xA;        public property link : FSObject [?] { acyclic };&#xA;--      invariant : all l: Link | not (l in l.^link);&#xA;--      invariant : all l: Link | lone l.link;&#xA;    }&#xA;    public class one Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;        invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : Root = FileSystem.root;&#xA;}"/>
-    <details key="source_hash" value="-1501880418"/>
+    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;public class one FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;property names : Name[1..*] { composes, unique };&#xA;&#x9;&#x9;property root : Root { composes, unique };&#xA;--&#x9;&#x9;invariant : all f: FileSystem | one f.root;&#xA;--&#x9;&#x9;invariant : all f: FileSystem | some f.names;&#xA;--&#x9;&#x9;invariant : all n: Name | lone n.~names;&#xA;--&#x9;&#x9;invariant : all r: Root | lone r.~root;&#xA;&#x9;&#x9;invariant : all n: Name | n in FileSystem.names;&#xA;--&#x9;&#x9;invariant : one FileSystem;&#xA;&#x9;}&#xA;    public class Name [2]; &#xA;    abstract class FSObject [6]&#xA;    {&#xA;    &#x9;attribute n : String;&#xA;        property name : Name;&#xA;        invariant : FSObject in Root.*content;&#xA;--      invariant : all f: FSObject | one f.name;&#xA;--      invariant : all f: FSObject | one f.n;&#xA;    }&#xA;    abstract class Executable&#xA;    {&#xA;        property depend : File[*] { acyclic };&#xA;--      invariant : all e: Executable | not (e in e.^depend);&#xA;    }&#xA;    class File extends FSObject;&#xA;    class ExecutableFile extends File, Executable;&#xA;    class Dir extends FSObject&#xA;    {&#xA;        property some content : FSObject[*] { composes, acyclic };&#xA;--      invariant : all d: Dir | not (d in d.^content);&#xA;--&#x9;&#x9;invariant : all f: FSObject | lone f.~content;&#xA;--&#x9;&#x9;invariant : some content;&#xA;    }&#xA;    class Link extends FSObject&#xA;    {&#xA;        property link : FSObject [?] { acyclic };&#xA;--      invariant : all l: Link | not (l in l.^link);&#xA;--      invariant : all l: Link | lone l.link;&#xA;    }&#xA;    class one Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;--      invariant : one Root;&#xA;    }&#xA;    invariant : all disj a, b: FSObject - Root |&#xA;                        a.~content = b.~content => a.name != b.name;&#xA;    invariant : Root = FileSystem.root;&#xA;}"/>
+    <details key="source_hash" value="-391635288"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="FileSystem">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
       <details key="multiplicity" value="one"/>
     </eAnnotations>
@@ -20,22 +23,13 @@
       <details key="callable" value="false"/>
       <details key="formula" value="all n: Name | n in FileSystem.names"/>
     </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="one FileSystem"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" lowerBound="1" upperBound="-1" eType="//Name" containment="true">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false" lowerBound="1" eType="//Root" containment="true">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" lowerBound="1" upperBound="-1" eType="//Name" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false" lowerBound="1" eType="//Root" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Name">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
       <details key="lowerscope" value="2"/>
     </eAnnotations>
@@ -60,52 +54,20 @@
       <details key="callable" value="false"/>
       <details key="formula" value="FSObject in Root.*content"/>
     </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="all f: FSObject | one f.n"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="n" ordered="false" lowerBound="1">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" ordered="false" lowerBound="1" eType="//Name">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" ordered="false" lowerBound="1" eType="//Name"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Executable" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="depend" ordered="false" upperBound="-1" eType="//File">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="//FSObject">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-      <details key="visibility" value="public"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="//File //Executable">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-      <details key="visibility" value="public"/>
-    </eAnnotations>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="//FSObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="//File //Executable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Dir" eSuperTypes="//FSObject">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-      <details key="visibility" value="public"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="some content"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false" upperBound="-1" eType="//FSObject" containment="true">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
         <details key="multiplicity" value="some"/>
       </eAnnotations>
@@ -113,30 +75,17 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="//FSObject">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-      <details key="visibility" value="public"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" eType="//FSObject">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-        <details key="visibility" value="public"/>
-      </eAnnotations>
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="//Dir">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
-      <details key="visibility" value="public"/>
-    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
       <details key="multiplicity" value="one"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
       <details key="formula" value="no Root.~content"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="one Root"/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>
