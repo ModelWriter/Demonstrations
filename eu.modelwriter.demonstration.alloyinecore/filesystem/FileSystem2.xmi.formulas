@@ -33,7 +33,7 @@ FSObject in (Root . *content)
 (all f: FSObject | one (f . name)) 
 (all f: FSObject | one (f . n)) 
 
-/** Acyclic **/
+/** Acyclic Binary Relations **/
 (all e: Executable | !(e in (e . ^depend))) 
 (all d: Dir | !(d in (d . ^content))) 
 (all l: Link | !(l in (l . ^link))) 
