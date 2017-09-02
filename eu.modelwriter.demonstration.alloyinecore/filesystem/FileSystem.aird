@@ -22,16 +22,6 @@
   <diagram:DSemanticDiagram xmi:id="_yRrvAQliEeee_YAsgBpzrg" name="filesystem class diagram">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_yRrvAgliEeee_YAsgBpzrg" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_yRrvAwliEeee_YAsgBpzrg">
-        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_jaTPwAl9Eeee_YAsgBpzrg" routingStyle="manhattan">
-          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_jaTPwQl9Eeee_YAsgBpzrg" showIcon="false" labelExpression="service:render">
-            <labelFormat>bold</labelFormat>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </centerLabelStyleDescription>
-          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_jaTPwgl9Eeee_YAsgBpzrg" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-          </endLabelStyleDescription>
-        </computedStyleDescriptions>
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_jaVE8Al9Eeee_YAsgBpzrg" sourceArrow="FillDiamond" routingStyle="manhattan">
           <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_jaVE8Ql9Eeee_YAsgBpzrg" showIcon="false" labelExpression="service:render">
@@ -46,6 +36,16 @@
           <labelFormat>bold</labelFormat>
           <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_TXYZwI3XEee9bYcupqySOA" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_TXYZwY3XEee9bYcupqySOA" showIcon="false" labelExpression="service:render">
+            <labelFormat>bold</labelFormat>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_TXYZwo3XEee9bYcupqySOA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
@@ -380,14 +380,11 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_jaSosAl9Eeee_YAsgBpzrg" name="[1..1] name" sourceNode="_jaDYIAl9Eeee_YAsgBpzrg" targetNode="_jaBi8Al9Eeee_YAsgBpzrg">
       <target xmi:type="ecore:EReference" href="FileSystem.ecore#//FSObject/name"/>
       <semanticElements xmi:type="ecore:EReference" href="FileSystem.ecore#//FSObject/name"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_jaTPwwl9Eeee_YAsgBpzrg" description="_jaTPwAl9Eeee_YAsgBpzrg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_jaTPxAl9Eeee_YAsgBpzrg" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_TXYZw43XEee9bYcupqySOA" description="_TXYZwI3XEee9bYcupqySOA" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_TXYZxI3XEee9bYcupqySOA" showIcon="false">
           <labelFormat>bold</labelFormat>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_jaTPxQl9Eeee_YAsgBpzrg" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_TXYZxY3XEee9bYcupqySOA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
