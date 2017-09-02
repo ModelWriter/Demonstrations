@@ -4,10 +4,10 @@
   <names/>
   <root n="root" name="//@names.0">
     <content xsi:type="fsys:File" n="EString_5" name="//@names.0"/>
-    <content xsi:type="fsys:Dir" n="root" name="//@names.1">
-      <content xsi:type="fsys:Link" n="EString_5" name="//@names.1" link="//@root/@content.1/@content.1"/>
+    <content xsi:type="fsys:Dir" n="EString_3" name="//@names.1">
       <content xsi:type="fsys:Dir" n="EString_5" name="//@names.0">
-        <content xsi:type="fsys:File" n="EString_5" name="//@names.1"/>
+        <content xsi:type="fsys:Link" n="root" name="//@names.1"/>
+        <content xsi:type="fsys:File" n="EString_5" name="//@names.0"/>
       </content>
     </content>
   </root>

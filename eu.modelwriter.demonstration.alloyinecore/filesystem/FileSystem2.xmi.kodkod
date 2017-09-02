@@ -5,12 +5,12 @@ relation bounds:
  FSObject: [[[Link_0], [FSObject_4], [FSObject_5], [Root118], [Dir258], [File235]]]
  File: [[[File235]], [[FSObject_4], [FSObject_5], [File235]]]
  EString: [[["root"]], [[EString_2], ["root"], [EString_1], [EString_4], [EString_3], [EString_5]]]
+ ExecutableFile: [[], [[FSObject_4], [FSObject_5]]]
+ Executable: [[], [[FSObject_4], [FSObject_5]]]
  FileSystem: [[[FileSystem40]]]
  Root: [[[Root118]], [[FSObject_4], [FSObject_5], [Root118]]]
  Link: [[[Link_0]]]
  Name: [[[Name79], [Name_1]]]
- ExecutableFile: [[], [[FSObject_4], [FSObject_5]]]
- Executable: [[], [[FSObject_4], [FSObject_5]]]
  root: [[[FileSystem40, Root118]], [[FileSystem40, FSObject_4], [FileSystem40, FSObject_5], [FileSystem40, Root118]]]
  content: [[[Root118, Dir258], [Root118, File235]], [[FSObject_4, Link_0], [FSObject_4, FSObject_4], [FSObject_4, FSObject_5], [FSObject_4, Root118], [FSObject_4, Dir258], [FSObject_4, File235], [FSObject_5, Link_0], [FSObject_5, FSObject_4], [FSObject_5, FSObject_5], [FSObject_5, Root118], [FSObject_5, Dir258], [FSObject_5, File235], [Root118, Link_0], [Root118, FSObject_4], [Root118, FSObject_5], [Root118, Root118], [Root118, Dir258], [Root118, File235], [Dir258, Link_0], [Dir258, FSObject_4], [Dir258, FSObject_5], [Dir258, Root118], [Dir258, Dir258], [Dir258, File235]]]
  depend: [[], [[FSObject_4, FSObject_4], [FSObject_4, FSObject_5], [FSObject_4, File235], [FSObject_5, FSObject_4], [FSObject_5, FSObject_5], [FSObject_5, File235]]]
@@ -43,9 +43,12 @@ all d: Dir | !(d in (d.^content))
 some content
 one Root
 ExecutableFile in File
+no ExecutableFile
 Executable = ExecutableFile
 ExecutableFile in Executable
 all e: Executable | !(e in (e.^depend))
+no Executable
+no ExecutableFile
 all n: Name | lone (n.~names)
 all r: Root | lone (r.~root)
 one FileSystem
