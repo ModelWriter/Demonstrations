@@ -1,0 +1,58 @@
+[Dir442, Example575, Example698, Root166, FileSystem42, Y118, Name81, Example260, Y130, Example351]
+
+relation bounds:
+ Y: [[[Y118], [Y130]]]
+ X: [[[Y118], [Y130]]]
+ File: [[]]
+ FSObject: [[[Dir442], [Example575], [Example698], [Root166], [Example260], [Example351]]]
+ Example: [[[Example575], [Example698], [Example260], [Example351]]]
+ Root: [[[Root166]]]
+ Name: [[[Name81]]]
+ FileSystem: [[[FileSystem42]]]
+ Dir: [[[Dir442], [Root166]]]
+ names: [[[FileSystem42, Name81]]]
+ root: [[[FileSystem42, Root166]]]
+ name: [[[Dir442, Name81], [Example575, Y130], [Example698, Y118], [Root166, Name81], [Example260, Y130], [Example351, Y118]], [[Dir442, Y118], [Dir442, Name81], [Dir442, Y130], [Example575, Y118], [Example575, Name81], [Example575, Y130], [Example698, Y118], [Example698, Name81], [Example698, Y130], [Root166, Y118], [Root166, Name81], [Root166, Y130], [Example260, Y118], [Example260, Name81], [Example260, Y130], [Example351, Y118], [Example351, Name81], [Example351, Y130]]]
+ ys: [[[FileSystem42, Y118], [FileSystem42, Y130]]]
+ content: [[[Dir442, Example575], [Dir442, Example698], [Root166, Dir442], [Root166, Example260], [Root166, Example351]], [[Dir442, Dir442], [Dir442, Example575], [Dir442, Example698], [Dir442, Root166], [Dir442, Example260], [Dir442, Example351], [Root166, Dir442], [Root166, Example575], [Root166, Example698], [Root166, Root166], [Root166, Example260], [Root166, Example351]]]
+int bounds: 
+ []
+
+no Name & FileSystem
+no Name & X
+no Name & FSObject
+no FileSystem & X
+no FileSystem & FSObject
+no X & FSObject
+all n: Name | lone (n.~names)
+all x: X | lone (x.~ys)
+all r: Root | lone (r.~root)
+one FileSystem
+all f: FileSystem | one (f.root)
+Y in X
+FSObject = Dir + File + Example
+Dir in FSObject
+File in FSObject
+Example in FSObject
+no Dir & File
+no Dir & Example
+no File & Example
+all f: FSObject | one (f.name)
+Root in Dir
+all f: FSObject | lone (f.~content)
+all d: Dir | !(d in (d.^content))
+some content
+one Root
+all n: Name | n in (FileSystem.names)
+all y: X | y in (FileSystem.ys)
+FSObject in Root.*content
+no Root.~content
+all a: FSObject - Root, b: FSObject - Root | !(a = b => 
+  (a.~content = b.~content => 
+ !(a.name = b.name)))
+Root = FileSystem.root
+names in FileSystem -> Name
+root in FileSystem -> Root
+name in (Example -> Y + Dir -> Name + File -> Name)
+ys in FileSystem -> X
+content in Dir -> FSObject

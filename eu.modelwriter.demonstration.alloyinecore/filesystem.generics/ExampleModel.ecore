@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filesystem" nsURI="eu.modelwriter.examples.filesystem" nsPrefix="fsys">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all disj a, b: FSObject - Root |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="Root = FileSystem.root"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;public class one FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;property names : Name[*] { composes };&#xA;&#x9;&#x9;property ys : X[*] { composes };&#xA;&#x9;&#x9;property root : Root { composes };&#xA;&#x9;&#x9;invariant : all n: Name | n in FileSystem.names;&#xA;&#x9;&#x9;invariant : all y: X | y in FileSystem.ys;&#xA;&#x9;}&#xA;&#x9;&#xA;    public class Name [1]; &#xA;    public class X [2];&#xA;    public class Y extends X;&#xA;    &#xA;    abstract class FSObject&lt;E, V> [6]&#xA;    {&#xA;        property name : E;&#xA;        invariant : FSObject in Root.*content;&#xA;    }&#xA;    &#xA;    class Example extends FSObject&lt;Y, Name>;&#xA;    &#xA;    class File extends FSObject&lt;Name, X>;&#xA;    &#xA;    class Dir extends FSObject&lt;Name, X>&#xA;    {&#xA;        property some content : FSObject&lt;Name, X>[*] { composes, acyclic };&#xA;    }&#xA;    &#xA;    class one Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;    }&#xA;    &#xA;    invariant : all disj a, b: FSObject - Root |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name;&#xA;    invariant : Root = FileSystem.root;&#xA;}"/>
+    <details key="source_hash" value="715804593"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="FileSystem">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
+      <details key="multiplicity" value="one"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+      <details key="callable" value="false"/>
+      <details key="formula" value="all n: Name | n in FileSystem.names"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+      <details key="callable" value="false"/>
+      <details key="formula" value="all y: X | y in FileSystem.ys"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false"
+        upperBound="-1" eType="#//Name" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ys" ordered="false" upperBound="-1"
+        eType="#//X" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false" lowerBound="1"
+        eType="#//Root" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Name">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="1"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="X">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="2"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Y" eSuperTypes="#//X">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FSObject" abstract="true">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+      <details key="callable" value="false"/>
+      <details key="formula" value="FSObject in Root.*content"/>
+    </eAnnotations>
+    <eTypeParameters name="E"/>
+    <eTypeParameters name="V"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" ordered="false" lowerBound="1">
+      <eGenericType eTypeParameter="#//FSObject/E"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Example">
+    <eGenericSuperTypes eClassifier="#//FSObject">
+      <eTypeArguments eClassifier="#//Y"/>
+      <eTypeArguments eClassifier="#//Name"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File">
+    <eGenericSuperTypes eClassifier="#//FSObject">
+      <eTypeArguments eClassifier="#//Name"/>
+      <eTypeArguments eClassifier="#//X"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dir">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false"
+        upperBound="-1" containment="true">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
+        <details key="multiplicity" value="some"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
+      <eGenericType eClassifier="#//FSObject">
+        <eTypeArguments eClassifier="#//Name"/>
+        <eTypeArguments eClassifier="#//X"/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eGenericSuperTypes eClassifier="#//FSObject">
+      <eTypeArguments eClassifier="#//Name"/>
+      <eTypeArguments eClassifier="#//X"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="#//Dir">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
+      <details key="multiplicity" value="one"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+      <details key="callable" value="false"/>
+      <details key="formula" value="no Root.~content"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

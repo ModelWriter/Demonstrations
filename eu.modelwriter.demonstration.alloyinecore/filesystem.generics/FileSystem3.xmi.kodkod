@@ -1,0 +1,66 @@
+[Link_0, EString_2, EString_1, "Root", EString_4, EString_3, FSObject_3, Name94, FSObject_4, EString_5, FSObject_5, Name79, Root133, FileSystem40, FSObject_2]
+
+relation bounds:
+ Link: [[[Link_0]]]
+ Dir: [[[Root133]], [[FSObject_3], [FSObject_4], [FSObject_5], [Root133], [FSObject_2]]]
+ File: [[], [[FSObject_3], [FSObject_4], [FSObject_5], [FSObject_2]]]
+ EString: [[["Root"]], [[EString_2], [EString_1], ["Root"], [EString_4], [EString_3], [EString_5]]]
+ Root: [[[Root133]], [[FSObject_3], [FSObject_4], [FSObject_5], [Root133], [FSObject_2]]]
+ Name: [[[Name94], [Name79]]]
+ ExecutableFile: [[], [[FSObject_3], [FSObject_4], [FSObject_5], [FSObject_2]]]
+ FSObject: [[[Link_0], [FSObject_3], [FSObject_4], [FSObject_5], [Root133], [FSObject_2]]]
+ FileSystem: [[[FileSystem40]]]
+ Executable: [[], [[FSObject_3], [FSObject_4], [FSObject_5], [FSObject_2]]]
+ content: [[], [[FSObject_3, Link_0], [FSObject_3, FSObject_3], [FSObject_3, FSObject_4], [FSObject_3, FSObject_5], [FSObject_3, Root133], [FSObject_3, FSObject_2], [FSObject_4, Link_0], [FSObject_4, FSObject_3], [FSObject_4, FSObject_4], [FSObject_4, FSObject_5], [FSObject_4, Root133], [FSObject_4, FSObject_2], [FSObject_5, Link_0], [FSObject_5, FSObject_3], [FSObject_5, FSObject_4], [FSObject_5, FSObject_5], [FSObject_5, Root133], [FSObject_5, FSObject_2], [Root133, Link_0], [Root133, FSObject_3], [Root133, FSObject_4], [Root133, FSObject_5], [Root133, Root133], [Root133, FSObject_2], [FSObject_2, Link_0], [FSObject_2, FSObject_3], [FSObject_2, FSObject_4], [FSObject_2, FSObject_5], [FSObject_2, Root133], [FSObject_2, FSObject_2]]]
+ root: [[[FileSystem40, Root133]], [[FileSystem40, FSObject_3], [FileSystem40, FSObject_4], [FileSystem40, FSObject_5], [FileSystem40, Root133], [FileSystem40, FSObject_2]]]
+ name: [[[Root133, Name79]], [[Link_0, Name94], [Link_0, Name79], [FSObject_3, Name94], [FSObject_3, Name79], [FSObject_4, Name94], [FSObject_4, Name79], [FSObject_5, Name94], [FSObject_5, Name79], [Root133, Name94], [Root133, Name79], [FSObject_2, Name94], [FSObject_2, Name79]]]
+ depend: [[], [[FSObject_3, FSObject_3], [FSObject_3, FSObject_4], [FSObject_3, FSObject_5], [FSObject_3, FSObject_2], [FSObject_4, FSObject_3], [FSObject_4, FSObject_4], [FSObject_4, FSObject_5], [FSObject_4, FSObject_2], [FSObject_5, FSObject_3], [FSObject_5, FSObject_4], [FSObject_5, FSObject_5], [FSObject_5, FSObject_2], [FSObject_2, FSObject_3], [FSObject_2, FSObject_4], [FSObject_2, FSObject_5], [FSObject_2, FSObject_2]]]
+ n: [[[Root133, "Root"]], [[Link_0, EString_2], [Link_0, EString_1], [Link_0, "Root"], [Link_0, EString_4], [Link_0, EString_3], [Link_0, EString_5], [FSObject_3, EString_2], [FSObject_3, EString_1], [FSObject_3, "Root"], [FSObject_3, EString_4], [FSObject_3, EString_3], [FSObject_3, EString_5], [FSObject_4, EString_2], [FSObject_4, EString_1], [FSObject_4, "Root"], [FSObject_4, EString_4], [FSObject_4, EString_3], [FSObject_4, EString_5], [FSObject_5, EString_2], [FSObject_5, EString_1], [FSObject_5, "Root"], [FSObject_5, EString_4], [FSObject_5, EString_3], [FSObject_5, EString_5], [Root133, EString_2], [Root133, EString_1], [Root133, "Root"], [Root133, EString_4], [Root133, EString_3], [Root133, EString_5], [FSObject_2, EString_2], [FSObject_2, EString_1], [FSObject_2, "Root"], [FSObject_2, EString_4], [FSObject_2, EString_3], [FSObject_2, EString_5]]]
+ names: [[[FileSystem40, Name94], [FileSystem40, Name79]]]
+ link: [[], [[Link_0, Link_0], [Link_0, FSObject_3], [Link_0, FSObject_4], [Link_0, FSObject_5], [Link_0, Root133], [Link_0, FSObject_2]]]
+int bounds: 
+ []
+
+no Name & FSObject
+no Name & FileSystem
+no Name & Executable
+no FSObject & FileSystem
+no FileSystem & Executable
+FSObject = Link + Dir + File
+Link in FSObject
+Dir in FSObject
+File in FSObject
+no Link & Dir
+no Link & File
+no Dir & File
+all f: FSObject | one (f.name)
+all f: FSObject | one (f.n)
+all l: Link | !(l in (l.^link))
+all l: Link | lone (l.link)
+Root in Dir
+all f: FSObject | lone (f.~content)
+all d: Dir | !(d in (d.^content))
+some content
+one Root
+ExecutableFile in File
+all n: Name | lone (n.~names)
+all r: Root | lone (r.~root)
+one FileSystem
+all f: FileSystem | one (f.root)
+all f: FileSystem | some (f.names)
+Executable = ExecutableFile
+ExecutableFile in Executable
+all e: Executable | !(e in (e.^depend))
+all n: Name | n in (FileSystem.names)
+FSObject in Root.*content
+no Root.~content
+all a: FSObject - Root, b: FSObject - Root | !(a = b => 
+  (a.~content = b.~content => 
+ !(a.name = b.name)))
+Root = FileSystem.root
+content in Dir -> FSObject
+root in FileSystem -> Root
+depend in Executable -> File
+n in FSObject -> EString
+names in FileSystem -> Name
+link in Link -> FSObject
