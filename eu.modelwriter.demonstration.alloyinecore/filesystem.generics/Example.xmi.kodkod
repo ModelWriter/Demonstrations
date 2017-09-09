@@ -1,20 +1,21 @@
-[Dir442, Example575, Example698, Root166, FileSystem42, Y118, Name81, Example260, Y130, Example351]
+[Example267, FSObject_3, Root166, FileSystem42, Name81, X118, FSObject_2, Y130]
 
 relation bounds:
- Y: [[[Y118], [Y130]]]
- X: [[[Y118], [Y130]]]
- File: [[]]
- FSObject: [[[Dir442], [Example575], [Example698], [Root166], [Example260], [Example351]]]
- Example: [[[Example575], [Example698], [Example260], [Example351]]]
- Root: [[[Root166]]]
+ Dir: [[[Root166]], [[FSObject_3], [Root166], [FSObject_2]]]
+ Y: [[[Y130]]]
+ X: [[[X118], [Y130]]]
+ File: [[], [[FSObject_3], [FSObject_2]]]
+ Example: [[[Example267]], [[Example267], [FSObject_3], [FSObject_2]]]
+ Root: [[[Root166]], [[FSObject_3], [Root166], [FSObject_2]]]
  Name: [[[Name81]]]
  FileSystem: [[[FileSystem42]]]
- Dir: [[[Dir442], [Root166]]]
+ FSObject: [[[Example267], [FSObject_3], [Root166], [FSObject_2]]]
  names: [[[FileSystem42, Name81]]]
- root: [[[FileSystem42, Root166]]]
- name: [[[Dir442, Name81], [Example575, Y130], [Example698, Y118], [Root166, Name81], [Example260, Y130], [Example351, Y118]], [[Dir442, Y118], [Dir442, Name81], [Dir442, Y130], [Example575, Y118], [Example575, Name81], [Example575, Y130], [Example698, Y118], [Example698, Name81], [Example698, Y130], [Root166, Y118], [Root166, Name81], [Root166, Y130], [Example260, Y118], [Example260, Name81], [Example260, Y130], [Example351, Y118], [Example351, Name81], [Example351, Y130]]]
- ys: [[[FileSystem42, Y118], [FileSystem42, Y130]]]
- content: [[[Dir442, Example575], [Dir442, Example698], [Root166, Dir442], [Root166, Example260], [Root166, Example351]], [[Dir442, Dir442], [Dir442, Example575], [Dir442, Example698], [Dir442, Root166], [Dir442, Example260], [Dir442, Example351], [Root166, Dir442], [Root166, Example575], [Root166, Example698], [Root166, Root166], [Root166, Example260], [Root166, Example351]]]
+ root: [[[FileSystem42, Root166]], [[FileSystem42, FSObject_3], [FileSystem42, Root166], [FileSystem42, FSObject_2]]]
+ name: [[[Example267, Y130], [Root166, Name81]], [[Example267, Name81], [Example267, Y130], [FSObject_3, Name81], [FSObject_3, Y130], [Root166, Name81], [Root166, Y130], [FSObject_2, Name81], [FSObject_2, Y130]]]
+ contentExample: [[[Root166, Example267]], [[FSObject_3, Example267], [FSObject_3, FSObject_3], [FSObject_3, FSObject_2], [Root166, Example267], [Root166, FSObject_3], [Root166, FSObject_2], [FSObject_2, Example267], [FSObject_2, FSObject_3], [FSObject_2, FSObject_2]]]
+ ys: [[[FileSystem42, X118], [FileSystem42, Y130]]]
+ content: [[], [[FSObject_3, FSObject_3], [FSObject_3, Root166], [FSObject_3, FSObject_2], [Root166, FSObject_3], [Root166, Root166], [Root166, FSObject_2], [FSObject_2, FSObject_3], [FSObject_2, Root166], [FSObject_2, FSObject_2]]]
 int bounds: 
  []
 
@@ -39,13 +40,16 @@ no Dir & Example
 no File & Example
 all f: FSObject | one (f.name)
 Root in Dir
+all f: FSObject | lone (f.~contentExample)
 all f: FSObject | lone (f.~content)
+all d: Dir | !(d in (d.^contentExample))
 all d: Dir | !(d in (d.^content))
+some contentExample
 some content
 one Root
 all n: Name | n in (FileSystem.names)
 all y: X | y in (FileSystem.ys)
-FSObject in Root.*content
+FSObject in Root.*(content + contentExample)
 no Root.~content
 all a: FSObject - Root, b: FSObject - Root | !(a = b => 
   (a.~content = b.~content => 
@@ -54,5 +58,6 @@ Root = FileSystem.root
 names in FileSystem -> Name
 root in FileSystem -> Root
 name in (Example -> Y + Dir -> Name + File -> Name)
+contentExample in Dir -> Example
 ys in FileSystem -> X
-content in Dir -> FSObject
+content in Dir -> (File + Dir)
