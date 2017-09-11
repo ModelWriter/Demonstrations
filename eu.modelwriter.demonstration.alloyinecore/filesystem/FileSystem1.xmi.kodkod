@@ -1,0 +1,70 @@
+[EString_2, Dir397, EString_4, EString_3, Name94, "EString_0", Root148, Name79, "EString_3", Link270, Name109, FileSystem40, File566, File733]
+
+relation bounds:
+ Dir: [[[Dir397], [Root148]]]
+ FSObject: [[[Dir397], [Root148], [Link270], [File566], [File733]]]
+ File: [[[File566], [File733]]]
+ EString: [[["EString_0"], ["EString_3"]], [[EString_2], [EString_4], [EString_3], ["EString_0"], ["EString_3"]]]
+ ExecutableFile: [[]]
+ Executable: [[]]
+ FileSystem: [[[FileSystem40]]]
+ Root: [[[Root148]]]
+ Link: [[[Link270]]]
+ Name: [[[Name94], [Name79], [Name109]]]
+ root: [[[FileSystem40, Root148]]]
+ content: [[[Dir397, File566], [Dir397, File733], [Root148, Dir397], [Root148, Link270]], [[Dir397, Dir397], [Dir397, Root148], [Dir397, Link270], [Dir397, File566], [Dir397, File733], [Root148, Dir397], [Root148, Root148], [Root148, Link270], [Root148, File566], [Root148, File733]]]
+ name: [[[Dir397, Name79], [Root148, Name94], [Link270, Name94], [File566, Name94], [File733, Name79]], [[Dir397, Name94], [Dir397, Name79], [Dir397, Name109], [Root148, Name94], [Root148, Name79], [Root148, Name109], [Link270, Name94], [Link270, Name79], [Link270, Name109], [File566, Name94], [File566, Name79], [File566, Name109], [File733, Name94], [File733, Name79], [File733, Name109]]]
+ depend: [[]]
+ names: [[[FileSystem40, Name94], [FileSystem40, Name79], [FileSystem40, Name109]]]
+ n: [[[Dir397, "EString_0"], [Root148, "EString_0"], [Link270, "EString_0"], [File566, "EString_0"], [File733, "EString_3"]], [[Dir397, EString_2], [Dir397, EString_4], [Dir397, EString_3], [Dir397, "EString_0"], [Dir397, "EString_3"], [Root148, EString_2], [Root148, EString_4], [Root148, EString_3], [Root148, "EString_0"], [Root148, "EString_3"], [Link270, EString_2], [Link270, EString_4], [Link270, EString_3], [Link270, "EString_0"], [Link270, "EString_3"], [File566, EString_2], [File566, EString_4], [File566, EString_3], [File566, "EString_0"], [File566, "EString_3"], [File733, EString_2], [File733, EString_4], [File733, EString_3], [File733, "EString_0"], [File733, "EString_3"]]]
+ link: [[], [[Link270, Dir397], [Link270, Root148], [Link270, Link270], [Link270, File566], [Link270, File733]]]
+int bounds: 
+ []
+
+no Name & FSObject
+no Name & Executable
+no Name & FileSystem
+no FSObject & FileSystem
+no Executable & FileSystem
+FSObject = Link + Dir + File
+Link in FSObject
+Dir in FSObject
+File in FSObject
+no Link & Dir
+no Link & File
+no Dir & File
+all f: FSObject | one (f.name)
+all f: FSObject | one (f.n)
+all l: Link | !(l in (l.^link))
+all l: Link | lone (l.link)
+Root in Dir
+all f: FSObject | lone (f.~content)
+all d: Dir | !(d in (d.^content))
+some content
+one Root
+ExecutableFile in File
+no ExecutableFile
+Executable = ExecutableFile
+ExecutableFile in Executable
+all e: Executable | !(e in (e.^depend))
+no Executable
+no ExecutableFile
+all n: Name | lone (n.~names)
+all r: Root | lone (r.~root)
+one FileSystem
+all f: FileSystem | one (f.root)
+all f: FileSystem | some (f.names)
+all n: Name | n in (FileSystem.names)
+FSObject in Root.*content
+no Root.~content
+all a: FSObject - Root, b: FSObject - Root | !(a = b => 
+  (a.~content = b.~content => 
+ !(a.name = b.name)))
+Root = FileSystem.root
+root in FileSystem -> Root
+content in Dir -> FSObject
+name in FSObject -> Name
+depend in Executable -> File
+names in FileSystem -> Name
+n in FSObject -> EString
+link in Link -> FSObject

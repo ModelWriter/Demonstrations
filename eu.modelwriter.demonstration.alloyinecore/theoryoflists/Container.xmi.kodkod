@@ -1,0 +1,35 @@
+[Thing_0, List_0, Container46, List_9, Thing_9, List_6, Thing_7, List_5, Thing_8, List_8, Thing_5, List_7, Thing_6, List_2, Thing_3, List_1, Thing_4, List_4, Thing_1, List_3, Thing_2]
+
+relation bounds:
+ Container: [[[Container46]]]
+ List: [[[List_0], [List_9], [List_6], [List_5], [List_8], [List_7], [List_2], [List_1], [List_4], [List_3]]]
+ Thing: [[], [[Thing_0], [Thing_9], [Thing_7], [Thing_8], [Thing_5], [Thing_6], [Thing_3], [Thing_4], [Thing_1], [Thing_2]]]
+ Nil: [[], [[List_0], [List_9], [List_6], [List_5], [List_8], [List_7], [List_2], [List_1], [List_4], [List_3]]]
+ cdr: [[], [[List_0, List_0], [List_0, List_9], [List_0, List_6], [List_0, List_5], [List_0, List_8], [List_0, List_7], [List_0, List_2], [List_0, List_1], [List_0, List_4], [List_0, List_3], [List_9, List_0], [List_9, List_9], [List_9, List_6], [List_9, List_5], [List_9, List_8], [List_9, List_7], [List_9, List_2], [List_9, List_1], [List_9, List_4], [List_9, List_3], [List_6, List_0], [List_6, List_9], [List_6, List_6], [List_6, List_5], [List_6, List_8], [List_6, List_7], [List_6, List_2], [List_6, List_1], [List_6, List_4], [List_6, List_3], [List_5, List_0], [List_5, List_9], [List_5, List_6], [List_5, List_5], [List_5, List_8], [List_5, List_7], [List_5, List_2], [List_5, List_1], [List_5, List_4], [List_5, List_3], [List_8, List_0], [List_8, List_9], [List_8, List_6], [List_8, List_5], [List_8, List_8], [List_8, List_7], [List_8, List_2], [List_8, List_1], [List_8, List_4], [List_8, List_3], [List_7, List_0], [List_7, List_9], [List_7, List_6], [List_7, List_5], [List_7, List_8], [List_7, List_7], [List_7, List_2], [List_7, List_1], [List_7, List_4], [List_7, List_3], [List_2, List_0], [List_2, List_9], [List_2, List_6], [List_2, List_5], [List_2, List_8], [List_2, List_7], [List_2, List_2], [List_2, List_1], [List_2, List_4], [List_2, List_3], [List_1, List_0], [List_1, List_9], [List_1, List_6], [List_1, List_5], [List_1, List_8], [List_1, List_7], [List_1, List_2], [List_1, List_1], [List_1, List_4], [List_1, List_3], [List_4, List_0], [List_4, List_9], [List_4, List_6], [List_4, List_5], [List_4, List_8], [List_4, List_7], [List_4, List_2], [List_4, List_1], [List_4, List_4], [List_4, List_3], [List_3, List_0], [List_3, List_9], [List_3, List_6], [List_3, List_5], [List_3, List_8], [List_3, List_7], [List_3, List_2], [List_3, List_1], [List_3, List_4], [List_3, List_3]]]
+ lists: [[], [[Container46, List_0], [Container46, List_9], [Container46, List_6], [Container46, List_5], [Container46, List_8], [Container46, List_7], [Container46, List_2], [Container46, List_1], [Container46, List_4], [Container46, List_3]]]
+ car: [[], [[List_0, Thing_0], [List_0, Thing_9], [List_0, Thing_7], [List_0, Thing_8], [List_0, Thing_5], [List_0, Thing_6], [List_0, Thing_3], [List_0, Thing_4], [List_0, Thing_1], [List_0, Thing_2], [List_9, Thing_0], [List_9, Thing_9], [List_9, Thing_7], [List_9, Thing_8], [List_9, Thing_5], [List_9, Thing_6], [List_9, Thing_3], [List_9, Thing_4], [List_9, Thing_1], [List_9, Thing_2], [List_6, Thing_0], [List_6, Thing_9], [List_6, Thing_7], [List_6, Thing_8], [List_6, Thing_5], [List_6, Thing_6], [List_6, Thing_3], [List_6, Thing_4], [List_6, Thing_1], [List_6, Thing_2], [List_5, Thing_0], [List_5, Thing_9], [List_5, Thing_7], [List_5, Thing_8], [List_5, Thing_5], [List_5, Thing_6], [List_5, Thing_3], [List_5, Thing_4], [List_5, Thing_1], [List_5, Thing_2], [List_8, Thing_0], [List_8, Thing_9], [List_8, Thing_7], [List_8, Thing_8], [List_8, Thing_5], [List_8, Thing_6], [List_8, Thing_3], [List_8, Thing_4], [List_8, Thing_1], [List_8, Thing_2], [List_7, Thing_0], [List_7, Thing_9], [List_7, Thing_7], [List_7, Thing_8], [List_7, Thing_5], [List_7, Thing_6], [List_7, Thing_3], [List_7, Thing_4], [List_7, Thing_1], [List_7, Thing_2], [List_2, Thing_0], [List_2, Thing_9], [List_2, Thing_7], [List_2, Thing_8], [List_2, Thing_5], [List_2, Thing_6], [List_2, Thing_3], [List_2, Thing_4], [List_2, Thing_1], [List_2, Thing_2], [List_1, Thing_0], [List_1, Thing_9], [List_1, Thing_7], [List_1, Thing_8], [List_1, Thing_5], [List_1, Thing_6], [List_1, Thing_3], [List_1, Thing_4], [List_1, Thing_1], [List_1, Thing_2], [List_4, Thing_0], [List_4, Thing_9], [List_4, Thing_7], [List_4, Thing_8], [List_4, Thing_5], [List_4, Thing_6], [List_4, Thing_3], [List_4, Thing_4], [List_4, Thing_1], [List_4, Thing_2], [List_3, Thing_0], [List_3, Thing_9], [List_3, Thing_7], [List_3, Thing_8], [List_3, Thing_5], [List_3, Thing_6], [List_3, Thing_3], [List_3, Thing_4], [List_3, Thing_1], [List_3, Thing_2]]]
+int bounds: 
+ []
+
+no Container & List
+no Container & Thing
+no List & Thing
+all l: List | lone (l.~lists)
+all c: Container | one (c.lists)
+Nil in List
+all t: Thing | lone (t.~car)
+all l: List | lone (l.~cdr)
+all l: List | !(l in (l.^cdr))
+all l: List | lone (l.car)
+all l: List | lone (l.cdr)
+one Nil
+no Nil.car
+no Nil.cdr
+all l: List - Nil | some (l.cdr
+  some l.car)
+all l: List | Nil in (l.*cdr)
+one Container
+List = (Container.lists.*cdr)
+cdr in List -> List
+lists in Container -> List
+car in List -> Thing
