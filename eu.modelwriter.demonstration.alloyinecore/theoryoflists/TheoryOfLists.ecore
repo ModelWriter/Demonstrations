@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists" nsPrefix="tol">
-  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-    <details key="callable" value="false"/>
-    <details key="formula" value="one Container"/>
-  </eAnnotations>
-  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-    <details key="callable" value="false"/>
-    <details key="formula" value="List = Container.lists.*cdr"/>
-  </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;&#xA;&#x9;class Container&#xA;&#x9;{&#xA;&#x9;&#x9;property lists : List&lt;Thing> {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;class Thing [0,4];&#xA;&#x9;class List&lt;E> [4]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [0..1] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [0..1] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;class one Nil&lt;E> extends List&lt;E>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr and some l.car;&#xA;&#x9;&#x9;invariant : all l: List | Nil in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;invariant : one Container;&#xA;&#x9;invariant : List = Container.lists.*cdr;&#xA;&#x9;&#xA;&#x9;--pred prefixes[ pre: List → List ] {&#xA; &#x9;--all l: List | Nil in l.pre&#xA; &#x9;--all l: List − Nil | l not in Nil.pre&#xA; &#x9;--all l, p: List − Nil | (p in l.pre) iff (l.car = p.car and p.cdr in l.cdr.pre)&#xA; &#x9;--}&#xA; &#x9;&#xA; &#x9;--invariant : all l: List | Nil in l.(List -> List);&#xA; &#x9;--invariant : all l: List - Nil | l not in Nil.(List -> List);&#xA; &#x9;--invariant : all l, p: List - Nil | (p in l.(List -> List)) iff (l.car = p.car and p.cdr = l.cdr.(List -> List));&#xA;&#xA;}"/>
-    <details key="source_hash" value="-1860556866"/>
+    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#xA;&#x9;&#xA;&#x9;class Thing[10];&#xA;&#xA;&#xA;&#x9;class List [20]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : Thing[0..1] {composes};&#xA;&#x9;&#x9;property cdr : List[0..1] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil extends List&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr and some l.car;&#xA;&#x9;&#x9;invariant : all l: List | some (l.*cdr) &amp; Nil;&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property lists : List[1..*] {composes};&#xA;&#x9;&#x9;property things : Thing[0..*] {composes};&#xA;&#x9;}&#xA; &#x9;&#xA;}"/>
+    <details key="source_hash" value="-717035467"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Container">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lists" ordered="false" lowerBound="1" containment="true">
-      <eGenericType eClassifier="//List">
-        <eTypeArguments eClassifier="//Thing"/>
-      </eGenericType>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Thing">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
-      <details key="upperscope" value="4"/>
-    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="0"/>
+      <details key="lowerscope" value="10"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
@@ -35,7 +17,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="List">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="4"/>
+      <details key="lowerscope" value="20"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
@@ -43,21 +25,10 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
       <details key="upperincluded" value="]"/>
     </eAnnotations>
-    <eTypeParameters name="E"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="car" ordered="false" containment="true">
-      <eGenericType eTypeParameter="//List/E"/>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" ordered="false" containment="true">
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
-      <eGenericType eClassifier="//List">
-        <eTypeArguments eTypeParameter="//List/E"/>
-      </eGenericType>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="car" ordered="false" eType="//Thing" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" ordered="false" eType="//List" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Nil">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
-      <details key="multiplicity" value="one"/>
-    </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Nil" eSuperTypes="//List">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
       <details key="formula" value="no Nil.car"/>
@@ -72,11 +43,14 @@
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
       <details key="callable" value="false"/>
-      <details key="formula" value="all l: List | Nil in l.*cdr"/>
+      <details key="formula" value="all l: List | some (l.*cdr) &amp; Nil"/>
     </eAnnotations>
-    <eTypeParameters name="E"/>
-    <eGenericSuperTypes eClassifier="//List">
-      <eTypeArguments eTypeParameter="//Nil/E"/>
-    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/multiplicity">
+      <details key="multiplicity" value="one"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lists" ordered="false" lowerBound="1" upperBound="-1" eType="//List" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="things" ordered="false" upperBound="-1" eType="//Thing" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
