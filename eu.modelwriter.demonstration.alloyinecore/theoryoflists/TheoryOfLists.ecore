@@ -2,9 +2,17 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
     nsPrefix="tol">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="some (List - Nil) &amp; (Container.lists) => no Nil &amp; (Container.lists)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="lone Nil &amp; (Container.lists)"/>
+  </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;class Thing[10];&#xA;&#xA;&#x9;class List [20]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : Thing[0..1] {composes};&#xA;&#x9;&#x9;property cdr : List[0..1] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil extends List&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr and some l.car;&#xA;&#x9;&#x9;invariant : all l: List | some (l.*cdr) &amp; Nil;&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property lists : List[1..*] {composes};&#xA;&#x9;&#x9;property things : Thing[0..*] {composes};&#xA;&#x9;}&#xA; &#x9;&#xA;}"/>
-    <details key="source_hash" value="-717035467"/>
+    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;class Thing[10];&#xA;&#xA;&#x9;class List [20]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : Thing[0..1] {composes};&#xA;&#x9;&#x9;property cdr : List[0..1] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil extends List&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr and some l.car;&#xA;&#x9;&#x9;invariant : all l: List | some (l.*cdr) &amp; Nil;&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property lists : List[1..*] {composes};&#xA;&#x9;&#x9;property things : Thing[0..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;invariant : some (List - Nil) &amp; (Container.lists) => no Nil &amp; (Container.lists);&#xA;&#x9;invariant : lone Nil &amp; (Container.lists);&#xA; &#x9;&#xA;}"/>
+    <details key="source_hash" value="484595598"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Thing">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
