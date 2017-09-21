@@ -1,38 +1,70 @@
-[Thing_0, List_11, Nil84, List_10, List_13, List_12, List_15, List_9, List_14, List_17, List_16, List_6, List_19, List_5, List_18, List_8, List_7, List_2, List_1, List_4, List_3, Container46, Thing_9, Thing_7, Thing_8, Thing_5, Thing_6, Thing_3, Thing_4, Thing_1, Thing_2]
+[? extends Item, Item_2, Item_1, Item_0, Nil<Paper>, Container46, List<? extends Item>, Nil<Pen>, Nil<? extends Item>, PenList_0, PaperList_0, List_2, List<Pen>, List_4, List_3, List<Paper>]
 
 relation bounds:
- Thing: [[[Thing_0], [Thing_9], [Thing_7], [Thing_8], [Thing_5], [Thing_6], [Thing_3], [Thing_4], [Thing_1], [Thing_2]]]
- Nil: [[[Nil84]], [[List_11], [Nil84], [List_10], [List_13], [List_12], [List_15], [List_9], [List_14], [List_17], [List_16], [List_6], [List_19], [List_5], [List_18], [List_8], [List_7], [List_2], [List_1], [List_4], [List_3]]]
+ Nil: [[], [[List_2], [List_4], [List_3]]]
+ PaperList: [[[PaperList_0]]]
+ List: [[[PenList_0], [PaperList_0], [List_2], [List_4], [List_3]]]
+ Pen: [[], [[Item_2], [Item_1], [Item_0]]]
  Container: [[[Container46]]]
- List: [[[List_11], [Nil84], [List_10], [List_13], [List_12], [List_15], [List_9], [List_14], [List_17], [List_16], [List_6], [List_19], [List_5], [List_18], [List_8], [List_7], [List_2], [List_1], [List_4], [List_3]]]
- cdr: [[], [[List_11, List_11], [List_11, Nil84], [List_11, List_10], [List_11, List_13], [List_11, List_12], [List_11, List_15], [List_11, List_9], [List_11, List_14], [List_11, List_17], [List_11, List_16], [List_11, List_6], [List_11, List_19], [List_11, List_5], [List_11, List_18], [List_11, List_8], [List_11, List_7], [List_11, List_2], [List_11, List_1], [List_11, List_4], [List_11, List_3], [Nil84, List_11], [Nil84, Nil84], [Nil84, List_10], [Nil84, List_13], [Nil84, List_12], [Nil84, List_15], [Nil84, List_9], [Nil84, List_14], [Nil84, List_17], [Nil84, List_16], [Nil84, List_6], [Nil84, List_19], [Nil84, List_5], [Nil84, List_18], [Nil84, List_8], [Nil84, List_7], [Nil84, List_2], [Nil84, List_1], [Nil84, List_4], [Nil84, List_3], [List_10, List_11], [List_10, Nil84], [List_10, List_10], [List_10, List_13], [List_10, List_12], [List_10, List_15], [List_10, List_9], [List_10, List_14], [List_10, List_17], [List_10, List_16], [List_10, List_6], [List_10, List_19], [List_10, List_5], [List_10, List_18], [List_10, List_8], [List_10, List_7], [List_10, List_2], [List_10, List_1], [List_10, List_4], [List_10, List_3], [List_13, List_11], [List_13, Nil84], [List_13, List_10], [List_13, List_13], [List_13, List_12], [List_13, List_15], [List_13, List_9], [List_13, List_14], [List_13, List_17], [List_13, List_16], [List_13, List_6], [List_13, List_19], [List_13, List_5], [List_13, List_18], [List_13, List_8], [List_13, List_7], [List_13, List_2], [List_13, List_1], [List_13, List_4], [List_13, List_3], [List_12, List_11], [List_12, Nil84], [List_12, List_10], [List_12, List_13], [List_12, List_12], [List_12, List_15], [List_12, List_9], [List_12, List_14], [List_12, List_17], [List_12, List_16], [List_12, List_6], [List_12, List_19], [List_12, List_5], [List_12, List_18], [List_12, List_8], [List_12, List_7], [List_12, List_2], [List_12, List_1], [List_12, List_4], [List_12, List_3], [List_15, List_11], [List_15, Nil84], [List_15, List_10], [List_15, List_13], [List_15, List_12], [List_15, List_15], [List_15, List_9], [List_15, List_14], [List_15, List_17], [List_15, List_16], [List_15, List_6], [List_15, List_19], [List_15, List_5], [List_15, List_18], [List_15, List_8], [List_15, List_7], [List_15, List_2], [List_15, List_1], [List_15, List_4], [List_15, List_3], [List_9, List_11], [List_9, Nil84], [List_9, List_10], [List_9, List_13], [List_9, List_12], [List_9, List_15], [List_9, List_9], [List_9, List_14], [List_9, List_17], [List_9, List_16], [List_9, List_6], [List_9, List_19], [List_9, List_5], [List_9, List_18], [List_9, List_8], [List_9, List_7], [List_9, List_2], [List_9, List_1], [List_9, List_4], [List_9, List_3], [List_14, List_11], [List_14, Nil84], [List_14, List_10], [List_14, List_13], [List_14, List_12], [List_14, List_15], [List_14, List_9], [List_14, List_14], [List_14, List_17], [List_14, List_16], [List_14, List_6], [List_14, List_19], [List_14, List_5], [List_14, List_18], [List_14, List_8], [List_14, List_7], [List_14, List_2], [List_14, List_1], [List_14, List_4], [List_14, List_3], [List_17, List_11], [List_17, Nil84], [List_17, List_10], [List_17, List_13], [List_17, List_12], [List_17, List_15], [List_17, List_9], [List_17, List_14], [List_17, List_17], [List_17, List_16], [List_17, List_6], [List_17, List_19], [List_17, List_5], [List_17, List_18], [List_17, List_8], [List_17, List_7], [List_17, List_2], [List_17, List_1], [List_17, List_4], [List_17, List_3], [List_16, List_11], [List_16, Nil84], [List_16, List_10], [List_16, List_13], [List_16, List_12], [List_16, List_15], [List_16, List_9], [List_16, List_14], [List_16, List_17], [List_16, List_16], [List_16, List_6], [List_16, List_19], [List_16, List_5], [List_16, List_18], [List_16, List_8], [List_16, List_7], [List_16, List_2], [List_16, List_1], [List_16, List_4], [List_16, List_3], [List_6, List_11], [List_6, Nil84], [List_6, List_10], [List_6, List_13], [List_6, List_12], [List_6, List_15], [List_6, List_9], [List_6, List_14], [List_6, List_17], [List_6, List_16], [List_6, List_6], [List_6, List_19], [List_6, List_5], [List_6, List_18], [List_6, List_8], [List_6, List_7], [List_6, List_2], [List_6, List_1], [List_6, List_4], [List_6, List_3], [List_19, List_11], [List_19, Nil84], [List_19, List_10], [List_19, List_13], [List_19, List_12], [List_19, List_15], [List_19, List_9], [List_19, List_14], [List_19, List_17], [List_19, List_16], [List_19, List_6], [List_19, List_19], [List_19, List_5], [List_19, List_18], [List_19, List_8], [List_19, List_7], [List_19, List_2], [List_19, List_1], [List_19, List_4], [List_19, List_3], [List_5, List_11], [List_5, Nil84], [List_5, List_10], [List_5, List_13], [List_5, List_12], [List_5, List_15], [List_5, List_9], [List_5, List_14], [List_5, List_17], [List_5, List_16], [List_5, List_6], [List_5, List_19], [List_5, List_5], [List_5, List_18], [List_5, List_8], [List_5, List_7], [List_5, List_2], [List_5, List_1], [List_5, List_4], [List_5, List_3], [List_18, List_11], [List_18, Nil84], [List_18, List_10], [List_18, List_13], [List_18, List_12], [List_18, List_15], [List_18, List_9], [List_18, List_14], [List_18, List_17], [List_18, List_16], [List_18, List_6], [List_18, List_19], [List_18, List_5], [List_18, List_18], [List_18, List_8], [List_18, List_7], [List_18, List_2], [List_18, List_1], [List_18, List_4], [List_18, List_3], [List_8, List_11], [List_8, Nil84], [List_8, List_10], [List_8, List_13], [List_8, List_12], [List_8, List_15], [List_8, List_9], [List_8, List_14], [List_8, List_17], [List_8, List_16], [List_8, List_6], [List_8, List_19], [List_8, List_5], [List_8, List_18], [List_8, List_8], [List_8, List_7], [List_8, List_2], [List_8, List_1], [List_8, List_4], [List_8, List_3], [List_7, List_11], [List_7, Nil84], [List_7, List_10], [List_7, List_13], [List_7, List_12], [List_7, List_15], [List_7, List_9], [List_7, List_14], [List_7, List_17], [List_7, List_16], [List_7, List_6], [List_7, List_19], [List_7, List_5], [List_7, List_18], [List_7, List_8], [List_7, List_7], [List_7, List_2], [List_7, List_1], [List_7, List_4], [List_7, List_3], [List_2, List_11], [List_2, Nil84], [List_2, List_10], [List_2, List_13], [List_2, List_12], [List_2, List_15], [List_2, List_9], [List_2, List_14], [List_2, List_17], [List_2, List_16], [List_2, List_6], [List_2, List_19], [List_2, List_5], [List_2, List_18], [List_2, List_8], [List_2, List_7], [List_2, List_2], [List_2, List_1], [List_2, List_4], [List_2, List_3], [List_1, List_11], [List_1, Nil84], [List_1, List_10], [List_1, List_13], [List_1, List_12], [List_1, List_15], [List_1, List_9], [List_1, List_14], [List_1, List_17], [List_1, List_16], [List_1, List_6], [List_1, List_19], [List_1, List_5], [List_1, List_18], [List_1, List_8], [List_1, List_7], [List_1, List_2], [List_1, List_1], [List_1, List_4], [List_1, List_3], [List_4, List_11], [List_4, Nil84], [List_4, List_10], [List_4, List_13], [List_4, List_12], [List_4, List_15], [List_4, List_9], [List_4, List_14], [List_4, List_17], [List_4, List_16], [List_4, List_6], [List_4, List_19], [List_4, List_5], [List_4, List_18], [List_4, List_8], [List_4, List_7], [List_4, List_2], [List_4, List_1], [List_4, List_4], [List_4, List_3], [List_3, List_11], [List_3, Nil84], [List_3, List_10], [List_3, List_13], [List_3, List_12], [List_3, List_15], [List_3, List_9], [List_3, List_14], [List_3, List_17], [List_3, List_16], [List_3, List_6], [List_3, List_19], [List_3, List_5], [List_3, List_18], [List_3, List_8], [List_3, List_7], [List_3, List_2], [List_3, List_1], [List_3, List_4], [List_3, List_3]]]
- things: [[], [[Container46, Thing_0], [Container46, Thing_9], [Container46, Thing_7], [Container46, Thing_8], [Container46, Thing_5], [Container46, Thing_6], [Container46, Thing_3], [Container46, Thing_4], [Container46, Thing_1], [Container46, Thing_2]]]
- lists: [[[Container46, Nil84]], [[Container46, List_11], [Container46, Nil84], [Container46, List_10], [Container46, List_13], [Container46, List_12], [Container46, List_15], [Container46, List_9], [Container46, List_14], [Container46, List_17], [Container46, List_16], [Container46, List_6], [Container46, List_19], [Container46, List_5], [Container46, List_18], [Container46, List_8], [Container46, List_7], [Container46, List_2], [Container46, List_1], [Container46, List_4], [Container46, List_3]]]
- car: [[], [[List_11, Thing_0], [List_11, Thing_9], [List_11, Thing_7], [List_11, Thing_8], [List_11, Thing_5], [List_11, Thing_6], [List_11, Thing_3], [List_11, Thing_4], [List_11, Thing_1], [List_11, Thing_2], [Nil84, Thing_0], [Nil84, Thing_9], [Nil84, Thing_7], [Nil84, Thing_8], [Nil84, Thing_5], [Nil84, Thing_6], [Nil84, Thing_3], [Nil84, Thing_4], [Nil84, Thing_1], [Nil84, Thing_2], [List_10, Thing_0], [List_10, Thing_9], [List_10, Thing_7], [List_10, Thing_8], [List_10, Thing_5], [List_10, Thing_6], [List_10, Thing_3], [List_10, Thing_4], [List_10, Thing_1], [List_10, Thing_2], [List_13, Thing_0], [List_13, Thing_9], [List_13, Thing_7], [List_13, Thing_8], [List_13, Thing_5], [List_13, Thing_6], [List_13, Thing_3], [List_13, Thing_4], [List_13, Thing_1], [List_13, Thing_2], [List_12, Thing_0], [List_12, Thing_9], [List_12, Thing_7], [List_12, Thing_8], [List_12, Thing_5], [List_12, Thing_6], [List_12, Thing_3], [List_12, Thing_4], [List_12, Thing_1], [List_12, Thing_2], [List_15, Thing_0], [List_15, Thing_9], [List_15, Thing_7], [List_15, Thing_8], [List_15, Thing_5], [List_15, Thing_6], [List_15, Thing_3], [List_15, Thing_4], [List_15, Thing_1], [List_15, Thing_2], [List_9, Thing_0], [List_9, Thing_9], [List_9, Thing_7], [List_9, Thing_8], [List_9, Thing_5], [List_9, Thing_6], [List_9, Thing_3], [List_9, Thing_4], [List_9, Thing_1], [List_9, Thing_2], [List_14, Thing_0], [List_14, Thing_9], [List_14, Thing_7], [List_14, Thing_8], [List_14, Thing_5], [List_14, Thing_6], [List_14, Thing_3], [List_14, Thing_4], [List_14, Thing_1], [List_14, Thing_2], [List_17, Thing_0], [List_17, Thing_9], [List_17, Thing_7], [List_17, Thing_8], [List_17, Thing_5], [List_17, Thing_6], [List_17, Thing_3], [List_17, Thing_4], [List_17, Thing_1], [List_17, Thing_2], [List_16, Thing_0], [List_16, Thing_9], [List_16, Thing_7], [List_16, Thing_8], [List_16, Thing_5], [List_16, Thing_6], [List_16, Thing_3], [List_16, Thing_4], [List_16, Thing_1], [List_16, Thing_2], [List_6, Thing_0], [List_6, Thing_9], [List_6, Thing_7], [List_6, Thing_8], [List_6, Thing_5], [List_6, Thing_6], [List_6, Thing_3], [List_6, Thing_4], [List_6, Thing_1], [List_6, Thing_2], [List_19, Thing_0], [List_19, Thing_9], [List_19, Thing_7], [List_19, Thing_8], [List_19, Thing_5], [List_19, Thing_6], [List_19, Thing_3], [List_19, Thing_4], [List_19, Thing_1], [List_19, Thing_2], [List_5, Thing_0], [List_5, Thing_9], [List_5, Thing_7], [List_5, Thing_8], [List_5, Thing_5], [List_5, Thing_6], [List_5, Thing_3], [List_5, Thing_4], [List_5, Thing_1], [List_5, Thing_2], [List_18, Thing_0], [List_18, Thing_9], [List_18, Thing_7], [List_18, Thing_8], [List_18, Thing_5], [List_18, Thing_6], [List_18, Thing_3], [List_18, Thing_4], [List_18, Thing_1], [List_18, Thing_2], [List_8, Thing_0], [List_8, Thing_9], [List_8, Thing_7], [List_8, Thing_8], [List_8, Thing_5], [List_8, Thing_6], [List_8, Thing_3], [List_8, Thing_4], [List_8, Thing_1], [List_8, Thing_2], [List_7, Thing_0], [List_7, Thing_9], [List_7, Thing_7], [List_7, Thing_8], [List_7, Thing_5], [List_7, Thing_6], [List_7, Thing_3], [List_7, Thing_4], [List_7, Thing_1], [List_7, Thing_2], [List_2, Thing_0], [List_2, Thing_9], [List_2, Thing_7], [List_2, Thing_8], [List_2, Thing_5], [List_2, Thing_6], [List_2, Thing_3], [List_2, Thing_4], [List_2, Thing_1], [List_2, Thing_2], [List_1, Thing_0], [List_1, Thing_9], [List_1, Thing_7], [List_1, Thing_8], [List_1, Thing_5], [List_1, Thing_6], [List_1, Thing_3], [List_1, Thing_4], [List_1, Thing_1], [List_1, Thing_2], [List_4, Thing_0], [List_4, Thing_9], [List_4, Thing_7], [List_4, Thing_8], [List_4, Thing_5], [List_4, Thing_6], [List_4, Thing_3], [List_4, Thing_4], [List_4, Thing_1], [List_4, Thing_2], [List_3, Thing_0], [List_3, Thing_9], [List_3, Thing_7], [List_3, Thing_8], [List_3, Thing_5], [List_3, Thing_6], [List_3, Thing_3], [List_3, Thing_4], [List_3, Thing_1], [List_3, Thing_2]]]
+ PenList: [[[PenList_0]]]
+ Item: [[[Item_2], [Item_1], [Item_0]]]
+ Paper: [[], [[Item_2], [Item_1], [Item_0]]]
+ List<? extends Item>: [[], [[PenList_0], [PaperList_0], [List_2], [List_4], [List_3]]]
+ ? extends Item: [[], [[Item_2], [Item_1], [Item_0]]]
+ Nil<? extends Item>: [[], [[List_2], [List_4], [List_3]]]
+ Nil<Pen>: [[], [[List_2], [List_4], [List_3]]]
+ Nil<Paper>: [[], [[List_2], [List_4], [List_3]]]
+ List<Pen>: [[], [[PenList_0], [PaperList_0], [List_2], [List_4], [List_3]]]
+ List<Paper>: [[], [[PenList_0], [PaperList_0], [List_2], [List_4], [List_3]]]
+ car: [[], [[PenList_0, Item_2], [PenList_0, Item_1], [PenList_0, Item_0], [PaperList_0, Item_2], [PaperList_0, Item_1], [PaperList_0, Item_0], [List_2, Item_2], [List_2, Item_1], [List_2, Item_0], [List_4, Item_2], [List_4, Item_1], [List_4, Item_0], [List_3, Item_2], [List_3, Item_1], [List_3, Item_0]]]
+ cdr: [[], [[PenList_0, PenList_0], [PenList_0, PaperList_0], [PenList_0, List_2], [PenList_0, List_4], [PenList_0, List_3], [PaperList_0, PenList_0], [PaperList_0, PaperList_0], [PaperList_0, List_2], [PaperList_0, List_4], [PaperList_0, List_3], [List_2, PenList_0], [List_2, PaperList_0], [List_2, List_2], [List_2, List_4], [List_2, List_3], [List_4, PenList_0], [List_4, PaperList_0], [List_4, List_2], [List_4, List_4], [List_4, List_3], [List_3, PenList_0], [List_3, PaperList_0], [List_3, List_2], [List_3, List_4], [List_3, List_3]]]
+ list: [[], [[Container46, PenList_0], [Container46, PaperList_0], [Container46, List_2], [Container46, List_4], [Container46, List_3]]]
 int bounds: 
  []
 
-no Thing & Container
-no Thing & List
-no Container & List
-all l: List | lone (l.~lists)
-all t: Thing | lone (t.~things)
-one Container
-all c: Container | some (c.lists)
+no List & Container
+no List & Item
+no Container & Item
 Nil in List
-all t: Thing | lone (t.~car)
-all l: List | lone (l.~cdr)
+PaperList in List
+PenList in List
+no Nil & PaperList
+no Nil & PenList
+no PaperList & PenList
+all l: List.car | lone (l.~(cdr + car + list))
+all l: List.cdr | lone (l.~(cdr + car + list))
+all l: List | !(l in (l.^cdr))
 all l: List | lone (l.car)
 all l: List | lone (l.cdr)
+all c: Container.list | lone (c.~(cdr + car + list))
+one Container
+all c: Container | some (c.list)
+Pen in Item
+Paper in Item
+no Pen & Paper
 no Nil.car
 no Nil.cdr
 all l: List - Nil | some (l.cdr
   some l.car)
-all l: List | some ((l.*cdr & Nil))
-some ((List - Nil & Container.lists) => 
- no Nil & (Container.lists))
-lone Nil & (Container.lists)
+all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr <=> 
+  n' = n)
 cdr in List -> List
-things in Container -> Thing
-lists in Container -> List
-car in List -> Thing
+list in Container -> List
+Container.*(cdr + car + list) = (PenList + PaperList + Item + Paper + Nil + 
+List + Container + Pen)
+Container.list in List<? extends Item>
+car in (List<Pen> -> Pen + List<Paper> -> Paper)
+cdr in (List<Pen> -> List<Pen> + List<Paper> -> List<Paper>)
+Nil = Nil<? extends Item> + Nil<Pen> + Nil<Paper>
+List = (Nil + PenList + PaperList + List<? extends Item> + List<Pen> + 
+List<Paper>)
+? extends Item = Pen + Paper
+Nil<? extends Item> in List<? extends Item>
+Nil<Pen> in List<Pen>
+Nil<Paper> in List<Paper>
+List<? extends Item> = List<Pen> + List<Paper>
+no List<Paper> & List<Pen>
+Nil<? extends Item> = Nil<Pen> + Nil<Paper>
+no Nil<Paper> & Nil<Pen>
+PaperList in List<Paper>
+PenList in List<Pen>

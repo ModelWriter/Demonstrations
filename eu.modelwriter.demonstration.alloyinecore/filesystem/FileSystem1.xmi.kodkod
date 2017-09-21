@@ -7,9 +7,9 @@ relation bounds:
  EString: [[], [[EString_2], [EString_1], [EString_4], [EString_3], [EString_0]]]
  ExecutableFile: [[], [[FSObject_3], [FSObject_4], [FSObject_1], [FSObject_2]]]
  Executable: [[], [[FSObject_3], [FSObject_4], [FSObject_1], [FSObject_2]]]
- FileSystem: [[[FileSystem40]]]
  Root: [[], [[FSObject_3], [FSObject_4], [FSObject_1], [FSObject_2]]]
  Link: [[[Link_0]]]
+ FileSystem: [[[FileSystem40]]]
  Name: [[[Name_1], [Name_0]]]
  root: [[], [[FileSystem40, FSObject_3], [FileSystem40, FSObject_4], [FileSystem40, FSObject_1], [FileSystem40, FSObject_2]]]
  content: [[], [[FSObject_3, Link_0], [FSObject_3, FSObject_3], [FSObject_3, FSObject_4], [FSObject_3, FSObject_1], [FSObject_3, FSObject_2], [FSObject_4, Link_0], [FSObject_4, FSObject_3], [FSObject_4, FSObject_4], [FSObject_4, FSObject_1], [FSObject_4, FSObject_2], [FSObject_1, Link_0], [FSObject_1, FSObject_3], [FSObject_1, FSObject_4], [FSObject_1, FSObject_1], [FSObject_1, FSObject_2], [FSObject_2, Link_0], [FSObject_2, FSObject_3], [FSObject_2, FSObject_4], [FSObject_2, FSObject_1], [FSObject_2, FSObject_2]]]
@@ -21,11 +21,16 @@ relation bounds:
 int bounds: 
  []
 
+no FileSystem & Name
+no FileSystem & FSObject
+no FileSystem & Executable
 no Name & FSObject
 no Name & Executable
-no Name & FileSystem
-no FSObject & FileSystem
-no Executable & FileSystem
+all f: FileSystem.names | lone (f.~(root + names + content))
+all f: FileSystem.root | lone (f.~(root + names + content))
+one FileSystem
+all f: FileSystem | one (f.root)
+all f: FileSystem | some (f.names)
 FSObject = Link + Dir + File
 Link in FSObject
 Dir in FSObject
@@ -38,7 +43,7 @@ all f: FSObject | one (f.n)
 all l: Link | !(l in (l.^link))
 all l: Link | lone (l.link)
 Root in Dir
-all f: FSObject | lone (f.~content)
+all d: Dir.content | lone (d.~(root + names + content))
 all d: Dir | !(d in (d.^content))
 some content
 one Root
@@ -49,18 +54,10 @@ ExecutableFile in Executable
 all e: Executable | !(e in (e.^depend))
 no Executable
 no ExecutableFile
-all n: Name | lone (n.~names)
-all r: Root | lone (r.~root)
-one FileSystem
-all f: FileSystem | one (f.root)
-all f: FileSystem | some (f.names)
-all n: Name | n in (FileSystem.names)
-FSObject in Root.*content
 no Root.~content
 all a: FSObject - Root, b: FSObject - Root | !(a = b => 
   (a.~content = b.~content => 
  !(a.name = b.name)))
-Root = FileSystem.root
 root in FileSystem -> Root
 content in Dir -> FSObject
 name in FSObject -> Name
@@ -68,3 +65,6 @@ depend in Executable -> File
 names in FileSystem -> Name
 n in FSObject -> EString
 link in Link -> FSObject
+FileSystem.*(root + names + content) = (Executable + Link + Root + 
+FileSystem + File + FSObject + Name + Dir + ExecutableFile)
+true
