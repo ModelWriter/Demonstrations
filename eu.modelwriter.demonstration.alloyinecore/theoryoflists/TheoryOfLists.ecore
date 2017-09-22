@@ -3,15 +3,18 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
     nsPrefix="tol">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public class List&lt;E> [5]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [0..1] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [0..1] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;&#x9;invariant : all l: List | one n: Nil | n in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class PenList extends List&lt;Pen> [1];&#xA;&#x9;class PaperList extends List&lt;Paper> [1];&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;? extends Item>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Item [3];&#xA;&#x9;class Pen extends Item;&#xA;&#x9;class Paper extends Item;&#xA;}"/>
-    <details key="source_hash" value="2036519824"/>
+    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public class List&lt;E> [3,5]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [0..1] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [0..1] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class PenList extends List&lt;Pen>;&#xA;&#x9;class PaperList extends List&lt;Paper> [1,4];&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;? super Pen>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;abstract class Item [0,4];&#xA;&#x9;class Pen extends Item;&#xA;&#x9;class Paper extends Item;&#xA;}"/>
+    <details key="source_hash" value="2039684535"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="5"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="5"/>
+      <details key="lowerscope" value="3"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
@@ -43,30 +46,20 @@
       <details key="callable" value="false"/>
       <details key="formula" value="all l: List - Nil | some l.cdr &amp;&amp; some l.car"/>
     </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
-      <details key="callable" value="false"/>
-      <details key="formula" value="all l: List | one n: Nil | n in l.*cdr"/>
-    </eAnnotations>
     <eTypeParameters name="V"/>
     <eGenericSuperTypes eClassifier="#//List">
       <eTypeArguments eTypeParameter="#//Nil/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PenList">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="1"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
-      <details key="lowerincluded" value="["/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
-      <details key="upperincluded" value="]"/>
-    </eAnnotations>
     <eGenericSuperTypes eClassifier="#//List">
       <eTypeArguments eClassifier="#//Pen"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PaperList">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="4"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
       <details key="lowerscope" value="1"/>
     </eAnnotations>
@@ -88,14 +81,17 @@
         upperBound="-1" containment="true">
       <eGenericType eClassifier="#//List">
         <eTypeArguments>
-          <eUpperBound eClassifier="#//Item"/>
+          <eLowerBound eClassifier="#//Pen"/>
         </eTypeArguments>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Item">
+  <eClassifiers xsi:type="ecore:EClass" name="Item" abstract="true">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="4"/>
+    </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="3"/>
+      <details key="lowerscope" value="0"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
