@@ -1,0 +1,30 @@
+module TraceabilityModel
+open util/relation
+
+abstract sig Artifact {
+	requires: set Artifact,	refines: set Artifact,
+	contains: set Artifact,	conflicts: set Artifact}
+
+-- Locate@Text
+sig Specification extends Artifact {}
+
+-- Locate@Text
+sig Requirement extends Artifact { equals: set Requirement}
+
+fact {injective[contains, Artifact]}
+fact {irreflexive[requires + refines + contains + conflicts]}
+fact {antisymmetric[requires + refines + contains]}
+
+-- Reason@Artifact.conflicts
+fact {all a,b,c: Artifact |
+		b in a.(requires + contains) and 
+					c in b.conflicts => c in a.conflicts
+	symmetric[conflicts]}
+
+-- Reason@Artifact.requires
+fact {all a,b,c: Artifact {
+		b in a.requires and c in b.(refines + contains) and 
+		   c !in a.(refines + contains) => c in a.requires
+		b in a.(refines + contains) and c in b.requires and 
+		   c !in a.(refines + contains) => c in a.requires}}
+
