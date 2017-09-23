@@ -1,0 +1,84 @@
+[TruckList443, Nil<? extends Vehicle>, Nil<NonEnginedVehicle>, EnginedVehicle151, EnginedVehicle331, TruckList719, List_9, List_6, List<NonEnginedVehicle>, EnginedVehicle575, List_8, List_7, ? extends Vehicle, TruckList231, Vehicle_9, Nil<EnginedVehicle>, Container46, BicycleList1265, Vehicle_7, Vehicle_8, Vehicle_5, Vehicle_6, Nil1059, Vehicle_4, List<EnginedVehicle>, TruckList83, EnginedVehicle883, List<? extends Vehicle>]
+
+relation bounds:
+ Nil: [[[Nil1059]], [[List_9], [List_6], [List_8], [List_7], [Nil1059]]]
+ CarList: [[], [[List_9], [List_6], [List_8], [List_7]]]
+ List: [[[TruckList443], [TruckList719], [TruckList231], [BicycleList1265], [Nil1059], [TruckList83]], [[TruckList443], [TruckList719], [List_9], [List_6], [List_8], [List_7], [TruckList231], [BicycleList1265], [Nil1059], [TruckList83]]]
+ TruckList: [[[TruckList443], [TruckList719], [TruckList231], [TruckList83]], [[TruckList443], [TruckList719], [List_9], [List_6], [List_8], [List_7], [TruckList231], [TruckList83]]]
+ BicycleList: [[[BicycleList1265]], [[List_9], [List_6], [List_8], [List_7], [BicycleList1265]]]
+ NonEnginedVehicle: [[], [[Vehicle_9], [Vehicle_7], [Vehicle_8], [Vehicle_5], [Vehicle_6], [Vehicle_4]]]
+ EnginedVehicle: [[[EnginedVehicle151], [EnginedVehicle331], [EnginedVehicle575], [EnginedVehicle883]], [[EnginedVehicle151], [EnginedVehicle331], [EnginedVehicle575], [Vehicle_9], [Vehicle_7], [Vehicle_8], [Vehicle_5], [Vehicle_6], [Vehicle_4], [EnginedVehicle883]]]
+ Container: [[[Container46]]]
+ Vehicle: [[[EnginedVehicle151], [EnginedVehicle331], [EnginedVehicle575], [EnginedVehicle883]], [[EnginedVehicle151], [EnginedVehicle331], [EnginedVehicle575], [Vehicle_9], [Vehicle_7], [Vehicle_8], [Vehicle_5], [Vehicle_6], [Vehicle_4], [EnginedVehicle883]]]
+ List<EnginedVehicle>: [[], [[TruckList443], [TruckList719], [List_9], [List_6], [List_8], [List_7], [TruckList231], [BicycleList1265], [Nil1059], [TruckList83]]]
+ List<NonEnginedVehicle>: [[], [[TruckList443], [TruckList719], [List_9], [List_6], [List_8], [List_7], [TruckList231], [BicycleList1265], [Nil1059], [TruckList83]]]
+ Nil<? extends Vehicle>: [[], [[List_9], [List_6], [List_8], [List_7], [Nil1059]]]
+ ? extends Vehicle: [[], [[EnginedVehicle151], [EnginedVehicle331], [EnginedVehicle575], [Vehicle_9], [Vehicle_7], [Vehicle_8], [Vehicle_5], [Vehicle_6], [Vehicle_4], [EnginedVehicle883]]]
+ Nil<NonEnginedVehicle>: [[], [[List_9], [List_6], [List_8], [List_7], [Nil1059]]]
+ Nil<EnginedVehicle>: [[], [[List_9], [List_6], [List_8], [List_7], [Nil1059]]]
+ List<? extends Vehicle>: [[], [[TruckList443], [TruckList719], [List_9], [List_6], [List_8], [List_7], [TruckList231], [BicycleList1265], [Nil1059], [TruckList83]]]
+ list: [[[Container46, BicycleList1265], [Container46, TruckList83]], [[Container46, TruckList443], [Container46, TruckList719], [Container46, List_9], [Container46, List_6], [Container46, List_8], [Container46, List_7], [Container46, TruckList231], [Container46, BicycleList1265], [Container46, Nil1059], [Container46, TruckList83]]]
+ car: [[[TruckList443, EnginedVehicle575], [TruckList719, EnginedVehicle883], [TruckList231, EnginedVehicle331], [TruckList83, EnginedVehicle151]], [[TruckList443, EnginedVehicle151], [TruckList443, EnginedVehicle331], [TruckList443, EnginedVehicle575], [TruckList443, Vehicle_9], [TruckList443, Vehicle_7], [TruckList443, Vehicle_8], [TruckList443, Vehicle_5], [TruckList443, Vehicle_6], [TruckList443, Vehicle_4], [TruckList443, EnginedVehicle883], [TruckList719, EnginedVehicle151], [TruckList719, EnginedVehicle331], [TruckList719, EnginedVehicle575], [TruckList719, Vehicle_9], [TruckList719, Vehicle_7], [TruckList719, Vehicle_8], [TruckList719, Vehicle_5], [TruckList719, Vehicle_6], [TruckList719, Vehicle_4], [TruckList719, EnginedVehicle883], [List_9, EnginedVehicle151], [List_9, EnginedVehicle331], [List_9, EnginedVehicle575], [List_9, Vehicle_9], [List_9, Vehicle_7], [List_9, Vehicle_8], [List_9, Vehicle_5], [List_9, Vehicle_6], [List_9, Vehicle_4], [List_9, EnginedVehicle883], [List_6, EnginedVehicle151], [List_6, EnginedVehicle331], [List_6, EnginedVehicle575], [List_6, Vehicle_9], [List_6, Vehicle_7], [List_6, Vehicle_8], [List_6, Vehicle_5], [List_6, Vehicle_6], [List_6, Vehicle_4], [List_6, EnginedVehicle883], [List_8, EnginedVehicle151], [List_8, EnginedVehicle331], [List_8, EnginedVehicle575], [List_8, Vehicle_9], [List_8, Vehicle_7], [List_8, Vehicle_8], [List_8, Vehicle_5], [List_8, Vehicle_6], [List_8, Vehicle_4], [List_8, EnginedVehicle883], [List_7, EnginedVehicle151], [List_7, EnginedVehicle331], [List_7, EnginedVehicle575], [List_7, Vehicle_9], [List_7, Vehicle_7], [List_7, Vehicle_8], [List_7, Vehicle_5], [List_7, Vehicle_6], [List_7, Vehicle_4], [List_7, EnginedVehicle883], [TruckList231, EnginedVehicle151], [TruckList231, EnginedVehicle331], [TruckList231, EnginedVehicle575], [TruckList231, Vehicle_9], [TruckList231, Vehicle_7], [TruckList231, Vehicle_8], [TruckList231, Vehicle_5], [TruckList231, Vehicle_6], [TruckList231, Vehicle_4], [TruckList231, EnginedVehicle883], [BicycleList1265, EnginedVehicle151], [BicycleList1265, EnginedVehicle331], [BicycleList1265, EnginedVehicle575], [BicycleList1265, Vehicle_9], [BicycleList1265, Vehicle_7], [BicycleList1265, Vehicle_8], [BicycleList1265, Vehicle_5], [BicycleList1265, Vehicle_6], [BicycleList1265, Vehicle_4], [BicycleList1265, EnginedVehicle883], [Nil1059, EnginedVehicle151], [Nil1059, EnginedVehicle331], [Nil1059, EnginedVehicle575], [Nil1059, Vehicle_9], [Nil1059, Vehicle_7], [Nil1059, Vehicle_8], [Nil1059, Vehicle_5], [Nil1059, Vehicle_6], [Nil1059, Vehicle_4], [Nil1059, EnginedVehicle883], [TruckList83, EnginedVehicle151], [TruckList83, EnginedVehicle331], [TruckList83, EnginedVehicle575], [TruckList83, Vehicle_9], [TruckList83, Vehicle_7], [TruckList83, Vehicle_8], [TruckList83, Vehicle_5], [TruckList83, Vehicle_6], [TruckList83, Vehicle_4], [TruckList83, EnginedVehicle883]]]
+ cdr: [[[TruckList443, TruckList719], [TruckList719, Nil1059], [TruckList231, TruckList443], [TruckList83, TruckList231]], [[TruckList443, TruckList443], [TruckList443, TruckList719], [TruckList443, List_9], [TruckList443, List_6], [TruckList443, List_8], [TruckList443, List_7], [TruckList443, TruckList231], [TruckList443, BicycleList1265], [TruckList443, Nil1059], [TruckList443, TruckList83], [TruckList719, TruckList443], [TruckList719, TruckList719], [TruckList719, List_9], [TruckList719, List_6], [TruckList719, List_8], [TruckList719, List_7], [TruckList719, TruckList231], [TruckList719, BicycleList1265], [TruckList719, Nil1059], [TruckList719, TruckList83], [List_9, TruckList443], [List_9, TruckList719], [List_9, List_9], [List_9, List_6], [List_9, List_8], [List_9, List_7], [List_9, TruckList231], [List_9, BicycleList1265], [List_9, Nil1059], [List_9, TruckList83], [List_6, TruckList443], [List_6, TruckList719], [List_6, List_9], [List_6, List_6], [List_6, List_8], [List_6, List_7], [List_6, TruckList231], [List_6, BicycleList1265], [List_6, Nil1059], [List_6, TruckList83], [List_8, TruckList443], [List_8, TruckList719], [List_8, List_9], [List_8, List_6], [List_8, List_8], [List_8, List_7], [List_8, TruckList231], [List_8, BicycleList1265], [List_8, Nil1059], [List_8, TruckList83], [List_7, TruckList443], [List_7, TruckList719], [List_7, List_9], [List_7, List_6], [List_7, List_8], [List_7, List_7], [List_7, TruckList231], [List_7, BicycleList1265], [List_7, Nil1059], [List_7, TruckList83], [TruckList231, TruckList443], [TruckList231, TruckList719], [TruckList231, List_9], [TruckList231, List_6], [TruckList231, List_8], [TruckList231, List_7], [TruckList231, TruckList231], [TruckList231, BicycleList1265], [TruckList231, Nil1059], [TruckList231, TruckList83], [BicycleList1265, TruckList443], [BicycleList1265, TruckList719], [BicycleList1265, List_9], [BicycleList1265, List_6], [BicycleList1265, List_8], [BicycleList1265, List_7], [BicycleList1265, TruckList231], [BicycleList1265, BicycleList1265], [BicycleList1265, Nil1059], [BicycleList1265, TruckList83], [Nil1059, TruckList443], [Nil1059, TruckList719], [Nil1059, List_9], [Nil1059, List_6], [Nil1059, List_8], [Nil1059, List_7], [Nil1059, TruckList231], [Nil1059, BicycleList1265], [Nil1059, Nil1059], [Nil1059, TruckList83], [TruckList83, TruckList443], [TruckList83, TruckList719], [TruckList83, List_9], [TruckList83, List_6], [TruckList83, List_8], [TruckList83, List_7], [TruckList83, TruckList231], [TruckList83, BicycleList1265], [TruckList83, Nil1059], [TruckList83, TruckList83]]]
+int bounds: 
+ []
+
+no List & Container
+no List & Vehicle
+no Container & Vehicle
+List = Nil + CarList + TruckList + BicycleList
+Nil in List
+CarList in List
+TruckList in List
+BicycleList in List
+no Nil & CarList
+no Nil & TruckList
+no Nil & BicycleList
+no CarList & TruckList
+no CarList & BicycleList
+no TruckList & BicycleList
+all l: List.car | lone (l.~(cdr + car + list))
+all l: List.cdr | lone (l.~(cdr + car + list))
+all l: List | !(l in (l.^cdr))
+all l: List | lone (l.car)
+all l: List | lone (l.cdr)
+all c: Container.list | lone (c.~(cdr + car + list))
+one Container
+all c: Container | some (c.list)
+Vehicle = NonEnginedVehicle + EnginedVehicle
+NonEnginedVehicle in Vehicle
+EnginedVehicle in Vehicle
+no NonEnginedVehicle & EnginedVehicle
+no Nil.car
+no Nil.cdr
+all l: List - Nil | some (l.cdr
+  some l.car)
+all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr <=> 
+  n' = n)
+list in Container -> List
+cdr in List -> List
+Container.*(cdr + list + car) = (NonEnginedVehicle + CarList + Container + 
+List + TruckList + Vehicle + EnginedVehicle + BicycleList + Nil)
+Container.list in List<? extends Vehicle>
+List<EnginedVehicle>.car in EnginedVehicle
+List<NonEnginedVehicle>.car in NonEnginedVehicle
+car in (List<EnginedVehicle> -> EnginedVehicle + (List<NonEnginedVehicle> -> 
+NonEnginedVehicle))
+List<EnginedVehicle>.cdr in List<EnginedVehicle>
+List<NonEnginedVehicle>.cdr in List<NonEnginedVehicle>
+cdr in (List<EnginedVehicle> -> List<EnginedVehicle> + (
+List<NonEnginedVehicle> -> List<NonEnginedVehicle>))
+Nil = Nil<? extends Vehicle> + Nil<NonEnginedVehicle> + Nil<EnginedVehicle>
+List = (Nil + TruckList + CarList + BicycleList + List<EnginedVehicle> + 
+List<NonEnginedVehicle> + List<? extends Vehicle>)
+? extends Vehicle = EnginedVehicle + NonEnginedVehicle
+Nil<EnginedVehicle> in List<EnginedVehicle>
+Nil<NonEnginedVehicle> in List<NonEnginedVehicle>
+Nil<? extends Vehicle> in List<? extends Vehicle>
+Nil<? extends Vehicle> = Nil<NonEnginedVehicle> + Nil<EnginedVehicle>
+List<? extends Vehicle> = List<EnginedVehicle> + List<NonEnginedVehicle>
+CarList in List<EnginedVehicle>
+TruckList in List<EnginedVehicle>
+BicycleList in List<NonEnginedVehicle>
+no Nil<EnginedVehicle> & Nil<NonEnginedVehicle>
+no List<NonEnginedVehicle> & List<EnginedVehicle>
