@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tol:Memory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.theoryoflists" xsi:schemaLocation="eu.modelwriter.examples.theoryoflists TheoryOfLists.ecore" heads="//@lists.0 //@lists.1 //@lists.2 //@lists.3 //@lists.4">
-  <vehicles xsi:type="tol:NonEnginedVehicle" name="EString_17"/>
-  <vehicles xsi:type="tol:NonEnginedVehicle" name="EString_14"/>
-  <lists xsi:type="tol:Nil" name="EString_12" eq="//@lists.0" pre="//@lists.0"/>
-  <lists xsi:type="tol:BicycleList" name="EString_13" car="//@vehicles.1" cdr="//@lists.0" eq="//@lists.1 //@lists.2" pre="//@lists.0 //@lists.1 //@lists.2"/>
-  <lists xsi:type="tol:BicycleList" name="EString_10" car="//@vehicles.1" cdr="//@lists.0" eq="//@lists.1 //@lists.2" pre="//@lists.0 //@lists.1 //@lists.2"/>
-  <lists xsi:type="tol:BicycleList" name="EString_11" car="//@vehicles.1" cdr="//@lists.2" eq="//@lists.3" pre="//@lists.0 //@lists.1 //@lists.2 //@lists.3"/>
-  <lists xsi:type="tol:BicycleList" name="EString_16" car="//@vehicles.0" cdr="//@lists.0" eq="//@lists.4" pre="//@lists.0 //@lists.4"/>
-</tol:Memory>
+<tol:Memory
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tol="eu.modelwriter.examples.theoryoflists"
+    xsi:schemaLocation="eu.modelwriter.examples.theoryoflists TheoryOfLists.ecore"/>

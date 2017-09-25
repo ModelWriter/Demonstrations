@@ -3,24 +3,12 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
     nsPrefix="tol">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public abstract class List&lt;E> [5,10]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [?] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [?] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;&#x9;invariant : all l: List | one n: Nil | n in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class TruckList extends List&lt;EnginedVehicle>;&#xA;&#x9;class CarList extends List&lt;EnginedVehicle>;&#xA;&#x9;class BicycleList extends List&lt;NonEnginedVehicle>;&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;? extends Vehicle>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;abstract class Vehicle [2,10];&#xA;&#x9;class EnginedVehicle extends Vehicle;&#xA;&#x9;class NonEnginedVehicle extends Vehicle;&#xA;}"/>
-    <details key="source_hash" value="1698858048"/>
+    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public abstract class List&lt;E>&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [?] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [?] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;&#x9;invariant : all l: List | one n: Nil | n in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class VehicleList extends List&lt;Vehicle> [1,3];&#xA;&#x9;class CarList extends List&lt;EnginedVehicle> [1,3];&#xA;&#x9;class BicycleList extends List&lt;NonEnginedVehicle> [1,3];&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;?>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;abstract class Vehicle [0,9];&#xA;&#x9;class EnginedVehicle extends Vehicle;&#xA;&#x9;class NonEnginedVehicle extends Vehicle;&#xA;}"/>
+    <details key="source_hash" value="-161272011"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
-      <details key="upperscope" value="10"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="5"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
-      <details key="lowerincluded" value="["/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
-      <details key="upperincluded" value="]"/>
     </eAnnotations>
     <eTypeParameters name="E"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="car" ordered="false" containment="true">
@@ -55,17 +43,53 @@
       <eTypeArguments eTypeParameter="#//Nil/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TruckList">
+  <eClassifiers xsi:type="ecore:EClass" name="VehicleList">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="3"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="1"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
     <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eClassifier="#//EnginedVehicle"/>
+      <eTypeArguments eClassifier="#//Vehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CarList">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="3"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="1"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
     <eGenericSuperTypes eClassifier="#//List">
       <eTypeArguments eClassifier="#//EnginedVehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BicycleList">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="3"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="1"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
     <eGenericSuperTypes eClassifier="#//List">
       <eTypeArguments eClassifier="#//NonEnginedVehicle"/>
     </eGenericSuperTypes>
@@ -77,18 +101,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="list" ordered="false" lowerBound="1"
         upperBound="-1" containment="true">
       <eGenericType eClassifier="#//List">
-        <eTypeArguments>
-          <eUpperBound eClassifier="#//Vehicle"/>
-        </eTypeArguments>
+        <eTypeArguments/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
-      <details key="upperscope" value="10"/>
+      <details key="upperscope" value="9"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="2"/>
+      <details key="lowerscope" value="0"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
