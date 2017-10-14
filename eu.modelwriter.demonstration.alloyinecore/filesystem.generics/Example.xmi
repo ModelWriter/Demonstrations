@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fsys:FileSystem
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:fsys="eu.modelwriter.examples.filesystem"
-    xsi:schemaLocation="eu.modelwriter.examples.filesystem ExampleModel.ecore"/>
+<fsys:FileSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsys="eu.modelwriter.examples.filesystem" xsi:schemaLocation="eu.modelwriter.examples.filesystem ExampleModel.ecore">
+  <names/>
+  <namexs/>
+  <namexs/>
+  <namexs/>
+  <root name="//@namexs.2">
+    <content xsi:type="fsys:File2" name="//@namexs.2"/>
+    <content xsi:type="fsys:File2" name="//@namexs.1"/>
+    <content xsi:type="fsys:File2" name="//@namexs.0"/>
+  </root>
+</fsys:FileSystem>

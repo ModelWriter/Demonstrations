@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fsys:FileSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fsys="eu.modelwriter.examples.filesystem" xsi:schemaLocation="eu.modelwriter.examples.filesystem FileSystem.ecore">
-  <names/>
+<fsys:FileSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fsys="eu.modelwriter.examples.filesystem"
+    xsi:schemaLocation="eu.modelwriter.examples.filesystem FileSystem.ecore">
   <names/>
   <root name="//@names.0">
-    <content xsi:type="fsys:File" name="//@names.0"/>
-    <content xsi:type="fsys:Dir" name="//@names.1">
-      <content xsi:type="fsys:File" name="//@names.1"/>
-      <content xsi:type="fsys:Dir" name="//@names.0">
-        <content xsi:type="fsys:Dir" name="//@names.0"/>
-      </content>
-    </content>
+    <content
+        xsi:type="fsys:Root"/>
   </root>
 </fsys:FileSystem>

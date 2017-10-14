@@ -1,4 +1,4 @@
-[FSObject_3, FileSystem42, FSObject_0, FSObject_1, FSObject_2, Name_3, Name_2, Name_1, Name_0]
+[FSObject<? extends Name>, FSObject_3, FileSystem42, FSObject_0, FSObject<Name>, FSObject_1, FSObject_2, Name_3, Name_2, FSObject<NameX>, Name_1, Name_0]
 
 relation bounds:
  FSObject: [[[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
@@ -9,6 +9,9 @@ relation bounds:
  FileSystem: [[[FileSystem42]]]
  Dir: [[], [[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
  File2: [[], [[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
+ FSObject<Name>: [[], [[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
+ FSObject<? extends Name>: [[], [[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
+ FSObject<NameX>: [[], [[FSObject_3], [FSObject_0], [FSObject_1], [FSObject_2]]]
  names: [[], [[FileSystem42, Name_3], [FileSystem42, Name_2], [FileSystem42, Name_1], [FileSystem42, Name_0]]]
  root: [[], [[FileSystem42, FSObject_3], [FileSystem42, FSObject_0], [FileSystem42, FSObject_1], [FileSystem42, FSObject_2]]]
  name: [[], [[FSObject_3, Name_3], [FSObject_3, Name_2], [FSObject_3, Name_1], [FSObject_3, Name_0], [FSObject_0, Name_3], [FSObject_0, Name_2], [FSObject_0, Name_1], [FSObject_0, Name_0], [FSObject_1, Name_3], [FSObject_1, Name_2], [FSObject_1, Name_1], [FSObject_1, Name_0], [FSObject_2, Name_3], [FSObject_2, Name_2], [FSObject_2, Name_1], [FSObject_2, Name_0]]]
@@ -20,9 +23,9 @@ int bounds:
 no FileSystem & FSObject
 no FileSystem & Name
 no FSObject & Name
-all n: Name | lone (n.~names)
-all n: NameX | lone (n.~namexs)
-all r: Root | lone (r.~root)
+all f: FileSystem.names | lone (f.~namexs + root + content + names)
+all f: FileSystem.namexs | lone (f.~namexs + root + content + names)
+all f: FileSystem.root | lone (f.~namexs + root + content + names)
 one FileSystem
 all f: FileSystem | one (f.root)
 FSObject = Dir + File2 + File
@@ -34,7 +37,7 @@ no Dir & File
 no File2 & File
 all f: FSObject | one (f.name)
 Root in Dir
-all f: FSObject | lone (f.~content)
+all d: Dir.content | lone (d.~namexs + root + content + names)
 all d: Dir | !(d in (d.^content))
 some content
 one Root
@@ -49,6 +52,16 @@ all a: FSObject - Root, b: FSObject - Root | !(a = b =>
 Root = FileSystem.root
 names in FileSystem -> Name
 root in FileSystem -> Root
-name in (Dir -> Name + File -> Name + File2 -> NameX)
 namexs in FileSystem -> NameX
-content in Dir -> File2
+content in Dir -> FSObject
+FileSystem.*namexs + root + content + names = NameX + Root + File2 + File + 
+FileSystem + Name + FSObject + Dir
+Dir.content in FSObject<? extends Name>
+name in (FSObject<Name> -> Name + FSObject<NameX> -> NameX)
+FSObject = File + File2 + Dir + FSObject<Name> + FSObject<? extends Name> + 
+FSObject<NameX>
+FSObject<? extends Name> = FSObject<NameX>
+Dir in FSObject<Name>
+File2 in FSObject<NameX>
+File in FSObject<Name>
+no FSObject<NameX> & FSObject<Name>
