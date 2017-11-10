@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://modelwriter.eu/aie" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:aie="http://modelwriter.eu/aie">
-
-    <attribute name="name" type="string"></attribute>
-</schema>

@@ -46,10 +46,6 @@ fact {all a,b,c: Artifact {
 		b in a.(refines + contains) and c in b.requires and 
 		   c !in a.(refines + contains) => c in a.requires}
 		   transitive[requires]}
-		   
-		   
 
 fact {no conflicts & 
 		(requires + refines + satisfies + contains)}
-
-
