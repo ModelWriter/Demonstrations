@@ -1,31 +1,29 @@
-[FSObject_3, FileSystem40, Root212, FSObject_2, Root118, Name79]
+[FSObject_3, Name94, Root133, Link360, FileSystem40, Name79, Dir227]
 
 relation bounds:
- Dir: [[[Root212], [Root118]], [[FSObject_3], [Root212], [FSObject_2], [Root118]]]
- Link: [[], [[FSObject_3], [FSObject_2]]]
- File: [[], [[FSObject_3], [FSObject_2]]]
- FSObject: [[[FSObject_3], [Root212], [FSObject_2], [Root118]]]
- Name: [[[Name79]]]
- Root: [[[Root212], [Root118]], [[FSObject_3], [Root212], [FSObject_2], [Root118]]]
+ Link: [[[Link360]], [[FSObject_3], [Link360]]]
+ File: [[], [[FSObject_3]]]
+ FSObject: [[[FSObject_3], [Root133], [Link360], [Dir227]]]
+ Root: [[[Root133]], [[FSObject_3], [Root133]]]
  FileSystem: [[[FileSystem40]]]
- ExecutableFile: [[], [[FSObject_3], [FSObject_2]]]
- Executable: [[], [[FSObject_3], [FSObject_2]]]
- root: [[[FileSystem40, Root118]], [[FileSystem40, FSObject_3], [FileSystem40, Root212], [FileSystem40, FSObject_2], [FileSystem40, Root118]]]
- content: [[[Root118, Root212]], [[FSObject_3, FSObject_3], [FSObject_3, Root212], [FSObject_3, FSObject_2], [FSObject_3, Root118], [Root212, FSObject_3], [Root212, Root212], [Root212, FSObject_2], [Root212, Root118], [FSObject_2, FSObject_3], [FSObject_2, Root212], [FSObject_2, FSObject_2], [FSObject_2, Root118], [Root118, FSObject_3], [Root118, Root212], [Root118, FSObject_2], [Root118, Root118]]]
- name: [[[Root118, Name79]], [[FSObject_3, Name79], [Root212, Name79], [FSObject_2, Name79], [Root118, Name79]]]
- link: [[], [[FSObject_3, FSObject_3], [FSObject_3, Root212], [FSObject_3, FSObject_2], [FSObject_3, Root118], [FSObject_2, FSObject_3], [FSObject_2, Root212], [FSObject_2, FSObject_2], [FSObject_2, Root118]]]
- depend: [[], [[FSObject_3, FSObject_3], [FSObject_3, FSObject_2], [FSObject_2, FSObject_3], [FSObject_2, FSObject_2]]]
- names: [[[FileSystem40, Name79]]]
+ Dir: [[[Root133], [Dir227]], [[FSObject_3], [Root133], [Dir227]]]
+ Name: [[[Name94], [Name79]]]
+ ExecutableFile: [[], [[FSObject_3]]]
+ Executable: [[], [[FSObject_3]]]
+ root: [[[FileSystem40, Root133]], [[FileSystem40, FSObject_3], [FileSystem40, Root133]]]
+ content: [[[Root133, Dir227], [Dir227, Link360]], [[FSObject_3, FSObject_3], [FSObject_3, Root133], [FSObject_3, Link360], [FSObject_3, Dir227], [Root133, FSObject_3], [Root133, Root133], [Root133, Link360], [Root133, Dir227], [Dir227, FSObject_3], [Dir227, Root133], [Dir227, Link360], [Dir227, Dir227]]]
+ name: [[[Root133, Name79], [Link360, Name94], [Dir227, Name94]], [[FSObject_3, Name94], [FSObject_3, Name79], [Root133, Name94], [Root133, Name79], [Link360, Name94], [Link360, Name79], [Dir227, Name94], [Dir227, Name79]]]
+ link: [[[Link360, Link360]], [[FSObject_3, FSObject_3], [FSObject_3, Root133], [FSObject_3, Link360], [FSObject_3, Dir227], [Link360, FSObject_3], [Link360, Root133], [Link360, Link360], [Link360, Dir227]]]
+ depend: [[], [[FSObject_3, FSObject_3]]]
+ names: [[[FileSystem40, Name94], [FileSystem40, Name79]]]
 int bounds: 
  []
 
-no FileSystem & FSObject
 no FileSystem & Name
+no FileSystem & FSObject
 no FileSystem & Executable
-no FSObject & Name
+no Name & FSObject
 no Name & Executable
-all f: FileSystem.names | lone (f.~names + content + root)
-all f: FileSystem.root | lone (f.~names + content + root)
 one FileSystem
 all f: FileSystem | one (f.root)
 all f: FileSystem | some (f.names)
@@ -38,16 +36,13 @@ no Dir & File
 no Link & File
 all f: FSObject | one (f.name)
 Root in Dir
-all d: Dir.content | lone (d.~names + content + root)
-all d: Dir | !(d in (d.^content))
 some content
+no Dir
 one Root
-all l: Link | !(l in (l.^link))
 all l: Link | one (l.link)
 ExecutableFile in File
 Executable = ExecutableFile
 ExecutableFile in Executable
-all e: Executable | !(e in (e.^depend))
 no Root.~content
 all a: FSObject, b: FSObject | !(a = b => 
   (a.~content = b.~content => 
@@ -58,7 +53,7 @@ name in FSObject -> Name
 link in Link -> FSObject
 depend in Executable -> File
 names in FileSystem -> Name
-FileSystem.*names + content + root = Link + File + ExecutableFile + Root + 
-Executable + Name + Dir + FSObject + FileSystem
+FileSystem.*content + names + root = FSObject + Root + Name + File + Link + 
+Dir + FileSystem + ExecutableFile + Executable
 true
 true

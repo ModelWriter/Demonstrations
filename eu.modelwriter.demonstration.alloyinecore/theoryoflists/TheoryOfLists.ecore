@@ -3,8 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
     nsPrefix="tol">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public abstract class List&lt;E> [0,6]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [?] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [?] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;&#x9;invariant : all l: List | one n: Nil | n in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class VehicleList extends List&lt;Vehicle> [0,5];&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;Vehicle>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;abstract class Vehicle [0,3];&#xA;&#x9;class EnginedVehicle extends Vehicle [2];&#xA;&#x9;class NonEnginedVehicle extends Vehicle [2];&#xA;}"/>
-    <details key="source_hash" value="701757589"/>
+    <details key="source" value="package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'&#xA;{&#xA;&#x9;public abstract class List&lt;E> [0,6]&#xA;&#x9;{&#xA;&#x9;&#x9;property car : E [?] {composes};&#xA;&#x9;&#x9;property cdr : List&lt;E> [?] {composes, acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class Nil&lt;V> extends List&lt;V>&#xA;&#x9;{&#xA;&#x9;&#x9;invariant : no Nil.car;&#xA;&#x9;&#x9;invariant : no Nil.cdr;&#xA;&#x9;&#x9;invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9;&#x9;invariant : all l: List | one n: Nil | n in l.*cdr;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;class VehicleList extends List&lt;Vehicle> [0,5];&#xA;&#x9;&#xA;&#x9;class one Container&#xA;&#x9;{&#xA;&#x9;&#x9;property list : List&lt;Vehicle>[1..*] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;abstract class Vehicle [0,4];&#xA;&#x9;class EnginedVehicle extends Vehicle [2];&#xA;&#x9;class NonEnginedVehicle extends Vehicle [2];&#xA;}"/>
+    <details key="source_hash" value="-200437196"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -85,7 +85,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
-      <details key="upperscope" value="3"/>
+      <details key="upperscope" value="4"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
       <details key="lowerscope" value="0"/>

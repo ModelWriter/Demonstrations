@@ -6,8 +6,20 @@
     xmlns:fsys="eu.modelwriter.examples.filesystem"
     xsi:schemaLocation="eu.modelwriter.examples.filesystem FileSystem.ecore">
   <names/>
+  <names/>
   <root name="//@names.0">
     <content
-        xsi:type="fsys:Root"/>
+        xsi:type="fsys:Dir"
+        name="//@names.1">
+      <content
+          xsi:type="fsys:Link"
+          name="//@names.1"
+          link="//@root/@content.0/@content.0"/>
+      <content
+          xsi:type="fsys:Dir">
+        <content
+            xsi:type="fsys:ExecutableFile"/>
+      </content>
+    </content>
   </root>
 </fsys:FileSystem>

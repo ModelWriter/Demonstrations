@@ -1,0 +1,85 @@
+[Specification54, Requirement409, "EString_0", "EString_1", Requirement515, Requirement247, Requirement103, "EString_2", "EString_3"]
+
+relation bounds:
+ Requirement: [[[Requirement409], [Requirement515], [Requirement247], [Requirement103]]]
+ Specification: [[[Specification54]]]
+ EString: [[["EString_0"], ["EString_1"], ["EString_2"], ["EString_3"]]]
+ equals: [[[Requirement409, Requirement409], [Requirement515, Requirement515], [Requirement247, Requirement247], [Requirement103, Requirement103]], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+ refines: [[], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+ conflicts: [[], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+ partially_refines: [[], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+ name: [[[Requirement409, "EString_1"], [Requirement515, "EString_2"], [Requirement247, "EString_3"], [Requirement103, "EString_0"]], [[Requirement409, "EString_0"], [Requirement409, "EString_1"], [Requirement409, "EString_2"], [Requirement409, "EString_3"], [Requirement515, "EString_0"], [Requirement515, "EString_1"], [Requirement515, "EString_2"], [Requirement515, "EString_3"], [Requirement247, "EString_0"], [Requirement247, "EString_1"], [Requirement247, "EString_2"], [Requirement247, "EString_3"], [Requirement103, "EString_0"], [Requirement103, "EString_1"], [Requirement103, "EString_2"], [Requirement103, "EString_3"]]]
+ contains: [[[Requirement247, Requirement515], [Requirement247, Requirement103], [Requirement103, Requirement409]], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+ requirements: [[[Specification54, Requirement409], [Specification54, Requirement515], [Specification54, Requirement247], [Specification54, Requirement103]]]
+ req: [[], [[Requirement409, Requirement409], [Requirement409, Requirement515], [Requirement409, Requirement247], [Requirement409, Requirement103], [Requirement515, Requirement409], [Requirement515, Requirement515], [Requirement515, Requirement247], [Requirement515, Requirement103], [Requirement247, Requirement409], [Requirement247, Requirement515], [Requirement247, Requirement247], [Requirement247, Requirement103], [Requirement103, Requirement409], [Requirement103, Requirement515], [Requirement103, Requirement247], [Requirement103, Requirement103]]]
+int bounds: 
+ []
+
+no Requirement & Specification
+all r: Requirement | one (r.name)
+all a: Requirement, b: Requirement | !(a = b => 
+  !(a.name = b.name))
+all a: Requirement | !(a in (a.req))
+all a: Requirement, b: Requirement | (b in (a.req
+ a in b.req) => 
+  a = b)
+req.req in req
+all a: Requirement | !(a in (a.refines))
+all a: Requirement, b: Requirement | (b in (a.refines
+ a in b.refines) => 
+  a = b)
+refines.refines in refines
+all a: Requirement | !(a in (a.contains))
+all a: Requirement, b: Requirement | (b in (a.contains
+ a in b.contains) => 
+  a = b)
+contains.contains in contains
+all a: Requirement | !(a in (a.conflicts))
+conflicts = ~conflicts
+all a: Requirement | a in (a.equals)
+equals = ~equals
+equals.equals in equals
+all a: Requirement | !(a in (a.partially_refines))
+all a: Requirement, b: Requirement | (b in (a.partially_refines
+ a in b.partially_refines) => 
+  a = b)
+partially_refines.partially_refines in partially_refines
+no (req + ~req & refines + ~refines)
+no (contains + ~contains & equals + ~equals)
+no (conflicts + ~conflicts & partially_refines + ~partially_refines)
+no (req + ~req + refines + ~refines & (contains + ~contains + equals + ~equals
+))
+no (req + ~req + refines + ~refines + contains + ~contains + equals + ~equals & 
+conflicts + ~conflicts + partially_refines + ~partially_refines)
+req.refines in req
+req.contains in req
+req.conflicts in conflicts
+req.equals in req
+refines.req in req
+refines.contains in refines
+refines.partially_refines in partially_refines
+refines.conflicts in conflicts
+refines.equals in refines
+contains.req in req
+contains.refines in refines
+contains.partially_refines in partially_refines
+contains.conflicts in conflicts
+contains.equals in contains
+partially_refines.equals in partially_refines
+conflicts.equals in conflicts
+equals.req in req
+equals.refines in refines
+equals.contains in contains
+equals.conflicts in conflicts
+equals.partially_refines in partially_refines
+equals in Requirement -> Requirement
+refines in Requirement -> Requirement
+conflicts in Requirement -> Requirement
+partially_refines in Requirement -> Requirement
+name in Requirement -> EString
+contains in Requirement -> Requirement
+requirements in Specification -> Requirement
+req in Requirement -> Requirement
+Specification.*requirements = Requirement + Specification
+true
+true
