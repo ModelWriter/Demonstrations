@@ -1,0 +1,35 @@
+[EString_2, EString_1, 53031, ArchitecturalModel53, 74573, ArhitecturalElement_1, ArhitecturalElement_2, 50538, EString_0, ArhitecturalElement_0]
+
+relation bounds:
+ ArchitecturalModel: [[[ArchitecturalModel53]]]
+ EInt: [[], [[53031], [74573], [50538]]]
+ ArhitecturalElement: [[[ArhitecturalElement_1], [ArhitecturalElement_2], [ArhitecturalElement_0]]]
+ EString: [[], [[EString_0]]]
+ EString: [[], [[EString_2], [EString_1], [EString_0]]]
+ Component: [[], [[ArhitecturalElement_1], [ArhitecturalElement_2], [ArhitecturalElement_0]]]
+ name: [[], [[ArchitecturalModel53, EString_0]]]
+ name: [[], [[ArhitecturalElement_1, EString_2], [ArhitecturalElement_1, EString_1], [ArhitecturalElement_1, EString_0], [ArhitecturalElement_2, EString_2], [ArhitecturalElement_2, EString_1], [ArhitecturalElement_2, EString_0], [ArhitecturalElement_0, EString_2], [ArhitecturalElement_0, EString_1], [ArhitecturalElement_0, EString_0]]]
+ subComponents: [[], [[ArhitecturalElement_1, ArhitecturalElement_1], [ArhitecturalElement_1, ArhitecturalElement_2], [ArhitecturalElement_1, ArhitecturalElement_0], [ArhitecturalElement_2, ArhitecturalElement_1], [ArhitecturalElement_2, ArhitecturalElement_2], [ArhitecturalElement_2, ArhitecturalElement_0], [ArhitecturalElement_0, ArhitecturalElement_1], [ArhitecturalElement_0, ArhitecturalElement_2], [ArhitecturalElement_0, ArhitecturalElement_0]]]
+ elements: [[], [[ArchitecturalModel53, ArhitecturalElement_1], [ArchitecturalModel53, ArhitecturalElement_2], [ArchitecturalModel53, ArhitecturalElement_0]]]
+ id: [[], [[ArhitecturalElement_1, 53031], [ArhitecturalElement_1, 74573], [ArhitecturalElement_1, 50538], [ArhitecturalElement_2, 53031], [ArhitecturalElement_2, 74573], [ArhitecturalElement_2, 50538], [ArhitecturalElement_0, 53031], [ArhitecturalElement_0, 74573], [ArhitecturalElement_0, 50538]]]
+int bounds: 
+ []
+
+no ArchitecturalModel & ArhitecturalElement
+some elements
+one ArchitecturalModel
+all a: ArchitecturalModel | lone (a.name)
+ArhitecturalElement = Component
+Component in ArhitecturalElement
+all a: ArhitecturalElement | lone (a.id)
+all a: ArhitecturalElement | lone (a.name)
+true
+name in ArchitecturalModel -> EString
+name in ArhitecturalElement -> EString
+subComponents in Component -> Component
+elements in ArchitecturalModel -> ArhitecturalElement
+id in ArhitecturalElement -> EInt
+ArchitecturalModel.*(subComponents + elements) = Component + 
+ArchitecturalModel + ArhitecturalElement
+true
+true

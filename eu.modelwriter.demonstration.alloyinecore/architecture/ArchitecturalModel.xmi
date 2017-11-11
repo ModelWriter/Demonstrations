@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arch:ArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arch="eu.modelwriter.demonstrations.metamodels.architecture" xsi:schemaLocation="eu.modelwriter.demonstrations.metamodels.architecture Architecture.ecore">
+  <elements xsi:type="arch:Component" name="EString_0">
+    <subComponents id="50538" name="EString_0"/>
+    <subComponents id="50538" name="EString_1"/>
+  </elements>
+</arch:ArchitecturalModel>
