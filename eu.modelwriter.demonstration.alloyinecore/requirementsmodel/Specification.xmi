@@ -15,5 +15,5 @@
   <requirements
       name="EString_1"/>
   <requirements
-      name="EString_2"/>
+      name="EString_1"/>
 </tol:Specification>
