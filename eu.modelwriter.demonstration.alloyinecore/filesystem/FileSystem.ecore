@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filesystem" nsURI="eu.modelwriter.examples.filesystem" nsPrefix="fsys">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="filesystem" nsURI="eu.modelwriter.examples.filesystem" nsPrefix="fsys">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="formula" value="all disj a, b: FSObject |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name"/>
@@ -16,10 +15,8 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
       <details key="cardinality" value="one"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false"
-        lowerBound="1" upperBound="-1" eType="#//Name" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false" lowerBound="1"
-        eType="#//Root" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="names" ordered="false" lowerBound="1" upperBound="-1" eType="//Name" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" ordered="false" lowerBound="1" eType="//Root" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Name">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -45,33 +42,29 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
       <details key="upperincluded" value="]"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" ordered="false" lowerBound="1"
-        eType="#//Name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" ordered="false" lowerBound="1" eType="//Name"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Executable" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="depend" ordered="false"
-        upperBound="-1" eType="#//File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="depend" ordered="false" upperBound="-1" eType="//File">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//FSObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="#//File #//Executable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Dir" eSuperTypes="#//FSObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false"
-        upperBound="-1" eType="#//FSObject" containment="true">
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="//FSObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="//File //Executable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Dir" eSuperTypes="//FSObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false" upperBound="-1" eType="//FSObject" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
         <details key="cardinality" value="some"/>
       </eAnnotations>
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//FSObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" lowerBound="1"
-        eType="#//FSObject">
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="//FSObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" lowerBound="1" eType="//FSObject">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="#//Dir">
+  <eClassifiers xsi:type="ecore:EClass" name="Root" eSuperTypes="//Dir">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
       <details key="cardinality" value="one"/>
     </eAnnotations>
