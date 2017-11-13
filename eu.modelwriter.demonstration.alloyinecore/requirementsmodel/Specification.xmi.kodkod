@@ -80,7 +80,7 @@ req in (Requirement -> Requirement)
 partially_refines in (Requirement -> Requirement)
 refines in (Requirement -> Requirement)
 equals in (Requirement -> Requirement)
-(Specification.*requirements) = (Requirement + Specification)
+(Specification.*requirements) = (Specification + Requirement)
 true
 true
 
@@ -88,10 +88,10 @@ true
 UNSATISFIABLE
 
 ---PROOF---
-kodkod.engine.ResolutionBasedProof@1f5a79f0
+kodkod.engine.ResolutionBasedProof@29350c21
 
 ---STATS---
 p cnf 2505 4237
 primary variables: 103
-translation time: 46 ms
-solving time: 0 ms
+translation time: 61 ms
+solving time: 1 ms
