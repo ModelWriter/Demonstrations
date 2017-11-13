@@ -8,47 +8,47 @@ relation bounds:
  List: [[[VehicleList453], [VehicleList236], [VehicleList83]], [[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [List_5], [VehicleList83]]]
  Vehicle: [[[NonEnginedVehicle153], [NonEnginedVehicle338], [EnginedVehicle587], [EnginedVehicle_1]]]
  Container: [[[Container46]]]
- List<Vehicle>: [[], [[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [List_5], [VehicleList83]]]
  Nil<Vehicle>: [[], [[VehicleList_4], [VehicleList_3], [List_5]]]
+ List<Vehicle>: [[], [[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [List_5], [VehicleList83]]]
  list: [[[Container46, VehicleList83]], [[Container46, VehicleList_4], [Container46, VehicleList_3], [Container46, VehicleList453], [Container46, VehicleList236], [Container46, List_5], [Container46, VehicleList83]]]
  car: [[[VehicleList453, EnginedVehicle587], [VehicleList236, NonEnginedVehicle338], [VehicleList83, NonEnginedVehicle153]], [[VehicleList_4, NonEnginedVehicle153], [VehicleList_4, NonEnginedVehicle338], [VehicleList_4, EnginedVehicle587], [VehicleList_4, EnginedVehicle_1], [VehicleList_3, NonEnginedVehicle153], [VehicleList_3, NonEnginedVehicle338], [VehicleList_3, EnginedVehicle587], [VehicleList_3, EnginedVehicle_1], [VehicleList453, NonEnginedVehicle153], [VehicleList453, NonEnginedVehicle338], [VehicleList453, EnginedVehicle587], [VehicleList453, EnginedVehicle_1], [VehicleList236, NonEnginedVehicle153], [VehicleList236, NonEnginedVehicle338], [VehicleList236, EnginedVehicle587], [VehicleList236, EnginedVehicle_1], [List_5, NonEnginedVehicle153], [List_5, NonEnginedVehicle338], [List_5, EnginedVehicle587], [List_5, EnginedVehicle_1], [VehicleList83, NonEnginedVehicle153], [VehicleList83, NonEnginedVehicle338], [VehicleList83, EnginedVehicle587], [VehicleList83, EnginedVehicle_1]]]
  cdr: [[[VehicleList236, VehicleList453], [VehicleList83, VehicleList236]], [[VehicleList_4, VehicleList_4], [VehicleList_4, VehicleList_3], [VehicleList_4, VehicleList453], [VehicleList_4, VehicleList236], [VehicleList_4, List_5], [VehicleList_4, VehicleList83], [VehicleList_3, VehicleList_4], [VehicleList_3, VehicleList_3], [VehicleList_3, VehicleList453], [VehicleList_3, VehicleList236], [VehicleList_3, List_5], [VehicleList_3, VehicleList83], [VehicleList453, VehicleList_4], [VehicleList453, VehicleList_3], [VehicleList453, VehicleList453], [VehicleList453, VehicleList236], [VehicleList453, List_5], [VehicleList453, VehicleList83], [VehicleList236, VehicleList_4], [VehicleList236, VehicleList_3], [VehicleList236, VehicleList453], [VehicleList236, VehicleList236], [VehicleList236, List_5], [VehicleList236, VehicleList83], [List_5, VehicleList_4], [List_5, VehicleList_3], [List_5, VehicleList453], [List_5, VehicleList236], [List_5, List_5], [List_5, VehicleList83], [VehicleList83, VehicleList_4], [VehicleList83, VehicleList_3], [VehicleList83, VehicleList453], [VehicleList83, VehicleList236], [VehicleList83, List_5], [VehicleList83, VehicleList83]]]
 int bounds: 
  []
 
-no List & Vehicle
-no List & Container
-no Vehicle & Container
-List = Nil + VehicleList
+no (List & Vehicle)
+no (List & Container)
+no (Vehicle & Container)
+List = (Nil + VehicleList)
 Nil in List
 VehicleList in List
-no Nil & VehicleList
-all l: List.car | lone (l.~list + cdr + car)
-all l: List.cdr | lone (l.~list + cdr + car)
-all l: List | !(l in (l.^cdr))
-all l: List | lone (l.car)
-all l: List | lone (l.cdr)
-Vehicle = EnginedVehicle + NonEnginedVehicle
+no (Nil & VehicleList)
+(all l: List.car | lone (l.~car + cdr + list))
+(all l: List.cdr | lone (l.~car + cdr + list))
+(all l: List | !(l in (l.^cdr)))
+(all l: List | lone (l.car))
+(all l: List | lone (l.cdr))
+Vehicle = (EnginedVehicle + NonEnginedVehicle)
 EnginedVehicle in Vehicle
 NonEnginedVehicle in Vehicle
-no EnginedVehicle & NonEnginedVehicle
-all c: Container.list | lone (c.~list + cdr + car)
+no (EnginedVehicle & NonEnginedVehicle)
+(all c: Container.list | lone (c.~car + cdr + list))
 one Container
-all c: Container | some (c.list)
-no Nil.car
-no Nil.cdr
-all l: List - Nil | some (l.cdr
-  some l.car)
-all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr <=> 
+(all c: Container | some (c.list))
+no (Nil.car)
+no (Nil.cdr)
+(all l: List - Nil | some (l.cdr)
+  some (l.car))
+(all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr) <=> 
   n' = n)
-list in Container -> List
-cdr in List -> List
-Container.*list + cdr + car = List + Container + Vehicle + VehicleList + 
-EnginedVehicle + Nil + NonEnginedVehicle
+list in (Container -> List)
+cdr in (List -> List)
+(Container.*car + cdr + list) = Nil + NonEnginedVehicle + List + Vehicle + 
+EnginedVehicle + VehicleList + Container
 true
-Container.list in List<Vehicle>
-car in List<Vehicle> -> Vehicle
-cdr in List<Vehicle> -> List<Vehicle>
+(Container.list) in List<Vehicle>
+car in (List<Vehicle> -> Vehicle)
+cdr in (List<Vehicle> -> List<Vehicle>)
 Nil = Nil<Vehicle>
 List = Nil + VehicleList + List<Vehicle>
 Nil<Vehicle> in List<Vehicle>
@@ -58,11 +58,11 @@ VehicleList in List<Vehicle>
 SATISFIABLE
 
 ---INSTANCE---
-relations: {EnginedVehicle=[[EnginedVehicle587], [EnginedVehicle_1]], Nil=[[VehicleList_3]], VehicleList=[[VehicleList_4], [VehicleList453], [VehicleList236], [VehicleList83]], NonEnginedVehicle=[[NonEnginedVehicle153], [NonEnginedVehicle338]], List=[[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [VehicleList83]], Vehicle=[[NonEnginedVehicle153], [NonEnginedVehicle338], [EnginedVehicle587], [EnginedVehicle_1]], Container=[[Container46]], List<Vehicle>=[[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [VehicleList83]], Nil<Vehicle>=[[VehicleList_3]], list=[[Container46, VehicleList83]], car=[[VehicleList_4, EnginedVehicle_1], [VehicleList453, EnginedVehicle587], [VehicleList236, NonEnginedVehicle338], [VehicleList83, NonEnginedVehicle153]], cdr=[[VehicleList_4, VehicleList_3], [VehicleList453, VehicleList_4], [VehicleList236, VehicleList453], [VehicleList83, VehicleList236]]}
+relations: {EnginedVehicle=[[EnginedVehicle587], [EnginedVehicle_1]], Nil=[[VehicleList_3]], VehicleList=[[VehicleList_4], [VehicleList453], [VehicleList236], [VehicleList83]], NonEnginedVehicle=[[NonEnginedVehicle153], [NonEnginedVehicle338]], List=[[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [VehicleList83]], Vehicle=[[NonEnginedVehicle153], [NonEnginedVehicle338], [EnginedVehicle587], [EnginedVehicle_1]], Container=[[Container46]], Nil<Vehicle>=[[VehicleList_3]], List<Vehicle>=[[VehicleList_4], [VehicleList_3], [VehicleList453], [VehicleList236], [VehicleList83]], list=[[Container46, VehicleList83]], car=[[VehicleList_4, EnginedVehicle_1], [VehicleList453, EnginedVehicle587], [VehicleList236, NonEnginedVehicle338], [VehicleList83, NonEnginedVehicle153]], cdr=[[VehicleList_4, VehicleList_3], [VehicleList453, VehicleList_4], [VehicleList236, VehicleList453], [VehicleList83, VehicleList236]]}
 ints: []
 
 ---STATS---
 p cnf 1962 3534
 primary variables: 77
-translation time: 25 ms
-solving time: 2 ms
+translation time: 73 ms
+solving time: 1 ms

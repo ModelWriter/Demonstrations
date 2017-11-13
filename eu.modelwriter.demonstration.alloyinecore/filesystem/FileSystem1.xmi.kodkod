@@ -19,47 +19,47 @@ relation bounds:
 int bounds: 
  []
 
-no FileSystem & Name
-no FileSystem & FSObject
-no FileSystem & Executable
-no Name & FSObject
-no Name & Executable
-all f: FileSystem.names | lone (f.~names + content + root)
-all f: FileSystem.root | lone (f.~names + content + root)
+no (FileSystem & Name)
+no (FileSystem & FSObject)
+no (FileSystem & Executable)
+no (Name & FSObject)
+no (Name & Executable)
+(all f: FileSystem.names | lone (f.~names + root + content))
+(all f: FileSystem.root | lone (f.~names + root + content))
 one FileSystem
-all f: FileSystem | one (f.root)
-all f: FileSystem | some (f.names)
+(all f: FileSystem | one (f.root))
+(all f: FileSystem | some (f.names))
 FSObject = Dir + Link + File
 Dir in FSObject
 Link in FSObject
 File in FSObject
-no Dir & Link
-no Dir & File
-no Link & File
-all f: FSObject | one (f.name)
+no (Dir & Link)
+no (Dir & File)
+no (Link & File)
+(all f: FSObject | one (f.name))
 Root in Dir
-all d: Dir.content | lone (d.~names + content + root)
-all d: Dir | !(d in (d.^content))
+(all d: Dir.content | lone (d.~names + root + content))
+(all d: Dir | !(d in (d.^content)))
 some content
 one Root
-all l: Link | !(l in (l.^link))
-all l: Link | one (l.link)
+(all l: Link | !(l in (l.^link)))
+(all l: Link | one (l.link))
 ExecutableFile in File
 Executable = ExecutableFile
 ExecutableFile in Executable
-all e: Executable | !(e in (e.^depend))
-no Root.~content
-all a: FSObject, b: FSObject | !(a = b => 
-  (a.~content = b.~content => 
- !(a.name = b.name)))
-root in FileSystem -> Root
-content in Dir -> FSObject
-name in FSObject -> Name
-link in Link -> FSObject
-depend in Executable -> File
-names in FileSystem -> Name
-FileSystem.*names + content + root = Root + FSObject + Name + Link + 
-ExecutableFile + Dir + FileSystem + Executable + File
+(all e: Executable | !(e in (e.^depend)))
+no (Root.~content)
+(all a: FSObject, b: FSObject | !(a = b) => 
+  ((a.~content) = (b.~content) => 
+ !((a.name) = (b.name))))
+root in (FileSystem -> Root)
+content in (Dir -> FSObject)
+name in (FSObject -> Name)
+link in (Link -> FSObject)
+depend in (Executable -> File)
+names in (FileSystem -> Name)
+(FileSystem.*names + root + content) = Name + Executable + ExecutableFile + 
+Dir + File + Root + FileSystem + Link + FSObject
 true
 true
 
@@ -73,5 +73,5 @@ ints: []
 ---STATS---
 p cnf 582 721
 primary variables: 47
-translation time: 6 ms
+translation time: 105 ms
 solving time: 0 ms
