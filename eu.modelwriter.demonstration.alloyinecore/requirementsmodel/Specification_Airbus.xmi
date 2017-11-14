@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tol:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.requirementsmodels" xsi:schemaLocation="eu.modelwriter.examples.requirementsmodels RequirementsModel.ecore">
+  <requirements req="//@requirements.4" refines="//@requirements.3" name="r1"/>
+  <requirements req="//@requirements.4" refines="//@requirements.3" name="r2"/>
+  <requirements req="//@requirements.4" refines="//@requirements.1 //@requirements.5 //@requirements.3" name="r3"/>
+  <requirements req="//@requirements.4" name="r4"/>
+  <requirements name="r5"/>
+  <requirements name="r6"/>
+</tol:Specification>

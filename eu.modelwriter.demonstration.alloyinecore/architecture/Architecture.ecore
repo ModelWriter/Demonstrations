@@ -4,8 +4,8 @@
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package ArchitectureMetamodel : arch = 'eu.modelwriter.demonstrations.metamodels.architecture'&#xA;{&#xA;    public class one ArchitecturalModel&#xA;    {&#xA;        property one elements : ArchitecturalElement[*] { composes };&#xA;    }&#xA;    abstract class ArchitecturalElement [6]&#xA;    {&#xA;        attribute identifier : Integer[1] {id}; &#xA;      --invariant : all disj a, b: ArchitecturalElement | a.identifier != b.identifier;&#xA;        attribute name : String[?];&#xA;        invariant : all a: Component| #a.subComponents &lt; 3;&#xA;    }&#xA;    class Component extends ArchitecturalElement&#xA;    {&#xA;        property subComponents : Component[*] { composes };&#xA;    }&#xA;}"/>
-    <details key="source_hash" value="-1599541197"/>
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package ArchitectureMetamodel : arch = 'eu.modelwriter.demonstrations.metamodels.architecture'&#xA;{&#xA;    public class one ArchitecturalModel&#xA;    {&#xA;        property one elements : ArchitecturalElement[*] { composes };&#xA;    }&#xA;    abstract class ArchitecturalElement [6]&#xA;    {&#xA;        attribute identifier : Integer[1] {id}; &#xA;      --invariant : all disj a, b: ArchitecturalElement | a.identifier != b.identifier;&#xA;        attribute name : String[?];&#xA;        invariant : all a: Component| #a.subComponents &lt; 3;&#xA;    }&#xA;    class Component extends ArchitecturalElement&#xA;    {&#xA;        property subComponents : Component[*] { composes };&#xA;        ghost attribute description: String;&#xA;    }&#xA;}"/>
+    <details key="source_hash" value="-69758478"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ArchitecturalModel">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -43,5 +43,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="//ArchitecturalElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subComponents" ordered="false" upperBound="-1" eType="//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false" lowerBound="1">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/ghost"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

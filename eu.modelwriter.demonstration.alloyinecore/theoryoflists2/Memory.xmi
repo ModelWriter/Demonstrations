@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tol:Memory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.theoryoflists" xsi:schemaLocation="eu.modelwriter.examples.theoryoflists TheoryOfLists.ecore" heads="//@lists.0 //@lists.1 //@lists.2 //@lists.3">
   <vehicles xsi:type="tol:NonEnginedVehicle" name="EString_0"/>
-  <vehicles xsi:type="tol:EnginedVehicle" name="EString_7"/>
+  <vehicles xsi:type="tol:NonEnginedVehicle" name="EString_7"/>
   <lists xsi:type="tol:Nil" name="EString_9" eq="//@lists.0"/>
-  <lists xsi:type="tol:BicycleList" name="EString_8" car="//@vehicles.0" cdr="//@lists.3" eq="//@lists.1 //@lists.2"/>
-  <lists xsi:type="tol:BicycleList" name="EString_5" car="//@vehicles.0" cdr="//@lists.3" eq="//@lists.1 //@lists.2"/>
+  <lists xsi:type="tol:BicycleList" name="EString_8" car="//@vehicles.1" cdr="//@lists.3" eq="//@lists.1 //@lists.2"/>
+  <lists xsi:type="tol:BicycleList" name="EString_5" car="//@vehicles.1" cdr="//@lists.3" eq="//@lists.1 //@lists.2"/>
   <lists xsi:type="tol:BicycleList" name="EString_6" car="//@vehicles.0" cdr="//@lists.0" eq="//@lists.3"/>
 </tol:Memory>
