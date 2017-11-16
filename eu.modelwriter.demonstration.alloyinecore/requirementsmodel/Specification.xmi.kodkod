@@ -1,98 +1,87 @@
-[Ahmet, Specification54, arda, Requirement262, Requirement460, ferhat, Requirement103, EString_0, Requirement399]
+[Ahmet, Specification54, arda, Requirement262, ferhat, Requirement469, Requirement103, EString_0, Requirement399]
 
 relation bounds:
- Requirement: [[[Requirement262], [Requirement460], [Requirement103], [Requirement399]]]
+ Requirement: [[[Requirement262], [Requirement469], [Requirement103], [Requirement399]]]
  Specification: [[[Specification54]]]
- EString: [[[Ahmet], [arda], [ferhat]], [[Ahmet], [arda], [ferhat], [EString_0]]]
- name: [[[Requirement262, arda], [Requirement460, Ahmet], [Requirement103, ferhat]], [[Requirement262, Ahmet], [Requirement262, arda], [Requirement262, ferhat], [Requirement262, EString_0], [Requirement460, Ahmet], [Requirement460, arda], [Requirement460, ferhat], [Requirement460, EString_0], [Requirement103, Ahmet], [Requirement103, arda], [Requirement103, ferhat], [Requirement103, EString_0], [Requirement399, Ahmet], [Requirement399, arda], [Requirement399, ferhat], [Requirement399, EString_0]]]
- contains: [[[Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement103, Requirement460], [Requirement103, Requirement399]], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
- conflicts: [[], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
- requirements: [[[Specification54, Requirement262], [Specification54, Requirement460], [Specification54, Requirement103], [Specification54, Requirement399]]]
- req: [[], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
- partially_refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
- refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
- equals: [[[Requirement103, Requirement103]], [[Requirement262, Requirement262], [Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement460, Requirement262], [Requirement460, Requirement460], [Requirement460, Requirement103], [Requirement460, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement460], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement460], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ EString: [[[Ahmet], [arda], [ferhat], [EString_0]]]
+ name: [[[Requirement262, arda], [Requirement469, Ahmet], [Requirement103, ferhat], [Requirement399, EString_0]], [[Requirement262, Ahmet], [Requirement262, arda], [Requirement262, ferhat], [Requirement262, EString_0], [Requirement469, Ahmet], [Requirement469, arda], [Requirement469, ferhat], [Requirement469, EString_0], [Requirement103, Ahmet], [Requirement103, arda], [Requirement103, ferhat], [Requirement103, EString_0], [Requirement399, Ahmet], [Requirement399, arda], [Requirement399, ferhat], [Requirement399, EString_0]]]
+ contains: [[[Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement103, Requirement469], [Requirement103, Requirement399]], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ conflicts: [[], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ requirements: [[[Specification54, Requirement262], [Specification54, Requirement469], [Specification54, Requirement103], [Specification54, Requirement399]]]
+ req: [[], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ partially_refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
+ equals: [[[Requirement103, Requirement103]], [[Requirement262, Requirement262], [Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement469, Requirement262], [Requirement469, Requirement469], [Requirement469, Requirement103], [Requirement469, Requirement399], [Requirement103, Requirement262], [Requirement103, Requirement469], [Requirement103, Requirement103], [Requirement103, Requirement399], [Requirement399, Requirement262], [Requirement399, Requirement469], [Requirement399, Requirement103], [Requirement399, Requirement399]]]
 int bounds: 
  []
 
-no (Requirement & Specification)
-(req.req) in req
-(all r: Requirement | !(r in (r.req)))
-(all a: Requirement, b: Requirement | (b in (a.req)
- a in (b.req)) => 
-  a = b)
-(refines.refines) in refines
-(all r: Requirement | !(r in (r.refines)))
-(all a: Requirement, b: Requirement | (b in (a.refines)
- a in (b.refines)) => 
-  a = b)
-(contains.contains) in contains
-(all r: Requirement | !(r in (r.contains)))
-(all a: Requirement, b: Requirement | (b in (a.contains)
- a in (b.contains)) => 
-  a = b)
-(all r: Requirement | !(r in (r.conflicts)))
-conflicts = ~conflicts
-equals = ~equals
-(equals.equals) in equals
-(partially_refines.partially_refines) in partially_refines
-(all r: Requirement | !(r in (r.partially_refines)))
-(all a: Requirement, b: Requirement | (b in (a.partially_refines)
- a in (b.partially_refines)) => 
-  a = b)
-(all r: Requirement | one (r.name))
-(all s: Specification.requirements | lone (s.~requirements))
-(all a: Requirement, b: Requirement | !(a = b) => 
-  !((a.name) = (b.name)))
-no ((req + ~req) & (refines + ~refines))
-no ((contains + ~contains) & (equals + ~equals))
-no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines))
-no ((req + ~req + refines + ~refines) & (contains + ~contains + equals + ~equals
-))
-no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & 
-(conflicts + ~conflicts + partially_refines + ~partially_refines))
-(req.refines) in req
-(req.contains) in req
-(req.conflicts) in conflicts
-(req.equals) in req
-(refines.req) in req
-(refines.contains) in refines
-(refines.partially_refines) in partially_refines
-(refines.conflicts) in conflicts
-(refines.equals) in refines
-(contains.req) in req
-(contains.refines) in refines
-(contains.partially_refines) in partially_refines
-(contains.conflicts) in conflicts
-(contains.equals) in contains
-(partially_refines.equals) in partially_refines
-(conflicts.equals) in conflicts
-(equals.req) in req
-(equals.refines) in refines
-(equals.contains) in contains
-(equals.conflicts) in conflicts
-(equals.partially_refines) in partially_refines
-name in (Requirement -> EString)
-contains in (Requirement -> Requirement)
-conflicts in (Requirement -> Requirement)
-requirements in (Specification -> Requirement)
-req in (Requirement -> Requirement)
-partially_refines in (Requirement -> Requirement)
-refines in (Requirement -> Requirement)
-equals in (Requirement -> Requirement)
-(Specification.*requirements) = (Specification + Requirement)
-true
+no (Requirement & Specification) 
+(req.req) in req 
+(all r: Requirement | !(r in (r.req))) 
+(all a: Requirement, b: Requirement | (b in (a.req) and a in (b.req)) => a = b) 
+(refines.refines) in refines 
+(all r: Requirement | !(r in (r.refines))) 
+(all a: Requirement, b: Requirement | (b in (a.refines) and a in (b.refines)) => a = b) 
+(contains.contains) in contains 
+(all r: Requirement | !(r in (r.contains))) 
+(all a: Requirement, b: Requirement | (b in (a.contains) and a in (b.contains)) => a = b) 
+(all r: Requirement | !(r in (r.conflicts))) 
+conflicts = ~conflicts 
+equals = ~equals 
+(equals.equals) in equals 
+(partially_refines.partially_refines) in partially_refines 
+(all r: Requirement | !(r in (r.partially_refines))) 
+(all a: Requirement, b: Requirement | (b in (a.partially_refines) and a in (b.partially_refines)) => a = b) 
+(all r: Requirement | one (r.name)) 
+(all s: Specification.requirements | lone (s.~requirements)) 
+(all a: Requirement, b: Requirement | !(a = b) => !((a.name) = (b.name))) 
+no ((req + ~req) & (refines + ~refines)) 
+no ((contains + ~contains) & (equals + ~equals)) 
+no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines)) 
+no ((req + ~req + refines + ~refines) & (contains + ~contains + equals + ~equals)) 
+no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & (conflicts + ~conflicts + partially_refines + ~partially_refines)) 
+(req.refines) in req 
+(req.contains) in req 
+(req.conflicts) in conflicts 
+(req.equals) in req 
+(refines.req) in req 
+(refines.contains) in refines 
+(refines.partially_refines) in partially_refines 
+(refines.conflicts) in conflicts 
+(refines.equals) in refines 
+(contains.req) in req 
+(contains.refines) in refines 
+(contains.partially_refines) in partially_refines 
+(contains.conflicts) in conflicts 
+(contains.equals) in contains 
+(partially_refines.equals) in partially_refines 
+(conflicts.equals) in conflicts 
+(equals.req) in req 
+(equals.refines) in refines 
+(equals.contains) in contains 
+(equals.conflicts) in conflicts 
+(equals.partially_refines) in partially_refines 
+name in (Requirement -> EString) 
+contains in (Requirement -> Requirement) 
+conflicts in (Requirement -> Requirement) 
+requirements in (Specification -> Requirement) 
+req in (Requirement -> Requirement) 
+partially_refines in (Requirement -> Requirement) 
+refines in (Requirement -> Requirement) 
+equals in (Requirement -> Requirement) 
+(Specification.*requirements) = (Requirement + Specification) 
+true 
 true
 
 ---OUTCOME---
 SATISFIABLE
 
 ---INSTANCE---
-relations: {Requirement=[[Requirement262], [Requirement460], [Requirement103], [Requirement399]], Specification=[[Specification54]], EString=[[Ahmet], [arda], [ferhat], [EString_0]], name=[[Requirement262, arda], [Requirement460, Ahmet], [Requirement103, ferhat], [Requirement399, EString_0]], contains=[[Requirement262, Requirement460], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement103, Requirement460], [Requirement103, Requirement399]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement460], [Specification54, Requirement103], [Specification54, Requirement399]], req=[], partially_refines=[], refines=[], equals=[[Requirement103, Requirement103]]}
+relations: {Requirement=[[Requirement262], [Requirement469], [Requirement103], [Requirement399]], Specification=[[Specification54]], EString=[[Ahmet], [arda], [ferhat], [EString_0]], name=[[Requirement262, arda], [Requirement469, Ahmet], [Requirement103, ferhat], [Requirement399, EString_0]], contains=[[Requirement262, Requirement469], [Requirement262, Requirement103], [Requirement262, Requirement399], [Requirement103, Requirement469], [Requirement103, Requirement399]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement469], [Specification54, Requirement103], [Specification54, Requirement399]], req=[], partially_refines=[], refines=[], equals=[[Requirement103, Requirement103]]}
 ints: []
 
 ---STATS---
-p cnf 2442 4142
-primary variables: 104
-translation time: 18 ms
+p cnf 2427 4116
+primary variables: 102
+translation time: 139 ms
 solving time: 1 ms

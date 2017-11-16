@@ -1,98 +1,87 @@
-[r2, r3, r4, r5, r6, Requirement517, Requirement303, Requirement203, Requirement103, Requirement421, Specification54, Requirement580, r1]
+[r2, r3, r4, r5, r6, Requirement536, Requirement369, Requirement236, Requirement632, Requirement103, Requirement695, Specification54, r1]
 
 relation bounds:
- Requirement: [[[Requirement517], [Requirement303], [Requirement203], [Requirement103], [Requirement421], [Requirement580]]]
+ Requirement: [[[Requirement536], [Requirement369], [Requirement236], [Requirement632], [Requirement103], [Requirement695]]]
  Specification: [[[Specification54]]]
  EString: [[[r2], [r3], [r4], [r5], [r6], [r1]]]
- name: [[[Requirement517, r5], [Requirement303, r3], [Requirement203, r2], [Requirement103, r1], [Requirement421, r4], [Requirement580, r6]], [[Requirement517, r2], [Requirement517, r3], [Requirement517, r4], [Requirement517, r5], [Requirement517, r6], [Requirement517, r1], [Requirement303, r2], [Requirement303, r3], [Requirement303, r4], [Requirement303, r5], [Requirement303, r6], [Requirement303, r1], [Requirement203, r2], [Requirement203, r3], [Requirement203, r4], [Requirement203, r5], [Requirement203, r6], [Requirement203, r1], [Requirement103, r2], [Requirement103, r3], [Requirement103, r4], [Requirement103, r5], [Requirement103, r6], [Requirement103, r1], [Requirement421, r2], [Requirement421, r3], [Requirement421, r4], [Requirement421, r5], [Requirement421, r6], [Requirement421, r1], [Requirement580, r2], [Requirement580, r3], [Requirement580, r4], [Requirement580, r5], [Requirement580, r6], [Requirement580, r1]]]
- contains: [[], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
- conflicts: [[], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
- requirements: [[[Specification54, Requirement517], [Specification54, Requirement303], [Specification54, Requirement203], [Specification54, Requirement103], [Specification54, Requirement421], [Specification54, Requirement580]]]
- req: [[[Requirement421, Requirement517]], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
- partially_refines: [[], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
- refines: [[[Requirement303, Requirement203], [Requirement303, Requirement580], [Requirement203, Requirement421], [Requirement103, Requirement421]], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
- equals: [[], [[Requirement517, Requirement517], [Requirement517, Requirement303], [Requirement517, Requirement203], [Requirement517, Requirement103], [Requirement517, Requirement421], [Requirement517, Requirement580], [Requirement303, Requirement517], [Requirement303, Requirement303], [Requirement303, Requirement203], [Requirement303, Requirement103], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement517], [Requirement203, Requirement303], [Requirement203, Requirement203], [Requirement203, Requirement103], [Requirement203, Requirement421], [Requirement203, Requirement580], [Requirement103, Requirement517], [Requirement103, Requirement303], [Requirement103, Requirement203], [Requirement103, Requirement103], [Requirement103, Requirement421], [Requirement103, Requirement580], [Requirement421, Requirement517], [Requirement421, Requirement303], [Requirement421, Requirement203], [Requirement421, Requirement103], [Requirement421, Requirement421], [Requirement421, Requirement580], [Requirement580, Requirement517], [Requirement580, Requirement303], [Requirement580, Requirement203], [Requirement580, Requirement103], [Requirement580, Requirement421], [Requirement580, Requirement580]]]
+ name: [[[Requirement536, r4], [Requirement369, r3], [Requirement236, r2], [Requirement632, r5], [Requirement103, r1], [Requirement695, r6]], [[Requirement536, r2], [Requirement536, r3], [Requirement536, r4], [Requirement536, r5], [Requirement536, r6], [Requirement536, r1], [Requirement369, r2], [Requirement369, r3], [Requirement369, r4], [Requirement369, r5], [Requirement369, r6], [Requirement369, r1], [Requirement236, r2], [Requirement236, r3], [Requirement236, r4], [Requirement236, r5], [Requirement236, r6], [Requirement236, r1], [Requirement632, r2], [Requirement632, r3], [Requirement632, r4], [Requirement632, r5], [Requirement632, r6], [Requirement632, r1], [Requirement103, r2], [Requirement103, r3], [Requirement103, r4], [Requirement103, r5], [Requirement103, r6], [Requirement103, r1], [Requirement695, r2], [Requirement695, r3], [Requirement695, r4], [Requirement695, r5], [Requirement695, r6], [Requirement695, r1]]]
+ contains: [[], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
+ conflicts: [[], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
+ requirements: [[[Specification54, Requirement536], [Specification54, Requirement369], [Specification54, Requirement236], [Specification54, Requirement632], [Specification54, Requirement103], [Specification54, Requirement695]]]
+ req: [[[Requirement536, Requirement632], [Requirement369, Requirement632], [Requirement236, Requirement632], [Requirement103, Requirement632]], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
+ partially_refines: [[], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
+ refines: [[[Requirement369, Requirement536], [Requirement369, Requirement236], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement103, Requirement536]], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
+ equals: [[], [[Requirement536, Requirement536], [Requirement536, Requirement369], [Requirement536, Requirement236], [Requirement536, Requirement632], [Requirement536, Requirement103], [Requirement536, Requirement695], [Requirement369, Requirement536], [Requirement369, Requirement369], [Requirement369, Requirement236], [Requirement369, Requirement632], [Requirement369, Requirement103], [Requirement369, Requirement695], [Requirement236, Requirement536], [Requirement236, Requirement369], [Requirement236, Requirement236], [Requirement236, Requirement632], [Requirement236, Requirement103], [Requirement236, Requirement695], [Requirement632, Requirement536], [Requirement632, Requirement369], [Requirement632, Requirement236], [Requirement632, Requirement632], [Requirement632, Requirement103], [Requirement632, Requirement695], [Requirement103, Requirement536], [Requirement103, Requirement369], [Requirement103, Requirement236], [Requirement103, Requirement632], [Requirement103, Requirement103], [Requirement103, Requirement695], [Requirement695, Requirement536], [Requirement695, Requirement369], [Requirement695, Requirement236], [Requirement695, Requirement632], [Requirement695, Requirement103], [Requirement695, Requirement695]]]
 int bounds: 
  []
 
-no (Requirement & Specification)
-(req.req) in req
-(all r: Requirement | !(r in (r.req)))
-(all a: Requirement, b: Requirement | (b in (a.req)
- a in (b.req)) => 
-  a = b)
-(refines.refines) in refines
-(all r: Requirement | !(r in (r.refines)))
-(all a: Requirement, b: Requirement | (b in (a.refines)
- a in (b.refines)) => 
-  a = b)
-(contains.contains) in contains
-(all r: Requirement | !(r in (r.contains)))
-(all a: Requirement, b: Requirement | (b in (a.contains)
- a in (b.contains)) => 
-  a = b)
-(all r: Requirement | !(r in (r.conflicts)))
-conflicts = ~conflicts
-equals = ~equals
-(equals.equals) in equals
-(partially_refines.partially_refines) in partially_refines
-(all r: Requirement | !(r in (r.partially_refines)))
-(all a: Requirement, b: Requirement | (b in (a.partially_refines)
- a in (b.partially_refines)) => 
-  a = b)
-(all r: Requirement | one (r.name))
-(all s: Specification.requirements | lone (s.~requirements))
-(all a: Requirement, b: Requirement | !(a = b) => 
-  !((a.name) = (b.name)))
-no ((req + ~req) & (refines + ~refines))
-no ((contains + ~contains) & (equals + ~equals))
-no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines))
+no (Requirement & Specification) 
+(req.req) in req 
+(all r: Requirement | !(r in (r.req))) 
+(all a: Requirement, b: Requirement | (b in (a.req) and a in (b.req)) => a = b) 
+(refines.refines) in refines 
+(all r: Requirement | !(r in (r.refines))) 
+(all a: Requirement, b: Requirement | (b in (a.refines) and a in (b.refines)) => a = b) 
+(contains.contains) in contains 
+(all r: Requirement | !(r in (r.contains))) 
+(all a: Requirement, b: Requirement | (b in (a.contains) and a in (b.contains)) => a = b) 
+(all r: Requirement | !(r in (r.conflicts))) 
+conflicts = ~conflicts 
+equals = ~equals 
+(equals.equals) in equals 
+(partially_refines.partially_refines) in partially_refines 
+(all r: Requirement | !(r in (r.partially_refines))) 
+(all a: Requirement, b: Requirement | (b in (a.partially_refines) and a in (b.partially_refines)) => a = b) 
+(all r: Requirement | one (r.name)) 
+(all s: Specification.requirements | lone (s.~requirements)) 
+(all a: Requirement, b: Requirement | !(a = b) => !((a.name) = (b.name))) 
+no ((req + ~req) & (refines + ~refines)) 
+no ((contains + ~contains) & (equals + ~equals)) 
+no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines)) 
 no ((req + ~req + refines + ~refines) & (contains + ~contains + equals + ~equals
-))
-no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & 
-(conflicts + ~conflicts + partially_refines + ~partially_refines))
-(req.refines) in req
-(req.contains) in req
-(req.conflicts) in conflicts
-(req.equals) in req
-(refines.req) in req
-(refines.contains) in refines
-(refines.partially_refines) in partially_refines
-(refines.conflicts) in conflicts
-(refines.equals) in refines
-(contains.req) in req
-(contains.refines) in refines
-(contains.partially_refines) in partially_refines
-(contains.conflicts) in conflicts
-(contains.equals) in contains
-(partially_refines.equals) in partially_refines
-(conflicts.equals) in conflicts
-(equals.req) in req
-(equals.refines) in refines
-(equals.contains) in contains
-(equals.conflicts) in conflicts
-(equals.partially_refines) in partially_refines
-name in (Requirement -> EString)
-contains in (Requirement -> Requirement)
-conflicts in (Requirement -> Requirement)
-requirements in (Specification -> Requirement)
-req in (Requirement -> Requirement)
-partially_refines in (Requirement -> Requirement)
-refines in (Requirement -> Requirement)
-equals in (Requirement -> Requirement)
-(Specification.*requirements) = (Requirement + Specification)
-true
+)) 
+no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & (conflicts + ~conflicts + partially_refines + ~partially_refines)) 
+(req.refines) in req 
+(req.contains) in req 
+(req.conflicts) in conflicts 
+(req.equals) in req 
+(refines.req) in req 
+(refines.contains) in refines 
+(refines.partially_refines) in partially_refines 
+(refines.conflicts) in conflicts 
+(refines.equals) in refines 
+(contains.req) in req 
+(contains.refines) in refines 
+(contains.partially_refines) in partially_refines 
+(contains.conflicts) in conflicts 
+(contains.equals) in contains 
+(partially_refines.equals) in partially_refines 
+(conflicts.equals) in conflicts 
+(equals.req) in req 
+(equals.refines) in refines 
+(equals.contains) in contains 
+(equals.conflicts) in conflicts 
+(equals.partially_refines) in partially_refines 
+name in (Requirement -> EString) 
+contains in (Requirement -> Requirement) 
+conflicts in (Requirement -> Requirement) 
+requirements in (Specification -> Requirement) 
+req in (Requirement -> Requirement) 
+partially_refines in (Requirement -> Requirement) 
+refines in (Requirement -> Requirement) 
+equals in (Requirement -> Requirement) 
+(Specification.*requirements) = (Specification + Requirement) 
+#(Requirement) <= 4 
 true
 
 ---OUTCOME---
-SATISFIABLE
+TRIVIALLY_UNSATISFIABLE
 
----INSTANCE---
-relations: {Requirement=[[Requirement517], [Requirement303], [Requirement203], [Requirement103], [Requirement421], [Requirement580]], Specification=[[Specification54]], EString=[[r2], [r3], [r4], [r5], [r6], [r1]], name=[[Requirement517, r5], [Requirement303, r3], [Requirement203, r2], [Requirement103, r1], [Requirement421, r4], [Requirement580, r6]], contains=[], conflicts=[], requirements=[[Specification54, Requirement517], [Specification54, Requirement303], [Specification54, Requirement203], [Specification54, Requirement103], [Specification54, Requirement421], [Specification54, Requirement580]], req=[[Requirement303, Requirement517], [Requirement203, Requirement517], [Requirement103, Requirement517], [Requirement421, Requirement517]], partially_refines=[], refines=[[Requirement303, Requirement203], [Requirement303, Requirement421], [Requirement303, Requirement580], [Requirement203, Requirement421], [Requirement103, Requirement421]], equals=[]}
-ints: []
+---PROOF---
+kodkod.engine.TrivialProof@df70207
 
 ---STATS---
-p cnf 7705 13345
-primary variables: 241
-translation time: 17 ms
-solving time: 3 ms
+p cnf 0 0
+primary variables: 0
+translation time: 45 ms
+solving time: 0 ms
