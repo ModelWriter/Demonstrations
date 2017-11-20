@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ArchitectureMetamodel" nsURI="eu.modelwriter.demonstrations.metamodels.architecture" nsPrefix="arch">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ArchitectureMetamodel" nsURI="eu.modelwriter.demonstrations.metamodels.architecture"
+    nsPrefix="arch">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
@@ -14,7 +16,8 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
       <details key="cardinality" value="one"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" ordered="false" upperBound="-1" eType="//ArchitecturalElement" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" ordered="false"
+        upperBound="-1" eType="#//ArchitecturalElement" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
         <details key="cardinality" value="one"/>
       </eAnnotations>
@@ -34,18 +37,17 @@
       <details key="callable" value="false"/>
       <details key="formula" value="all a: Component| #a.subComponents &lt; 3"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" ordered="false" lowerBound="1" iD="true">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false">
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="//ArchitecturalElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subComponents" ordered="false" upperBound="-1" eType="//Component" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false" lowerBound="1">
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//ArchitecturalElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subComponents" ordered="false"
+        upperBound="-1" eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/ghost"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

@@ -1,20 +1,20 @@
-[Name94, Root133, FileSystem40, Link227, FSObject_2, Name79]
+[File361, Name94, Root133, FileSystem40, Link227, Name79]
 
 relation bounds:
- Dir: [[[Root133]], [[Root133], [FSObject_2]]]
- Link: [[[Link227]], [[Link227], [FSObject_2]]]
- File: [[], [[FSObject_2]]]
- Root: [[[Root133]], [[Root133], [FSObject_2]]]
+ Dir: [[[Root133]]]
+ Link: [[[Link227]]]
+ File: [[[File361]]]
+ Root: [[[Root133]]]
  FileSystem: [[[FileSystem40]]]
  Name: [[[Name94], [Name79]]]
- ExecutableFile: [[], [[FSObject_2]]]
- Executable: [[], [[FSObject_2]]]
- FSObject: [[[Root133], [Link227], [FSObject_2]]]
- root: [[[FileSystem40, Root133]], [[FileSystem40, Root133], [FileSystem40, FSObject_2]]]
- content: [[[Root133, Link227]], [[Root133, Root133], [Root133, Link227], [Root133, FSObject_2], [FSObject_2, Root133], [FSObject_2, Link227], [FSObject_2, FSObject_2]]]
- name: [[[Root133, Name79], [Link227, Name79]], [[Root133, Name94], [Root133, Name79], [Link227, Name94], [Link227, Name79], [FSObject_2, Name94], [FSObject_2, Name79]]]
- link: [[], [[Link227, Root133], [Link227, Link227], [Link227, FSObject_2], [FSObject_2, Root133], [FSObject_2, Link227], [FSObject_2, FSObject_2]]]
- depend: [[], [[FSObject_2, FSObject_2]]]
+ ExecutableFile: [[]]
+ Executable: [[]]
+ FSObject: [[[File361], [Root133], [Link227]]]
+ root: [[[FileSystem40, Root133]]]
+ content: [[[Root133, File361], [Root133, Link227]], [[Root133, File361], [Root133, Root133], [Root133, Link227]]]
+ name: [[[File361, Name79], [Root133, Name79], [Link227, Name79]], [[File361, Name94], [File361, Name79], [Root133, Name94], [Root133, Name79], [Link227, Name94], [Link227, Name79]]]
+ link: [[[Link227, File361]], [[Link227, File361], [Link227, Root133], [Link227, Link227]]]
+ depend: [[]]
  names: [[[FileSystem40, Name94], [FileSystem40, Name79]]]
 int bounds: 
  []
@@ -24,8 +24,8 @@ no (FileSystem & Executable)
 no (FileSystem & FSObject) 
 no (Name & Executable) 
 no (Name & FSObject) 
-(all f: FileSystem.names | lone (f.~root + content + names)) 
-(all f: FileSystem.root | lone (f.~root + content + names)) 
+(all f: FileSystem.names | lone (f.~names + root + content)) 
+(all f: FileSystem.root | lone (f.~names + root + content)) 
 one FileSystem 
 (all f: FileSystem | one (f.root)) 
 (all f: FileSystem | some (f.names)) 
@@ -41,7 +41,7 @@ no (Dir & File)
 no (Link & File) 
 (all f: FSObject | one (f.name)) 
 Root in Dir 
-(all d: Dir.content | lone (d.~root + content + names)) 
+(all d: Dir.content | lone (d.~names + root + content)) 
 (all d: Dir | !(d in (d.^content))) 
 some content 
 one Root 
@@ -56,19 +56,39 @@ name in (FSObject -> Name)
 link in (Link -> FSObject) 
 depend in (Executable -> File) 
 names in (FileSystem -> Name) 
-(FileSystem.*root + content + names) = Executable + FSObject + ExecutableFile + Dir + Link + Name + File + FileSystem + Root 
-true 
+(FileSystem.*root + names + content) = ExecutableFile + File + FileSystem + Name + FSObject + Link + Executable + Dir + Root 
+#(FSObject) >= 3 
 true
 
 ---OUTCOME---
-SATISFIABLE
+UNSATISFIABLE
 
----INSTANCE---
-relations: {Dir=[[Root133]], Link=[[Link227]], File=[[FSObject_2]], Root=[[Root133]], FileSystem=[[FileSystem40]], Name=[[Name94], [Name79]], ExecutableFile=[], Executable=[], FSObject=[[Root133], [Link227], [FSObject_2]], root=[[FileSystem40, Root133]], content=[[Root133, Link227], [Root133, FSObject_2]], name=[[Root133, Name79], [Link227, Name79], [FSObject_2, Name94]], link=[[Link227, FSObject_2]], depend=[], names=[[FileSystem40, Name94], [FileSystem40, Name79]]}
-ints: []
+---PROOF---
+kodkod.engine.ResolutionBasedProof@4ff3de26
 
 ---STATS---
-p cnf 179 188
-primary variables: 23
-translation time: 5 ms
+p cnf 21 30
+primary variables: 6
+translation time: 7 ms
 solving time: 0 ms
+
+
+Dir:            Root133
+Link:           Link227
+File:           File361
+Root:           Root133
+FileSystem:     FileSystem40
+Name:           Name94, Name79
+ExecutableFile: 
+Executable:     
+FSObject:       File361, Root133, Link227
+
+root (FileSystem40, Root133)
+content (Root133, File361)
+content (Root133, Link227)
+name (Link227, Name79)
+name (Root133, Name79)
+name (File361, Name79)
+link (Link227, File361)
+names (FileSystem40, Name94)
+names (FileSystem40, Name79)

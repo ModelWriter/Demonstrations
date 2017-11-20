@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists" nsPrefix="tol">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
+    nsPrefix="tol">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
@@ -25,12 +27,12 @@
     </eAnnotations>
     <eTypeParameters name="E"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="car" ordered="false" containment="true">
-      <eGenericType eTypeParameter="//List/E"/>
+      <eGenericType eTypeParameter="#//List/E"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" ordered="false" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
-      <eGenericType eClassifier="//List">
-        <eTypeArguments eTypeParameter="//List/E"/>
+      <eGenericType eClassifier="#//List">
+        <eTypeArguments eTypeParameter="#//List/E"/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
@@ -52,8 +54,8 @@
       <details key="formula" value="all l: List | one n: Nil | n in l.*cdr"/>
     </eAnnotations>
     <eTypeParameters name="V"/>
-    <eGenericSuperTypes eClassifier="//List">
-      <eTypeArguments eTypeParameter="//Nil/V"/>
+    <eGenericSuperTypes eClassifier="#//List">
+      <eTypeArguments eTypeParameter="#//Nil/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VehicleList">
@@ -69,17 +71,18 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
       <details key="upperincluded" value="]"/>
     </eAnnotations>
-    <eGenericSuperTypes eClassifier="//List">
-      <eTypeArguments eClassifier="//Vehicle"/>
+    <eGenericSuperTypes eClassifier="#//List">
+      <eTypeArguments eClassifier="#//Vehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
       <details key="cardinality" value="one"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="list" ordered="false" lowerBound="1" upperBound="-1" containment="true">
-      <eGenericType eClassifier="//List">
-        <eTypeArguments eClassifier="//Vehicle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" ordered="false" lowerBound="1"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//List">
+        <eTypeArguments eClassifier="#//Vehicle"/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
@@ -97,7 +100,7 @@
       <details key="upperincluded" value="]"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EnginedVehicle" eSuperTypes="//Vehicle">
+  <eClassifiers xsi:type="ecore:EClass" name="EnginedVehicle" eSuperTypes="#//Vehicle">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
       <details key="lowerscope" value="2"/>
     </eAnnotations>
@@ -108,7 +111,7 @@
       <details key="upperincluded" value="]"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NonEnginedVehicle" eSuperTypes="//Vehicle">
+  <eClassifiers xsi:type="ecore:EClass" name="NonEnginedVehicle" eSuperTypes="#//Vehicle">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
       <details key="lowerscope" value="2"/>
     </eAnnotations>

@@ -16,42 +16,40 @@ relation bounds:
 int bounds: 
  []
 
-no (List & Vehicle)
-no (List & Container)
-no (Vehicle & Container)
-List = (Nil + VehicleList)
-Nil in List
-VehicleList in List
-no (Nil & VehicleList)
-(all l: List.car | lone (l.~cdr + car + list))
-(all l: List.cdr | lone (l.~cdr + car + list))
-(all l: List | !(l in (l.^cdr)))
-(all l: List | lone (l.car))
-(all l: List | lone (l.cdr))
-Vehicle = (EnginedVehicle + NonEnginedVehicle)
-EnginedVehicle in Vehicle
-NonEnginedVehicle in Vehicle
-no (EnginedVehicle & NonEnginedVehicle)
-(all c: Container.list | lone (c.~cdr + car + list))
-one Container
-(all c: Container | some (c.list))
-no (Nil.car)
-no (Nil.cdr)
-(all l: List - Nil | some (l.cdr)
-  some (l.car))
-(all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr) <=> 
-  n' = n)
-list in (Container -> List)
-cdr in (List -> List)
-(Container.*cdr + car + list) = Nil + EnginedVehicle + NonEnginedVehicle + 
-Container + List + VehicleList + Vehicle
-true
-(Container.list) in List<Vehicle>
-car in (List<Vehicle> -> Vehicle)
-cdr in (List<Vehicle> -> List<Vehicle>)
-Nil = Nil<Vehicle>
-List = Nil + VehicleList + List<Vehicle>
-Nil<Vehicle> in List<Vehicle>
+no (List & Vehicle) 
+no (List & Container) 
+no (Vehicle & Container) 
+List = (Nil + VehicleList) 
+Nil in List 
+VehicleList in List 
+no (Nil & VehicleList) 
+(all l: List.car | lone (l.~list + cdr + car)) 
+(all l: List.cdr | lone (l.~list + cdr + car)) 
+(all l: List | !(l in (l.^cdr))) 
+(all l: List | lone (l.car)) 
+(all l: List | lone (l.cdr)) 
+Vehicle = (EnginedVehicle + NonEnginedVehicle) 
+EnginedVehicle in Vehicle 
+NonEnginedVehicle in Vehicle 
+no (EnginedVehicle & NonEnginedVehicle) 
+(all c: Container.list | lone (c.~list + cdr + car)) 
+one Container 
+(all c: Container | some (c.list)) 
+no (Nil.car) 
+no (Nil.cdr) 
+(all l: List - Nil | some (l.cdr) and some (l.car)) 
+(all l: List | some n: Nil |  all n': Nil |   n' in (l.*cdr) <=>   n' = n) 
+list in (Container -> List) 
+cdr in (List -> List) 
+(Container.*list + cdr + car) = EnginedVehicle + Vehicle + Container + NonEnginedVehicle + VehicleList + List + Nil 
+#(EnginedVehicle) >= 2 
+#(List) >= 1 
+(Container.list) in List<Vehicle> 
+car in (List<Vehicle> -> Vehicle) 
+cdr in (List<Vehicle> -> List<Vehicle>) 
+Nil = Nil<Vehicle> 
+List = Nil + VehicleList + List<Vehicle> 
+Nil<Vehicle> in List<Vehicle> 
 VehicleList in List<Vehicle>
 
 ---OUTCOME---
@@ -62,7 +60,26 @@ relations: {EnginedVehicle=[[EnginedVehicle587], [EnginedVehicle_1]], Nil=[[Vehi
 ints: []
 
 ---STATS---
-p cnf 1962 3534
+p cnf 1977 3570
 primary variables: 77
-translation time: 137 ms
-solving time: 1 ms
+translation time: 19 ms
+solving time: 0 ms
+
+
+EnginedVehicle: EnginedVehicle587, EnginedVehicle_1
+Nil<V>:         VehicleList_3
+VehicleList:    VehicleList453, VehicleList236, VehicleList_4, VehicleList83
+NonEnginedVehicle: NonEnginedVehicle338, NonEnginedVehicle153
+List<E>:        VehicleList453, VehicleList236, VehicleList_4, VehicleList_3, VehicleList83
+Vehicle:        NonEnginedVehicle338, EnginedVehicle587, NonEnginedVehicle153, EnginedVehicle_1
+Container:      Container46
+
+list Container46 VehicleList83
+car VehicleList_4 EnginedVehicle_1
+car VehicleList453 EnginedVehicle587
+car VehicleList236 NonEnginedVehicle338
+car VehicleList83 NonEnginedVehicle153
+cdr VehicleList_4 VehicleList_3
+cdr VehicleList453 VehicleList_4
+cdr VehicleList236 VehicleList453
+cdr VehicleList83 VehicleList236
