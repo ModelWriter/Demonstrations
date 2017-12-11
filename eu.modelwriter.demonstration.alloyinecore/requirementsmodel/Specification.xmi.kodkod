@@ -1,11 +1,15 @@
-[Arda, Specification54, Requirement262, true, false, Requirement537, Requirement436, Bedir, Requirement103, EString_0, Ferhat]
+[Arda, Specification54, Requirement262, Ivan, true, false, Requirement537, Requirement436, Bedir, Requirement103, Ferhat]
 
 relation bounds:
  EBoolean: [[], [[true], [false]]]
+ EString: [[[Arda], [Ivan], [Bedir], [Ferhat]]]
  Requirement: [[[Requirement262], [Requirement537], [Requirement436], [Requirement103]]]
- EString: [[[Arda], [Bedir], [Ferhat]], [[Arda], [Bedir], [EString_0], [Ferhat]]]
  Specification: [[[Specification54]]]
- name: [[[Requirement262, Bedir], [Requirement537, Arda], [Requirement436, Arda], [Requirement103, Ferhat]], [[Requirement262, Arda], [Requirement262, Bedir], [Requirement262, EString_0], [Requirement262, Ferhat], [Requirement537, Arda], [Requirement537, Bedir], [Requirement537, EString_0], [Requirement537, Ferhat], [Requirement436, Arda], [Requirement436, Bedir], [Requirement436, EString_0], [Requirement436, Ferhat], [Requirement103, Arda], [Requirement103, Bedir], [Requirement103, EString_0], [Requirement103, Ferhat]]]
+ "Arda": [[[Arda]]]
+ "Ferhat": [[[Ferhat]]]
+ "Ivan": [[[Ivan]]]
+ "Bedir": [[[Bedir]]]
+ name: [[[Requirement262, Bedir], [Requirement436, Arda], [Requirement103, Ferhat]], [[Requirement262, Arda], [Requirement262, Ivan], [Requirement262, Bedir], [Requirement262, Ferhat], [Requirement537, Arda], [Requirement537, Ivan], [Requirement537, Bedir], [Requirement537, Ferhat], [Requirement436, Arda], [Requirement436, Ivan], [Requirement436, Bedir], [Requirement436, Ferhat], [Requirement103, Arda], [Requirement103, Ivan], [Requirement103, Bedir], [Requirement103, Ferhat]]]
  contains: [[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
  conflicts: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
  requirements: [[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]]]
@@ -37,6 +41,7 @@ equals = ~equals
 (all r: Requirement | one (r.name)) 
 (all s: Specification.requirements | lone (s.~requirements)) 
 (all a: Requirement, b: Requirement | !(a = b) => !((a.name) = (b.name))) 
+EString in ("Arda" + "Ferhat" + "Ivan" + "Bedir") 
 no ((req + ~req) & (refines + ~refines)) 
 no ((contains + ~contains) & (equals + ~equals)) 
 no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines)) 
@@ -63,6 +68,7 @@ no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) 
 (equals.contains) in contains 
 (equals.conflicts) in conflicts 
 (equals.partially_refines) in partially_refines 
+true 
 name in (Requirement -> EString) 
 contains in (Requirement -> Requirement) 
 conflicts in (Requirement -> Requirement) 
@@ -76,36 +82,38 @@ true
 true
 
 ---OUTCOME---
-UNSATISFIABLE
+SATISFIABLE
 
----PROOF---
-kodkod.engine.ResolutionBasedProof@929cbb1
+---INSTANCE---
+relations: {EString=[[Arda], [Ivan], [Bedir], [Ferhat]], Requirement=[[Requirement262], [Requirement537], [Requirement436], [Requirement103]], Specification=[[Specification54]], "Arda"=[[Arda]], "Ferhat"=[[Ferhat]], "Ivan"=[[Ivan]], "Bedir"=[[Bedir]], name=[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], contains=[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]], req=[], partially_refines=[], refines=[], equals=[[Requirement262, Requirement262], [Requirement537, Requirement537], [Requirement436, Requirement436], [Requirement103, Requirement103]], EBoolean=[]}
+ints: []
 
 ---STATS---
-p cnf 2379 4088
+p cnf 2296 3963
 primary variables: 100
-translation time: 75 ms
-solving time: 4 ms
+translation time: 63 ms
+solving time: 1 ms
 
 
+EBoolean:       
+EString:        Arda, Ivan, Bedir, Ferhat
 Requirement:    Requirement262, Requirement537, Requirement436, Requirement103
-EString:        Arda, Bedir, Ferhat
 Specification:  Specification54
 
 name (Requirement262, Bedir)
-name (Requirement103, Ferhat)
+name (Requirement537, Ivan)
 name (Requirement436, Arda)
-name (Requirement537, Arda)
+name (Requirement103, Ferhat)
 contains (Requirement262, Requirement537)
-contains (Requirement103, Requirement537)
 contains (Requirement262, Requirement436)
-contains (Requirement103, Requirement436)
 contains (Requirement262, Requirement103)
+contains (Requirement103, Requirement537)
+contains (Requirement103, Requirement436)
 requirements (Specification54, Requirement262)
-requirements (Specification54, Requirement436)
 requirements (Specification54, Requirement537)
+requirements (Specification54, Requirement436)
 requirements (Specification54, Requirement103)
-equals (Requirement537, Requirement537)
-equals (Requirement103, Requirement103)
 equals (Requirement262, Requirement262)
+equals (Requirement537, Requirement537)
 equals (Requirement436, Requirement436)
+equals (Requirement103, Requirement103)

@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tol:Specification
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:tol="eu.modelwriter.examples.requirementsmodels"
-    xsi:schemaLocation="eu.modelwriter.examples.requirementsmodels RequirementsModel.ecore">
-  <requirements
-      contains="//@requirements.2 //@requirements.3"
-      equals="//@requirements.0"
-      name="Ferhat"/>
-  <requirements
-      contains="//@requirements.0 //@requirements.3 //@requirements.2"
-      equals="//@requirements.1"
-      name="Bedir"/>
-  <requirements
-      equals="//@requirements.2"
-      name="Arda"/>
-  <requirements
-      equals="//@requirements.3"
-      name="Arda"/>
+<tol:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.requirementsmodels" xsi:schemaLocation="eu.modelwriter.examples.requirementsmodels RequirementsModel.ecore">
+  <requirements contains="//@requirements.2 //@requirements.3" equals="//@requirements.0" name="Ferhat"/>
+  <requirements contains="//@requirements.0 //@requirements.3 //@requirements.2" equals="//@requirements.1" name="Bedir"/>
+  <requirements equals="//@requirements.2" name="Arda"/>
+  <requirements equals="//@requirements.3" name="Ivan"/>
 </tol:Specification>
