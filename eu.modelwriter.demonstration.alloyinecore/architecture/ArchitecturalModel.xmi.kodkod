@@ -1,15 +1,16 @@
-[EString_2, 47725, EString_1, EString_4, EString_3, 13099, EString_6, EString_5, ArchitecturalElement_6, Component706, 45527, EString_0, 66706, 4617, Component511, Component218, Component955, Component373, ArchitecturalModel53, 67081, Component103, 36868]
+[EString_2, 47725, EString_1, EString_4, EString_3, 13099, Component1125, EString_6, EString_5, Component706, 45527, EString_0, 66706, 4617, Component511, Component875, Component218, Component373, ArchitecturalModel53, 67081, Component103, 36868]
 
 relation bounds:
- EInt: [[[47725], [45527], [66706], [4617], [67081], [36868]], [[47725], [13099], [45527], [66706], [4617], [67081], [36868]]]
+ EInt: [[[47725], [13099], [45527], [66706], [4617], [67081], [36868]]]
  ArchitecturalModel: [[[ArchitecturalModel53]]]
- Component: [[[Component706], [Component511], [Component218], [Component955], [Component373], [Component103]], [[ArchitecturalElement_6], [Component706], [Component511], [Component218], [Component955], [Component373], [Component103]]]
- EString: [[[EString_4], [EString_3], [EString_5], [EString_0]], [[EString_2], [EString_1], [EString_4], [EString_3], [EString_6], [EString_5], [EString_0]]]
- ArchitecturalElement: [[[ArchitecturalElement_6], [Component706], [Component511], [Component218], [Component955], [Component373], [Component103]]]
- name: [[[Component706, EString_4], [Component511, EString_3], [Component218, EString_5], [Component955, EString_4], [Component373, EString_5], [Component103, EString_0]], [[ArchitecturalElement_6, EString_2], [ArchitecturalElement_6, EString_1], [ArchitecturalElement_6, EString_4], [ArchitecturalElement_6, EString_3], [ArchitecturalElement_6, EString_6], [ArchitecturalElement_6, EString_5], [ArchitecturalElement_6, EString_0], [Component706, EString_2], [Component706, EString_1], [Component706, EString_4], [Component706, EString_3], [Component706, EString_6], [Component706, EString_5], [Component706, EString_0], [Component511, EString_2], [Component511, EString_1], [Component511, EString_4], [Component511, EString_3], [Component511, EString_6], [Component511, EString_5], [Component511, EString_0], [Component218, EString_2], [Component218, EString_1], [Component218, EString_4], [Component218, EString_3], [Component218, EString_6], [Component218, EString_5], [Component218, EString_0], [Component955, EString_2], [Component955, EString_1], [Component955, EString_4], [Component955, EString_3], [Component955, EString_6], [Component955, EString_5], [Component955, EString_0], [Component373, EString_2], [Component373, EString_1], [Component373, EString_4], [Component373, EString_3], [Component373, EString_6], [Component373, EString_5], [Component373, EString_0], [Component103, EString_2], [Component103, EString_1], [Component103, EString_4], [Component103, EString_3], [Component103, EString_6], [Component103, EString_5], [Component103, EString_0]]]
- elements: [[[ArchitecturalModel53, Component103]], [[ArchitecturalModel53, ArchitecturalElement_6], [ArchitecturalModel53, Component706], [ArchitecturalModel53, Component511], [ArchitecturalModel53, Component218], [ArchitecturalModel53, Component955], [ArchitecturalModel53, Component373], [ArchitecturalModel53, Component103]]]
- subComponents: [[[Component511, Component706], [Component218, Component511], [Component218, Component373], [Component103, Component218], [Component103, Component955]], [[ArchitecturalElement_6, ArchitecturalElement_6], [ArchitecturalElement_6, Component706], [ArchitecturalElement_6, Component511], [ArchitecturalElement_6, Component218], [ArchitecturalElement_6, Component955], [ArchitecturalElement_6, Component373], [ArchitecturalElement_6, Component103], [Component706, ArchitecturalElement_6], [Component706, Component706], [Component706, Component511], [Component706, Component218], [Component706, Component955], [Component706, Component373], [Component706, Component103], [Component511, ArchitecturalElement_6], [Component511, Component706], [Component511, Component511], [Component511, Component218], [Component511, Component955], [Component511, Component373], [Component511, Component103], [Component218, ArchitecturalElement_6], [Component218, Component706], [Component218, Component511], [Component218, Component218], [Component218, Component955], [Component218, Component373], [Component218, Component103], [Component955, ArchitecturalElement_6], [Component955, Component706], [Component955, Component511], [Component955, Component218], [Component955, Component955], [Component955, Component373], [Component955, Component103], [Component373, ArchitecturalElement_6], [Component373, Component706], [Component373, Component511], [Component373, Component218], [Component373, Component955], [Component373, Component373], [Component373, Component103], [Component103, ArchitecturalElement_6], [Component103, Component706], [Component103, Component511], [Component103, Component218], [Component103, Component955], [Component103, Component373], [Component103, Component103]]]
- identifier: [[[Component706, 4617], [Component511, 45527], [Component218, 36868], [Component955, 66706], [Component373, 67081], [Component103, 47725]], [[ArchitecturalElement_6, 47725], [ArchitecturalElement_6, 13099], [ArchitecturalElement_6, 45527], [ArchitecturalElement_6, 66706], [ArchitecturalElement_6, 4617], [ArchitecturalElement_6, 67081], [ArchitecturalElement_6, 36868], [Component706, 47725], [Component706, 13099], [Component706, 45527], [Component706, 66706], [Component706, 4617], [Component706, 67081], [Component706, 36868], [Component511, 47725], [Component511, 13099], [Component511, 45527], [Component511, 66706], [Component511, 4617], [Component511, 67081], [Component511, 36868], [Component218, 47725], [Component218, 13099], [Component218, 45527], [Component218, 66706], [Component218, 4617], [Component218, 67081], [Component218, 36868], [Component955, 47725], [Component955, 13099], [Component955, 45527], [Component955, 66706], [Component955, 4617], [Component955, 67081], [Component955, 36868], [Component373, 47725], [Component373, 13099], [Component373, 45527], [Component373, 66706], [Component373, 4617], [Component373, 67081], [Component373, 36868], [Component103, 47725], [Component103, 13099], [Component103, 45527], [Component103, 66706], [Component103, 4617], [Component103, 67081], [Component103, 36868]]]
+ ArchitecturalElement: [[[Component1125], [Component706], [Component511], [Component875], [Component218], [Component373], [Component103]]]
+ Component: [[[Component1125], [Component706], [Component511], [Component875], [Component218], [Component373], [Component103]]]
+ EString: [[[EString_1], [EString_4], [EString_3], [EString_5], [EString_0]], [[EString_2], [EString_1], [EString_4], [EString_3], [EString_6], [EString_5], [EString_0]]]
+ name: [[[Component1125, EString_4], [Component706, EString_4], [Component511, EString_3], [Component875, EString_1], [Component218, EString_5], [Component373, EString_5], [Component103, EString_0]], [[Component1125, EString_2], [Component1125, EString_1], [Component1125, EString_4], [Component1125, EString_3], [Component1125, EString_6], [Component1125, EString_5], [Component1125, EString_0], [Component706, EString_2], [Component706, EString_1], [Component706, EString_4], [Component706, EString_3], [Component706, EString_6], [Component706, EString_5], [Component706, EString_0], [Component511, EString_2], [Component511, EString_1], [Component511, EString_4], [Component511, EString_3], [Component511, EString_6], [Component511, EString_5], [Component511, EString_0], [Component875, EString_2], [Component875, EString_1], [Component875, EString_4], [Component875, EString_3], [Component875, EString_6], [Component875, EString_5], [Component875, EString_0], [Component218, EString_2], [Component218, EString_1], [Component218, EString_4], [Component218, EString_3], [Component218, EString_6], [Component218, EString_5], [Component218, EString_0], [Component373, EString_2], [Component373, EString_1], [Component373, EString_4], [Component373, EString_3], [Component373, EString_6], [Component373, EString_5], [Component373, EString_0], [Component103, EString_2], [Component103, EString_1], [Component103, EString_4], [Component103, EString_3], [Component103, EString_6], [Component103, EString_5], [Component103, EString_0]]]
+ elements: [[[ArchitecturalModel53, Component103]], [[ArchitecturalModel53, Component1125], [ArchitecturalModel53, Component706], [ArchitecturalModel53, Component511], [ArchitecturalModel53, Component875], [ArchitecturalModel53, Component218], [ArchitecturalModel53, Component373], [ArchitecturalModel53, Component103]]]
+ subComponents: [[[Component511, Component706], [Component511, Component875], [Component218, Component511], [Component218, Component373], [Component103, Component1125], [Component103, Component218]], [[Component1125, Component1125], [Component1125, Component706], [Component1125, Component511], [Component1125, Component875], [Component1125, Component218], [Component1125, Component373], [Component1125, Component103], [Component706, Component1125], [Component706, Component706], [Component706, Component511], [Component706, Component875], [Component706, Component218], [Component706, Component373], [Component706, Component103], [Component511, Component1125], [Component511, Component706], [Component511, Component511], [Component511, Component875], [Component511, Component218], [Component511, Component373], [Component511, Component103], [Component875, Component1125], [Component875, Component706], [Component875, Component511], [Component875, Component875], [Component875, Component218], [Component875, Component373], [Component875, Component103], [Component218, Component1125], [Component218, Component706], [Component218, Component511], [Component218, Component875], [Component218, Component218], [Component218, Component373], [Component218, Component103], [Component373, Component1125], [Component373, Component706], [Component373, Component511], [Component373, Component875], [Component373, Component218], [Component373, Component373], [Component373, Component103], [Component103, Component1125], [Component103, Component706], [Component103, Component511], [Component103, Component875], [Component103, Component218], [Component103, Component373], [Component103, Component103]]]
+ leaves: [[], [[ArchitecturalModel53, Component1125], [ArchitecturalModel53, Component706], [ArchitecturalModel53, Component511], [ArchitecturalModel53, Component875], [ArchitecturalModel53, Component218], [ArchitecturalModel53, Component373], [ArchitecturalModel53, Component103]]]
+ identifier: [[[Component1125, 66706], [Component706, 4617], [Component511, 45527], [Component875, 13099], [Component218, 36868], [Component373, 67081], [Component103, 47725]], [[Component1125, 47725], [Component1125, 13099], [Component1125, 45527], [Component1125, 66706], [Component1125, 4617], [Component1125, 67081], [Component1125, 36868], [Component706, 47725], [Component706, 13099], [Component706, 45527], [Component706, 66706], [Component706, 4617], [Component706, 67081], [Component706, 36868], [Component511, 47725], [Component511, 13099], [Component511, 45527], [Component511, 66706], [Component511, 4617], [Component511, 67081], [Component511, 36868], [Component875, 47725], [Component875, 13099], [Component875, 45527], [Component875, 66706], [Component875, 4617], [Component875, 67081], [Component875, 36868], [Component218, 47725], [Component218, 13099], [Component218, 45527], [Component218, 66706], [Component218, 4617], [Component218, 67081], [Component218, 36868], [Component373, 47725], [Component373, 13099], [Component373, 45527], [Component373, 66706], [Component373, 4617], [Component373, 67081], [Component373, 36868], [Component103, 47725], [Component103, 13099], [Component103, 45527], [Component103, 66706], [Component103, 4617], [Component103, 67081], [Component103, 36868]]]
 int bounds: 
  []
 
@@ -23,11 +24,12 @@ Component in ArchitecturalElement
 (all a: ArchitecturalElement | one (a.identifier)) 
 (all a: ArchitecturalElement | lone (a.name)) 
 (all c: Component.subComponents | lone (c.~(elements + subComponents))) 
-(all a: Component | #(a.subComponents) < 3) 
+(Component - (Component.^~subComponents)) in (ArchitecturalModel.leaves) 
 true 
 name in (ArchitecturalElement -> EString) 
 elements in (ArchitecturalModel -> ArchitecturalElement) 
 subComponents in (Component -> Component) 
+leaves in (ArchitecturalModel -> Component) 
 identifier in (ArchitecturalElement -> EInt) 
 (ArchitecturalModel.*(elements + subComponents)) = ArchitecturalModel + Component + ArchitecturalElement 
 #(ArchitecturalElement) >= 7 
@@ -37,39 +39,44 @@ true
 SATISFIABLE
 
 ---INSTANCE---
-relations: {EInt=[[47725], [13099], [45527], [66706], [4617], [67081], [36868]], ArchitecturalModel=[[ArchitecturalModel53]], Component=[[ArchitecturalElement_6], [Component706], [Component511], [Component218], [Component955], [Component373], [Component103]], EString=[[EString_4], [EString_3], [EString_6], [EString_5], [EString_0]], ArchitecturalElement=[[ArchitecturalElement_6], [Component706], [Component511], [Component218], [Component955], [Component373], [Component103]], name=[[Component706, EString_4], [Component511, EString_3], [Component218, EString_5], [Component955, EString_4], [Component373, EString_5], [Component103, EString_0]], elements=[[ArchitecturalModel53, Component103]], subComponents=[[Component511, ArchitecturalElement_6], [Component511, Component706], [Component218, Component511], [Component218, Component373], [Component103, Component218], [Component103, Component955]], identifier=[[ArchitecturalElement_6, 13099], [Component706, 4617], [Component511, 45527], [Component218, 36868], [Component955, 66706], [Component373, 67081], [Component103, 47725]]}
+relations: {EInt=[[47725], [13099], [45527], [66706], [4617], [67081], [36868]], ArchitecturalModel=[[ArchitecturalModel53]], ArchitecturalElement=[[Component1125], [Component706], [Component511], [Component875], [Component218], [Component373], [Component103]], Component=[[Component1125], [Component706], [Component511], [Component875], [Component218], [Component373], [Component103]], EString=[[EString_1], [EString_4], [EString_3], [EString_6], [EString_5], [EString_0]], name=[[Component1125, EString_4], [Component706, EString_4], [Component511, EString_3], [Component875, EString_1], [Component218, EString_5], [Component373, EString_5], [Component103, EString_0]], elements=[[ArchitecturalModel53, Component103]], subComponents=[[Component511, Component706], [Component511, Component875], [Component218, Component511], [Component218, Component373], [Component103, Component1125], [Component103, Component218]], leaves=[[ArchitecturalModel53, Component1125], [ArchitecturalModel53, Component706], [ArchitecturalModel53, Component875], [ArchitecturalModel53, Component373]], identifier=[[Component1125, 66706], [Component706, 4617], [Component511, 45527], [Component875, 13099], [Component218, 36868], [Component373, 67081], [Component103, 47725]]}
 ints: []
 
 ---STATS---
-p cnf 1951 2415
-primary variables: 141
-translation time: 90 ms
+p cnf 1524 2153
+primary variables: 142
+translation time: 8 ms
 solving time: 1 ms
 
 
 EInt:           4617, 47725, 13099, 67081, 45527, 66706, 36868
 ArchitecturalModel: ArchitecturalModel53
-Component:      Component511, Component218, Component955, ArchitecturalElement_6, Component373, Component706, Component103
-EString:        EString_4, EString_3, EString_6, EString_5, EString_0
-ArchitecturalElement: Component511, Component218, Component955, ArchitecturalElement_6, Component373, Component706, Component103
+ArchitecturalElement: Component511, Component875, Component1125, Component218, Component373, Component706, Component103
+Component:      Component511, Component875, Component1125, Component218, Component373, Component706, Component103
+EString:        EString_1, EString_4, EString_3, EString_6, EString_5, EString_0
 
+name (Component1125, EString_4)
 name (Component706, EString_4)
 name (Component511, EString_3)
+name (Component875, EString_1)
 name (Component218, EString_5)
-name (Component955, EString_4)
 name (Component373, EString_5)
 name (Component103, EString_0)
 elements (ArchitecturalModel53, Component103)
-subComponents (Component511, ArchitecturalElement_6)
 subComponents (Component511, Component706)
+subComponents (Component511, Component875)
 subComponents (Component218, Component511)
 subComponents (Component218, Component373)
+subComponents (Component103, Component1125)
 subComponents (Component103, Component218)
-subComponents (Component103, Component955)
-identifier (ArchitecturalElement_6, 13099)
+leaves (ArchitecturalModel53, Component1125)
+leaves (ArchitecturalModel53, Component706)
+leaves (ArchitecturalModel53, Component875)
+leaves (ArchitecturalModel53, Component373)
+identifier (Component1125, 66706)
 identifier (Component706, 4617)
 identifier (Component511, 45527)
+identifier (Component875, 13099)
 identifier (Component218, 36868)
-identifier (Component955, 66706)
 identifier (Component373, 67081)
 identifier (Component103, 47725)
