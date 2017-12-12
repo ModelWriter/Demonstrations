@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fordcad" nsURI="eu.modelwriter.examples.fordcad" nsPrefix="fcad">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="r1"/>
+    <details key="formula" value="all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;&#x9;&#x9;((one c: p.has | (c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and&#xA;&#x9;&#x9;(all c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) implies &quot;WU5GP&quot; in c.touch.PAF))"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all c: Component | c.*contains = Component implies c.name = &quot;Vehicle&quot;"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="package fordcad : fcad = 'eu.modelwriter.examples.fordcad'&#xA;{&#xA;&#x9;public class Component&#xA;&#x9;{&#xA;&#x9;&#x9;attribute CPSC: String;&#xA;&#x9;&#x9;attribute name: String;&#xA;&#x9;&#x9;attribute PAF: String[?];&#xA;&#x9;&#x9;property has: Clearance[*] {composes};&#xA;&#x9;&#x9;property contains: Component[*] {composes acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;public class Clearance [0,2]&#xA;&#x9;{&#xA;&#x9;&#x9;property touch: Component;&#xA;&#x9;&#x9;attribute value: String;&#xA;&#x9;&#x9;attribute type: String;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;invariant r1: all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;&#x9;&#x9;((one c: p.has | (c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and&#xA;&#x9;&#x9;(all c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) implies &quot;WU5GP&quot; in c.touch.PAF));&#xA;&#x9;&#x9;&#xA; &#x9;invariant: all c: Component | c.*contains = Component implies c.name = &quot;Vehicle&quot;;&#xA;}"/>
+    <details key="source_hash" value="765870886"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CPSC" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PAF" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has" ordered="false" upperBound="-1"
+        eType="#//Clearance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" ordered="false"
+        upperBound="-1" eType="#//Component" containment="true">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clearance">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="2"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="touch" ordered="false"
+        lowerBound="1" eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
