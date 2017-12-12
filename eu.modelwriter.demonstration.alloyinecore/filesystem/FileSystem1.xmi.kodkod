@@ -1,34 +1,37 @@
-[Link_0, FSObject_3, Name94, Root133, FileSystem40, File227, Name79]
+[Link_0, Name94, Root133, FileSystem40, File227, Name79]
 
 relation bounds:
- Dir: [[[Root133]], [[FSObject_3], [Root133]]]
- File: [[[File227]], [[FSObject_3], [File227]]]
- FSObject: [[[Link_0], [FSObject_3], [Root133], [File227]]]
- Root: [[[Root133]], [[FSObject_3], [Root133]]]
+ Dir: [[[Root133]]]
+ File: [[[File227]]]
+ Root: [[[Root133]]]
  FileSystem: [[[FileSystem40]]]
  Link: [[[Link_0]]]
  Name: [[[Name94], [Name79]]]
- ExecutableFile: [[], [[FSObject_3]]]
- Executable: [[], [[FSObject_3]]]
- root: [[[FileSystem40, Root133]], [[FileSystem40, FSObject_3], [FileSystem40, Root133]]]
- content: [[[Root133, File227]], [[FSObject_3, Link_0], [FSObject_3, FSObject_3], [FSObject_3, Root133], [FSObject_3, File227], [Root133, Link_0], [Root133, FSObject_3], [Root133, Root133], [Root133, File227]]]
- name: [[[Root133, Name79], [File227, Name79]], [[Link_0, Name94], [Link_0, Name79], [FSObject_3, Name94], [FSObject_3, Name79], [Root133, Name94], [Root133, Name79], [File227, Name94], [File227, Name79]]]
- link: [[], [[Link_0, Link_0], [Link_0, FSObject_3], [Link_0, Root133], [Link_0, File227]]]
- depend: [[], [[FSObject_3, FSObject_3], [FSObject_3, File227]]]
+ ExecutableFile: [[]]
+ Executable: [[]]
+ FSObject: [[[Link_0], [Root133], [File227]]]
+ root: [[[FileSystem40, Root133]]]
+ content: [[[Root133, File227]], [[Root133, Link_0], [Root133, Root133], [Root133, File227]]]
+ name: [[[Root133, Name79], [File227, Name79]], [[Link_0, Name94], [Link_0, Name79], [Root133, Name94], [Root133, Name79], [File227, Name94], [File227, Name79]]]
+ link: [[], [[Link_0, Link_0], [Link_0, Root133], [Link_0, File227]]]
+ depend: [[]]
  names: [[[FileSystem40, Name94], [FileSystem40, Name79]]]
 int bounds: 
  []
 
 no (FileSystem & Name) 
-no (FileSystem & FSObject) 
 no (FileSystem & Executable) 
-no (Name & FSObject) 
+no (FileSystem & FSObject) 
 no (Name & Executable) 
-(all f: FileSystem.names | lone (f.~root + content + names)) 
-(all f: FileSystem.root | lone (f.~root + content + names)) 
+no (Name & FSObject) 
+(all f: FileSystem.names | lone (f.~names + root + content)) 
+(all f: FileSystem.root | lone (f.~names + root + content)) 
 one FileSystem 
 (all f: FileSystem | one (f.root)) 
 (all f: FileSystem | some (f.names)) 
+Executable = ExecutableFile 
+ExecutableFile in Executable 
+(all e: Executable | !(e in (e.^depend))) 
 FSObject = Link + Dir + File 
 Link in FSObject 
 Dir in FSObject 
@@ -40,59 +43,55 @@ no (Dir & File)
 (all l: Link | !(l in (l.^link))) 
 (all l: Link | one (l.link)) 
 Root in Dir 
-(all d: Dir.content | lone (d.~root + content + names)) 
+(all d: Dir.content | lone (d.~names + root + content)) 
 (all d: Dir | !(d in (d.^content))) 
 some content 
 one Root 
 ExecutableFile in File 
-Executable = ExecutableFile 
-ExecutableFile in Executable 
-(all e: Executable | !(e in (e.^depend))) 
 no (Root.~content) 
 (all a: FSObject, b: FSObject | !(a = b) => ((a.~content) = (b.~content) =>  !((a.name) = (b.name)))) 
+true 
 root in (FileSystem -> Root) 
 content in (Dir -> FSObject) 
 name in (FSObject -> Name) 
 link in (Link -> FSObject) 
 depend in (Executable -> File) 
 names in (FileSystem -> Name) 
-(FileSystem.*root + content + names) = Link + Name + FSObject + File + ExecutableFile + Root + FileSystem + Dir + Executable 
-#(FSObject) >= 4 
+(FileSystem.*names + root + content) = Executable + File + Dir + Root + ExecutableFile + Name + FSObject + Link + FileSystem 
 #(Link) >= 1 
+#(FSObject) >= 3 
 true
 
 ---OUTCOME---
 SATISFIABLE
 
 ---INSTANCE---
-relations: {Dir=[[FSObject_3], [Root133]], File=[[File227]], FSObject=[[Link_0], [FSObject_3], [Root133], [File227]], Root=[[Root133]], FileSystem=[[FileSystem40]], Link=[[Link_0]], Name=[[Name94], [Name79]], ExecutableFile=[], Executable=[], root=[[FileSystem40, Root133]], content=[[FSObject_3, Link_0], [Root133, FSObject_3], [Root133, File227]], name=[[Link_0, Name94], [FSObject_3, Name94], [Root133, Name79], [File227, Name79]], link=[[Link_0, Root133]], depend=[], names=[[FileSystem40, Name94], [FileSystem40, Name79]]}
+relations: {Dir=[[Root133]], File=[[File227]], Root=[[Root133]], FileSystem=[[FileSystem40]], Link=[[Link_0]], Name=[[Name94], [Name79]], ExecutableFile=[], Executable=[], FSObject=[[Link_0], [Root133], [File227]], root=[[FileSystem40, Root133]], content=[[Root133, Link_0], [Root133, File227]], name=[[Link_0, Name94], [Root133, Name79], [File227, Name79]], link=[[Link_0, File227]], depend=[], names=[[FileSystem40, Name94], [FileSystem40, Name79]]}
 ints: []
 
 ---STATS---
-p cnf 220 259
-primary variables: 25
-translation time: 6 ms
+p cnf 38 50
+primary variables: 9
+translation time: 11 ms
 solving time: 0 ms
 
 
-Dir:            FSObject_3, Root133
+Dir:            Root133
 File:           File227
-FSObject:       Link_0, FSObject_3, Root133, File227
 Root:           Root133
 FileSystem:     FileSystem40
 Link:           Link_0
 Name:           Name94, Name79
 ExecutableFile: 
 Executable:     
+FSObject:       Link_0, Root133, File227
 
 root (FileSystem40, Root133)
-content (FSObject_3, Link_0)
-content (Root133, FSObject_3)
+content (Root133, Link_0)
 content (Root133, File227)
 name (Link_0, Name94)
-name (FSObject_3, Name94)
 name (Root133, Name79)
 name (File227, Name79)
-link (Link_0, Root133)
+link (Link_0, File227)
 names (FileSystem40, Name94)
 names (FileSystem40, Name79)

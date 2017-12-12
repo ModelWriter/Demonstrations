@@ -4,8 +4,6 @@
   <names/>
   <root name="//@names.0">
     <content xsi:type="fsys:File" name="//@names.0"/>
-    <content xsi:type="fsys:Dir" name="//@names.1">
-      <content xsi:type="fsys:Link" name="//@names.1" link="//@root"/>
-    </content>
+    <content xsi:type="fsys:Link" name="//@names.1" link="//@root/@content.0"/>
   </root>
 </fsys:FileSystem>
