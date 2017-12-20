@@ -1,30 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fcad:Component xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fcad="eu.modelwriter.examples.fordcad" xsi:schemaLocation="eu.modelwriter.examples.fordcad Ford-CAD.ecore" CPSC="000000" name="Vehicle" PAF="XXXXXX">
-  <contains CPSC="180113" name="Engine and Transmission Wiring" PAF="AD3D5">
-    <has touch="//@contains.1/@contains.0" value="20" type="static"/>
-    <has touch="//@contains.1/@contains.0" value="10" type="dynamic"/>
-    <has touch="//@contains.1/@contains.0" value="6.5" type="static"/>
+<fcad:Component
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fcad="eu.modelwriter.examples.fordcad"
+    xsi:schemaLocation="eu.modelwriter.examples.fordcad Ford-CAD.ecore"
+    CPSC="000000"
+    name="Vehicle"
+    PAF="XXXXXX">
+  <contains
+      CPSC="180113"
+      name="Engine and Transmission Wiring"
+      PAF="AD3D5">
+    <has touch="//@contains.1/@contains.0"
+        value="20"
+        type="static"/>
+    <has touch="//@contains.1/@contains.0"
+        value="10"
+        type="dynamic"/>
+    <has touch="//@contains.1/@contains.0"
+        value="6.5"
+        type="static"/>
   </contains>
-  <contains CPSC="030000" name="Engine" PAF="XXXXXX">
-    <contains CPSC="031500" name="Sound Control Subsystem" PAF="WU5GP"/>
-    <contains CPSC="030800" name="Engine Emission Control Subsystem" PAF="XXXXXX"/>
-    <contains CPSC="031403" name="Powertrain Control: Sensors and Actuators" PAF="XXXXXX"/>
-    <contains CPSC="030304" name="Hose Set" PAF="4TQQN">
-      <has touch="//@contains.1/@contains.0" value="10" type="static"/>
-      <has touch="//@contains.1/@contains.0" value="20" type="static"/>
+  <contains
+      CPSC="030000"
+      name="Engine"
+      PAF="XXXXXX">
+    <contains
+        CPSC="031500"
+        name="Sound Control Subsystem"
+        PAF="WU5GP"/>
+    <contains
+        CPSC="030800"
+        name="Engine Emission Control Subsystem"
+        PAF="XXXXXX"/>
+    <contains
+        CPSC="031403"
+        name="Powertrain Control: Sensors and Actuators"
+        PAF="XXXXXX"/>
+    <contains
+        CPSC="030304"
+        name="Hose Set"
+        PAF="4TQQN">
+      <has touch="//@contains.1/@contains.0"
+          value="10"
+          type="static"/>
+      <has touch="//@contains.1/@contains.0"
+          value="20"
+          type="static"/>
     </contains>
-    <contains CPSC="032100" name="Engine Modules" PAF="XXXXXX">
-      <contains CPSC="030402" name="Fuel Injection and Throttle" PAF="XXXXXX"/>
-      <contains CPSC="031004" name="Engine Covers" PAF="XXXXXX"/>
-      <contains CPSC="031403" name="PT Control Sensors" PAF="XXXXXX"/>
-      <contains CPSC="030202" name="Oil Filter and Integrated Cooler" PAF="G9V9R">
-        <has touch="//@contains.1/@contains.0" value="30" type="static"/>
+    <contains
+        CPSC="032100"
+        name="Engine Modules"
+        PAF="XXXXXX">
+      <contains
+          CPSC="030402"
+          name="Fuel Injection and Throttle"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="031004"
+          name="Engine Covers"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="031403"
+          name="PT Control Sensors"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="030202"
+          name="Oil Filter and Integrated Cooler"
+          PAF="G9V9R">
+        <has
+            touch="//@contains.1/@contains.0"
+            value="30"
+            type="static"/>
       </contains>
-      <contains CPSC="030407" name="Turbocharger" PAF="XXXXXX"/>
-      <contains CPSC="030901" name="Camshaft and Drive" PAF="XXXXXX"/>
-      <contains CPSC="030801" name="Engine Ventilation" PAF="XXXXXX"/>
-      <contains CPSC="030304" name="Coolant Hose Set and Tank" PAF="XXXXXX"/>
-      <contains CPSC="030106" name="Engine Lifting Eyes" PAF="XXXXXX"/>
+      <contains
+          CPSC="030407"
+          name="Turbocharger"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="030901"
+          name="Camshaft and Drive"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="030801"
+          name="Engine Ventilation"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="030304"
+          name="Coolant Hose Set and Tank"
+          PAF="XXXXXX"/>
+      <contains
+          CPSC="030106"
+          name="Engine Lifting Eyes"
+          PAF="XXXXXX"/>
     </contains>
   </contains>
 </fcad:Component>
