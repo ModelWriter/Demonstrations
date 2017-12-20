@@ -15,31 +15,34 @@
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="name" value="r1"/>
-    <details key="formula" value="all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;&#x9;&#x9;(one c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and &quot;WU5GP&quot; in c.touch.PAF)"/>
+    <details key="formula" value="all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;    &#x9;&#x9;(one c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and &quot;WU5GP&quot; in c.touch.PAF)"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="name" value="r2"/>
-    <details key="formula" value="all p: Component | p.PAF in (&quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;6.5&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
+    <details key="formula" value="all p: Component | p.PAF in (&quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;6.5&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="name" value="r3"/>
-    <details key="formula" value="all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;10&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
+    <details key="formula" value="all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;10&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="name" value="r4"/>
-    <details key="formula" value="all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;20&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
+    <details key="formula" value="all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;20&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
     <details key="callable" value="false"/>
     <details key="name" value="r5"/>
-    <details key="formula" value="all p: Component | p.PAF = &quot;G9V9R&quot; implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;30&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
+    <details key="formula" value="all p: Component | p.PAF = &quot;G9V9R&quot; implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;30&quot; and &quot;WU5GP&quot; in c.touch.PAF)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package fordcad : fcad = 'eu.modelwriter.examples.fordcad'&#xA;{&#xA;&#x9;public class Component&#xA;&#x9;{&#xA;&#x9;&#x9;attribute CPSC: String;&#xA;&#x9;&#x9;attribute name: String;&#xA;&#x9;&#x9;attribute PAF: String[?];&#xA;&#x9;&#x9;property has: Clearance[*] {composes};&#xA;&#x9;&#x9;property contains: Component[*] {composes acyclic};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;public class Clearance [0,6]&#xA;&#x9;{&#xA;&#x9;&#x9;property touch: Component;&#xA;&#x9;&#x9;attribute value: String;&#xA;&#x9;&#x9;attribute type: String;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;invariant: all c: Component | c.*contains = Component implies c.name = &quot;Vehicle&quot;;&#xA;&#x9;&#xA;&#x9;invariant: all c: Clearance | c.type in (&quot;static&quot; + &quot;dynamic&quot;);&#xA;&#x9;&#xA;&#x9;invariant: all c: Clearance | c.value in (&quot;25&quot; + &quot;10&quot; + &quot;6.5&quot; + &quot;20&quot; + &quot;30&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;invariant r1: all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;&#x9;&#x9;(one c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and &quot;WU5GP&quot; in c.touch.PAF);&#xA;&#x9;&#x9;&#xA;&#x9;invariant r2: all p: Component | p.PAF in (&quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;6.5&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;&#x9;&#x9;&#xA;&#x9;invariant r3: all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;10&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;&#x9;&#x9;&#xA; &#x9;invariant r4: all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;20&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;&#x9;&#x9;&#xA;&#x9;invariant r5: all p: Component | p.PAF = &quot;G9V9R&quot; implies &#xA;&#x9;&#x9;(one c: p.has | c.value = &quot;30&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;&#x9;&#xA;}"/>
-    <details key="source_hash" value="180620128"/>
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package fordcad : fcad = 'eu.modelwriter.examples.fordcad'&#xA;{&#xA;    public class Component&#xA;    {&#xA;        attribute CPSC : String;&#xA;        attribute name : String;&#xA;        attribute PAF : String[?];&#xA;        property has : Clearance[*] { composes };&#xA;        property contains : Component[*] { composes acyclic };&#xA;    }&#xA;    public class Clearance&#xA;    {&#xA;        attribute value : String;&#xA;        attribute type : String;&#xA;        property touch : Component;&#xA;    }&#xA;    &#xA;    invariant : all c: Component | c.*contains = Component implies c.name = &quot;Vehicle&quot;;&#xA;    invariant : all c: Clearance | c.type in (&quot;static&quot; + &quot;dynamic&quot;);&#xA;    invariant : all c: Clearance | c.value in (&quot;25&quot; + &quot;10&quot; + &quot;6.5&quot; + &quot;20&quot; + &quot;30&quot;);&#xA;    invariant r1 : all p: Component | &quot;030000&quot; not in ((p.*(~contains)) + (p.*contains)).CPSC implies &#xA;    &#x9;&#x9;(one c: p.has | ((c.type = &quot;static&quot; and c.value = &quot;25&quot;) or (c.type = &quot;dynamic&quot; and c.value = &quot;10&quot;)) and &quot;WU5GP&quot; in c.touch.PAF);&#xA;    invariant r2 : all p: Component | p.PAF in (&quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;6.5&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;    invariant r3 : all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;10&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;    invariant r4 : all p: Component | p.PAF in (&quot;4TQQN&quot; + &quot;APPT0&quot; + &quot;LAJDW&quot; + &quot;AD3D5&quot;) implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;20&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;    invariant r5 : all p: Component | p.PAF = &quot;G9V9R&quot; implies &#xA;    &#x9;&#x9;(one c: p.has | c.value = &quot;30&quot; and &quot;WU5GP&quot; in c.touch.PAF);&#xA;}"/>
+    <details key="source_hash" value="102732939"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -63,24 +66,12 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
-      <details key="upperscope" value="6"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
-      <details key="lowerincluded" value="["/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
-      <details key="upperincluded" value="]"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="touch" ordered="false" lowerBound="1" eType="//Component"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="touch" ordered="false" lowerBound="1" eType="//Component"/>
   </eClassifiers>
 </ecore:EPackage>
