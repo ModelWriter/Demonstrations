@@ -5,11 +5,11 @@ relation bounds:
  EString: [[[Arda], [Ivan], [Bedir], [Ferhat]]]
  Requirement: [[[Requirement262], [Requirement537], [Requirement436], [Requirement103]]]
  Specification: [[[Specification54]]]
- "Bedir": [[[Bedir]]]
  "Ferhat": [[[Ferhat]]]
+ "Bedir": [[[Bedir]]]
  "Arda": [[[Arda]]]
  "Ivan": [[[Ivan]]]
- name: [[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], [[Requirement262, Arda], [Requirement262, Ivan], [Requirement262, Bedir], [Requirement262, Ferhat], [Requirement537, Arda], [Requirement537, Ivan], [Requirement537, Bedir], [Requirement537, Ferhat], [Requirement436, Arda], [Requirement436, Ivan], [Requirement436, Bedir], [Requirement436, Ferhat], [Requirement103, Arda], [Requirement103, Ivan], [Requirement103, Bedir], [Requirement103, Ferhat]]]
+ name: [[[Requirement262, Bedir], [Requirement436, Arda], [Requirement103, Ferhat]], [[Requirement262, Arda], [Requirement262, Ivan], [Requirement262, Bedir], [Requirement262, Ferhat], [Requirement537, Arda], [Requirement537, Ivan], [Requirement537, Bedir], [Requirement537, Ferhat], [Requirement436, Arda], [Requirement436, Ivan], [Requirement436, Bedir], [Requirement436, Ferhat], [Requirement103, Arda], [Requirement103, Ivan], [Requirement103, Bedir], [Requirement103, Ferhat]]]
  contains: [[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
  conflicts: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
  requirements: [[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]]]
@@ -77,7 +77,7 @@ req in (Requirement -> Requirement)
 partially_refines in (Requirement -> Requirement) 
 refines in (Requirement -> Requirement) 
 equals in (Requirement -> Requirement) 
-(Specification.*requirements) = (Specification + Requirement) 
+(Specification.*requirements) = (Requirement + Specification) 
 true 
 true
 
@@ -85,14 +85,14 @@ true
 SATISFIABLE
 
 ---INSTANCE---
-relations: {EString=[[Arda], [Ivan], [Bedir], [Ferhat]], Requirement=[[Requirement262], [Requirement537], [Requirement436], [Requirement103]], Specification=[[Specification54]], "Bedir"=[[Bedir]], "Ferhat"=[[Ferhat]], "Arda"=[[Arda]], "Ivan"=[[Ivan]], name=[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], contains=[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]], req=[], partially_refines=[], refines=[], equals=[[Requirement262, Requirement262], [Requirement537, Requirement537], [Requirement436, Requirement436], [Requirement103, Requirement103]], EBoolean=[]}
+relations: {EString=[[Arda], [Ivan], [Bedir], [Ferhat]], Requirement=[[Requirement262], [Requirement537], [Requirement436], [Requirement103]], Specification=[[Specification54]], "Ferhat"=[[Ferhat]], "Bedir"=[[Bedir]], "Arda"=[[Arda]], "Ivan"=[[Ivan]], name=[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], contains=[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]], req=[], partially_refines=[], refines=[], equals=[[Requirement262, Requirement262], [Requirement537, Requirement537], [Requirement436, Requirement436], [Requirement103, Requirement103]], EBoolean=[]}
 ints: []
 
 ---STATS---
-p cnf 2283 3940
-primary variables: 99
-translation time: 84 ms
-solving time: 4 ms
+p cnf 2296 3963
+primary variables: 100
+translation time: 31 ms
+solving time: 2 ms
 
 
 EBoolean:       
