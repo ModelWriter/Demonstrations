@@ -1,50 +1,90 @@
-[Nil<Vehicle>, Memory46, Nil<Nil<EnginedVehicle>>, EnginedVehicle84, List<List<NonEnginedVehicle>>, Nil<Nil<NonEnginedVehicle>>, TruckList528, Nil1123, List<Vehicle>, TruckList647, Nil<Object>, TruckList766, Nil<NonEnginedVehicle>, List<?>, TruckList885, Nil<BicycleList>, Nil<TruckList>, List<TruckList>, List<NonEnginedVehicle>, List<Object>, Nil<List<NonEnginedVehicle>>, List<List<EnginedVehicle>>, EString_2, EString_1, List<Memory>, EString_3, Nil<List<EnginedVehicle>>, Nil<EnginedVehicle>, List<Nil<NonEnginedVehicle>>, EString_0, Vehicle_3, List<CarList>, EnginedVehicle184, List<EnginedVehicle>, List<BicycleList>, Nil<CarList>, Nil<Memory>, List<Nil<EnginedVehicle>>, EnginedVehicle284, TruckList409, List<? extends Vehicle>, TruckList1004]
+[Memory46, Nil<Nil<EnginedVehicle>>, EnginedVehicle84, Memory, Nil1123, Nil<NonEnginedVehicle>, List<?>, Vehicle, List<TruckList>, TruckList, List, List<List<EnginedVehicle>>, BicycleList, EString_1, List<Memory>, EString_3, Nil<List<EnginedVehicle>>, Nil<EnginedVehicle>, EString_0, List<CarList>, EnginedVehicle184, List<BicycleList>, List<Nil<EnginedVehicle>>, Nil<Memory>, NonEnginedVehicle, Object, List<? extends Vehicle>, CarList, Nil<Vehicle>, List<List<NonEnginedVehicle>>, Nil<Nil<NonEnginedVehicle>>, TruckList528, List<Vehicle>, TruckList647, Nil<Object>, TruckList766, TruckList885, Nil<BicycleList>, Nil<TruckList>, List<NonEnginedVehicle>, Nil<List<NonEnginedVehicle>>, List<Object>, List<Nil<NonEnginedVehicle>>, Vehicle_3, Nil, List<EnginedVehicle>, Nil<CarList>, EnginedVehicle, EnginedVehicle284, TruckList409, EString, TruckList1004, Ferhat]
 
 relation bounds:
  Nil: [[[Nil1123]]]
- List: [[[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Vehicle: [[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], [[EnginedVehicle84], [Vehicle_3], [EnginedVehicle184], [EnginedVehicle284]]]
  NonEnginedVehicle: [[], [[Vehicle_3]]]
- EString: [[[EString_1], [EString_3], [EString_0]], [[EString_2], [EString_1], [EString_3], [EString_0]]]
- EnginedVehicle: [[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], [[EnginedVehicle84], [Vehicle_3], [EnginedVehicle184], [EnginedVehicle284]]]
- Object: [[[EnginedVehicle84], [TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [EnginedVehicle184], [EnginedVehicle284], [TruckList409], [TruckList1004]], [[EnginedVehicle84], [TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [Vehicle_3], [EnginedVehicle184], [EnginedVehicle284], [TruckList409], [TruckList1004]]]
+ EString: [[[EString_1], [EString_3], [EString_0], [Ferhat]]]
+ Memory: [[[Memory46]]]
+ EnginedVehicle: [[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], [[EnginedVehicle84], [EnginedVehicle184], [Vehicle_3], [EnginedVehicle284]]]
+ Object: [[[EnginedVehicle84], [Nil1123], [EnginedVehicle184], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [EnginedVehicle284], [TruckList409], [TruckList1004]], [[EnginedVehicle84], [Nil1123], [EnginedVehicle184], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [Vehicle_3], [EnginedVehicle284], [TruckList409], [TruckList1004]]]
  CarList: [[]]
+ Vehicle: [[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], [[EnginedVehicle84], [EnginedVehicle184], [Vehicle_3], [EnginedVehicle284]]]
  TruckList: [[[TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
  BicycleList: [[]]
- Memory: [[[Memory46]]]
- List<List<NonEnginedVehicle>>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<Object>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Nil<BicycleList>: [[], [[Nil1123]]]
- Nil<Memory>: [[], [[Nil1123]]]
- Nil<TruckList>: [[], [[Nil1123]]]
- List<EnginedVehicle>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<NonEnginedVehicle>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Nil<Nil<EnginedVehicle>>: [[], [[Nil1123]]]
- List<? extends Vehicle>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<Nil<EnginedVehicle>>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<TruckList>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<CarList>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List: [[[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
  Nil<List<EnginedVehicle>>: [[], [[Nil1123]]]
- List<Nil<NonEnginedVehicle>>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Nil<Nil<NonEnginedVehicle>>: [[], [[Nil1123]]]
+ List<Nil<EnginedVehicle>>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<TruckList>: [[], [[Nil1123]]]
+ List<NonEnginedVehicle>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<Nil<EnginedVehicle>>: [[], [[Nil1123]]]
+ List<List<EnginedVehicle>>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<Memory>: [[], [[Nil1123]]]
+ List<Memory>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<? extends Vehicle>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<Nil<NonEnginedVehicle>>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<Object>: [[], [[Nil1123]]]
+ List<EnginedVehicle>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<Vehicle>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<EnginedVehicle>: [[], [[Nil1123]]]
  Nil<Vehicle>: [[], [[Nil1123]]]
  Nil<NonEnginedVehicle>: [[], [[Nil1123]]]
- List<BicycleList>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Nil<Object>: [[], [[Nil1123]]]
- Nil<List<NonEnginedVehicle>>: [[], [[Nil1123]]]
+ List<CarList>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<BicycleList>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<TruckList>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
  Nil<CarList>: [[], [[Nil1123]]]
- List<Memory>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<Vehicle>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- Nil<EnginedVehicle>: [[], [[Nil1123]]]
- List<?>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- List<List<EnginedVehicle>>: [[], [[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
- vehicles: [[[Memory46, EnginedVehicle84], [Memory46, EnginedVehicle184], [Memory46, EnginedVehicle284]], [[Memory46, EnginedVehicle84], [Memory46, Vehicle_3], [Memory46, EnginedVehicle184], [Memory46, EnginedVehicle284]]]
- heads: [[], [[Memory46, TruckList528], [Memory46, Nil1123], [Memory46, TruckList647], [Memory46, TruckList766], [Memory46, TruckList885], [Memory46, TruckList409], [Memory46, TruckList1004]]]
- cdr: [[[TruckList528, TruckList409], [TruckList647, TruckList409], [TruckList766, Nil1123], [TruckList885, Nil1123], [TruckList409, TruckList1004], [TruckList1004, TruckList885]], [[TruckList528, TruckList528], [TruckList528, Nil1123], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, TruckList409], [TruckList528, TruckList1004], [Nil1123, TruckList528], [Nil1123, Nil1123], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList647, TruckList528], [TruckList647, Nil1123], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, TruckList528], [TruckList766, Nil1123], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, TruckList528], [TruckList885, Nil1123], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, TruckList528], [TruckList409, Nil1123], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, TruckList528], [TruckList1004, Nil1123], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
- name: [[[EnginedVehicle84, EString_0], [EnginedVehicle184, EString_3], [EnginedVehicle284, EString_1]], [[EnginedVehicle84, EString_2], [EnginedVehicle84, EString_1], [EnginedVehicle84, EString_3], [EnginedVehicle84, EString_0], [Vehicle_3, EString_2], [Vehicle_3, EString_1], [Vehicle_3, EString_3], [Vehicle_3, EString_0], [EnginedVehicle184, EString_2], [EnginedVehicle184, EString_1], [EnginedVehicle184, EString_3], [EnginedVehicle184, EString_0], [EnginedVehicle284, EString_2], [EnginedVehicle284, EString_1], [EnginedVehicle284, EString_3], [EnginedVehicle284, EString_0]]]
- eq: [[], [[TruckList528, TruckList528], [TruckList528, Nil1123], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, TruckList409], [TruckList528, TruckList1004], [Nil1123, TruckList528], [Nil1123, Nil1123], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList647, TruckList528], [TruckList647, Nil1123], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, TruckList528], [TruckList766, Nil1123], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, TruckList528], [TruckList885, Nil1123], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, TruckList528], [TruckList409, Nil1123], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, TruckList528], [TruckList1004, Nil1123], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
- lists: [[[Memory46, TruckList528], [Memory46, Nil1123], [Memory46, TruckList647], [Memory46, TruckList766], [Memory46, TruckList885], [Memory46, TruckList409], [Memory46, TruckList1004]]]
- car: [[[TruckList528, EnginedVehicle284], [TruckList647, EnginedVehicle284], [TruckList766, EnginedVehicle184], [TruckList885, EnginedVehicle284], [TruckList409, EnginedVehicle184], [TruckList1004, EnginedVehicle84]], [[TruckList528, Memory46], [TruckList528, EnginedVehicle84], [TruckList528, TruckList528], [TruckList528, Nil1123], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, Vehicle_3], [TruckList528, EnginedVehicle184], [TruckList528, EnginedVehicle284], [TruckList528, TruckList409], [TruckList528, TruckList1004], [Nil1123, Memory46], [Nil1123, EnginedVehicle84], [Nil1123, TruckList528], [Nil1123, Nil1123], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, Vehicle_3], [Nil1123, EnginedVehicle184], [Nil1123, EnginedVehicle284], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList647, Memory46], [TruckList647, EnginedVehicle84], [TruckList647, TruckList528], [TruckList647, Nil1123], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, Vehicle_3], [TruckList647, EnginedVehicle184], [TruckList647, EnginedVehicle284], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, Memory46], [TruckList766, EnginedVehicle84], [TruckList766, TruckList528], [TruckList766, Nil1123], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, Vehicle_3], [TruckList766, EnginedVehicle184], [TruckList766, EnginedVehicle284], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, Memory46], [TruckList885, EnginedVehicle84], [TruckList885, TruckList528], [TruckList885, Nil1123], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, Vehicle_3], [TruckList885, EnginedVehicle184], [TruckList885, EnginedVehicle284], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, Memory46], [TruckList409, EnginedVehicle84], [TruckList409, TruckList528], [TruckList409, Nil1123], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, Vehicle_3], [TruckList409, EnginedVehicle184], [TruckList409, EnginedVehicle284], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, Memory46], [TruckList1004, EnginedVehicle84], [TruckList1004, TruckList528], [TruckList1004, Nil1123], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, Vehicle_3], [TruckList1004, EnginedVehicle184], [TruckList1004, EnginedVehicle284], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
+ List<List<NonEnginedVehicle>>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ Nil<Nil<NonEnginedVehicle>>: [[], [[Nil1123]]]
+ Nil<BicycleList>: [[], [[Nil1123]]]
+ Nil<List<NonEnginedVehicle>>: [[], [[Nil1123]]]
+ List<?>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ List<Object>: [[], [[Nil1123], [TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]]]
+ "Ferhat": [[[Ferhat]]]
+ vehicles: [[[Memory46, EnginedVehicle84], [Memory46, EnginedVehicle184], [Memory46, EnginedVehicle284]], [[Memory46, EnginedVehicle84], [Memory46, EnginedVehicle184], [Memory46, Vehicle_3], [Memory46, EnginedVehicle284]]]
+ heads: [[], [[Memory46, Nil1123], [Memory46, TruckList528], [Memory46, TruckList647], [Memory46, TruckList766], [Memory46, TruckList885], [Memory46, TruckList409], [Memory46, TruckList1004]]]
+ cdr: [[[TruckList528, TruckList409], [TruckList647, TruckList409], [TruckList766, Nil1123], [TruckList885, Nil1123], [TruckList409, TruckList1004], [TruckList1004, TruckList885]], [[Nil1123, Nil1123], [Nil1123, TruckList528], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList528, Nil1123], [TruckList528, TruckList528], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, TruckList409], [TruckList528, TruckList1004], [TruckList647, Nil1123], [TruckList647, TruckList528], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, Nil1123], [TruckList766, TruckList528], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, Nil1123], [TruckList885, TruckList528], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, Nil1123], [TruckList409, TruckList528], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, Nil1123], [TruckList1004, TruckList528], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
+ name: [[[EnginedVehicle84, EString_0], [EnginedVehicle184, EString_3], [EnginedVehicle284, EString_1]], [[EnginedVehicle84, EString_1], [EnginedVehicle84, EString_3], [EnginedVehicle84, EString_0], [EnginedVehicle84, Ferhat], [EnginedVehicle184, EString_1], [EnginedVehicle184, EString_3], [EnginedVehicle184, EString_0], [EnginedVehicle184, Ferhat], [Vehicle_3, EString_1], [Vehicle_3, EString_3], [Vehicle_3, EString_0], [Vehicle_3, Ferhat], [EnginedVehicle284, EString_1], [EnginedVehicle284, EString_3], [EnginedVehicle284, EString_0], [EnginedVehicle284, Ferhat]]]
+ eq: [[], [[Nil1123, Nil1123], [Nil1123, TruckList528], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList528, Nil1123], [TruckList528, TruckList528], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, TruckList409], [TruckList528, TruckList1004], [TruckList647, Nil1123], [TruckList647, TruckList528], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, Nil1123], [TruckList766, TruckList528], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, Nil1123], [TruckList885, TruckList528], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, Nil1123], [TruckList409, TruckList528], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, Nil1123], [TruckList1004, TruckList528], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
+ lists: [[[Memory46, Nil1123], [Memory46, TruckList528], [Memory46, TruckList647], [Memory46, TruckList766], [Memory46, TruckList885], [Memory46, TruckList409], [Memory46, TruckList1004]]]
+ car: [[[TruckList528, EnginedVehicle284], [TruckList647, EnginedVehicle284], [TruckList766, EnginedVehicle184], [TruckList885, EnginedVehicle284], [TruckList409, EnginedVehicle184], [TruckList1004, EnginedVehicle84]], [[Nil1123, Memory46], [Nil1123, EnginedVehicle84], [Nil1123, Nil1123], [Nil1123, EnginedVehicle184], [Nil1123, TruckList528], [Nil1123, TruckList647], [Nil1123, TruckList766], [Nil1123, TruckList885], [Nil1123, Vehicle_3], [Nil1123, EnginedVehicle284], [Nil1123, TruckList409], [Nil1123, TruckList1004], [TruckList528, Memory46], [TruckList528, EnginedVehicle84], [TruckList528, Nil1123], [TruckList528, EnginedVehicle184], [TruckList528, TruckList528], [TruckList528, TruckList647], [TruckList528, TruckList766], [TruckList528, TruckList885], [TruckList528, Vehicle_3], [TruckList528, EnginedVehicle284], [TruckList528, TruckList409], [TruckList528, TruckList1004], [TruckList647, Memory46], [TruckList647, EnginedVehicle84], [TruckList647, Nil1123], [TruckList647, EnginedVehicle184], [TruckList647, TruckList528], [TruckList647, TruckList647], [TruckList647, TruckList766], [TruckList647, TruckList885], [TruckList647, Vehicle_3], [TruckList647, EnginedVehicle284], [TruckList647, TruckList409], [TruckList647, TruckList1004], [TruckList766, Memory46], [TruckList766, EnginedVehicle84], [TruckList766, Nil1123], [TruckList766, EnginedVehicle184], [TruckList766, TruckList528], [TruckList766, TruckList647], [TruckList766, TruckList766], [TruckList766, TruckList885], [TruckList766, Vehicle_3], [TruckList766, EnginedVehicle284], [TruckList766, TruckList409], [TruckList766, TruckList1004], [TruckList885, Memory46], [TruckList885, EnginedVehicle84], [TruckList885, Nil1123], [TruckList885, EnginedVehicle184], [TruckList885, TruckList528], [TruckList885, TruckList647], [TruckList885, TruckList766], [TruckList885, TruckList885], [TruckList885, Vehicle_3], [TruckList885, EnginedVehicle284], [TruckList885, TruckList409], [TruckList885, TruckList1004], [TruckList409, Memory46], [TruckList409, EnginedVehicle84], [TruckList409, Nil1123], [TruckList409, EnginedVehicle184], [TruckList409, TruckList528], [TruckList409, TruckList647], [TruckList409, TruckList766], [TruckList409, TruckList885], [TruckList409, Vehicle_3], [TruckList409, EnginedVehicle284], [TruckList409, TruckList409], [TruckList409, TruckList1004], [TruckList1004, Memory46], [TruckList1004, EnginedVehicle84], [TruckList1004, Nil1123], [TruckList1004, EnginedVehicle184], [TruckList1004, TruckList528], [TruckList1004, TruckList647], [TruckList1004, TruckList766], [TruckList1004, TruckList885], [TruckList1004, Vehicle_3], [TruckList1004, EnginedVehicle284], [TruckList1004, TruckList409], [TruckList1004, TruckList1004]]]
+ Class<NonEnginedVehicle>: [[[NonEnginedVehicle]]]
+ Class<Nil<Nil<NonEnginedVehicle>>>: [[[Nil<Nil<NonEnginedVehicle>>]]]
+ Class<Nil<Vehicle>>: [[[Nil<Vehicle>]]]
+ Class<Nil<CarList>>: [[[Nil<CarList>]]]
+ Class<Nil<Object>>: [[[Nil<Object>]]]
+ Class<List<TruckList>>: [[[List<TruckList>]]]
+ Class<List<NonEnginedVehicle>>: [[[List<NonEnginedVehicle>]]]
+ Class<Vehicle>: [[[Vehicle]]]
+ Class<List<Memory>>: [[[List<Memory>]]]
+ Class<List<CarList>>: [[[List<CarList>]]]
+ Class<CarList>: [[[CarList]]]
+ Class<Nil<List<EnginedVehicle>>>: [[[Nil<List<EnginedVehicle>>]]]
+ Class<List<? extends Vehicle>>: [[[List<? extends Vehicle>]]]
+ Class<BicycleList>: [[[BicycleList]]]
+ Class<List<?>>: [[[List<?>]]]
+ Class<Nil<BicycleList>>: [[[Nil<BicycleList>]]]
+ Class<List<Nil<NonEnginedVehicle>>>: [[[List<Nil<NonEnginedVehicle>>]]]
+ Class<List<Vehicle>>: [[[List<Vehicle>]]]
+ Class<Nil<TruckList>>: [[[Nil<TruckList>]]]
+ Class<TruckList>: [[[TruckList]]]
+ Class<Memory>: [[[Memory]]]
+ Class<EnginedVehicle>: [[[EnginedVehicle]]]
+ Class<Object>: [[[Object]]]
+ Class<Nil<EnginedVehicle>>: [[[Nil<EnginedVehicle>]]]
+ Class: [[[Nil<Nil<EnginedVehicle>>], [Memory], [Nil<NonEnginedVehicle>], [List<?>], [Vehicle], [List<TruckList>], [TruckList], [List], [List<List<EnginedVehicle>>], [BicycleList], [List<Memory>], [Nil<List<EnginedVehicle>>], [Nil<EnginedVehicle>], [List<CarList>], [List<BicycleList>], [List<Nil<EnginedVehicle>>], [Nil<Memory>], [NonEnginedVehicle], [Object], [List<? extends Vehicle>], [CarList], [Nil<Vehicle>], [List<List<NonEnginedVehicle>>], [Nil<Nil<NonEnginedVehicle>>], [List<Vehicle>], [Nil<Object>], [Nil<BicycleList>], [Nil<TruckList>], [List<NonEnginedVehicle>], [Nil<List<NonEnginedVehicle>>], [List<Object>], [List<Nil<NonEnginedVehicle>>], [Nil], [List<EnginedVehicle>], [Nil<CarList>], [EnginedVehicle], [EString]]]
+ Class<Nil<Nil<EnginedVehicle>>>: [[[Nil<Nil<EnginedVehicle>>]]]
+ Class<List<Nil<EnginedVehicle>>>: [[[List<Nil<EnginedVehicle>>]]]
+ Class<List<List<EnginedVehicle>>>: [[[List<List<EnginedVehicle>>]]]
+ Class<EString>: [[[EString]]]
+ Class<Nil<List<NonEnginedVehicle>>>: [[[Nil<List<NonEnginedVehicle>>]]]
+ Class<List>: [[[List]]]
+ Class<Nil<Memory>>: [[[Nil<Memory>]]]
+ Class<List<List<NonEnginedVehicle>>>: [[[List<List<NonEnginedVehicle>>]]]
+ Class<List<BicycleList>>: [[[List<BicycleList>]]]
+ Class<List<Object>>: [[[List<Object>]]]
+ Class<Nil<NonEnginedVehicle>>: [[[Nil<NonEnginedVehicle>]]]
+ Class<List<EnginedVehicle>>: [[[List<EnginedVehicle>]]]
+ Class<Nil>: [[[Nil]]]
+ class: [[], [[Memory46, Nil<Nil<EnginedVehicle>>], [Memory46, Memory], [Memory46, Nil<NonEnginedVehicle>], [Memory46, List<?>], [Memory46, Vehicle], [Memory46, List<TruckList>], [Memory46, TruckList], [Memory46, List], [Memory46, List<List<EnginedVehicle>>], [Memory46, BicycleList], [Memory46, List<Memory>], [Memory46, Nil<List<EnginedVehicle>>], [Memory46, Nil<EnginedVehicle>], [Memory46, List<CarList>], [Memory46, List<BicycleList>], [Memory46, List<Nil<EnginedVehicle>>], [Memory46, Nil<Memory>], [Memory46, NonEnginedVehicle], [Memory46, Object], [Memory46, List<? extends Vehicle>], [Memory46, CarList], [Memory46, Nil<Vehicle>], [Memory46, List<List<NonEnginedVehicle>>], [Memory46, Nil<Nil<NonEnginedVehicle>>], [Memory46, List<Vehicle>], [Memory46, Nil<Object>], [Memory46, Nil<BicycleList>], [Memory46, Nil<TruckList>], [Memory46, List<NonEnginedVehicle>], [Memory46, Nil<List<NonEnginedVehicle>>], [Memory46, List<Object>], [Memory46, List<Nil<NonEnginedVehicle>>], [Memory46, Nil], [Memory46, List<EnginedVehicle>], [Memory46, Nil<CarList>], [Memory46, EnginedVehicle], [Memory46, EString], [EnginedVehicle84, Nil<Nil<EnginedVehicle>>], [EnginedVehicle84, Memory], [EnginedVehicle84, Nil<NonEnginedVehicle>], [EnginedVehicle84, List<?>], [EnginedVehicle84, Vehicle], [EnginedVehicle84, List<TruckList>], [EnginedVehicle84, TruckList], [EnginedVehicle84, List], [EnginedVehicle84, List<List<EnginedVehicle>>], [EnginedVehicle84, BicycleList], [EnginedVehicle84, List<Memory>], [EnginedVehicle84, Nil<List<EnginedVehicle>>], [EnginedVehicle84, Nil<EnginedVehicle>], [EnginedVehicle84, List<CarList>], [EnginedVehicle84, List<BicycleList>], [EnginedVehicle84, List<Nil<EnginedVehicle>>], [EnginedVehicle84, Nil<Memory>], [EnginedVehicle84, NonEnginedVehicle], [EnginedVehicle84, Object], [EnginedVehicle84, List<? extends Vehicle>], [EnginedVehicle84, CarList], [EnginedVehicle84, Nil<Vehicle>], [EnginedVehicle84, List<List<NonEnginedVehicle>>], [EnginedVehicle84, Nil<Nil<NonEnginedVehicle>>], [EnginedVehicle84, List<Vehicle>], [EnginedVehicle84, Nil<Object>], [EnginedVehicle84, Nil<BicycleList>], [EnginedVehicle84, Nil<TruckList>], [EnginedVehicle84, List<NonEnginedVehicle>], [EnginedVehicle84, Nil<List<NonEnginedVehicle>>], [EnginedVehicle84, List<Object>], [EnginedVehicle84, List<Nil<NonEnginedVehicle>>], [EnginedVehicle84, Nil], [EnginedVehicle84, List<EnginedVehicle>], [EnginedVehicle84, Nil<CarList>], [EnginedVehicle84, EnginedVehicle], [EnginedVehicle84, EString], [Nil1123, Nil<Nil<EnginedVehicle>>], [Nil1123, Memory], [Nil1123, Nil<NonEnginedVehicle>], [Nil1123, List<?>], [Nil1123, Vehicle], [Nil1123, List<TruckList>], [Nil1123, TruckList], [Nil1123, List], [Nil1123, List<List<EnginedVehicle>>], [Nil1123, BicycleList], [Nil1123, List<Memory>], [Nil1123, Nil<List<EnginedVehicle>>], [Nil1123, Nil<EnginedVehicle>], [Nil1123, List<CarList>], [Nil1123, List<BicycleList>], [Nil1123, List<Nil<EnginedVehicle>>], [Nil1123, Nil<Memory>], [Nil1123, NonEnginedVehicle], [Nil1123, Object], [Nil1123, List<? extends Vehicle>], [Nil1123, CarList], [Nil1123, Nil<Vehicle>], [Nil1123, List<List<NonEnginedVehicle>>], [Nil1123, Nil<Nil<NonEnginedVehicle>>], [Nil1123, List<Vehicle>], [Nil1123, Nil<Object>], [Nil1123, Nil<BicycleList>], [Nil1123, Nil<TruckList>], [Nil1123, List<NonEnginedVehicle>], [Nil1123, Nil<List<NonEnginedVehicle>>], [Nil1123, List<Object>], [Nil1123, List<Nil<NonEnginedVehicle>>], [Nil1123, Nil], [Nil1123, List<EnginedVehicle>], [Nil1123, Nil<CarList>], [Nil1123, EnginedVehicle], [Nil1123, EString], [EString_1, Nil<Nil<EnginedVehicle>>], [EString_1, Memory], [EString_1, Nil<NonEnginedVehicle>], [EString_1, List<?>], [EString_1, Vehicle], [EString_1, List<TruckList>], [EString_1, TruckList], [EString_1, List], [EString_1, List<List<EnginedVehicle>>], [EString_1, BicycleList], [EString_1, List<Memory>], [EString_1, Nil<List<EnginedVehicle>>], [EString_1, Nil<EnginedVehicle>], [EString_1, List<CarList>], [EString_1, List<BicycleList>], [EString_1, List<Nil<EnginedVehicle>>], [EString_1, Nil<Memory>], [EString_1, NonEnginedVehicle], [EString_1, Object], [EString_1, List<? extends Vehicle>], [EString_1, CarList], [EString_1, Nil<Vehicle>], [EString_1, List<List<NonEnginedVehicle>>], [EString_1, Nil<Nil<NonEnginedVehicle>>], [EString_1, List<Vehicle>], [EString_1, Nil<Object>], [EString_1, Nil<BicycleList>], [EString_1, Nil<TruckList>], [EString_1, List<NonEnginedVehicle>], [EString_1, Nil<List<NonEnginedVehicle>>], [EString_1, List<Object>], [EString_1, List<Nil<NonEnginedVehicle>>], [EString_1, Nil], [EString_1, List<EnginedVehicle>], [EString_1, Nil<CarList>], [EString_1, EnginedVehicle], [EString_1, EString], [EString_3, Nil<Nil<EnginedVehicle>>], [EString_3, Memory], [EString_3, Nil<NonEnginedVehicle>], [EString_3, List<?>], [EString_3, Vehicle], [EString_3, List<TruckList>], [EString_3, TruckList], [EString_3, List], [EString_3, List<List<EnginedVehicle>>], [EString_3, BicycleList], [EString_3, List<Memory>], [EString_3, Nil<List<EnginedVehicle>>], [EString_3, Nil<EnginedVehicle>], [EString_3, List<CarList>], [EString_3, List<BicycleList>], [EString_3, List<Nil<EnginedVehicle>>], [EString_3, Nil<Memory>], [EString_3, NonEnginedVehicle], [EString_3, Object], [EString_3, List<? extends Vehicle>], [EString_3, CarList], [EString_3, Nil<Vehicle>], [EString_3, List<List<NonEnginedVehicle>>], [EString_3, Nil<Nil<NonEnginedVehicle>>], [EString_3, List<Vehicle>], [EString_3, Nil<Object>], [EString_3, Nil<BicycleList>], [EString_3, Nil<TruckList>], [EString_3, List<NonEnginedVehicle>], [EString_3, Nil<List<NonEnginedVehicle>>], [EString_3, List<Object>], [EString_3, List<Nil<NonEnginedVehicle>>], [EString_3, Nil], [EString_3, List<EnginedVehicle>], [EString_3, Nil<CarList>], [EString_3, EnginedVehicle], [EString_3, EString], [EString_0, Nil<Nil<EnginedVehicle>>], [EString_0, Memory], [EString_0, Nil<NonEnginedVehicle>], [EString_0, List<?>], [EString_0, Vehicle], [EString_0, List<TruckList>], [EString_0, TruckList], [EString_0, List], [EString_0, List<List<EnginedVehicle>>], [EString_0, BicycleList], [EString_0, List<Memory>], [EString_0, Nil<List<EnginedVehicle>>], [EString_0, Nil<EnginedVehicle>], [EString_0, List<CarList>], [EString_0, List<BicycleList>], [EString_0, List<Nil<EnginedVehicle>>], [EString_0, Nil<Memory>], [EString_0, NonEnginedVehicle], [EString_0, Object], [EString_0, List<? extends Vehicle>], [EString_0, CarList], [EString_0, Nil<Vehicle>], [EString_0, List<List<NonEnginedVehicle>>], [EString_0, Nil<Nil<NonEnginedVehicle>>], [EString_0, List<Vehicle>], [EString_0, Nil<Object>], [EString_0, Nil<BicycleList>], [EString_0, Nil<TruckList>], [EString_0, List<NonEnginedVehicle>], [EString_0, Nil<List<NonEnginedVehicle>>], [EString_0, List<Object>], [EString_0, List<Nil<NonEnginedVehicle>>], [EString_0, Nil], [EString_0, List<EnginedVehicle>], [EString_0, Nil<CarList>], [EString_0, EnginedVehicle], [EString_0, EString], [EnginedVehicle184, Nil<Nil<EnginedVehicle>>], [EnginedVehicle184, Memory], [EnginedVehicle184, Nil<NonEnginedVehicle>], [EnginedVehicle184, List<?>], [EnginedVehicle184, Vehicle], [EnginedVehicle184, List<TruckList>], [EnginedVehicle184, TruckList], [EnginedVehicle184, List], [EnginedVehicle184, List<List<EnginedVehicle>>], [EnginedVehicle184, BicycleList], [EnginedVehicle184, List<Memory>], [EnginedVehicle184, Nil<List<EnginedVehicle>>], [EnginedVehicle184, Nil<EnginedVehicle>], [EnginedVehicle184, List<CarList>], [EnginedVehicle184, List<BicycleList>], [EnginedVehicle184, List<Nil<EnginedVehicle>>], [EnginedVehicle184, Nil<Memory>], [EnginedVehicle184, NonEnginedVehicle], [EnginedVehicle184, Object], [EnginedVehicle184, List<? extends Vehicle>], [EnginedVehicle184, CarList], [EnginedVehicle184, Nil<Vehicle>], [EnginedVehicle184, List<List<NonEnginedVehicle>>], [EnginedVehicle184, Nil<Nil<NonEnginedVehicle>>], [EnginedVehicle184, List<Vehicle>], [EnginedVehicle184, Nil<Object>], [EnginedVehicle184, Nil<BicycleList>], [EnginedVehicle184, Nil<TruckList>], [EnginedVehicle184, List<NonEnginedVehicle>], [EnginedVehicle184, Nil<List<NonEnginedVehicle>>], [EnginedVehicle184, List<Object>], [EnginedVehicle184, List<Nil<NonEnginedVehicle>>], [EnginedVehicle184, Nil], [EnginedVehicle184, List<EnginedVehicle>], [EnginedVehicle184, Nil<CarList>], [EnginedVehicle184, EnginedVehicle], [EnginedVehicle184, EString], [TruckList528, Nil<Nil<EnginedVehicle>>], [TruckList528, Memory], [TruckList528, Nil<NonEnginedVehicle>], [TruckList528, List<?>], [TruckList528, Vehicle], [TruckList528, List<TruckList>], [TruckList528, TruckList], [TruckList528, List], [TruckList528, List<List<EnginedVehicle>>], [TruckList528, BicycleList], [TruckList528, List<Memory>], [TruckList528, Nil<List<EnginedVehicle>>], [TruckList528, Nil<EnginedVehicle>], [TruckList528, List<CarList>], [TruckList528, List<BicycleList>], [TruckList528, List<Nil<EnginedVehicle>>], [TruckList528, Nil<Memory>], [TruckList528, NonEnginedVehicle], [TruckList528, Object], [TruckList528, List<? extends Vehicle>], [TruckList528, CarList], [TruckList528, Nil<Vehicle>], [TruckList528, List<List<NonEnginedVehicle>>], [TruckList528, Nil<Nil<NonEnginedVehicle>>], [TruckList528, List<Vehicle>], [TruckList528, Nil<Object>], [TruckList528, Nil<BicycleList>], [TruckList528, Nil<TruckList>], [TruckList528, List<NonEnginedVehicle>], [TruckList528, Nil<List<NonEnginedVehicle>>], [TruckList528, List<Object>], [TruckList528, List<Nil<NonEnginedVehicle>>], [TruckList528, Nil], [TruckList528, List<EnginedVehicle>], [TruckList528, Nil<CarList>], [TruckList528, EnginedVehicle], [TruckList528, EString], [TruckList647, Nil<Nil<EnginedVehicle>>], [TruckList647, Memory], [TruckList647, Nil<NonEnginedVehicle>], [TruckList647, List<?>], [TruckList647, Vehicle], [TruckList647, List<TruckList>], [TruckList647, TruckList], [TruckList647, List], [TruckList647, List<List<EnginedVehicle>>], [TruckList647, BicycleList], [TruckList647, List<Memory>], [TruckList647, Nil<List<EnginedVehicle>>], [TruckList647, Nil<EnginedVehicle>], [TruckList647, List<CarList>], [TruckList647, List<BicycleList>], [TruckList647, List<Nil<EnginedVehicle>>], [TruckList647, Nil<Memory>], [TruckList647, NonEnginedVehicle], [TruckList647, Object], [TruckList647, List<? extends Vehicle>], [TruckList647, CarList], [TruckList647, Nil<Vehicle>], [TruckList647, List<List<NonEnginedVehicle>>], [TruckList647, Nil<Nil<NonEnginedVehicle>>], [TruckList647, List<Vehicle>], [TruckList647, Nil<Object>], [TruckList647, Nil<BicycleList>], [TruckList647, Nil<TruckList>], [TruckList647, List<NonEnginedVehicle>], [TruckList647, Nil<List<NonEnginedVehicle>>], [TruckList647, List<Object>], [TruckList647, List<Nil<NonEnginedVehicle>>], [TruckList647, Nil], [TruckList647, List<EnginedVehicle>], [TruckList647, Nil<CarList>], [TruckList647, EnginedVehicle], [TruckList647, EString], [TruckList766, Nil<Nil<EnginedVehicle>>], [TruckList766, Memory], [TruckList766, Nil<NonEnginedVehicle>], [TruckList766, List<?>], [TruckList766, Vehicle], [TruckList766, List<TruckList>], [TruckList766, TruckList], [TruckList766, List], [TruckList766, List<List<EnginedVehicle>>], [TruckList766, BicycleList], [TruckList766, List<Memory>], [TruckList766, Nil<List<EnginedVehicle>>], [TruckList766, Nil<EnginedVehicle>], [TruckList766, List<CarList>], [TruckList766, List<BicycleList>], [TruckList766, List<Nil<EnginedVehicle>>], [TruckList766, Nil<Memory>], [TruckList766, NonEnginedVehicle], [TruckList766, Object], [TruckList766, List<? extends Vehicle>], [TruckList766, CarList], [TruckList766, Nil<Vehicle>], [TruckList766, List<List<NonEnginedVehicle>>], [TruckList766, Nil<Nil<NonEnginedVehicle>>], [TruckList766, List<Vehicle>], [TruckList766, Nil<Object>], [TruckList766, Nil<BicycleList>], [TruckList766, Nil<TruckList>], [TruckList766, List<NonEnginedVehicle>], [TruckList766, Nil<List<NonEnginedVehicle>>], [TruckList766, List<Object>], [TruckList766, List<Nil<NonEnginedVehicle>>], [TruckList766, Nil], [TruckList766, List<EnginedVehicle>], [TruckList766, Nil<CarList>], [TruckList766, EnginedVehicle], [TruckList766, EString], [TruckList885, Nil<Nil<EnginedVehicle>>], [TruckList885, Memory], [TruckList885, Nil<NonEnginedVehicle>], [TruckList885, List<?>], [TruckList885, Vehicle], [TruckList885, List<TruckList>], [TruckList885, TruckList], [TruckList885, List], [TruckList885, List<List<EnginedVehicle>>], [TruckList885, BicycleList], [TruckList885, List<Memory>], [TruckList885, Nil<List<EnginedVehicle>>], [TruckList885, Nil<EnginedVehicle>], [TruckList885, List<CarList>], [TruckList885, List<BicycleList>], [TruckList885, List<Nil<EnginedVehicle>>], [TruckList885, Nil<Memory>], [TruckList885, NonEnginedVehicle], [TruckList885, Object], [TruckList885, List<? extends Vehicle>], [TruckList885, CarList], [TruckList885, Nil<Vehicle>], [TruckList885, List<List<NonEnginedVehicle>>], [TruckList885, Nil<Nil<NonEnginedVehicle>>], [TruckList885, List<Vehicle>], [TruckList885, Nil<Object>], [TruckList885, Nil<BicycleList>], [TruckList885, Nil<TruckList>], [TruckList885, List<NonEnginedVehicle>], [TruckList885, Nil<List<NonEnginedVehicle>>], [TruckList885, List<Object>], [TruckList885, List<Nil<NonEnginedVehicle>>], [TruckList885, Nil], [TruckList885, List<EnginedVehicle>], [TruckList885, Nil<CarList>], [TruckList885, EnginedVehicle], [TruckList885, EString], [Vehicle_3, Nil<Nil<EnginedVehicle>>], [Vehicle_3, Memory], [Vehicle_3, Nil<NonEnginedVehicle>], [Vehicle_3, List<?>], [Vehicle_3, Vehicle], [Vehicle_3, List<TruckList>], [Vehicle_3, TruckList], [Vehicle_3, List], [Vehicle_3, List<List<EnginedVehicle>>], [Vehicle_3, BicycleList], [Vehicle_3, List<Memory>], [Vehicle_3, Nil<List<EnginedVehicle>>], [Vehicle_3, Nil<EnginedVehicle>], [Vehicle_3, List<CarList>], [Vehicle_3, List<BicycleList>], [Vehicle_3, List<Nil<EnginedVehicle>>], [Vehicle_3, Nil<Memory>], [Vehicle_3, NonEnginedVehicle], [Vehicle_3, Object], [Vehicle_3, List<? extends Vehicle>], [Vehicle_3, CarList], [Vehicle_3, Nil<Vehicle>], [Vehicle_3, List<List<NonEnginedVehicle>>], [Vehicle_3, Nil<Nil<NonEnginedVehicle>>], [Vehicle_3, List<Vehicle>], [Vehicle_3, Nil<Object>], [Vehicle_3, Nil<BicycleList>], [Vehicle_3, Nil<TruckList>], [Vehicle_3, List<NonEnginedVehicle>], [Vehicle_3, Nil<List<NonEnginedVehicle>>], [Vehicle_3, List<Object>], [Vehicle_3, List<Nil<NonEnginedVehicle>>], [Vehicle_3, Nil], [Vehicle_3, List<EnginedVehicle>], [Vehicle_3, Nil<CarList>], [Vehicle_3, EnginedVehicle], [Vehicle_3, EString], [EnginedVehicle284, Nil<Nil<EnginedVehicle>>], [EnginedVehicle284, Memory], [EnginedVehicle284, Nil<NonEnginedVehicle>], [EnginedVehicle284, List<?>], [EnginedVehicle284, Vehicle], [EnginedVehicle284, List<TruckList>], [EnginedVehicle284, TruckList], [EnginedVehicle284, List], [EnginedVehicle284, List<List<EnginedVehicle>>], [EnginedVehicle284, BicycleList], [EnginedVehicle284, List<Memory>], [EnginedVehicle284, Nil<List<EnginedVehicle>>], [EnginedVehicle284, Nil<EnginedVehicle>], [EnginedVehicle284, List<CarList>], [EnginedVehicle284, List<BicycleList>], [EnginedVehicle284, List<Nil<EnginedVehicle>>], [EnginedVehicle284, Nil<Memory>], [EnginedVehicle284, NonEnginedVehicle], [EnginedVehicle284, Object], [EnginedVehicle284, List<? extends Vehicle>], [EnginedVehicle284, CarList], [EnginedVehicle284, Nil<Vehicle>], [EnginedVehicle284, List<List<NonEnginedVehicle>>], [EnginedVehicle284, Nil<Nil<NonEnginedVehicle>>], [EnginedVehicle284, List<Vehicle>], [EnginedVehicle284, Nil<Object>], [EnginedVehicle284, Nil<BicycleList>], [EnginedVehicle284, Nil<TruckList>], [EnginedVehicle284, List<NonEnginedVehicle>], [EnginedVehicle284, Nil<List<NonEnginedVehicle>>], [EnginedVehicle284, List<Object>], [EnginedVehicle284, List<Nil<NonEnginedVehicle>>], [EnginedVehicle284, Nil], [EnginedVehicle284, List<EnginedVehicle>], [EnginedVehicle284, Nil<CarList>], [EnginedVehicle284, EnginedVehicle], [EnginedVehicle284, EString], [TruckList409, Nil<Nil<EnginedVehicle>>], [TruckList409, Memory], [TruckList409, Nil<NonEnginedVehicle>], [TruckList409, List<?>], [TruckList409, Vehicle], [TruckList409, List<TruckList>], [TruckList409, TruckList], [TruckList409, List], [TruckList409, List<List<EnginedVehicle>>], [TruckList409, BicycleList], [TruckList409, List<Memory>], [TruckList409, Nil<List<EnginedVehicle>>], [TruckList409, Nil<EnginedVehicle>], [TruckList409, List<CarList>], [TruckList409, List<BicycleList>], [TruckList409, List<Nil<EnginedVehicle>>], [TruckList409, Nil<Memory>], [TruckList409, NonEnginedVehicle], [TruckList409, Object], [TruckList409, List<? extends Vehicle>], [TruckList409, CarList], [TruckList409, Nil<Vehicle>], [TruckList409, List<List<NonEnginedVehicle>>], [TruckList409, Nil<Nil<NonEnginedVehicle>>], [TruckList409, List<Vehicle>], [TruckList409, Nil<Object>], [TruckList409, Nil<BicycleList>], [TruckList409, Nil<TruckList>], [TruckList409, List<NonEnginedVehicle>], [TruckList409, Nil<List<NonEnginedVehicle>>], [TruckList409, List<Object>], [TruckList409, List<Nil<NonEnginedVehicle>>], [TruckList409, Nil], [TruckList409, List<EnginedVehicle>], [TruckList409, Nil<CarList>], [TruckList409, EnginedVehicle], [TruckList409, EString], [TruckList1004, Nil<Nil<EnginedVehicle>>], [TruckList1004, Memory], [TruckList1004, Nil<NonEnginedVehicle>], [TruckList1004, List<?>], [TruckList1004, Vehicle], [TruckList1004, List<TruckList>], [TruckList1004, TruckList], [TruckList1004, List], [TruckList1004, List<List<EnginedVehicle>>], [TruckList1004, BicycleList], [TruckList1004, List<Memory>], [TruckList1004, Nil<List<EnginedVehicle>>], [TruckList1004, Nil<EnginedVehicle>], [TruckList1004, List<CarList>], [TruckList1004, List<BicycleList>], [TruckList1004, List<Nil<EnginedVehicle>>], [TruckList1004, Nil<Memory>], [TruckList1004, NonEnginedVehicle], [TruckList1004, Object], [TruckList1004, List<? extends Vehicle>], [TruckList1004, CarList], [TruckList1004, Nil<Vehicle>], [TruckList1004, List<List<NonEnginedVehicle>>], [TruckList1004, Nil<Nil<NonEnginedVehicle>>], [TruckList1004, List<Vehicle>], [TruckList1004, Nil<Object>], [TruckList1004, Nil<BicycleList>], [TruckList1004, Nil<TruckList>], [TruckList1004, List<NonEnginedVehicle>], [TruckList1004, Nil<List<NonEnginedVehicle>>], [TruckList1004, List<Object>], [TruckList1004, List<Nil<NonEnginedVehicle>>], [TruckList1004, Nil], [TruckList1004, List<EnginedVehicle>], [TruckList1004, Nil<CarList>], [TruckList1004, EnginedVehicle], [TruckList1004, EString], [Ferhat, Nil<Nil<EnginedVehicle>>], [Ferhat, Memory], [Ferhat, Nil<NonEnginedVehicle>], [Ferhat, List<?>], [Ferhat, Vehicle], [Ferhat, List<TruckList>], [Ferhat, TruckList], [Ferhat, List], [Ferhat, List<List<EnginedVehicle>>], [Ferhat, BicycleList], [Ferhat, List<Memory>], [Ferhat, Nil<List<EnginedVehicle>>], [Ferhat, Nil<EnginedVehicle>], [Ferhat, List<CarList>], [Ferhat, List<BicycleList>], [Ferhat, List<Nil<EnginedVehicle>>], [Ferhat, Nil<Memory>], [Ferhat, NonEnginedVehicle], [Ferhat, Object], [Ferhat, List<? extends Vehicle>], [Ferhat, CarList], [Ferhat, Nil<Vehicle>], [Ferhat, List<List<NonEnginedVehicle>>], [Ferhat, Nil<Nil<NonEnginedVehicle>>], [Ferhat, List<Vehicle>], [Ferhat, Nil<Object>], [Ferhat, Nil<BicycleList>], [Ferhat, Nil<TruckList>], [Ferhat, List<NonEnginedVehicle>], [Ferhat, Nil<List<NonEnginedVehicle>>], [Ferhat, List<Object>], [Ferhat, List<Nil<NonEnginedVehicle>>], [Ferhat, Nil], [Ferhat, List<EnginedVehicle>], [Ferhat, Nil<CarList>], [Ferhat, EnginedVehicle], [Ferhat, EString]]]
 int bounds: 
  []
 
@@ -53,10 +93,15 @@ no (Memory & Object)
 (all m: Memory.lists | lone (m.~(lists + vehicles))) 
 one Memory 
 (all m: Memory | some (m.heads)) 
-Object = (List + Vehicle) 
-List in Object 
+Object = (Vehicle + List) 
 Vehicle in Object 
-no (List & Vehicle) 
+List in Object 
+no (Vehicle & List) 
+Vehicle = (NonEnginedVehicle + EnginedVehicle) 
+NonEnginedVehicle in Vehicle 
+EnginedVehicle in Vehicle 
+no (NonEnginedVehicle & EnginedVehicle) 
+(all v: Vehicle | one (v.name)) 
 List = Nil + CarList + TruckList + BicycleList 
 Nil in List 
 CarList in List 
@@ -72,150 +117,159 @@ no (TruckList & BicycleList)
 (all l: List | lone (l.car)) 
 (all l: List | lone (l.cdr)) 
 one Nil 
-Vehicle = (NonEnginedVehicle + EnginedVehicle) 
-NonEnginedVehicle in Vehicle 
-EnginedVehicle in Vehicle 
-no (NonEnginedVehicle & EnginedVehicle) 
-(all v: Vehicle | one (v.name)) 
-(all l: List | no (l.~cdr) => l in (Memory.heads)) 
+(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq) and  (a.class) = (b.class))) 
 (some a: List, b: List | !(a = b) and a in (b.eq) and #(a.^cdr) > 3) 
-(all v: Vehicle | some (v.~car)) 
+(all v: Object - List | some (v.~car)) 
 no (Nil.car) 
 no (Nil.cdr) 
 (all l: List - Nil | some (l.cdr) and some (l.car)) 
 (all l: List | Nil in (l.*cdr)) 
 (all a: Vehicle, b: Vehicle | !(a = b) => !((a.name) = (b.name))) 
-(all a: List<EnginedVehicle>, b: List<EnginedVehicle> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<Nil<NonEnginedVehicle>>, b: List<Nil<NonEnginedVehicle>> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<Vehicle>, b: List<Vehicle> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<Memory>, b: List<Memory> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<BicycleList>, b: List<BicycleList> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<Nil<EnginedVehicle>>, b: List<Nil<EnginedVehicle>> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<Object>, b: List<Object> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<TruckList>, b: List<TruckList> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<List<EnginedVehicle>>, b: List<List<EnginedVehicle>> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<List<NonEnginedVehicle>>, b: List<List<NonEnginedVehicle>> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<NonEnginedVehicle>, b: List<NonEnginedVehicle> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(all a: List<CarList>, b: List<CarList> | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
+(some v: Vehicle | all v': Vehicle |  (v'.name) = "Ferhat" <=>  v' = v) 
+true 
 vehicles in (Memory -> Vehicle) 
 heads in (Memory -> List) 
 cdr in (List -> List) 
 name in (Vehicle -> EString) 
 eq in (List -> List) 
 lists in (Memory -> List) 
-(Memory.*(lists + vehicles)) = Memory + Object + List + EnginedVehicle + TruckList + CarList + Nil + Vehicle + NonEnginedVehicle + BicycleList 
-#(List) >= 5 
+(Memory.*(lists + vehicles)) = EnginedVehicle + CarList + TruckList + Nil + BicycleList + NonEnginedVehicle + Vehicle + Memory + Object + List 
 #(Vehicle) >= 2 
+#(List) >= 5 
+(all l: univ | l in List<EnginedVehicle> <=> Class<List<EnginedVehicle>> in (l.class)) 
+(all t: univ | t in TruckList <=> Class<TruckList> in (t.class)) 
+(all n: univ | n in Nil<EnginedVehicle> <=> Class<Nil<EnginedVehicle>> in (n.class)) 
+(all n: univ | n in Nil<Object> <=> Class<Nil<Object>> in (n.class)) 
+(all c: univ | c in CarList <=> Class<CarList> in (c.class)) 
+(all l: univ | l in List<?> <=> Class<List<?>> in (l.class)) 
+(all l: univ | l in List<List<EnginedVehicle>> <=> Class<List<List<EnginedVehicle>>> in (l.class)) 
+(all n: univ | n in Nil<Memory> <=> Class<Nil<Memory>> in (n.class)) 
+(all n: univ | n in Nil<TruckList> <=> Class<Nil<TruckList>> in (n.class)) 
+(all n: univ | n in NonEnginedVehicle <=> Class<NonEnginedVehicle> in (n.class)) 
+(all l: univ | l in List<NonEnginedVehicle> <=> Class<List<NonEnginedVehicle>> in (l.class)) 
+(all l: univ | l in List<Object> <=> Class<List<Object>> in (l.class)) 
+(all l: univ | l in List<Memory> <=> Class<List<Memory>> in (l.class)) 
+(all n: univ | n in Nil<Vehicle> <=> Class<Nil<Vehicle>> in (n.class)) 
+(all o: univ | o in Object <=> Class<Object> in (o.class)) 
+(all n: univ | n in Nil<NonEnginedVehicle> <=> Class<Nil<NonEnginedVehicle>> in (n.class)) 
+(all e: univ | e in EnginedVehicle <=> Class<EnginedVehicle> in (e.class)) 
+(all l: univ | l in List<Nil<EnginedVehicle>> <=> Class<List<Nil<EnginedVehicle>>> in (l.class)) 
+(all l: univ | l in List <=> Class<List> in (l.class)) 
+(all n: univ | n in Nil<BicycleList> <=> Class<Nil<BicycleList>> in (n.class)) 
+(all l: univ | l in List<Vehicle> <=> Class<List<Vehicle>> in (l.class)) 
+(all m: univ | m in Memory <=> Class<Memory> in (m.class)) 
+(all l: univ | l in List<List<NonEnginedVehicle>> <=> Class<List<List<NonEnginedVehicle>>> in (l.class)) 
+(all n: univ | n in Nil<List<EnginedVehicle>> <=> Class<Nil<List<EnginedVehicle>>> in (n.class)) 
+(all n: univ | n in Nil <=> Class<Nil> in (n.class)) 
+(all v: univ | v in Vehicle <=> Class<Vehicle> in (v.class)) 
+(all e: univ | e in EString <=> Class<EString> in (e.class)) 
+(all l: univ | l in List<TruckList> <=> Class<List<TruckList>> in (l.class)) 
+(all n: univ | n in Nil<Nil<NonEnginedVehicle>> <=> Class<Nil<Nil<NonEnginedVehicle>>> in (n.class)) 
+(all n: univ | n in Nil<List<NonEnginedVehicle>> <=> Class<Nil<List<NonEnginedVehicle>>> in (n.class)) 
+(all l: univ | l in List<BicycleList> <=> Class<List<BicycleList>> in (l.class)) 
+(all n: univ | n in Nil<CarList> <=> Class<Nil<CarList>> in (n.class)) 
+(all n: univ | n in Nil<Nil<EnginedVehicle>> <=> Class<Nil<Nil<EnginedVehicle>>> in (n.class)) 
+(all b: univ | b in BicycleList <=> Class<BicycleList> in (b.class)) 
+(all l: univ | l in List<? extends Vehicle> <=> Class<List<? extends Vehicle>> in (l.class)) 
+(all l: univ | l in List<Nil<NonEnginedVehicle>> <=> Class<List<Nil<NonEnginedVehicle>>> in (l.class)) 
+(all l: univ | l in List<CarList> <=> Class<List<CarList>> in (l.class)) 
 (Memory.heads) in List<? extends Vehicle> 
 (Memory.lists) in List<?> 
 cdr in (List<List<NonEnginedVehicle>> -> List<List<NonEnginedVehicle>>) + (List<Vehicle> -> List<Vehicle>) + (List<TruckList> -> List<TruckList>) + (List<NonEnginedVehicle> -> List<NonEnginedVehicle>) + (List<Object> -> List<Object>) + (List<List<EnginedVehicle>> -> List<List<EnginedVehicle>>) + (List<Memory> -> List<Memory>) + (List<Nil<NonEnginedVehicle>> -> List<Nil<NonEnginedVehicle>>) + (List<CarList> -> List<CarList>) + (List<EnginedVehicle> -> List<EnginedVehicle>) + (List<BicycleList> -> List<BicycleList>) + (List<Nil<EnginedVehicle>> -> List<Nil<EnginedVehicle>>) 
 eq in (List<List<NonEnginedVehicle>> -> List<List<NonEnginedVehicle>>) + (List<Vehicle> -> List<Vehicle>) + (List<TruckList> -> List<TruckList>) + (List<NonEnginedVehicle> -> List<NonEnginedVehicle>) + (List<Object> -> List<Object>) + (List<List<EnginedVehicle>> -> List<List<EnginedVehicle>>) + (List<Memory> -> List<Memory>) + (List<Nil<NonEnginedVehicle>> -> List<Nil<NonEnginedVehicle>>) + (List<CarList> -> List<CarList>) + (List<EnginedVehicle> -> List<EnginedVehicle>) + (List<BicycleList> -> List<BicycleList>) + (List<Nil<EnginedVehicle>> -> List<Nil<EnginedVehicle>>) 
 car in (List<List<NonEnginedVehicle>> -> List<NonEnginedVehicle>) + (List<Vehicle> -> Vehicle) + (List<TruckList> -> TruckList) + (List<NonEnginedVehicle> -> NonEnginedVehicle) + (List<Object> -> Object) + (List<List<EnginedVehicle>> -> List<EnginedVehicle>) + (List<Memory> -> Memory) + (List<Nil<NonEnginedVehicle>> -> Nil<NonEnginedVehicle>) + (List<CarList> -> CarList) + (List<EnginedVehicle> -> EnginedVehicle) + (List<BicycleList> -> BicycleList) + (List<Nil<EnginedVehicle>> -> Nil<EnginedVehicle>) 
-Nil = Nil<BicycleList> + Nil<Memory> + Nil<TruckList> + Nil<Nil<EnginedVehicle>> + Nil<List<EnginedVehicle>> + Nil<Nil<NonEnginedVehicle>> + Nil<Vehicle> + Nil<NonEnginedVehicle> + Nil<Object> + Nil<List<NonEnginedVehicle>> + Nil<CarList> + Nil<EnginedVehicle> 
-List = Nil + TruckList + CarList + BicycleList + List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<? extends Vehicle> + List<Nil<EnginedVehicle>> + List<TruckList> + List<CarList> + List<Nil<NonEnginedVehicle>> + List<BicycleList> + List<Memory> + List<Vehicle> + List<?> + List<List<EnginedVehicle>> 
-Nil<List<NonEnginedVehicle>> in List<List<NonEnginedVehicle>> 
-Nil<Object> in List<Object> 
-Nil<TruckList> in List<TruckList> 
-Nil<CarList> in List<CarList> 
-Nil<Nil<NonEnginedVehicle>> in List<Nil<NonEnginedVehicle>> 
-Nil<BicycleList> in List<BicycleList> 
+Nil = Nil<List<EnginedVehicle>> + Nil<TruckList> + Nil<Nil<EnginedVehicle>> + Nil<Memory> + Nil<Object> + Nil<EnginedVehicle> + Nil<Vehicle> + Nil<NonEnginedVehicle> + Nil<CarList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<List<NonEnginedVehicle>> 
+List = Nil + TruckList + CarList + BicycleList + List<Nil<EnginedVehicle>> + List<NonEnginedVehicle> + List<List<EnginedVehicle>> + List<Memory> + List<? extends Vehicle> + List<Nil<NonEnginedVehicle>> + List<EnginedVehicle> + List<Vehicle> + List<CarList> + List<BicycleList> + List<TruckList> + List<List<NonEnginedVehicle>> + List<?> + List<Object> 
+CarList in List<EnginedVehicle> 
 TruckList in List<EnginedVehicle> 
 Nil<EnginedVehicle> in List<EnginedVehicle> 
-CarList in List<EnginedVehicle> 
-Nil<NonEnginedVehicle> in List<NonEnginedVehicle> 
-BicycleList in List<NonEnginedVehicle> 
-Nil<Memory> in List<Memory> 
-Nil<Vehicle> in List<Vehicle> 
 Nil<Nil<EnginedVehicle>> in List<Nil<EnginedVehicle>> 
+Nil<Vehicle> in List<Vehicle> 
+BicycleList in List<NonEnginedVehicle> 
+Nil<NonEnginedVehicle> in List<NonEnginedVehicle> 
+Nil<CarList> in List<CarList> 
+Nil<BicycleList> in List<BicycleList> 
 Nil<List<EnginedVehicle>> in List<List<EnginedVehicle>> 
+Nil<TruckList> in List<TruckList> 
+Nil<Memory> in List<Memory> 
+Nil<List<NonEnginedVehicle>> in List<List<NonEnginedVehicle>> 
+Nil<Nil<NonEnginedVehicle>> in List<Nil<NonEnginedVehicle>> 
+Nil<Object> in List<Object> 
 List<? extends Vehicle> = (List<EnginedVehicle> + List<NonEnginedVehicle>) 
-List<?> = List<List<NonEnginedVehicle>> + List<Object> + List<TruckList> + List<CarList> + List<Nil<NonEnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<Memory> + List<Vehicle> + List<Nil<EnginedVehicle>> + List<List<EnginedVehicle>> 
+List<?> = List<EnginedVehicle> + List<Nil<EnginedVehicle>> + List<NonEnginedVehicle> + List<Vehicle> + List<CarList> + List<List<EnginedVehicle>> + List<BicycleList> + List<TruckList> + List<List<NonEnginedVehicle>> + List<Memory> + List<Nil<NonEnginedVehicle>> + List<Object> 
 CarList in List<EnginedVehicle> 
 TruckList in List<EnginedVehicle> 
 BicycleList in List<NonEnginedVehicle> 
-no (Nil<BicycleList> & Nil<Nil<EnginedVehicle>>) 
-no (Nil<CarList> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList>)) 
-no (Nil<EnginedVehicle> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList>)) 
-no (Nil<List<EnginedVehicle>> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle>)) 
-no (Nil<Memory> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>>)) 
-no (Nil<Nil<NonEnginedVehicle>> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory>)) 
-no (Nil<Vehicle> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory> + Nil<Nil<NonEnginedVehicle>>)) 
-no (Nil<TruckList> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory> + Nil<Nil<NonEnginedVehicle>> + Nil<Vehicle>)) 
-no (Nil<NonEnginedVehicle> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory> + Nil<Nil<NonEnginedVehicle>> + Nil<Vehicle> + Nil<TruckList>)) 
-no (Nil<Object> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory> + Nil<Nil<NonEnginedVehicle>> + Nil<Vehicle> + Nil<TruckList> + Nil<NonEnginedVehicle>)) 
-no (Nil<List<NonEnginedVehicle>> & (Nil<Nil<EnginedVehicle>> + Nil<BicycleList> + Nil<CarList> + Nil<EnginedVehicle> + Nil<List<EnginedVehicle>> + Nil<Memory> + Nil<Nil<NonEnginedVehicle>> + Nil<Vehicle> + Nil<TruckList> + Nil<NonEnginedVehicle> + Nil<Object>)) 
-no (List<Object> & List<List<NonEnginedVehicle>>) 
-no (List<EnginedVehicle> & (List<List<NonEnginedVehicle>> + List<Object>)) 
-no (List<NonEnginedVehicle> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle>)) 
-no (List<TruckList> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle>)) 
-no (List<CarList> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList>)) 
-no (List<Memory> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList>)) 
-no (List<Vehicle> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList> + List<Memory>)) 
-no (List<Nil<EnginedVehicle>> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList> + List<Memory> + List<Vehicle>)) 
-no (List<Nil<NonEnginedVehicle>> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList> + List<Memory> + List<Vehicle> + List<Nil<EnginedVehicle>>)) 
-no (List<List<EnginedVehicle>> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList> + List<Memory> + List<Vehicle> + List<Nil<EnginedVehicle>> + List<Nil<NonEnginedVehicle>>)) 
-no (List<BicycleList> & (List<List<NonEnginedVehicle>> + List<Object> + List<EnginedVehicle> + List<NonEnginedVehicle> + List<TruckList> + List<CarList> + List<Memory> + List<Vehicle> + List<Nil<EnginedVehicle>> + List<Nil<NonEnginedVehicle>> + List<List<EnginedVehicle>>))
+no (Nil<List<EnginedVehicle>> & Nil<Memory>) 
+no (Nil<CarList> & (Nil<Memory> + Nil<List<EnginedVehicle>>)) 
+no (Nil<TruckList> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList>)) 
+no (Nil<Nil<NonEnginedVehicle>> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList>)) 
+no (Nil<BicycleList> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>>)) 
+no (Nil<EnginedVehicle> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList>)) 
+no (Nil<Vehicle> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<EnginedVehicle>)) 
+no (Nil<List<NonEnginedVehicle>> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<EnginedVehicle> + Nil<Vehicle>)) 
+no (Nil<Object> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<EnginedVehicle> + Nil<Vehicle> + Nil<List<NonEnginedVehicle>>)) 
+no (Nil<Nil<EnginedVehicle>> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<EnginedVehicle> + Nil<Vehicle> + Nil<List<NonEnginedVehicle>> + Nil<Object>)) 
+no (Nil<NonEnginedVehicle> & (Nil<Memory> + Nil<List<EnginedVehicle>> + Nil<CarList> + Nil<TruckList> + Nil<Nil<NonEnginedVehicle>> + Nil<BicycleList> + Nil<EnginedVehicle> + Nil<Vehicle> + Nil<List<NonEnginedVehicle>> + Nil<Object> + Nil<Nil<EnginedVehicle>>)) 
+no (List<BicycleList> & List<List<EnginedVehicle>>) 
+no (List<EnginedVehicle> & (List<List<EnginedVehicle>> + List<BicycleList>)) 
+no (List<TruckList> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle>)) 
+no (List<Nil<EnginedVehicle>> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList>)) 
+no (List<Memory> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>>)) 
+no (List<List<NonEnginedVehicle>> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory>)) 
+no (List<NonEnginedVehicle> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory> + List<List<NonEnginedVehicle>>)) 
+no (List<Vehicle> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory> + List<List<NonEnginedVehicle>> + List<NonEnginedVehicle>)) 
+no (List<Nil<NonEnginedVehicle>> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory> + List<List<NonEnginedVehicle>> + List<NonEnginedVehicle> + List<Vehicle>)) 
+no (List<CarList> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory> + List<List<NonEnginedVehicle>> + List<NonEnginedVehicle> + List<Vehicle> + List<Nil<NonEnginedVehicle>>)) 
+no (List<Object> & (List<List<EnginedVehicle>> + List<BicycleList> + List<EnginedVehicle> + List<TruckList> + List<Nil<EnginedVehicle>> + List<Memory> + List<List<NonEnginedVehicle>> + List<NonEnginedVehicle> + List<Vehicle> + List<Nil<NonEnginedVehicle>> + List<CarList>))
 
 ---OUTCOME---
-SATISFIABLE
+UNSATISFIABLE
 
----INSTANCE---
-relations: {Nil=[[Nil1123]], List=[[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]], Vehicle=[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], NonEnginedVehicle=[], EString=[[EString_1], [EString_3], [EString_0]], EnginedVehicle=[[EnginedVehicle84], [EnginedVehicle184], [EnginedVehicle284]], Object=[[EnginedVehicle84], [TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [EnginedVehicle184], [EnginedVehicle284], [TruckList409], [TruckList1004]], CarList=[], TruckList=[[TruckList528], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]], BicycleList=[], Memory=[[Memory46]], List<List<NonEnginedVehicle>>=[], List<Object>=[], Nil<BicycleList>=[], Nil<Memory>=[], Nil<TruckList>=[], List<EnginedVehicle>=[[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]], List<NonEnginedVehicle>=[], Nil<Nil<EnginedVehicle>>=[], List<? extends Vehicle>=[[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]], List<Nil<EnginedVehicle>>=[], List<TruckList>=[], List<CarList>=[], Nil<List<EnginedVehicle>>=[], List<Nil<NonEnginedVehicle>>=[], Nil<Nil<NonEnginedVehicle>>=[], Nil<Vehicle>=[], Nil<NonEnginedVehicle>=[], List<BicycleList>=[], Nil<Object>=[], Nil<List<NonEnginedVehicle>>=[], Nil<CarList>=[], List<Memory>=[], List<Vehicle>=[], Nil<EnginedVehicle>=[[Nil1123]], List<?>=[[TruckList528], [Nil1123], [TruckList647], [TruckList766], [TruckList885], [TruckList409], [TruckList1004]], List<List<EnginedVehicle>>=[], vehicles=[[Memory46, EnginedVehicle84], [Memory46, EnginedVehicle184], [Memory46, EnginedVehicle284]], heads=[[Memory46, TruckList528], [Memory46, TruckList647], [Memory46, TruckList766]], cdr=[[TruckList528, TruckList409], [TruckList647, TruckList409], [TruckList766, Nil1123], [TruckList885, Nil1123], [TruckList409, TruckList1004], [TruckList1004, TruckList885]], name=[[EnginedVehicle84, EString_0], [EnginedVehicle184, EString_3], [EnginedVehicle284, EString_1]], eq=[[TruckList528, TruckList528], [TruckList528, TruckList647], [Nil1123, Nil1123], [TruckList647, TruckList528], [TruckList647, TruckList647], [TruckList766, TruckList766], [TruckList885, TruckList885], [TruckList409, TruckList409], [TruckList1004, TruckList1004]], lists=[[Memory46, TruckList528], [Memory46, Nil1123], [Memory46, TruckList647], [Memory46, TruckList766], [Memory46, TruckList885], [Memory46, TruckList409], [Memory46, TruckList1004]], car=[[TruckList528, EnginedVehicle284], [TruckList647, EnginedVehicle284], [TruckList766, EnginedVehicle184], [TruckList885, EnginedVehicle284], [TruckList409, EnginedVehicle184], [TruckList1004, EnginedVehicle84]], $a=[[TruckList647]], $b=[[TruckList528]]}
-ints: []
+---PROOF---
+kodkod.engine.ResolutionBasedProof@7f759883
 
 ---STATS---
-p cnf 4718 12035
-primary variables: 320
-translation time: 37 ms
-solving time: 1 ms
+p cnf 6258 17940
+primary variables: 915
+translation time: 53 ms
+solving time: 3 ms
 
 
 Nil<V>:         Nil1123
-List<E>:        TruckList409, TruckList528, Nil1123, TruckList647, TruckList766, TruckList885, TruckList1004
-Vehicle:        EnginedVehicle184, EnginedVehicle84, EnginedVehicle284
 NonEnginedVehicle: 
-EString:        EString_1, EString_3, EString_0
+EString:        EString_1, EString_3, EString_0, Ferhat
+Memory:         Memory46
 EnginedVehicle: EnginedVehicle184, EnginedVehicle84, EnginedVehicle284
-Object:         EnginedVehicle184, EnginedVehicle84, EnginedVehicle284, TruckList409, TruckList528, Nil1123, TruckList647, TruckList766, TruckList885, TruckList1004
+Object:         EnginedVehicle184, EnginedVehicle84, TruckList409, EnginedVehicle284, Nil1123, TruckList528, TruckList647, TruckList766, TruckList885, TruckList1004
 CarList:        
+Vehicle:        EnginedVehicle184, EnginedVehicle84, EnginedVehicle284
 TruckList:      TruckList409, TruckList528, TruckList647, TruckList766, TruckList885, TruckList1004
 BicycleList:    
-Memory:         Memory46
+List<E>:        TruckList409, Nil1123, TruckList528, TruckList647, TruckList766, TruckList885, TruckList1004
 
-vehicles (Memory46, EnginedVehicle84)
 vehicles (Memory46, EnginedVehicle184)
+vehicles (Memory46, EnginedVehicle84)
 vehicles (Memory46, EnginedVehicle284)
-heads (Memory46, TruckList528)
-heads (Memory46, TruckList647)
-heads (Memory46, TruckList766)
-cdr (TruckList528, TruckList409)
+cdr (TruckList409, TruckList1004)
+cdr (TruckList885, Nil1123)
 cdr (TruckList647, TruckList409)
 cdr (TruckList766, Nil1123)
-cdr (TruckList885, Nil1123)
-cdr (TruckList409, TruckList1004)
 cdr (TruckList1004, TruckList885)
-name (EnginedVehicle84, EString_0)
+cdr (TruckList528, TruckList409)
 name (EnginedVehicle184, EString_3)
+name (EnginedVehicle84, EString_0)
 name (EnginedVehicle284, EString_1)
-eq (TruckList528, TruckList528)
-eq (TruckList528, TruckList647)
-eq (Nil1123, Nil1123)
-eq (TruckList647, TruckList528)
-eq (TruckList647, TruckList647)
-eq (TruckList766, TruckList766)
-eq (TruckList885, TruckList885)
-eq (TruckList409, TruckList409)
-eq (TruckList1004, TruckList1004)
-lists (Memory46, TruckList528)
-lists (Memory46, Nil1123)
-lists (Memory46, TruckList647)
-lists (Memory46, TruckList766)
 lists (Memory46, TruckList885)
-lists (Memory46, TruckList409)
+lists (Memory46, Nil1123)
+lists (Memory46, TruckList766)
 lists (Memory46, TruckList1004)
-car (TruckList528, EnginedVehicle284)
+lists (Memory46, TruckList409)
+lists (Memory46, TruckList647)
+lists (Memory46, TruckList528)
+car (TruckList409, EnginedVehicle184)
+car (TruckList885, EnginedVehicle284)
 car (TruckList647, EnginedVehicle284)
 car (TruckList766, EnginedVehicle184)
-car (TruckList885, EnginedVehicle284)
-car (TruckList409, EnginedVehicle184)
 car (TruckList1004, EnginedVehicle84)
+car (TruckList528, EnginedVehicle284)
