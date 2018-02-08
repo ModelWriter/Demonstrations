@@ -2,7 +2,7 @@
 <tol:Memory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.theoryoflists" xsi:schemaLocation="eu.modelwriter.examples.theoryoflists TheoryOfLists.ecore">
   <vehicles xsi:type="tol:EnginedVehicle" name="EString_0"/>
   <vehicles xsi:type="tol:EnginedVehicle" name="EString_3"/>
-  <vehicles xsi:type="tol:EnginedVehicle" name="EString_1"/>
+  <vehicles xsi:type="tol:EnginedVehicle" name="Ferhat"/>
   <lists xsi:type="tol:TruckList" car="//@vehicles.1" cdr="//@lists.5"/>
   <lists xsi:type="tol:TruckList" car="//@vehicles.2" cdr="//@lists.0"/>
   <lists xsi:type="tol:TruckList" car="//@vehicles.2" cdr="//@lists.0"/>

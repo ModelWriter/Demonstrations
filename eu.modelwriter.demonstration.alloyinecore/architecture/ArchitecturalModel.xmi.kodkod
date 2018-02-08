@@ -1,21 +1,21 @@
-[72893, 93174, Default Description, 1576, Component639, Component1099, EString_2, EString_1, EString_4, EString_3, EString_5, false, 20606, 75299, EString_0, 11835, Component428, true, Component1341, ArchitecturalModel53, 10584, Component103, Component840, Component266]
+[16377, 26730, 22452, 33293, Default Description, Component639, 33218, 2208, EString_2, EString_1, EString_4, EString_3, EString_5, false, EString_0, 28163, Component841, Component428, true, Component1341, Component1100, ArchitecturalModel53, Component103, Component266]
 
 relation bounds:
- Component: [[[Component639], [Component1099], [Component428], [Component1341], [Component103], [Component840], [Component266]]]
- EString: [[[Default Description], [EString_0]], [[Default Description], [EString_2], [EString_1], [EString_4], [EString_3], [EString_5], [EString_0]]]
- EInt: [[[72893], [93174], [1576], [20606], [75299], [11835], [10584]]]
+ Component: [[[Component639], [Component841], [Component428], [Component1341], [Component1100], [Component103], [Component266]]]
+ EString: [[[Default Description], [EString_5], [EString_0]], [[Default Description], [EString_2], [EString_1], [EString_4], [EString_3], [EString_5], [EString_0]]]
+ EInt: [[[16377], [26730], [22452], [33293], [33218], [2208], [28163]]]
  EBoolean: [[[false], [true]]]
  ArchitecturalModel: [[[ArchitecturalModel53]]]
- ArchitecturalElement: [[[Component639], [Component1099], [Component428], [Component1341], [Component103], [Component840], [Component266]]]
- False: [[[false]]]
+ ArchitecturalElement: [[[Component639], [Component841], [Component428], [Component1341], [Component1100], [Component103], [Component266]]]
  True: [[[true]]]
- root: [[[ArchitecturalModel53, Component103]], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1099], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component840], [ArchitecturalModel53, Component266]]]
- elements: [[[ArchitecturalModel53, Component103]], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1099], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component840], [ArchitecturalModel53, Component266]]]
- identifier: [[[Component639, 1576], [Component1099, 10584], [Component428, 75299], [Component1341, 20606], [Component103, 72893], [Component840, 93174], [Component266, 11835]], [[Component639, 72893], [Component639, 93174], [Component639, 1576], [Component639, 20606], [Component639, 75299], [Component639, 11835], [Component639, 10584], [Component1099, 72893], [Component1099, 93174], [Component1099, 1576], [Component1099, 20606], [Component1099, 75299], [Component1099, 11835], [Component1099, 10584], [Component428, 72893], [Component428, 93174], [Component428, 1576], [Component428, 20606], [Component428, 75299], [Component428, 11835], [Component428, 10584], [Component1341, 72893], [Component1341, 93174], [Component1341, 1576], [Component1341, 20606], [Component1341, 75299], [Component1341, 11835], [Component1341, 10584], [Component103, 72893], [Component103, 93174], [Component103, 1576], [Component103, 20606], [Component103, 75299], [Component103, 11835], [Component103, 10584], [Component840, 72893], [Component840, 93174], [Component840, 1576], [Component840, 20606], [Component840, 75299], [Component840, 11835], [Component840, 10584], [Component266, 72893], [Component266, 93174], [Component266, 1576], [Component266, 20606], [Component266, 75299], [Component266, 11835], [Component266, 10584]]]
- isLeaf: [[], [[Component639, false], [Component639, true], [Component1099, false], [Component1099, true], [Component428, false], [Component428, true], [Component1341, false], [Component1341, true], [Component103, false], [Component103, true], [Component840, false], [Component840, true], [Component266, false], [Component266, true]]]
- name: [[[Component639, EString_0], [Component1099, EString_0], [Component428, EString_0], [Component1341, EString_0], [Component103, EString_0], [Component840, EString_0], [Component266, EString_0]], [[Component639, Default Description], [Component639, EString_2], [Component639, EString_1], [Component639, EString_4], [Component639, EString_3], [Component639, EString_5], [Component639, EString_0], [Component1099, Default Description], [Component1099, EString_2], [Component1099, EString_1], [Component1099, EString_4], [Component1099, EString_3], [Component1099, EString_5], [Component1099, EString_0], [Component428, Default Description], [Component428, EString_2], [Component428, EString_1], [Component428, EString_4], [Component428, EString_3], [Component428, EString_5], [Component428, EString_0], [Component1341, Default Description], [Component1341, EString_2], [Component1341, EString_1], [Component1341, EString_4], [Component1341, EString_3], [Component1341, EString_5], [Component1341, EString_0], [Component103, Default Description], [Component103, EString_2], [Component103, EString_1], [Component103, EString_4], [Component103, EString_3], [Component103, EString_5], [Component103, EString_0], [Component840, Default Description], [Component840, EString_2], [Component840, EString_1], [Component840, EString_4], [Component840, EString_3], [Component840, EString_5], [Component840, EString_0], [Component266, Default Description], [Component266, EString_2], [Component266, EString_1], [Component266, EString_4], [Component266, EString_3], [Component266, EString_5], [Component266, EString_0]]]
- subComponents: [[[Component428, Component639], [Component428, Component840], [Component103, Component428], [Component103, Component266], [Component840, Component1099], [Component840, Component1341]], [[Component639, Component639], [Component639, Component1099], [Component639, Component428], [Component639, Component1341], [Component639, Component103], [Component639, Component840], [Component639, Component266], [Component1099, Component639], [Component1099, Component1099], [Component1099, Component428], [Component1099, Component1341], [Component1099, Component103], [Component1099, Component840], [Component1099, Component266], [Component428, Component639], [Component428, Component1099], [Component428, Component428], [Component428, Component1341], [Component428, Component103], [Component428, Component840], [Component428, Component266], [Component1341, Component639], [Component1341, Component1099], [Component1341, Component428], [Component1341, Component1341], [Component1341, Component103], [Component1341, Component840], [Component1341, Component266], [Component103, Component639], [Component103, Component1099], [Component103, Component428], [Component103, Component1341], [Component103, Component103], [Component103, Component840], [Component103, Component266], [Component840, Component639], [Component840, Component1099], [Component840, Component428], [Component840, Component1341], [Component840, Component103], [Component840, Component840], [Component840, Component266], [Component266, Component639], [Component266, Component1099], [Component266, Component428], [Component266, Component1341], [Component266, Component103], [Component266, Component840], [Component266, Component266]]]
- leaves: [[[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1099], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component266]], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1099], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component840], [ArchitecturalModel53, Component266]]]
+ False: [[[false]]]
+ root: [[], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component841], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component1100], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component266]]]
+ elements: [[[ArchitecturalModel53, Component103]], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component841], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component1100], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component266]]]
+ identifier: [[[Component639, 28163], [Component841, 33293], [Component428, 26730], [Component1341, 22452], [Component1100, 2208], [Component103, 16377], [Component266, 33218]], [[Component639, 16377], [Component639, 26730], [Component639, 22452], [Component639, 33293], [Component639, 33218], [Component639, 2208], [Component639, 28163], [Component841, 16377], [Component841, 26730], [Component841, 22452], [Component841, 33293], [Component841, 33218], [Component841, 2208], [Component841, 28163], [Component428, 16377], [Component428, 26730], [Component428, 22452], [Component428, 33293], [Component428, 33218], [Component428, 2208], [Component428, 28163], [Component1341, 16377], [Component1341, 26730], [Component1341, 22452], [Component1341, 33293], [Component1341, 33218], [Component1341, 2208], [Component1341, 28163], [Component1100, 16377], [Component1100, 26730], [Component1100, 22452], [Component1100, 33293], [Component1100, 33218], [Component1100, 2208], [Component1100, 28163], [Component103, 16377], [Component103, 26730], [Component103, 22452], [Component103, 33293], [Component103, 33218], [Component103, 2208], [Component103, 28163], [Component266, 16377], [Component266, 26730], [Component266, 22452], [Component266, 33293], [Component266, 33218], [Component266, 2208], [Component266, 28163]]]
+ isLeaf: [[], [[Component639, false], [Component639, true], [Component841, false], [Component841, true], [Component428, false], [Component428, true], [Component1341, false], [Component1341, true], [Component1100, false], [Component1100, true], [Component103, false], [Component103, true], [Component266, false], [Component266, true]]]
+ name: [[[Component639, EString_0], [Component841, EString_5], [Component428, EString_0], [Component1341, EString_0], [Component1100, EString_0], [Component103, EString_5], [Component266, EString_0]], [[Component639, Default Description], [Component639, EString_2], [Component639, EString_1], [Component639, EString_4], [Component639, EString_3], [Component639, EString_5], [Component639, EString_0], [Component841, Default Description], [Component841, EString_2], [Component841, EString_1], [Component841, EString_4], [Component841, EString_3], [Component841, EString_5], [Component841, EString_0], [Component428, Default Description], [Component428, EString_2], [Component428, EString_1], [Component428, EString_4], [Component428, EString_3], [Component428, EString_5], [Component428, EString_0], [Component1341, Default Description], [Component1341, EString_2], [Component1341, EString_1], [Component1341, EString_4], [Component1341, EString_3], [Component1341, EString_5], [Component1341, EString_0], [Component1100, Default Description], [Component1100, EString_2], [Component1100, EString_1], [Component1100, EString_4], [Component1100, EString_3], [Component1100, EString_5], [Component1100, EString_0], [Component103, Default Description], [Component103, EString_2], [Component103, EString_1], [Component103, EString_4], [Component103, EString_3], [Component103, EString_5], [Component103, EString_0], [Component266, Default Description], [Component266, EString_2], [Component266, EString_1], [Component266, EString_4], [Component266, EString_3], [Component266, EString_5], [Component266, EString_0]]]
+ subComponents: [[[Component841, Component1341], [Component841, Component1100], [Component428, Component639], [Component428, Component841], [Component103, Component428], [Component103, Component266]], [[Component639, Component639], [Component639, Component841], [Component639, Component428], [Component639, Component1341], [Component639, Component1100], [Component639, Component103], [Component639, Component266], [Component841, Component639], [Component841, Component841], [Component841, Component428], [Component841, Component1341], [Component841, Component1100], [Component841, Component103], [Component841, Component266], [Component428, Component639], [Component428, Component841], [Component428, Component428], [Component428, Component1341], [Component428, Component1100], [Component428, Component103], [Component428, Component266], [Component1341, Component639], [Component1341, Component841], [Component1341, Component428], [Component1341, Component1341], [Component1341, Component1100], [Component1341, Component103], [Component1341, Component266], [Component1100, Component639], [Component1100, Component841], [Component1100, Component428], [Component1100, Component1341], [Component1100, Component1100], [Component1100, Component103], [Component1100, Component266], [Component103, Component639], [Component103, Component841], [Component103, Component428], [Component103, Component1341], [Component103, Component1100], [Component103, Component103], [Component103, Component266], [Component266, Component639], [Component266, Component841], [Component266, Component428], [Component266, Component1341], [Component266, Component1100], [Component266, Component103], [Component266, Component266]]]
+ leaves: [[[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component1100]], [[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component841], [ArchitecturalModel53, Component428], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component1100], [ArchitecturalModel53, Component103], [ArchitecturalModel53, Component266]]]
 int bounds: 
  []
 
@@ -45,61 +45,62 @@ isLeaf in (Component -> EBoolean)
 name in (ArchitecturalElement -> EString) 
 subComponents in (Component -> Component) 
 leaves in (ArchitecturalModel -> Component) 
-(ArchitecturalModel.*(elements + subComponents)) = Component + ArchitecturalElement + ArchitecturalModel 
+(ArchitecturalModel.*(elements + subComponents)) = Component + ArchitecturalModel + ArchitecturalElement 
 #(ArchitecturalElement) >= 7 
+true 
 true
 
 ---OUTCOME---
 SATISFIABLE
 
 ---INSTANCE---
-relations: {Component=[[Component639], [Component1099], [Component428], [Component1341], [Component103], [Component840], [Component266]], EString=[[Default Description], [EString_5], [EString_0]], EInt=[[72893], [93174], [1576], [20606], [75299], [11835], [10584]], EBoolean=[[false], [true]], ArchitecturalModel=[[ArchitecturalModel53]], ArchitecturalElement=[[Component639], [Component1099], [Component428], [Component1341], [Component103], [Component840], [Component266]], True=[[true]], root=[[ArchitecturalModel53, Component103]], elements=[[ArchitecturalModel53, Component103]], identifier=[[Component639, 1576], [Component1099, 10584], [Component428, 75299], [Component1341, 20606], [Component103, 72893], [Component840, 93174], [Component266, 11835]], isLeaf=[[Component639, true], [Component1099, true], [Component428, false], [Component1341, true], [Component103, false], [Component840, false], [Component266, true]], name=[[Component639, EString_0], [Component1099, EString_0], [Component428, EString_0], [Component1341, EString_0], [Component103, EString_0], [Component840, EString_0], [Component266, EString_0]], subComponents=[[Component428, Component639], [Component428, Component840], [Component103, Component428], [Component103, Component266], [Component840, Component1099], [Component840, Component1341]], leaves=[[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1099], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component266]], False=[[false]]}
+relations: {Component=[[Component639], [Component841], [Component428], [Component1341], [Component1100], [Component103], [Component266]], EString=[[Default Description], [EString_3], [EString_5], [EString_0]], EInt=[[16377], [26730], [22452], [33293], [33218], [2208], [28163]], EBoolean=[[false], [true]], ArchitecturalModel=[[ArchitecturalModel53]], ArchitecturalElement=[[Component639], [Component841], [Component428], [Component1341], [Component1100], [Component103], [Component266]], True=[[true]], root=[[ArchitecturalModel53, Component103]], elements=[[ArchitecturalModel53, Component103]], identifier=[[Component639, 28163], [Component841, 33293], [Component428, 26730], [Component1341, 22452], [Component1100, 2208], [Component103, 16377], [Component266, 33218]], isLeaf=[[Component639, true], [Component841, false], [Component428, false], [Component1341, true], [Component1100, true], [Component103, false], [Component266, true]], name=[[Component639, EString_0], [Component841, EString_5], [Component428, EString_0], [Component1341, EString_0], [Component1100, EString_0], [Component103, EString_5], [Component266, EString_0]], subComponents=[[Component841, Component1341], [Component841, Component1100], [Component428, Component639], [Component428, Component841], [Component103, Component428], [Component103, Component266]], leaves=[[ArchitecturalModel53, Component639], [ArchitecturalModel53, Component1341], [ArchitecturalModel53, Component1100], [ArchitecturalModel53, Component266]], False=[[false]]}
 ints: []
 
 ---STATS---
-p cnf 1958 1887
-primary variables: 161
-translation time: 6 ms
+p cnf 1914 3107
+primary variables: 162
+translation time: 47 ms
 solving time: 1 ms
 
 
-Component:      Component639, Component428, Component1099, Component1341, Component103, Component840, Component266
-EString:        Default Description, EString_5, EString_0
-EInt:           11835, 1576, 72893, 20606, 75299, 10584, 93174
+Component:      Component841, Component639, Component428, Component1341, Component1100, Component103, Component266
+EString:        Default Description, EString_3, EString_5, EString_0
+EInt:           28163, 16377, 26730, 22452, 33293, 33218, 2208
 EBoolean:       false, true
 ArchitecturalModel: ArchitecturalModel53
-ArchitecturalElement: Component639, Component428, Component1099, Component1341, Component103, Component840, Component266
+ArchitecturalElement: Component841, Component639, Component428, Component1341, Component1100, Component103, Component266
 
 root (ArchitecturalModel53, Component103)
 elements (ArchitecturalModel53, Component103)
-identifier (Component639, 1576)
-identifier (Component1099, 10584)
-identifier (Component428, 75299)
-identifier (Component1341, 20606)
-identifier (Component103, 72893)
-identifier (Component840, 93174)
-identifier (Component266, 11835)
+identifier (Component639, 28163)
+identifier (Component841, 33293)
+identifier (Component428, 26730)
+identifier (Component1341, 22452)
+identifier (Component1100, 2208)
+identifier (Component103, 16377)
+identifier (Component266, 33218)
 isLeaf (Component639, true)
-isLeaf (Component1099, true)
+isLeaf (Component841, false)
 isLeaf (Component428, false)
 isLeaf (Component1341, true)
+isLeaf (Component1100, true)
 isLeaf (Component103, false)
-isLeaf (Component840, false)
 isLeaf (Component266, true)
 name (Component639, EString_0)
-name (Component1099, EString_0)
+name (Component841, EString_5)
 name (Component428, EString_0)
 name (Component1341, EString_0)
-name (Component103, EString_0)
-name (Component840, EString_0)
+name (Component1100, EString_0)
+name (Component103, EString_5)
 name (Component266, EString_0)
+subComponents (Component841, Component1341)
+subComponents (Component841, Component1100)
 subComponents (Component428, Component639)
-subComponents (Component428, Component840)
+subComponents (Component428, Component841)
 subComponents (Component103, Component428)
 subComponents (Component103, Component266)
-subComponents (Component840, Component1099)
-subComponents (Component840, Component1341)
 leaves (ArchitecturalModel53, Component639)
-leaves (ArchitecturalModel53, Component1099)
 leaves (ArchitecturalModel53, Component1341)
+leaves (ArchitecturalModel53, Component1100)
 leaves (ArchitecturalModel53, Component266)

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <arch:ArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arch="eu.modelwriter.demonstrations.metamodels.architecture" xsi:schemaLocation="eu.modelwriter.demonstrations.metamodels.architecture Architecture.ecore">
-  <elements xsi:type="arch:Component" identifier="72893" name="EString_0">
-    <subComponents identifier="11835" name="EString_0"/>
-    <subComponents identifier="75299" name="EString_0">
-      <subComponents identifier="1576" name="EString_0"/>
-      <subComponents identifier="93174" name="EString_0">
-        <subComponents identifier="10584" name="EString_0"/>
-        <subComponents identifier="20606" name="EString_0"/>
+  <elements xsi:type="arch:Component" identifier="16377" name="EString_5">
+    <subComponents identifier="33218" name="EString_0"/>
+    <subComponents identifier="26730" name="EString_0">
+      <subComponents identifier="28163" name="EString_0"/>
+      <subComponents identifier="33293" name="EString_5">
+        <subComponents identifier="2208" name="EString_0"/>
+        <subComponents identifier="22452" name="EString_0"/>
       </subComponents>
     </subComponents>
   </elements>

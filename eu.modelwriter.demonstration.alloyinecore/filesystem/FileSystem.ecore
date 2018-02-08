@@ -6,8 +6,8 @@
     <details key="formula" value="all disj a, b: FSObject |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;public class one FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;property names : Name[1..*] { composes, unique };&#xA;&#x9;&#x9;property root : Root { composes, unique };&#xA;&#x9;}&#xA;&#x9;&#xA;    public class Name [2];&#xA;    &#xA;    abstract class FSObject [3] &#xA;    {&#xA;        property name : Name [1];&#xA;    } &#xA;    &#xA;    abstract class Executable&#xA;    {&#xA;        property depend : File[*] { acyclic };&#xA;    }&#xA;    &#xA;    class File extends FSObject;&#xA;    &#xA;    class ExecutableFile extends File, Executable;&#xA;    &#xA;    class Dir extends FSObject&#xA;    {&#xA;        property some content : FSObject[*] { composes, acyclic };&#xA;    }&#xA;    &#xA;    class Link extends FSObject [1]&#xA;    {&#xA;        property link : FSObject { acyclic };&#xA;    }&#xA;    &#xA;    class one Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;    }&#xA;    &#xA;    invariant : all disj a, b: FSObject |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name;&#xA;}"/>
-    <details key="source_hash" value="-1108751085"/>
+    <details key="source" value="package filesystem : fsys = 'eu.modelwriter.examples.filesystem'&#xA;{&#xA;&#x9;public class one FileSystem&#xA;&#x9;{&#xA;&#x9;&#x9;property names : Name[1..*] { composes, unique };&#xA;&#x9;&#x9;property root : Root { composes, unique };&#xA;&#x9;}&#xA;&#x9;&#xA;    public class Name [2];&#xA;    &#xA;    abstract class FSObject [4] &#xA;    {&#xA;        property name : Name [1];&#xA;    } &#xA;    &#xA;    abstract class no Executable&#xA;    {&#xA;        property depend : File[*] { acyclic };&#xA;    }&#xA;    &#xA;    class File extends FSObject;&#xA;    &#xA;    class no ExecutableFile extends File, Executable;&#xA;    &#xA;    class Dir extends FSObject&#xA;    {&#xA;        property some content : FSObject[*] { composes };&#xA;    }&#xA;    &#xA;    class no Link extends FSObject&#xA;    {&#xA;        property link : FSObject { acyclic };&#xA;    }&#xA;    &#xA;    class one Root extends Dir&#xA;    {&#xA;        invariant : no Root.~content;&#xA;    }&#xA;    &#xA;    invariant : all disj a, b: FSObject |&#xA;    &#x9;&#x9;&#x9;&#x9;a.~content = b.~content => a.name != b.name;&#xA;}"/>
+    <details key="source_hash" value="865790799"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="FileSystem">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
@@ -37,7 +37,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FSObject" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="3"/>
+      <details key="lowerscope" value="4"/>
     </eAnnotations>
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
       <details key="lowerincluded" value="["/>
@@ -49,31 +49,31 @@
         eType="#//Name"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Executable" abstract="true">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="no"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="depend" ordered="false"
         upperBound="-1" eType="#//File">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//FSObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="#//File #//Executable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutableFile" eSuperTypes="#//File #//Executable">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="no"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dir" eSuperTypes="#//FSObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false"
         upperBound="-1" eType="#//FSObject" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
         <details key="cardinality" value="some"/>
       </eAnnotations>
-      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//FSObject">
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
-      <details key="lowerscope" value="1"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
-      <details key="lowerincluded" value="["/>
-    </eAnnotations>
-    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
-      <details key="upperincluded" value="]"/>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="no"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="link" ordered="false" lowerBound="1"
         eType="#//FSObject">
