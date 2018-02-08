@@ -1,120 +1,114 @@
-[Arda, Specification54, Requirement262, Ivan, true, false, Requirement537, Requirement436, Bedir, Requirement103, Ferhat]
+[OBJECT::Specification54, BOOLEAN::false, OBJECT::Requirement262, STRING::Bedir, STRING::Arda, STRING::Ivan, BOOLEAN::true, STRING::Ferhat, OBJECT::Requirement537, OBJECT::Requirement103, OBJECT::Requirement436]
 
 relation bounds:
- EBoolean: [[], [[true], [false]]]
- EString: [[[Arda], [Ivan], [Bedir], [Ferhat]]]
- Requirement: [[[Requirement262], [Requirement537], [Requirement436], [Requirement103]]]
- Specification: [[[Specification54]]]
- "Arda": [[[Arda]]]
- "Ivan": [[[Ivan]]]
- "Ferhat": [[[Ferhat]]]
- "Bedir": [[[Bedir]]]
- name: [[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], [[Requirement262, Arda], [Requirement262, Ivan], [Requirement262, Bedir], [Requirement262, Ferhat], [Requirement537, Arda], [Requirement537, Ivan], [Requirement537, Bedir], [Requirement537, Ferhat], [Requirement436, Arda], [Requirement436, Ivan], [Requirement436, Bedir], [Requirement436, Ferhat], [Requirement103, Arda], [Requirement103, Ivan], [Requirement103, Bedir], [Requirement103, Ferhat]]]
- contains: [[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
- conflicts: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
- requirements: [[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]]]
- req: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
- partially_refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
- refines: [[], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
- equals: [[[Requirement262, Requirement262], [Requirement537, Requirement537], [Requirement436, Requirement436], [Requirement103, Requirement103]], [[Requirement262, Requirement262], [Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement537, Requirement262], [Requirement537, Requirement537], [Requirement537, Requirement436], [Requirement537, Requirement103], [Requirement436, Requirement262], [Requirement436, Requirement537], [Requirement436, Requirement436], [Requirement436, Requirement103], [Requirement103, Requirement262], [Requirement103, Requirement537], [Requirement103, Requirement436], [Requirement103, Requirement103]]]
+ Requirement: [[[OBJECT::Requirement262], [OBJECT::Requirement537], [OBJECT::Requirement103], [OBJECT::Requirement436]]]
+ EString: [[[STRING::Bedir], [STRING::Arda], [STRING::Ivan], [STRING::Ferhat]]]
+ "Ivan": [[[STRING::Ivan]]]
+ "Bedir": [[[STRING::Bedir]]]
+ "Arda": [[[STRING::Arda]]]
+ EBoolean: [[[BOOLEAN::false], [BOOLEAN::true]]]
+ "Ferhat": [[[STRING::Ferhat]]]
+ Specification: [[[OBJECT::Specification54]]]
+ equals: [[[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ req: [[], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ conflicts: [[], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ contains: [[[OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement436]], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ refines: [[], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ requirements: [[[OBJECT::Specification54, OBJECT::Requirement262], [OBJECT::Specification54, OBJECT::Requirement537], [OBJECT::Specification54, OBJECT::Requirement103], [OBJECT::Specification54, OBJECT::Requirement436]]]
+ partially_refines: [[], [[OBJECT::Requirement262, OBJECT::Requirement262], [OBJECT::Requirement262, OBJECT::Requirement537], [OBJECT::Requirement262, OBJECT::Requirement103], [OBJECT::Requirement262, OBJECT::Requirement436], [OBJECT::Requirement537, OBJECT::Requirement262], [OBJECT::Requirement537, OBJECT::Requirement537], [OBJECT::Requirement537, OBJECT::Requirement103], [OBJECT::Requirement537, OBJECT::Requirement436], [OBJECT::Requirement103, OBJECT::Requirement262], [OBJECT::Requirement103, OBJECT::Requirement537], [OBJECT::Requirement103, OBJECT::Requirement103], [OBJECT::Requirement103, OBJECT::Requirement436], [OBJECT::Requirement436, OBJECT::Requirement262], [OBJECT::Requirement436, OBJECT::Requirement537], [OBJECT::Requirement436, OBJECT::Requirement103], [OBJECT::Requirement436, OBJECT::Requirement436]]]
+ name: [[[OBJECT::Requirement262, STRING::Bedir], [OBJECT::Requirement537, STRING::Ivan], [OBJECT::Requirement103, STRING::Ferhat], [OBJECT::Requirement436, STRING::Arda]], [[OBJECT::Requirement262, STRING::Bedir], [OBJECT::Requirement262, STRING::Arda], [OBJECT::Requirement262, STRING::Ivan], [OBJECT::Requirement262, STRING::Ferhat], [OBJECT::Requirement537, STRING::Bedir], [OBJECT::Requirement537, STRING::Arda], [OBJECT::Requirement537, STRING::Ivan], [OBJECT::Requirement537, STRING::Ferhat], [OBJECT::Requirement103, STRING::Bedir], [OBJECT::Requirement103, STRING::Arda], [OBJECT::Requirement103, STRING::Ivan], [OBJECT::Requirement103, STRING::Ferhat], [OBJECT::Requirement436, STRING::Bedir], [OBJECT::Requirement436, STRING::Arda], [OBJECT::Requirement436, STRING::Ivan], [OBJECT::Requirement436, STRING::Ferhat]]]
 int bounds: 
  []
 
-no (Requirement & Specification) 
-(req.req) in req 
-(all r: Requirement | !(r in (r.req))) 
-(all a: Requirement, b: Requirement | (b in (a.req) and  a in (b.req)) => a = b) 
-(refines.refines) in refines 
-(all r: Requirement | !(r in (r.refines))) 
-(all a: Requirement, b: Requirement | (b in (a.refines) and  a in (b.refines)) => a = b) 
-(contains.contains) in contains 
-(all r: Requirement | !(r in (r.contains))) 
-(all a: Requirement, b: Requirement | (b in (a.contains) and  a in (b.contains)) => a = b) 
+(equals.conflicts) in conflicts 
 (all r: Requirement | !(r in (r.conflicts))) 
+(contains.partially_refines) in partially_refines 
+("Arda" + "Ferhat" + "Ivan" + "Bedir") in EString 
+no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & (conflicts + ~conflicts + partially_refines + ~partially_refines)) 
+(all a: Requirement, b: Requirement | (b in (a.contains) and  a in (b.contains)) => a = b) 
+(equals.req) in req 
+(all a: Requirement, b: Requirement | (b in (a.refines) and  a in (b.refines)) => a = b) 
+(all r: Requirement | !(r in (r.refines))) 
+requirements in (Specification -> Requirement) 
+(refines.req) in req 
+no ((req + ~req + refines + ~refines) & (contains + ~contains + equals + ~equals)) 
+(conflicts.equals) in conflicts 
 conflicts = ~conflicts 
+(contains.conflicts) in conflicts 
 equals = ~equals 
 (all r: Requirement | r in (r.equals)) 
 (equals.equals) in equals 
-(partially_refines.partially_refines) in partially_refines 
-(all r: Requirement | !(r in (r.partially_refines))) 
-(all a: Requirement, b: Requirement | (b in (a.partially_refines) and  a in (b.partially_refines)) => a = b) 
-(all r: Requirement | one (r.name)) 
-(all s: Specification.requirements | lone (s.~requirements)) 
-(all a: Requirement, b: Requirement | !(a = b) => !((a.name) = (b.name))) 
-("Arda" + "Ferhat" + "Ivan" + "Bedir") in EString 
-no ((req + ~req) & (refines + ~refines)) 
-no ((contains + ~contains) & (equals + ~equals)) 
-no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines)) 
-no ((req + ~req + refines + ~refines) & (contains + ~contains + equals + ~equals)) 
-no ((req + ~req + refines + ~refines + contains + ~contains + equals + ~equals) & (conflicts + ~conflicts + partially_refines + ~partially_refines)) 
-(req.refines) in req 
-(req.contains) in req 
-(req.conflicts) in conflicts 
-(req.equals) in req 
-(refines.req) in req 
-(refines.contains) in refines 
 (refines.partially_refines) in partially_refines 
-(refines.conflicts) in conflicts 
-(refines.equals) in refines 
-(contains.req) in req 
-(contains.refines) in refines 
-(contains.partially_refines) in partially_refines 
-(contains.conflicts) in conflicts 
-(contains.equals) in contains 
-(partially_refines.equals) in partially_refines 
-(conflicts.equals) in conflicts 
-(equals.req) in req 
-(equals.refines) in refines 
-(equals.contains) in contains 
-(equals.conflicts) in conflicts 
-(equals.partially_refines) in partially_refines 
-true 
-name in (Requirement -> EString) 
-contains in (Requirement -> Requirement) 
-conflicts in (Requirement -> Requirement) 
-requirements in (Specification -> Requirement) 
+(all s: Specification.requirements | lone (s.~requirements)) 
 req in (Requirement -> Requirement) 
-partially_refines in (Requirement -> Requirement) 
-refines in (Requirement -> Requirement) 
 equals in (Requirement -> Requirement) 
-(Specification.*requirements) = (Specification + Requirement) 
-true 
-true 
-true
+no (Requirement & Specification) 
+(req.req) in req 
+(Specification.*requirements) = (Requirement + Specification) 
+(equals.refines) in refines 
+conflicts in (Requirement -> Requirement) 
+(partially_refines.equals) in partially_refines 
+(req.conflicts) in conflicts 
+(all r: Requirement | !(r in (r.partially_refines))) 
+(contains.refines) in refines 
+(contains.equals) in contains 
+(refines.refines) in refines 
+(refines.contains) in refines 
+no ((contains + ~contains) & (equals + ~equals)) 
+no ((req + ~req) & (refines + ~refines)) 
+(equals.partially_refines) in partially_refines 
+(req.contains) in req 
+(all r: Requirement | !(r in (r.contains))) 
+(req.refines) in req 
+(all a: Requirement, b: Requirement | (b in (a.req) and  a in (b.req)) => a = b) 
+no ((conflicts + ~conflicts) & (partially_refines + ~partially_refines)) 
+contains in (Requirement -> Requirement) 
+refines in (Requirement -> Requirement) 
+(all r: Requirement | !(r in (r.req))) 
+name in (Requirement -> EString) 
+(partially_refines.partially_refines) in partially_refines 
+partially_refines in (Requirement -> Requirement) 
+(req.equals) in req 
+(all r: Requirement | one (r.name)) 
+(contains.req) in req 
+(equals.contains) in contains 
+(all a: Requirement, b: Requirement | (b in (a.partially_refines) and  a in (b.partially_refines)) => a = b) 
+(refines.conflicts) in conflicts 
+(contains.contains) in contains 
+(refines.equals) in refines 
+(all a: Requirement, b: Requirement | !(a = b) => !((a.name) = (b.name)))
 
 ---OUTCOME---
-SATISFIABLE
+UNSATISFIABLE
 
----INSTANCE---
-relations: {EString=[[Arda], [Ivan], [Bedir], [Ferhat]], Requirement=[[Requirement262], [Requirement537], [Requirement436], [Requirement103]], Specification=[[Specification54]], "Arda"=[[Arda]], "Ivan"=[[Ivan]], "Ferhat"=[[Ferhat]], "Bedir"=[[Bedir]], name=[[Requirement262, Bedir], [Requirement537, Ivan], [Requirement436, Arda], [Requirement103, Ferhat]], contains=[[Requirement262, Requirement537], [Requirement262, Requirement436], [Requirement262, Requirement103], [Requirement103, Requirement537], [Requirement103, Requirement436]], conflicts=[], requirements=[[Specification54, Requirement262], [Specification54, Requirement537], [Specification54, Requirement436], [Specification54, Requirement103]], req=[], partially_refines=[], refines=[], equals=[[Requirement262, Requirement262], [Requirement537, Requirement537], [Requirement436, Requirement436], [Requirement103, Requirement103]], EBoolean=[]}
-ints: []
+---PROOF---
+kodkod.engine.ResolutionBasedProof@14cd7540
 
 ---STATS---
-p cnf 2283 3940
+p cnf 2283 3944
 primary variables: 99
-translation time: 14 ms
-solving time: 1 ms
+translation time: 26 ms
+solving time: 0 ms
 
 
-EBoolean:       
-EString:        Arda, Ivan, Bedir, Ferhat
-Requirement:    Requirement262, Requirement537, Requirement436, Requirement103
+Requirement:    Requirement262, Requirement537, Requirement103, Requirement436
 Specification:  Specification54
 
-name (Requirement262, Bedir)
-name (Requirement537, Ivan)
-name (Requirement436, Arda)
-name (Requirement103, Ferhat)
-contains (Requirement262, Requirement537)
-contains (Requirement262, Requirement436)
-contains (Requirement262, Requirement103)
-contains (Requirement103, Requirement537)
-contains (Requirement103, Requirement436)
-requirements (Specification54, Requirement262)
-requirements (Specification54, Requirement537)
-requirements (Specification54, Requirement436)
-requirements (Specification54, Requirement103)
-equals (Requirement262, Requirement262)
-equals (Requirement537, Requirement537)
-equals (Requirement436, Requirement436)
-equals (Requirement103, Requirement103)
+Requirement::equals (Requirement537, Requirement537)
+Requirement::equals (Requirement436, Requirement436)
+Requirement::equals (Requirement262, Requirement262)
+Requirement::equals (Requirement103, Requirement103)
+Requirement::contains (Requirement262, Requirement103)
+Requirement::contains (Requirement103, Requirement537)
+Requirement::contains (Requirement262, Requirement436)
+Requirement::contains (Requirement103, Requirement436)
+Requirement::contains (Requirement537, Requirement436)
+Requirement::contains (Requirement262, Requirement537)
+Specification::requirements (Specification54, Requirement103)
+Specification::requirements (Specification54, Requirement262)
+Specification::requirements (Specification54, Requirement436)
+Specification::requirements (Specification54, Requirement537)
+Requirement::name (Requirement436, Arda)
+Requirement::name (Requirement103, Ferhat)
+Requirement::name (Requirement262, Bedir)
+Requirement::name (Requirement537, Ivan)
