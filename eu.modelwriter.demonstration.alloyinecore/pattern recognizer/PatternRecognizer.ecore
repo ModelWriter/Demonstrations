@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="patternrecognizer" nsURI="eu.modelwriter.examples.composite" nsPrefix="composite">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="Composite -> Component in inherits"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="Composite -> Component in contains"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="Leaf -> Component in inherits"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="Leaf -> Component !in contains"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="package  patternrecognizer : composite = 'eu.modelwriter.examples.composite'&#xA;{&#xA;&#x9;public class Container&#xA;&#x9;{&#xA;&#x9;&#x9;property classes: Class [*] {composes};&#xA;&#x9;}&#xA;&#xA;&#x9;public class Class [0,5]&#xA;&#x9;{&#xA;&#x9;&#x9;property inherits: Class[*] {transitive acyclic};&#xA;&#x9;&#x9;property contains: Class[*];&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;public class one Component extends Class;&#xA;&#x9;public class one Composite extends Class;&#xA;&#x9;public class one Leaf extends Class;&#xA;&#x9;&#xA;&#x9;invariant: Composite -> Component in inherits;&#xA;&#x9;invariant: Composite -> Component in contains;&#xA;&#x9;invariant: Leaf -> Component in inherits;&#xA;&#x9;invariant: Leaf -> Component !in contains;&#xA;}"/>
+    <details key="source_hash" value="1034636907"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classes" ordered="false" upperBound="-1" eType="//Class" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
+      <details key="upperscope" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inherits" ordered="false" upperBound="-1" eType="//Class">
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/transitive"/>
+      <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" ordered="false" upperBound="-1" eType="//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="//Class">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="one"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="//Class">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="one"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Leaf" eSuperTypes="//Class">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
+      <details key="cardinality" value="one"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

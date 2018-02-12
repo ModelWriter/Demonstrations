@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite:Container xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composite="eu.modelwriter.examples.composite" xsi:schemaLocation="eu.modelwriter.examples.composite PatternRecognizer.ecore">
+  <classes xsi:type="composite:Component"/>
+  <classes xsi:type="composite:Composite" inherits="//@classes.0" contains="//@classes.0"/>
+  <classes xsi:type="composite:Leaf" inherits="//@classes.0"/>
+</composite:Container>

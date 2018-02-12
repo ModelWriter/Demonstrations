@@ -1,0 +1,62 @@
+[OBJECT::Class_0, OBJECT::Class_1, OBJECT::Class_2, OBJECT::Class_3, OBJECT::Class_4, OBJECT::Container44]
+
+relation bounds:
+ Component: [[], [[OBJECT::Class_0], [OBJECT::Class_1], [OBJECT::Class_2], [OBJECT::Class_3], [OBJECT::Class_4]]]
+ Composite: [[], [[OBJECT::Class_0], [OBJECT::Class_1], [OBJECT::Class_2], [OBJECT::Class_3], [OBJECT::Class_4]]]
+ Class: [[], [[OBJECT::Class_0], [OBJECT::Class_1], [OBJECT::Class_2], [OBJECT::Class_3], [OBJECT::Class_4]]]
+ Container: [[[OBJECT::Container44]]]
+ Leaf: [[], [[OBJECT::Class_0], [OBJECT::Class_1], [OBJECT::Class_2], [OBJECT::Class_3], [OBJECT::Class_4]]]
+ inherits: [[], [[OBJECT::Class_0, OBJECT::Class_0], [OBJECT::Class_0, OBJECT::Class_1], [OBJECT::Class_0, OBJECT::Class_2], [OBJECT::Class_0, OBJECT::Class_3], [OBJECT::Class_0, OBJECT::Class_4], [OBJECT::Class_1, OBJECT::Class_0], [OBJECT::Class_1, OBJECT::Class_1], [OBJECT::Class_1, OBJECT::Class_2], [OBJECT::Class_1, OBJECT::Class_3], [OBJECT::Class_1, OBJECT::Class_4], [OBJECT::Class_2, OBJECT::Class_0], [OBJECT::Class_2, OBJECT::Class_1], [OBJECT::Class_2, OBJECT::Class_2], [OBJECT::Class_2, OBJECT::Class_3], [OBJECT::Class_2, OBJECT::Class_4], [OBJECT::Class_3, OBJECT::Class_0], [OBJECT::Class_3, OBJECT::Class_1], [OBJECT::Class_3, OBJECT::Class_2], [OBJECT::Class_3, OBJECT::Class_3], [OBJECT::Class_3, OBJECT::Class_4], [OBJECT::Class_4, OBJECT::Class_0], [OBJECT::Class_4, OBJECT::Class_1], [OBJECT::Class_4, OBJECT::Class_2], [OBJECT::Class_4, OBJECT::Class_3], [OBJECT::Class_4, OBJECT::Class_4]]]
+ contains: [[], [[OBJECT::Class_0, OBJECT::Class_0], [OBJECT::Class_0, OBJECT::Class_1], [OBJECT::Class_0, OBJECT::Class_2], [OBJECT::Class_0, OBJECT::Class_3], [OBJECT::Class_0, OBJECT::Class_4], [OBJECT::Class_1, OBJECT::Class_0], [OBJECT::Class_1, OBJECT::Class_1], [OBJECT::Class_1, OBJECT::Class_2], [OBJECT::Class_1, OBJECT::Class_3], [OBJECT::Class_1, OBJECT::Class_4], [OBJECT::Class_2, OBJECT::Class_0], [OBJECT::Class_2, OBJECT::Class_1], [OBJECT::Class_2, OBJECT::Class_2], [OBJECT::Class_2, OBJECT::Class_3], [OBJECT::Class_2, OBJECT::Class_4], [OBJECT::Class_3, OBJECT::Class_0], [OBJECT::Class_3, OBJECT::Class_1], [OBJECT::Class_3, OBJECT::Class_2], [OBJECT::Class_3, OBJECT::Class_3], [OBJECT::Class_3, OBJECT::Class_4], [OBJECT::Class_4, OBJECT::Class_0], [OBJECT::Class_4, OBJECT::Class_1], [OBJECT::Class_4, OBJECT::Class_2], [OBJECT::Class_4, OBJECT::Class_3], [OBJECT::Class_4, OBJECT::Class_4]]]
+ classes: [[], [[OBJECT::Container44, OBJECT::Class_0], [OBJECT::Container44, OBJECT::Class_1], [OBJECT::Container44, OBJECT::Class_2], [OBJECT::Container44, OBJECT::Class_3], [OBJECT::Container44, OBJECT::Class_4]]]
+int bounds: 
+ []
+
+Component in Class 
+(all c: Class | !(c in (c.^inherits))) 
+one Component 
+(Composite -> Component) in contains 
+!((Leaf -> Component) in contains) 
+one Composite 
+contains in (Class -> Class) 
+Composite in Class 
+no (Component & Leaf) 
+inherits in (Class -> Class) 
+no (Component & Composite) 
+(Leaf -> Component) in inherits 
+(inherits.inherits) in inherits 
+no (Composite & Leaf) 
+Leaf in Class 
+one Leaf 
+no (Class & Container) 
+(all c: Container.classes | lone (c.~classes)) 
+(Composite -> Component) in inherits 
+classes in (Container -> Class) 
+(Container.*classes) = (Class + Container)
+
+---OUTCOME---
+SATISFIABLE
+
+---INSTANCE---
+relations: {Component=[[OBJECT::Class_4]], Composite=[[OBJECT::Class_3]], Class=[[OBJECT::Class_2], [OBJECT::Class_3], [OBJECT::Class_4]], Container=[[OBJECT::Container44]], Leaf=[[OBJECT::Class_2]], inherits=[[OBJECT::Class_2, OBJECT::Class_4], [OBJECT::Class_3, OBJECT::Class_4]], contains=[[OBJECT::Class_3, OBJECT::Class_4]], classes=[[OBJECT::Container44, OBJECT::Class_2], [OBJECT::Container44, OBJECT::Class_3], [OBJECT::Container44, OBJECT::Class_4]]}
+ints: []
+
+---STATS---
+p cnf 1188 1712
+primary variables: 75
+translation time: 52 ms
+solving time: 0 ms
+
+
+Component:      Class_4
+Composite:      Class_3
+Class:          Class_2, Class_3, Class_4
+Container:      Container44
+Leaf:           Class_2
+
+Class::inherits (Class_2, Class_4)
+Class::inherits (Class_3, Class_4)
+Class::contains (Class_3, Class_4)
+Container::classes (Container44, Class_4)
+Container::classes (Container44, Class_3)
+Container::classes (Container44, Class_2)
