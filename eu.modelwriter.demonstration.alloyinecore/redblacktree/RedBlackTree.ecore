@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="redblacktree" nsURI="eu.modelwriter.examples.redblacktree" nsPrefix="rbt">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all n: Node | n in Leaf iff (no n.left and no n.right)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all l: Leaf | l.color = BLACK"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all n: Node | n.color = RED implies n.~(left + right).color != RED"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all n: Node | (all a: n.left.*(left + right) | a.value &lt;= n.value)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and (all b: n.right.*(left + right) | b.value > n.value)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all a, b: Leaf | #(a.*(~(left + right)) &amp; BLACK.~color) = #(b.*(~(left + right)) &amp; BLACK.~color)"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all n: Node | some n.right.*(left + right) implies some n.left"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all n: Node | some n.left.^(left + right) implies some n.right"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="formula" value="all a, b: Leaf | #a.*(~(left + right)) - #b.*(~(left + right)) &lt;= 1"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
+    <details key="source" value="package  redblacktree : rbt = 'eu.modelwriter.examples.redblacktree'&#xA;{&#xA;&#x9;public class Tree&#xA;&#x9;{&#xA;&#x9;&#x9;property head: Node[?] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;-- composes also ensures acyclic&#xA;&#x9;public class Node [5]&#xA;&#x9;{&#xA;&#x9;&#x9;attribute value: Integer;&#xA;&#x9;&#x9;model attribute color: Color {derived};&#xA;&#x9;&#x9;property left: Node[?] {composes};&#xA;&#x9;&#x9;property right: Node[?] {composes};&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;public class Leaf extends Node;&#xA;&#x9;&#xA;&#x9;public enum Color&#xA;&#x9;{&#xA;&#x9;&#x9;RED;&#xA;&#x9;&#x9;BLACK;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;-- No child means it is a leaf.&#xA;&#x9;invariant: all n: Node | n in Leaf iff (no n.left and no n.right);&#xA;&#x9;&#xA;&#x9;-- All leaves are black.&#xA;&#x9;invariant: all l: Leaf | l.color = BLACK;&#xA;&#x9;&#xA;&#x9;-- If a node is red, then its parent is not red.&#xA;&#x9;invariant: all n: Node | n.color = RED implies n.~(left + right).color != RED;&#xA;&#x9;&#xA;&#x9;-- Values of the left subtree are smaller and those of the right subtree are greater than the node value.&#xA;&#x9;invariant: all n: Node | (all a: n.left.*(left + right) | a.value &lt;= n.value)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and (all b: n.right.*(left + right) | b.value > n.value);&#xA;&#x9;&#xA;&#x9;-- All paths from the root to a descendant leaf contain the same number of black nodes.&#xA;&#x9;invariant: all a, b: Leaf | #(a.*(~(left + right)) &amp; BLACK.~color) = #(b.*(~(left + right)) &amp; BLACK.~color);&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;-- These 3 invariant makes the tree balanced.&#xA;&#x9;-- If the right child has any children, there is a left child&#xA;&#x9;invariant: all n: Node | some n.right.*(left + right) implies some n.left;&#xA;&#x9;-- If the left child has any children, there is a right child&#xA;&#x9;invariant: all n: Node | some n.left.^(left + right) implies some n.right;&#xA;&#x9;-- The depths calculated from all leaves must be equal or the substraction must be max 1.&#xA;&#x9;invariant: all a, b: Leaf | #a.*(~(left + right)) - #b.*(~(left + right)) &lt;= 1;&#xA;}"/>
+    <details key="source_hash" value="1012985074"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Tree">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="head" ordered="false" eType="//Node" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerscope">
+      <details key="lowerscope" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperincluded">
+      <details key="lowerincluded" value="["/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/lowerincluded">
+      <details key="upperincluded" value="]"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/model">
+      <details key="model" value="model attribute color: Color {derived};"/>
+      <contents xsi:type="ecore:EAttribute" name="color" ordered="false" lowerBound="1" eType="//Color" derived="true">
+        <eAnnotations source="http://www.modelwriter.eu/alloyinecore/model"/>
+      </contents>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" ordered="false" eType="//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" ordered="false" eType="//Node" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Leaf" eSuperTypes="//Node">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
+      <details key="visibility" value="public"/>
+    </eAnnotations>
+    <eLiterals name="RED"/>
+    <eLiterals name="BLACK"/>
+  </eClassifiers>
+</ecore:EPackage>

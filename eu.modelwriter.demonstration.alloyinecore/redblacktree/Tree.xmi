@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rbt:Tree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rbt="eu.modelwriter.examples.redblacktree" xsi:schemaLocation="eu.modelwriter.examples.redblacktree RedBlackTree.ecore">
+  <head value="-2">
+    <left value="-3">
+      <left xsi:type="rbt:Leaf" value="-3"/>
+    </left>
+    <right value="-1">
+      <left xsi:type="rbt:Leaf" value="-1"/>
+    </right>
+  </head>
+</rbt:Tree>
