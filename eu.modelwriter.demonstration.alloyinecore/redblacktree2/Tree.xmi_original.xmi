@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rbt2:Tree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rbt2="eu.modelwriter.examples.redblacktree2" xsi:schemaLocation="eu.modelwriter.examples.redblacktree2 RedBlackTree.ecore" root="//@nodes.2">
-  <nodes value="5" right="//@nodes.7"/>
+  <nodes value="5"/>
   <nodes value="10"/>
-  <nodes value="20" left="//@nodes.8" right="//@nodes.4"/>
+  <nodes value="20" left="//@nodes.7" right="//@nodes.4"/>
   <nodes value="30"/>
   <nodes value="35" left="//@nodes.3" right="//@nodes.6"/>
   <nodes value="15" left="//@nodes.1"/>
   <nodes value="40"/>
-  <nodes value="8"/>
-  <nodes value="9" left="//@nodes.0" right="//@nodes.5"/>
+  <nodes value="8" left="//@nodes.0" right="//@nodes.5"/>
+  <nodes value="9"/>
 </rbt2:Tree>

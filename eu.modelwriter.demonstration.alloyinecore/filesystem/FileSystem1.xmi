@@ -5,7 +5,7 @@
   <root name="//@names.0">
     <content xsi:type="fsys:File" name="//@names.0"/>
     <content xsi:type="fsys:Dir" name="//@names.1">
-      <content xsi:type="fsys:Dir" name="//@names.1"/>
+      <content xsi:type="fsys:Link" name="//@names.0" link="//@root/@content.1"/>
     </content>
   </root>
 </fsys:FileSystem>

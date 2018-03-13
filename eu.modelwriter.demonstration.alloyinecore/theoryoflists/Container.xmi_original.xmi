@@ -8,7 +8,6 @@
         <car xsi:type="tol:EnginedVehicle"/>
         <cdr xsi:type="tol:VehicleList">
           <car xsi:type="tol:EnginedVehicle"/>
-          <cdr xsi:type="tol:Nil"/>
         </cdr>
       </cdr>
     </cdr>

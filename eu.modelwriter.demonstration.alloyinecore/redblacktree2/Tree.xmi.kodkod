@@ -1,0 +1,122 @@
+[Tree45, 8, Node544, Node297, Node352, 30, Node132, 20, 10, Node708, 40, NODE, RED, 5, Node599, 1, Node462, Node187, LEAF, 9, BLACK, 35, ROOT, 15, Node78]
+
+relation bounds:
+ EInt: [[[8], [30], [20], [10], [40], [5], [1], [9], [35], [15]]]
+ Color: [[[RED], [BLACK]]]
+ NODE: [[[NODE]]]
+ Tree: [[[Tree45]]]
+ Type: [[[NODE], [LEAF], [ROOT]]]
+ ROOT: [[[ROOT]]]
+ RED: [[[RED]]]
+ LEAF: [[[LEAF]]]
+ BLACK: [[[BLACK]]]
+ Node: [[[Node544], [Node297], [Node352], [Node132], [Node708], [Node599], [Node462], [Node187], [Node78]]]
+ _gt_: [[[8, 5], [8, 1], [30, 8], [30, 20], [30, 10], [30, 5], [30, 1], [30, 9], [30, 15], [20, 8], [20, 10], [20, 5], [20, 1], [20, 9], [20, 15], [10, 8], [10, 5], [10, 1], [10, 9], [40, 8], [40, 30], [40, 20], [40, 10], [40, 5], [40, 1], [40, 9], [40, 35], [40, 15], [5, 1], [9, 8], [9, 5], [9, 1], [35, 8], [35, 30], [35, 20], [35, 10], [35, 5], [35, 1], [35, 9], [35, 15], [15, 8], [15, 10], [15, 5], [15, 1], [15, 9]]]
+ value: [[[Node544, 40], [Node297, 30], [Node352, 35], [Node132, 10], [Node708, 9], [Node599, 8], [Node462, 15], [Node187, 20], [Node78, 5]], [[Node544, 8], [Node544, 30], [Node544, 20], [Node544, 10], [Node544, 40], [Node544, 5], [Node544, 1], [Node544, 9], [Node544, 35], [Node544, 15], [Node297, 8], [Node297, 30], [Node297, 20], [Node297, 10], [Node297, 40], [Node297, 5], [Node297, 1], [Node297, 9], [Node297, 35], [Node297, 15], [Node352, 8], [Node352, 30], [Node352, 20], [Node352, 10], [Node352, 40], [Node352, 5], [Node352, 1], [Node352, 9], [Node352, 35], [Node352, 15], [Node132, 8], [Node132, 30], [Node132, 20], [Node132, 10], [Node132, 40], [Node132, 5], [Node132, 1], [Node132, 9], [Node132, 35], [Node132, 15], [Node708, 8], [Node708, 30], [Node708, 20], [Node708, 10], [Node708, 40], [Node708, 5], [Node708, 1], [Node708, 9], [Node708, 35], [Node708, 15], [Node599, 8], [Node599, 30], [Node599, 20], [Node599, 10], [Node599, 40], [Node599, 5], [Node599, 1], [Node599, 9], [Node599, 35], [Node599, 15], [Node462, 8], [Node462, 30], [Node462, 20], [Node462, 10], [Node462, 40], [Node462, 5], [Node462, 1], [Node462, 9], [Node462, 35], [Node462, 15], [Node187, 8], [Node187, 30], [Node187, 20], [Node187, 10], [Node187, 40], [Node187, 5], [Node187, 1], [Node187, 9], [Node187, 35], [Node187, 15], [Node78, 8], [Node78, 30], [Node78, 20], [Node78, 10], [Node78, 40], [Node78, 5], [Node78, 1], [Node78, 9], [Node78, 35], [Node78, 15]]]
+ type: [[], [[Node544, NODE], [Node544, LEAF], [Node544, ROOT], [Node297, NODE], [Node297, LEAF], [Node297, ROOT], [Node352, NODE], [Node352, LEAF], [Node352, ROOT], [Node132, NODE], [Node132, LEAF], [Node132, ROOT], [Node708, NODE], [Node708, LEAF], [Node708, ROOT], [Node599, NODE], [Node599, LEAF], [Node599, ROOT], [Node462, NODE], [Node462, LEAF], [Node462, ROOT], [Node187, NODE], [Node187, LEAF], [Node187, ROOT], [Node78, NODE], [Node78, LEAF], [Node78, ROOT]]]
+ root: [[[Tree45, Node187]], [[Tree45, Node544], [Tree45, Node297], [Tree45, Node352], [Tree45, Node132], [Tree45, Node708], [Tree45, Node599], [Tree45, Node462], [Tree45, Node187], [Tree45, Node78]]]
+ left: [[], [[Node544, Node544], [Node544, Node297], [Node544, Node352], [Node544, Node132], [Node544, Node708], [Node544, Node599], [Node544, Node462], [Node544, Node187], [Node544, Node78], [Node297, Node544], [Node297, Node297], [Node297, Node352], [Node297, Node132], [Node297, Node708], [Node297, Node599], [Node297, Node462], [Node297, Node187], [Node297, Node78], [Node352, Node544], [Node352, Node297], [Node352, Node352], [Node352, Node132], [Node352, Node708], [Node352, Node599], [Node352, Node462], [Node352, Node187], [Node352, Node78], [Node132, Node544], [Node132, Node297], [Node132, Node352], [Node132, Node132], [Node132, Node708], [Node132, Node599], [Node132, Node462], [Node132, Node187], [Node132, Node78], [Node708, Node544], [Node708, Node297], [Node708, Node352], [Node708, Node132], [Node708, Node708], [Node708, Node599], [Node708, Node462], [Node708, Node187], [Node708, Node78], [Node599, Node544], [Node599, Node297], [Node599, Node352], [Node599, Node132], [Node599, Node708], [Node599, Node599], [Node599, Node462], [Node599, Node187], [Node599, Node78], [Node462, Node544], [Node462, Node297], [Node462, Node352], [Node462, Node132], [Node462, Node708], [Node462, Node599], [Node462, Node462], [Node462, Node187], [Node462, Node78], [Node187, Node544], [Node187, Node297], [Node187, Node352], [Node187, Node132], [Node187, Node708], [Node187, Node599], [Node187, Node462], [Node187, Node187], [Node187, Node78], [Node78, Node544], [Node78, Node297], [Node78, Node352], [Node78, Node132], [Node78, Node708], [Node78, Node599], [Node78, Node462], [Node78, Node187], [Node78, Node78]]]
+ nodes: [[[Tree45, Node544], [Tree45, Node297], [Tree45, Node352], [Tree45, Node132], [Tree45, Node708], [Tree45, Node599], [Tree45, Node462], [Tree45, Node187], [Tree45, Node78]]]
+ _lte_: [[[8, 8], [8, 30], [8, 20], [8, 10], [8, 40], [8, 9], [8, 35], [8, 15], [30, 30], [30, 40], [30, 35], [20, 30], [20, 20], [20, 40], [20, 35], [10, 30], [10, 20], [10, 10], [10, 40], [10, 35], [10, 15], [5, 8], [5, 30], [5, 20], [5, 10], [5, 40], [5, 5], [5, 9], [5, 35], [5, 15], [1, 8], [1, 30], [1, 20], [1, 10], [1, 40], [1, 5], [1, 1], [1, 9], [1, 35], [1, 15], [9, 30], [9, 20], [9, 10], [9, 40], [9, 9], [9, 35], [9, 15], [35, 40], [35, 35], [15, 30], [15, 20], [15, 40], [15, 35], [15, 15]]]
+ color: [[], [[Node544, RED], [Node544, BLACK], [Node297, RED], [Node297, BLACK], [Node352, RED], [Node352, BLACK], [Node132, RED], [Node132, BLACK], [Node708, RED], [Node708, BLACK], [Node599, RED], [Node599, BLACK], [Node462, RED], [Node462, BLACK], [Node187, RED], [Node187, BLACK], [Node78, RED], [Node78, BLACK]]]
+ right: [[], [[Node544, Node544], [Node544, Node297], [Node544, Node352], [Node544, Node132], [Node544, Node708], [Node544, Node599], [Node544, Node462], [Node544, Node187], [Node544, Node78], [Node297, Node544], [Node297, Node297], [Node297, Node352], [Node297, Node132], [Node297, Node708], [Node297, Node599], [Node297, Node462], [Node297, Node187], [Node297, Node78], [Node352, Node544], [Node352, Node297], [Node352, Node352], [Node352, Node132], [Node352, Node708], [Node352, Node599], [Node352, Node462], [Node352, Node187], [Node352, Node78], [Node132, Node544], [Node132, Node297], [Node132, Node352], [Node132, Node132], [Node132, Node708], [Node132, Node599], [Node132, Node462], [Node132, Node187], [Node132, Node78], [Node708, Node544], [Node708, Node297], [Node708, Node352], [Node708, Node132], [Node708, Node708], [Node708, Node599], [Node708, Node462], [Node708, Node187], [Node708, Node78], [Node599, Node544], [Node599, Node297], [Node599, Node352], [Node599, Node132], [Node599, Node708], [Node599, Node599], [Node599, Node462], [Node599, Node187], [Node599, Node78], [Node462, Node544], [Node462, Node297], [Node462, Node352], [Node462, Node132], [Node462, Node708], [Node462, Node599], [Node462, Node462], [Node462, Node187], [Node462, Node78], [Node187, Node544], [Node187, Node297], [Node187, Node352], [Node187, Node132], [Node187, Node708], [Node187, Node599], [Node187, Node462], [Node187, Node187], [Node187, Node78], [Node78, Node544], [Node78, Node297], [Node78, Node352], [Node78, Node132], [Node78, Node708], [Node78, Node599], [Node78, Node462], [Node78, Node187], [Node78, Node78]]]
+int bounds: 
+ []
+
+right in (Node -> Node) 
+(all n: Node | one (n.~(left + right + root))) 
+(all n: Node | (n.type) = ROOT <=> (no (n.~left) and  no (n.~right))) 
+(Tree.*nodes) = (Tree + Node) 
+(all n: Node | one (n.type)) 
+value in (Node -> EInt) 
+(all a: LEAF.~type, b: LEAF.~type | #((a.*~(left + right)) & (BLACK.~color)) = #((b.*~(left + right)) & (  BLACK.~color))) 
+type in (Node -> Type) 
+(all l: LEAF.~type | (l.color) = BLACK) 
+left in (Node -> Node) 
+(all n: Node | (n.type) = LEAF <=> (no (n.left) and  no (n.right))) 
+no (Tree & Node) 
+(all n: Node | lone (n.left)) 
+color in (Node -> Color) 
+(all n: Node | (n.color) = RED => !(((n.~(left + right)).color) = RED)) 
+(all t: Tree | lone (t.root)) 
+(all n: Node | some ((n.left).^(left + right)) => some (n.right)) 
+(all n: Node | lone (n.right)) 
+(all n: Node | one (n.color)) 
+(all a: LEAF.~type, b: LEAF.~type | (#(a.*~(left + right)) - #(b.*~(left + right))) <= 1) 
+(all t: Tree.nodes | lone (t.~nodes)) 
+nodes in (Tree -> Node) 
+(all n: Node | one (n.value)) 
+root in (Tree -> Node) 
+(all n: Node | (all a: (n.left).*(left + right) |   ((a.value) -> (n.value)) in _lte_) and (all b: (n.right).*(left + right) |   ((b.value) -> (n.value)) in _gt_)) 
+(all n: Node | some ((n.right).^(left + right)) => some (n.left))
+
+---OUTCOME---
+SATISFIABLE
+
+---INSTANCE---
+relations: {EInt=[[8], [30], [20], [10], [40], [5], [1], [9], [35], [15]], Color=[[RED], [BLACK]], Tree=[[Tree45]], Type=[[NODE], [LEAF], [ROOT]], ROOT=[[ROOT]], RED=[[RED]], LEAF=[[LEAF]], BLACK=[[BLACK]], Node=[[Node544], [Node297], [Node352], [Node132], [Node708], [Node599], [Node462], [Node187], [Node78]], _gt_=[[8, 5], [8, 1], [30, 8], [30, 20], [30, 10], [30, 5], [30, 1], [30, 9], [30, 15], [20, 8], [20, 10], [20, 5], [20, 1], [20, 9], [20, 15], [10, 8], [10, 5], [10, 1], [10, 9], [40, 8], [40, 30], [40, 20], [40, 10], [40, 5], [40, 1], [40, 9], [40, 35], [40, 15], [5, 1], [9, 8], [9, 5], [9, 1], [35, 8], [35, 30], [35, 20], [35, 10], [35, 5], [35, 1], [35, 9], [35, 15], [15, 8], [15, 10], [15, 5], [15, 1], [15, 9]], value=[[Node544, 40], [Node297, 30], [Node352, 35], [Node132, 10], [Node708, 9], [Node599, 8], [Node462, 15], [Node187, 20], [Node78, 5]], type=[[Node544, LEAF], [Node297, LEAF], [Node352, NODE], [Node132, LEAF], [Node708, NODE], [Node599, LEAF], [Node462, NODE], [Node187, ROOT], [Node78, NODE]], root=[[Tree45, Node187]], left=[[Node352, Node297], [Node708, Node78], [Node462, Node132], [Node187, Node708]], nodes=[[Tree45, Node544], [Tree45, Node297], [Tree45, Node352], [Tree45, Node132], [Tree45, Node708], [Tree45, Node599], [Tree45, Node462], [Tree45, Node187], [Tree45, Node78]], _lte_=[[8, 8], [8, 30], [8, 20], [8, 10], [8, 40], [8, 9], [8, 35], [8, 15], [30, 30], [30, 40], [30, 35], [20, 30], [20, 20], [20, 40], [20, 35], [10, 30], [10, 20], [10, 10], [10, 40], [10, 35], [10, 15], [5, 8], [5, 30], [5, 20], [5, 10], [5, 40], [5, 5], [5, 9], [5, 35], [5, 15], [1, 8], [1, 30], [1, 20], [1, 10], [1, 40], [1, 5], [1, 1], [1, 9], [1, 35], [1, 15], [9, 30], [9, 20], [9, 10], [9, 40], [9, 9], [9, 35], [9, 15], [35, 40], [35, 35], [15, 30], [15, 20], [15, 40], [15, 35], [15, 15]], color=[[Node544, BLACK], [Node297, BLACK], [Node352, BLACK], [Node132, BLACK], [Node708, RED], [Node599, BLACK], [Node462, BLACK], [Node187, BLACK], [Node78, BLACK]], right=[[Node352, Node544], [Node708, Node462], [Node187, Node352], [Node78, Node599]], NODE=[[NODE]]}
+ints: []
+
+---STATS---
+p cnf 12994 33249
+primary variables: 296
+translation time: 266 ms
+solving time: 64 ms
+
+
+EInt:           5, 8, 1, 35, 15, 30, 20, 10, 9, 40
+Color:          RED, BLACK
+Tree:           Tree45
+NODE:           NODE
+Type:           ROOT, LEAF, NODE
+ROOT:           ROOT
+RED:            RED
+LEAF:           LEAF
+BLACK:          BLACK
+Node:           Node544, Node599, Node297, Node352, Node462, Node78, Node132, Node187, Node708
+
+value (Node708, 9)
+value (Node78, 5)
+value (Node297, 30)
+value (Node352, 35)
+value (Node544, 40)
+value (Node132, 10)
+value (Node462, 15)
+value (Node187, 20)
+value (Node599, 8)
+type (Node462, NODE)
+type (Node187, ROOT)
+type (Node544, LEAF)
+type (Node352, NODE)
+type (Node599, LEAF)
+type (Node297, LEAF)
+type (Node132, LEAF)
+type (Node708, NODE)
+type (Node78, NODE)
+root (Tree45, Node187)
+left (Node708, Node78)
+left (Node352, Node297)
+left (Node187, Node708)
+left (Node462, Node132)
+nodes (Tree45, Node544)
+nodes (Tree45, Node599)
+nodes (Tree45, Node708)
+nodes (Tree45, Node297)
+nodes (Tree45, Node352)
+nodes (Tree45, Node462)
+nodes (Tree45, Node78)
+nodes (Tree45, Node132)
+nodes (Tree45, Node187)
+color (Node462, BLACK)
+color (Node352, BLACK)
+color (Node708, RED)
+color (Node544, BLACK)
+color (Node132, BLACK)
+color (Node599, BLACK)
+color (Node297, BLACK)
+color (Node187, BLACK)
+color (Node78, BLACK)
+right (Node78, Node599)
+right (Node708, Node462)
+right (Node187, Node352)
+right (Node352, Node544)

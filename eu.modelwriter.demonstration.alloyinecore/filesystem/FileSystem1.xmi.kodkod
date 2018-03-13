@@ -1,91 +1,92 @@
-[OBJECT::Name79, OBJECT::Root133, OBJECT::FileSystem40, OBJECT::FSObject_2, OBJECT::FSObject_3, OBJECT::Name94, OBJECT::File227]
+[File227, FileSystem40, Name94, Root133, Name79, FSObject_3, FSObject_2]
 
 relation bounds:
- Executable: [[], [[OBJECT::FSObject_2], [OBJECT::FSObject_3]]]
- ExecutableFile: [[], [[OBJECT::FSObject_2], [OBJECT::FSObject_3]]]
- FSObject: [[[OBJECT::Root133], [OBJECT::FSObject_2], [OBJECT::FSObject_3], [OBJECT::File227]]]
- File: [[[OBJECT::File227]], [[OBJECT::FSObject_2], [OBJECT::FSObject_3], [OBJECT::File227]]]
- Dir: [[[OBJECT::Root133]], [[OBJECT::Root133], [OBJECT::FSObject_2], [OBJECT::FSObject_3]]]
- FileSystem: [[[OBJECT::FileSystem40]]]
- Link: [[], [[OBJECT::FSObject_2], [OBJECT::FSObject_3]]]
- Root: [[[OBJECT::Root133]], [[OBJECT::Root133], [OBJECT::FSObject_2], [OBJECT::FSObject_3]]]
- Name: [[[OBJECT::Name79], [OBJECT::Name94]]]
- depend: [[], [[OBJECT::FSObject_2, OBJECT::FSObject_2], [OBJECT::FSObject_2, OBJECT::FSObject_3], [OBJECT::FSObject_2, OBJECT::File227], [OBJECT::FSObject_3, OBJECT::FSObject_2], [OBJECT::FSObject_3, OBJECT::FSObject_3], [OBJECT::FSObject_3, OBJECT::File227]]]
- name: [[[OBJECT::Root133, OBJECT::Name79], [OBJECT::File227, OBJECT::Name79]], [[OBJECT::Root133, OBJECT::Name79], [OBJECT::Root133, OBJECT::Name94], [OBJECT::FSObject_2, OBJECT::Name79], [OBJECT::FSObject_2, OBJECT::Name94], [OBJECT::FSObject_3, OBJECT::Name79], [OBJECT::FSObject_3, OBJECT::Name94], [OBJECT::File227, OBJECT::Name79], [OBJECT::File227, OBJECT::Name94]]]
- link: [[], [[OBJECT::FSObject_2, OBJECT::Root133], [OBJECT::FSObject_2, OBJECT::FSObject_2], [OBJECT::FSObject_2, OBJECT::FSObject_3], [OBJECT::FSObject_2, OBJECT::File227], [OBJECT::FSObject_3, OBJECT::Root133], [OBJECT::FSObject_3, OBJECT::FSObject_2], [OBJECT::FSObject_3, OBJECT::FSObject_3], [OBJECT::FSObject_3, OBJECT::File227]]]
- content: [[[OBJECT::Root133, OBJECT::File227]], [[OBJECT::Root133, OBJECT::Root133], [OBJECT::Root133, OBJECT::FSObject_2], [OBJECT::Root133, OBJECT::FSObject_3], [OBJECT::Root133, OBJECT::File227], [OBJECT::FSObject_2, OBJECT::Root133], [OBJECT::FSObject_2, OBJECT::FSObject_2], [OBJECT::FSObject_2, OBJECT::FSObject_3], [OBJECT::FSObject_2, OBJECT::File227], [OBJECT::FSObject_3, OBJECT::Root133], [OBJECT::FSObject_3, OBJECT::FSObject_2], [OBJECT::FSObject_3, OBJECT::FSObject_3], [OBJECT::FSObject_3, OBJECT::File227]]]
- root: [[[OBJECT::FileSystem40, OBJECT::Root133]], [[OBJECT::FileSystem40, OBJECT::Root133], [OBJECT::FileSystem40, OBJECT::FSObject_2], [OBJECT::FileSystem40, OBJECT::FSObject_3]]]
- names: [[[OBJECT::FileSystem40, OBJECT::Name79], [OBJECT::FileSystem40, OBJECT::Name94]]]
+ ExecutableFile: [[], [[FSObject_3], [FSObject_2]]]
+ Link: [[], [[FSObject_3], [FSObject_2]]]
+ FileSystem: [[[FileSystem40]]]
+ Executable: [[], [[FSObject_3], [FSObject_2]]]
+ Dir: [[[Root133]], [[Root133], [FSObject_3], [FSObject_2]]]
+ FSObject: [[[File227], [Root133], [FSObject_3], [FSObject_2]]]
+ Root: [[[Root133]], [[Root133], [FSObject_3], [FSObject_2]]]
+ File: [[[File227]], [[File227], [FSObject_3], [FSObject_2]]]
+ Name: [[[Name94], [Name79]]]
+ names: [[[FileSystem40, Name94], [FileSystem40, Name79]]]
+ link: [[], [[FSObject_3, File227], [FSObject_3, Root133], [FSObject_3, FSObject_3], [FSObject_3, FSObject_2], [FSObject_2, File227], [FSObject_2, Root133], [FSObject_2, FSObject_3], [FSObject_2, FSObject_2]]]
+ content: [[[Root133, File227]], [[Root133, File227], [Root133, Root133], [Root133, FSObject_3], [Root133, FSObject_2], [FSObject_3, File227], [FSObject_3, Root133], [FSObject_3, FSObject_3], [FSObject_3, FSObject_2], [FSObject_2, File227], [FSObject_2, Root133], [FSObject_2, FSObject_3], [FSObject_2, FSObject_2]]]
+ root: [[[FileSystem40, Root133]], [[FileSystem40, Root133], [FileSystem40, FSObject_3], [FileSystem40, FSObject_2]]]
+ name: [[[File227, Name79], [Root133, Name79]], [[File227, Name94], [File227, Name79], [Root133, Name94], [Root133, Name79], [FSObject_3, Name94], [FSObject_3, Name79], [FSObject_2, Name94], [FSObject_2, Name79]]]
+ depend: [[], [[FSObject_3, File227], [FSObject_3, FSObject_3], [FSObject_3, FSObject_2], [FSObject_2, File227], [FSObject_2, FSObject_3], [FSObject_2, FSObject_2]]]
 int bounds: 
  []
 
-name in (FSObject -> Name) 
 no (Executable & Name) 
-(all f: FSObject | one (f.name)) 
-no (Root.~content) 
-(all d: Dir.content | lone (d.~root + content + names)) 
-one Root 
-no (File & Link) 
-(all f: FileSystem.names | lone (f.~root + content + names)) 
-no (Executable & FileSystem) 
-(all e: Executable | !(e in (e.^depend))) 
-no ExecutableFile 
-FSObject = Link + File + Dir 
-Root in Dir 
-no (Dir & Link) 
-some content 
-(all f: FileSystem | one (f.root)) 
-(all a: FSObject, b: FSObject | !(a = b) => ((a.~content) = (b.~content) =>  !((a.name) = (b.name)))) 
-ExecutableFile in File 
-no Executable 
-no Link 
-(all l: Link | one (l.link)) 
-(all f: FileSystem | some (f.names)) 
-content in (Dir -> FSObject) 
-root in (FileSystem -> Root) 
-(FileSystem.*root + content + names) = FileSystem + FSObject + Executable + Name 
-depend in (Executable -> File) 
-no (FSObject & FileSystem) 
-no (FSObject & Name) 
-no (File & Dir) 
 link in (Link -> FSObject) 
-names in (FileSystem -> Name) 
-(all l: Link | !(l in (l.^link))) 
-Executable = ExecutableFile 
-(all f: FileSystem.root | lone (f.~root + content + names)) 
+(all e: Executable | !(e in (e.^depend))) 
+content in (Dir -> FSObject) 
+no (FileSystem & Executable) 
+depend in (Executable -> File) 
+no (Link & File) 
+(all l: Link | one (l.link)) 
+no ExecutableFile 
 one FileSystem 
-no (FileSystem & Name)
+root in (FileSystem -> Root) 
+(FileSystem.*content + names + root) = FileSystem + Executable + Name + FSObject 
+FSObject = Dir + Link + File 
+(all f: FileSystem | one (f.root)) 
+(all f: FSObject | one (f.name)) 
+one Root 
+(all f: FileSystem | some (f.names)) 
+(all f: FileSystem.root | lone (f.~content + names + root)) 
+no (Dir & File) 
+ExecutableFile in File 
+names in (FileSystem -> Name) 
+Executable = ExecutableFile 
+no (Root.~content) 
+some content 
+no (FileSystem & Name) 
+no (FileSystem & FSObject) 
+no (FSObject & Name) 
+no Executable 
+name in (FSObject -> Name) 
+(all a: FSObject, b: FSObject | !(a = b) => ((a.~content) = (b.~content) =>  !((a.name) = (b.name)))) 
+Root in Dir 
+(all d: Dir.content | lone (d.~content + names + root)) 
+no (Link & Dir) 
+(all f: FileSystem.names | lone (f.~content + names + root)) 
+(all l: Link | !(l in (l.^link)))
 
 ---OUTCOME---
-UNSATISFIABLE
+SATISFIABLE
 
----PROOF---
-kodkod.engine.ResolutionBasedProof@20ed2dc9
+---INSTANCE---
+relations: {ExecutableFile=[], Link=[[FSObject_3]], FileSystem=[[FileSystem40]], Executable=[], Dir=[[Root133], [FSObject_2]], FSObject=[[File227], [Root133], [FSObject_3], [FSObject_2]], Root=[[Root133]], File=[[File227]], Name=[[Name94], [Name79]], names=[[FileSystem40, Name94], [FileSystem40, Name79]], link=[[FSObject_3, FSObject_2]], content=[[Root133, File227], [Root133, FSObject_2], [FSObject_2, FSObject_3]], root=[[FileSystem40, Root133]], name=[[File227, Name79], [Root133, Name79], [FSObject_3, Name79], [FSObject_2, Name94]], depend=[]}
+ints: []
 
 ---STATS---
-p cnf 506 573
+p cnf 505 569
 primary variables: 45
-translation time: 13 ms
+translation time: 94 ms
 solving time: 0 ms
 
 
-Executable:     
 ExecutableFile: 
-FSObject:       Root133, FSObject_2, FSObject_3, File227
-File:           File227
-Dir:            Root133, FSObject_2, FSObject_3
+Link:           FSObject_3
 FileSystem:     FileSystem40
-Link:           
+Executable:     
+Dir:            Root133, FSObject_2
+FSObject:       File227, Root133, FSObject_3, FSObject_2
 Root:           Root133
-Name:           Name79, Name94
+File:           File227
+Name:           Name94, Name79
 
-FSObject::name (FSObject_3, Name94)
-FSObject::name (FSObject_2, Name94)
-FSObject::name (File227, Name79)
-FSObject::name (Root133, Name79)
-Dir::content (Root133, FSObject_3)
-Dir::content (Root133, File227)
-Dir::content (FSObject_3, FSObject_2)
-FileSystem::root (FileSystem40, Root133)
-FileSystem::names (FileSystem40, Name94)
-FileSystem::names (FileSystem40, Name79)
+names (FileSystem40, Name79)
+names (FileSystem40, Name94)
+link (FSObject_3, FSObject_2)
+content (Root133, FSObject_2)
+content (Root133, File227)
+content (FSObject_2, FSObject_3)
+root (FileSystem40, Root133)
+name (FSObject_3, Name79)
+name (Root133, Name79)
+name (FSObject_2, Name94)
+name (File227, Name79)

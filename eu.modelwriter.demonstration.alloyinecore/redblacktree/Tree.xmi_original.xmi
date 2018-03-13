@@ -8,8 +8,7 @@
     <right value="-1">
       <left xsi:type="rbt:Leaf" value="-1"/>
       <right value="1">
-        <left xsi:type="rbt:Leaf" value="1"/>
-        <right xsi:type="rbt:Leaf" value="6411"/>
+        <left xsi:type="rbt:Leaf"/>
       </right>
     </right>
   </head>
