@@ -1,0 +1,44 @@
+import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';
+
+package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'{
+  public abstract class Object {
+	 ghost attribute identifier : Integer;
+  }
+    
+  public abstract class List<E> extends Object [5,7] {
+	 property car : E [?];
+	 property cdr : List<E> [?] {acyclic};
+	 model property eq : List<E> [*] ;
+		
+	 invariant: all a, b: List | a in b.eq iff (a.car = b.car 
+					and a.cdr in b.cdr.eq and a.class = b.class);	
+					
+	 invariant noStrayObjects: all v: Object - List | some v.~car;
+  }
+	 
+  public class one Nil<V> extends List<V>	{
+	 invariant : no Nil.car;
+	 invariant : no Nil.cdr;
+	 invariant : all l: List - Nil | some l.cdr && some l.car;
+	 invariant : all l: List | Nil in l.*cdr;
+  }
+	
+  private class one Memory {
+	 property some vehicles : Vehicle [*] {composes}; 
+	 property some lists : List<? extends Vehicle> [*] {composes}; 	
+  }
+	
+  abstract class Vehicle extends Object [2,4] {
+	 attribute name : String;
+	 invariant : all disj a, b: Vehicle | a.name != b.name;	
+	 invariant : one v: Vehicle | v.name = "FORD F-150 XLT";
+  }
+   	
+  class EnginedVehicle extends Vehicle;
+  class NonEnginedVehicle extends Vehicle;
+	
+  class TruckList extends List<EnginedVehicle>;
+  class CarList extends List<EnginedVehicle>;
+  class BicycleList extends List<NonEnginedVehicle>;
+}
+
