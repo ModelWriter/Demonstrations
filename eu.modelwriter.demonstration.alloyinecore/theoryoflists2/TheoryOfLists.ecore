@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists"
-    nsPrefix="tol">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="theoryoflists" nsURI="eu.modelwriter.examples.theoryoflists" nsPrefix="tol">
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
     <details key="Ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.modelwriter.eu/alloyinecore/source">
-    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'{&#xA;  public abstract class Object {&#xA;&#x9; ghost attribute identifier : Integer;&#xA;  }&#xA;    &#xA;  public abstract class List&lt;E> extends Object [6,7] {&#xA;&#x9; property car : E [?];&#xA;&#x9; property cdr : List&lt;E> [?] {acyclic};&#xA;&#x9; model property eq : List&lt;E> [*] {reflexive};&#xA;&#x9;&#x9;&#xA;&#x9; invariant: all a, b: List | a in b.eq iff (a.car = b.car &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;and a.cdr in b.cdr.eq and a.class = b.class);&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9; invariant noStrayObjects: all v: Object - List | some v.~car;&#xA;  }&#xA;&#x9; &#xA;  public class one Nil&lt;V> extends List&lt;V> {&#xA;&#x9; invariant : no Nil.car;&#xA;&#x9; invariant : no Nil.cdr;&#xA;&#x9; invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9; invariant : all l: List | Nil in l.*cdr;&#xA;  }&#xA;&#x9;&#xA;  private class one Memory {&#xA;&#x9; property some vehicles : Vehicle [*] {composes}; &#xA;&#x9; property some lists : List&lt;? extends Vehicle> [*] {composes}; &#x9;&#xA;  }&#xA;&#x9;&#xA;  abstract class Vehicle extends Object [2,4] {&#xA;&#x9; attribute name : String;&#xA;&#x9; invariant : all disj a, b: Vehicle | a.name != b.name;&#x9;&#xA;&#x9; invariant : one v: Vehicle | v.name = &quot;FORD F-150 XLT&quot;;&#xA;  }&#xA;  &#xA;  --invariant: all v: Vehicle | Class&lt;CarList> in v.extends;&#xA;   &#xA;  class EnginedVehicle extends Vehicle;&#xA;  class NonEnginedVehicle extends Vehicle;&#xA;&#x9;&#xA;  class TruckList extends List&lt;EnginedVehicle>;&#xA;  class CarList extends List&lt;EnginedVehicle>;&#xA;  class BicycleList extends List&lt;NonEnginedVehicle>;&#xA;}&#xA;&#xA;"/>
+    <details key="source" value="import Ecore : 'http://www.eclipse.org/emf/2002/Ecore';&#xA;&#xA;package theoryoflists: tol= 'eu.modelwriter.examples.theoryoflists'{&#xA;  public abstract class Object {&#xA;&#x9; ghost attribute identifier : Integer;&#xA;  }&#xA;    &#xA;  public abstract class List&lt;E> extends Object [6,7] {&#xA;&#x9; property car : E [?];&#xA;&#x9; property cdr : List&lt;E> [?] {acyclic};&#xA;&#x9; model property eq : List&lt;E> [*] {reflexive};&#xA;&#x9; &#xA;&#x9; invariant: all a, b: List | a in b.eq iff (a.car = b.car &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;and a.cdr in b.cdr.eq and a.class = b.class);&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9; invariant noStrayObjects: all v: Object - List | some v.~car;&#xA;  }&#xA;&#x9; &#xA;  public class one Nil&lt;V> extends List&lt;V> {&#xA;&#x9; invariant : no Nil.car;&#xA;&#x9; invariant : no Nil.cdr;&#xA;&#x9; invariant : all l: List - Nil | some l.cdr &amp;&amp; some l.car;&#xA;&#x9; invariant : all l: List | Nil in l.*cdr;&#xA;  }&#xA;&#x9;&#xA;  private class one Memory {&#xA;&#x9; property some vehicles : Vehicle [*] {composes}; &#xA;&#x9; property some lists : List&lt;? extends Vehicle> [*] {composes}; &#x9;&#xA;  }&#xA;&#x9;&#xA;  abstract class Vehicle extends Object [2,4] {&#xA;&#x9; attribute name : String;&#xA;&#x9; invariant : all disj a, b: Vehicle | a.name != b.name;&#x9;&#xA;&#x9; invariant : one v: Vehicle | v.name = &quot;FORD F-150 XLT&quot;;&#xA;  }&#xA;  &#xA;  --invariant: all v: Vehicle | Class&lt;CarList> in v.extends;&#xA;   &#xA;  class EnginedVehicle extends Vehicle;&#xA;  class NonEnginedVehicle extends Vehicle;&#xA;&#x9;&#xA;  class TruckList extends List&lt;EnginedVehicle>;&#xA;  class CarList extends List&lt;EnginedVehicle>;&#xA;  class BicycleList extends List&lt;NonEnginedVehicle>;&#xA;}&#xA;&#xA;"/>
     <details key="source_hash" value="1101606421"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Object" abstract="true">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" ordered="false"
-        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" ordered="false" lowerBound="1">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/ghost"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true" eSuperTypes="#//Object">
+  <eClassifiers xsi:type="ecore:EClass" name="List" abstract="true" eSuperTypes="//Object">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/visibility">
       <details key="visibility" value="public"/>
     </eAnnotations>
@@ -39,8 +37,8 @@
       <contents xsi:type="ecore:EReference" name="eq" ordered="false" upperBound="-1">
         <eAnnotations source="http://www.modelwriter.eu/alloyinecore/model"/>
         <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reflexive"/>
-        <eGenericType eClassifier="#//List">
-          <eTypeArguments eTypeParameter="#//List/E"/>
+        <eGenericType eClassifier="//List">
+          <eTypeArguments eTypeParameter="//List/E"/>
         </eGenericType>
       </contents>
     </eAnnotations>
@@ -55,12 +53,12 @@
     </eAnnotations>
     <eTypeParameters name="E"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="car" ordered="false">
-      <eGenericType eTypeParameter="#//List/E"/>
+      <eGenericType eTypeParameter="//List/E"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" ordered="false">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/acyclic"/>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eTypeParameter="#//List/E"/>
+      <eGenericType eClassifier="//List">
+        <eTypeArguments eTypeParameter="//List/E"/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
@@ -88,8 +86,8 @@
       <details key="formula" value="all l: List | Nil in l.*cdr"/>
     </eAnnotations>
     <eTypeParameters name="V"/>
-    <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eTypeParameter="#//Nil/V"/>
+    <eGenericSuperTypes eClassifier="//List">
+      <eTypeArguments eTypeParameter="//Nil/V"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Memory">
@@ -99,25 +97,23 @@
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
       <details key="cardinality" value="one"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicles" ordered="false"
-        upperBound="-1" eType="#//Vehicle" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehicles" ordered="false" upperBound="-1" eType="//Vehicle" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
         <details key="cardinality" value="some"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lists" ordered="false"
-        upperBound="-1" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lists" ordered="false" upperBound="-1" containment="true">
       <eAnnotations source="http://www.modelwriter.eu/alloyinecore/cardinality">
         <details key="cardinality" value="some"/>
       </eAnnotations>
-      <eGenericType eClassifier="#//List">
+      <eGenericType eClassifier="//List">
         <eTypeArguments>
-          <eUpperBound eClassifier="#//Vehicle"/>
+          <eUpperBound eClassifier="//Vehicle"/>
         </eTypeArguments>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true" eSuperTypes="#//Object">
+  <eClassifiers xsi:type="ecore:EClass" name="Vehicle" abstract="true" eSuperTypes="//Object">
     <eAnnotations source="http://www.modelwriter.eu/alloyinecore/reasoning/upperscope">
       <details key="upperscope" value="4"/>
     </eAnnotations>
@@ -138,24 +134,25 @@
       <details key="callable" value="false"/>
       <details key="formula" value="one v: Vehicle | v.name = &quot;FORD F-150 XLT&quot;"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EnginedVehicle" eSuperTypes="#//Vehicle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NonEnginedVehicle" eSuperTypes="#//Vehicle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnginedVehicle" eSuperTypes="//Vehicle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NonEnginedVehicle" eSuperTypes="//Vehicle"/>
   <eClassifiers xsi:type="ecore:EClass" name="TruckList">
-    <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eClassifier="#//EnginedVehicle"/>
+    <eGenericSuperTypes eClassifier="//List">
+      <eTypeArguments eClassifier="//EnginedVehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CarList">
-    <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eClassifier="#//EnginedVehicle"/>
+    <eGenericSuperTypes eClassifier="//List">
+      <eTypeArguments eClassifier="//EnginedVehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BicycleList">
-    <eGenericSuperTypes eClassifier="#//List">
-      <eTypeArguments eClassifier="#//NonEnginedVehicle"/>
+    <eGenericSuperTypes eClassifier="//List">
+      <eTypeArguments eClassifier="//NonEnginedVehicle"/>
     </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>
