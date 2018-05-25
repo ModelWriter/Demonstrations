@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tol:Memory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.theoryoflists" xsi:schemaLocation="eu.modelwriter.examples.theoryoflists BasicList.ecore">
+  <vehicles/>
+  <vehicles/>
+  <lists xsi:type="tol:VehicleList" car="//@vehicles.1" cdr="//@lists.5" eq="//@lists.0"/>
+  <lists xsi:type="tol:VehicleList" car="//@vehicles.1" cdr="//@lists.2" eq="//@lists.1 //@lists.4"/>
+  <lists xsi:type="tol:VehicleList" car="//@vehicles.0" cdr="//@lists.0" eq="//@lists.3 //@lists.2"/>
+  <lists xsi:type="tol:VehicleList" car="//@vehicles.0" cdr="//@lists.0" eq="//@lists.3 //@lists.2"/>
+  <lists xsi:type="tol:VehicleList" car="//@vehicles.1" cdr="//@lists.3" eq="//@lists.1 //@lists.4"/>
+  <lists xsi:type="tol:Nil" eq="//@lists.5"/>
+</tol:Memory>

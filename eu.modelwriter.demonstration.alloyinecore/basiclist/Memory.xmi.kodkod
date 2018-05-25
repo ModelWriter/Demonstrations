@@ -1,0 +1,88 @@
+[VehicleList397, Vehicle98, List_5, VehicleList303, Memory42, VehicleList209, VehicleList491, Vehicle80, VehicleList141]
+
+relation bounds:
+ Memory: [[[Memory42]]]
+ Nil: [[], [[List_5]]]
+ List: [[[VehicleList397], [List_5], [VehicleList303], [VehicleList209], [VehicleList491], [VehicleList141]]]
+ Vehicle: [[[Vehicle98], [Vehicle80]]]
+ VehicleList: [[[VehicleList397], [VehicleList303], [VehicleList209], [VehicleList491], [VehicleList141]]]
+ Object: [[[VehicleList397], [Vehicle98], [List_5], [VehicleList303], [VehicleList209], [VehicleList491], [Vehicle80], [VehicleList141]]]
+ cdr: [[[VehicleList397, VehicleList141], [VehicleList303, VehicleList141], [VehicleList209, VehicleList303], [VehicleList491, VehicleList397]], [[VehicleList397, VehicleList397], [VehicleList397, List_5], [VehicleList397, VehicleList303], [VehicleList397, VehicleList209], [VehicleList397, VehicleList491], [VehicleList397, VehicleList141], [List_5, VehicleList397], [List_5, List_5], [List_5, VehicleList303], [List_5, VehicleList209], [List_5, VehicleList491], [List_5, VehicleList141], [VehicleList303, VehicleList397], [VehicleList303, List_5], [VehicleList303, VehicleList303], [VehicleList303, VehicleList209], [VehicleList303, VehicleList491], [VehicleList303, VehicleList141], [VehicleList209, VehicleList397], [VehicleList209, List_5], [VehicleList209, VehicleList303], [VehicleList209, VehicleList209], [VehicleList209, VehicleList491], [VehicleList209, VehicleList141], [VehicleList491, VehicleList397], [VehicleList491, List_5], [VehicleList491, VehicleList303], [VehicleList491, VehicleList209], [VehicleList491, VehicleList491], [VehicleList491, VehicleList141], [VehicleList141, VehicleList397], [VehicleList141, List_5], [VehicleList141, VehicleList303], [VehicleList141, VehicleList209], [VehicleList141, VehicleList491], [VehicleList141, VehicleList141]]]
+ eq: [[], [[VehicleList397, VehicleList397], [VehicleList397, List_5], [VehicleList397, VehicleList303], [VehicleList397, VehicleList209], [VehicleList397, VehicleList491], [VehicleList397, VehicleList141], [List_5, VehicleList397], [List_5, List_5], [List_5, VehicleList303], [List_5, VehicleList209], [List_5, VehicleList491], [List_5, VehicleList141], [VehicleList303, VehicleList397], [VehicleList303, List_5], [VehicleList303, VehicleList303], [VehicleList303, VehicleList209], [VehicleList303, VehicleList491], [VehicleList303, VehicleList141], [VehicleList209, VehicleList397], [VehicleList209, List_5], [VehicleList209, VehicleList303], [VehicleList209, VehicleList209], [VehicleList209, VehicleList491], [VehicleList209, VehicleList141], [VehicleList491, VehicleList397], [VehicleList491, List_5], [VehicleList491, VehicleList303], [VehicleList491, VehicleList209], [VehicleList491, VehicleList491], [VehicleList491, VehicleList141], [VehicleList141, VehicleList397], [VehicleList141, List_5], [VehicleList141, VehicleList303], [VehicleList141, VehicleList209], [VehicleList141, VehicleList491], [VehicleList141, VehicleList141]]]
+ lists: [[[Memory42, VehicleList397], [Memory42, VehicleList303], [Memory42, VehicleList209], [Memory42, VehicleList491], [Memory42, VehicleList141]], [[Memory42, VehicleList397], [Memory42, List_5], [Memory42, VehicleList303], [Memory42, VehicleList209], [Memory42, VehicleList491], [Memory42, VehicleList141]]]
+ car: [[[VehicleList397, Vehicle80], [VehicleList303, Vehicle80], [VehicleList209, Vehicle98], [VehicleList491, Vehicle98], [VehicleList141, Vehicle98]], [[VehicleList397, VehicleList397], [VehicleList397, Vehicle98], [VehicleList397, List_5], [VehicleList397, VehicleList303], [VehicleList397, VehicleList209], [VehicleList397, VehicleList491], [VehicleList397, Vehicle80], [VehicleList397, VehicleList141], [List_5, VehicleList397], [List_5, Vehicle98], [List_5, List_5], [List_5, VehicleList303], [List_5, VehicleList209], [List_5, VehicleList491], [List_5, Vehicle80], [List_5, VehicleList141], [VehicleList303, VehicleList397], [VehicleList303, Vehicle98], [VehicleList303, List_5], [VehicleList303, VehicleList303], [VehicleList303, VehicleList209], [VehicleList303, VehicleList491], [VehicleList303, Vehicle80], [VehicleList303, VehicleList141], [VehicleList209, VehicleList397], [VehicleList209, Vehicle98], [VehicleList209, List_5], [VehicleList209, VehicleList303], [VehicleList209, VehicleList209], [VehicleList209, VehicleList491], [VehicleList209, Vehicle80], [VehicleList209, VehicleList141], [VehicleList491, VehicleList397], [VehicleList491, Vehicle98], [VehicleList491, List_5], [VehicleList491, VehicleList303], [VehicleList491, VehicleList209], [VehicleList491, VehicleList491], [VehicleList491, Vehicle80], [VehicleList491, VehicleList141], [VehicleList141, VehicleList397], [VehicleList141, Vehicle98], [VehicleList141, List_5], [VehicleList141, VehicleList303], [VehicleList141, VehicleList209], [VehicleList141, VehicleList491], [VehicleList141, Vehicle80], [VehicleList141, VehicleList141]]]
+ vehicles: [[[Memory42, Vehicle98], [Memory42, Vehicle80]]]
+int bounds: 
+ []
+
+no (Nil.car) 
+car in (List -> Object) 
+List = (VehicleList + Nil) 
+(all l: List | Nil in (l.*cdr)) 
+(all m: Memory.lists | lone (m.~(lists + vehicles))) 
+lists in (Memory -> List) 
+vehicles in (Memory -> Vehicle) 
+no (Nil.cdr) 
+Object = (List + Vehicle) 
+no (Memory & Object) 
+no (Nil & VehicleList) 
+(all l: List | lone (l.car)) 
+one Nil 
+(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
+(all l: List - Nil | some (l.cdr) and some (l.car)) 
+(all l: List | lone (l.cdr)) 
+cdr in (List -> List) 
+eq in (List -> List) 
+(all m: Memory.vehicles | lone (m.~(lists + vehicles))) 
+no (List & Vehicle) 
+(Memory.*(lists + vehicles)) = (Memory + Object)
+
+---OUTCOME---
+SATISFIABLE
+
+---INSTANCE---
+relations: {Memory=[[Memory42]], Nil=[[List_5]], List=[[VehicleList397], [List_5], [VehicleList303], [VehicleList209], [VehicleList491], [VehicleList141]], Vehicle=[[Vehicle98], [Vehicle80]], VehicleList=[[VehicleList397], [VehicleList303], [VehicleList209], [VehicleList491], [VehicleList141]], Object=[[VehicleList397], [Vehicle98], [List_5], [VehicleList303], [VehicleList209], [VehicleList491], [Vehicle80], [VehicleList141]], cdr=[[VehicleList397, VehicleList141], [VehicleList303, VehicleList141], [VehicleList209, VehicleList303], [VehicleList491, VehicleList397], [VehicleList141, List_5]], eq=[[VehicleList397, VehicleList397], [VehicleList397, VehicleList303], [List_5, List_5], [VehicleList303, VehicleList397], [VehicleList303, VehicleList303], [VehicleList209, VehicleList209], [VehicleList209, VehicleList491], [VehicleList491, VehicleList209], [VehicleList491, VehicleList491], [VehicleList141, VehicleList141]], lists=[[Memory42, VehicleList397], [Memory42, List_5], [Memory42, VehicleList303], [Memory42, VehicleList209], [Memory42, VehicleList491], [Memory42, VehicleList141]], car=[[VehicleList397, Vehicle80], [VehicleList303, Vehicle80], [VehicleList209, Vehicle98], [VehicleList491, Vehicle98], [VehicleList141, Vehicle98]], vehicles=[[Memory42, Vehicle98], [Memory42, Vehicle80]]}
+ints: []
+
+---STATS---
+p cnf 1580 3597
+primary variables: 113
+translation time: 148 ms
+solving time: 1 ms
+
+
+Memory:         Memory42
+Nil:            List_5
+List:           VehicleList397, List_5, VehicleList303, VehicleList209, VehicleList491, VehicleList141
+Vehicle:        Vehicle98, Vehicle80
+VehicleList:    VehicleList397, VehicleList303, VehicleList209, VehicleList491, VehicleList141
+Object:         VehicleList397, Vehicle98, List_5, VehicleList303, VehicleList209, VehicleList491, Vehicle80, VehicleList141
+
+cdr (VehicleList397, VehicleList141)
+cdr (VehicleList303, VehicleList141)
+cdr (VehicleList209, VehicleList303)
+cdr (VehicleList491, VehicleList397)
+cdr (VehicleList141, List_5)
+eq (VehicleList209, VehicleList209)
+eq (VehicleList209, VehicleList491)
+eq (VehicleList397, VehicleList397)
+eq (VehicleList491, VehicleList209)
+eq (VehicleList491, VehicleList491)
+eq (VehicleList141, VehicleList141)
+eq (List_5, List_5)
+eq (VehicleList303, VehicleList397)
+eq (VehicleList303, VehicleList303)
+eq (VehicleList397, VehicleList303)
+lists (Memory42, List_5)
+lists (Memory42, VehicleList303)
+lists (Memory42, VehicleList397)
+lists (Memory42, VehicleList209)
+lists (Memory42, VehicleList491)
+lists (Memory42, VehicleList141)
+car (VehicleList303, Vehicle80)
+car (VehicleList491, Vehicle98)
+car (VehicleList141, Vehicle98)
+car (VehicleList397, Vehicle80)
+car (VehicleList209, Vehicle98)
+vehicles (Memory42, Vehicle80)
+vehicles (Memory42, Vehicle98)
