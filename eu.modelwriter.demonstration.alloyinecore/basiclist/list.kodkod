@@ -1,0 +1,38 @@
+[o!1, o!2, l!1, l!2, l!3, l!4, l!5]
+
+List: [[[l!2], [l!5], [l!1], [l!4], [l!3], [l!0]]]
+Nil: [[], [[l!5]]]
+Object: [[[o!2], [o!1]]]
+
+car: [[[l!2, o!1], [l!1, o!2], [l!4, o!2], [l!3, o!1], [l!0, o!2]], 
+      [[l!2, o!2], [l!2, o!1], [l!5, o!2], [l!5, o!1], [l!1, o!2], 
+       [l!1, o!1], [l!4, o!2], [l!4, o!1], [l!3, o!2], [l!3, o!1], [l!0, o!2], [l!0, o!1]]]
+
+cdr: [[[l!2, l!0], [l!1, l!2], [l!4, l!3], [l!3, l!0]], 
+      [[l!2, l!2], [l!2, l!5], [l!2, l!1], [l!2, l!4], [l!2, l!3], [l!2, l!0], [l!5, l!2], [l!5, l!5], [l!5, l!1], [l!5, l!4], [l!5, l!3], [l!5, l!0], 
+       [l!1, l!2], [l!1, l!5], [l!1, l!1], [l!1, l!4], [l!1, l!3], [l!1, l!0], [l!4, l!2], [l!4, l!5], [l!4, l!1], [l!4, l!4], [l!4, l!3], [l!4, l!0], 
+       [l!3, l!2], [l!3, l!5], [l!3, l!1], [l!3, l!4], [l!3, l!3], [l!3, l!0], [l!0, l!2], [l!0, l!5], [l!0, l!1], [l!0, l!4], [l!0, l!3], [l!0, l!0]]]
+
+eq: [[], 
+     [[l!2, l!2], [l!2, l!5], [l!2, l!1], [l!2, l!4], [l!2, l!3], [l!2, l!0], [l!5, l!2], [l!5, l!5], [l!5, l!1], [l!5, l!4], [l!5, l!3], [l!5, l!0], 
+     [l!1, l!2], [l!1, l!5], [l!1, l!1], [l!1, l!4], [l!1, l!3], [l!1, l!0], [l!4, l!2], [l!4, l!5], [l!4, l!1], [l!4, l!4], [l!4, l!3], [l!4, l!0], 
+     [l!3, l!2], [l!3, l!5], [l!3, l!1], [l!3, l!4], [l!3, l!3], [l!3, l!0], [l!0, l!2], [l!0, l!5], [l!0, l!1], [l!0, l!4], [l!0, l!3], [l!0, l!0]]]
+
+one Nil 
+no (List & Object) 
+Nil in List
+
+cdr in (List -> List) 
+eq in (List -> List) 
+car in (List -> Object) 
+
+(all l: List | lone (l.cdr))  
+(all l: List | lone (l.car)) 
+
+no (Nil.cdr)
+no (Nil.car) 
+(all l: List - Nil | some (l.cdr) and some (l.car)) 
+(all l: List | Nil in (l.*cdr)) 
+
+(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq)))  
+
