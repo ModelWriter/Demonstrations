@@ -1,0 +1,83 @@
+[List153, List325, List_5, Object79, List239, List138, Memory42, Object96, List411]
+
+relation bounds:
+ Memory: [[[Memory42]]]
+ Nil: [[], [[List_5]]]
+ List: [[[List153], [List325], [List_5], [List239], [List138], [List411]]]
+ Object: [[[Object79], [Object96]]]
+ eq: [[], [[List153, List153], [List153, List325], [List153, List_5], [List153, List239], [List153, List138], [List153, List411], [List325, List153], [List325, List325], [List325, List_5], [List325, List239], [List325, List138], [List325, List411], [List_5, List153], [List_5, List325], [List_5, List_5], [List_5, List239], [List_5, List138], [List_5, List411], [List239, List153], [List239, List325], [List239, List_5], [List239, List239], [List239, List138], [List239, List411], [List138, List153], [List138, List325], [List138, List_5], [List138, List239], [List138, List138], [List138, List411], [List411, List153], [List411, List325], [List411, List_5], [List411, List239], [List411, List138], [List411, List411]]]
+ car: [[[List153, Object96], [List325, Object79], [List239, Object79], [List411, Object96]], [[List153, Object79], [List153, Object96], [List325, Object79], [List325, Object96], [List_5, Object79], [List_5, Object96], [List239, Object79], [List239, Object96], [List138, Object79], [List138, Object96], [List411, Object79], [List411, Object96]]]
+ cdr: [[[List153, List239], [List325, List138], [List239, List138], [List411, List325]], [[List153, List153], [List153, List325], [List153, List_5], [List153, List239], [List153, List138], [List153, List411], [List325, List153], [List325, List325], [List325, List_5], [List325, List239], [List325, List138], [List325, List411], [List_5, List153], [List_5, List325], [List_5, List_5], [List_5, List239], [List_5, List138], [List_5, List411], [List239, List153], [List239, List325], [List239, List_5], [List239, List239], [List239, List138], [List239, List411], [List138, List153], [List138, List325], [List138, List_5], [List138, List239], [List138, List138], [List138, List411], [List411, List153], [List411, List325], [List411, List_5], [List411, List239], [List411, List138], [List411, List411]]]
+ lists: [[[Memory42, List153], [Memory42, List325], [Memory42, List239], [Memory42, List138], [Memory42, List411]], [[Memory42, List153], [Memory42, List325], [Memory42, List_5], [Memory42, List239], [Memory42, List138], [Memory42, List411]]]
+ objects: [[[Memory42, Object79], [Memory42, Object96]]]
+int bounds: 
+ []
+
+no (Memory & List) 
+Nil in List 
+(Memory.*(lists + objects)) = List + Memory + Object 
+no (Object & List) 
+lists in (Memory -> List) 
+cdr in (List -> List) 
+(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
+(all l: List | lone (l.cdr)) 
+no (Nil.car) 
+no (Memory & Object) 
+(all m: Memory.lists | lone (m.~(lists + objects))) 
+(all l: List | lone (l.car)) 
+objects in (Memory -> Object) 
+no (Nil.cdr) 
+car in (List -> Object) 
+(all m: Memory.objects | lone (m.~(lists + objects))) 
+(all l: List | Nil in (l.*cdr)) 
+eq in (List -> List) 
+(all l: List - Nil | some (l.cdr) and some (l.car)) 
+one Nil
+
+---OUTCOME---
+SATISFIABLE
+
+---INSTANCE---
+relations: {Memory=[[Memory42]], Nil=[[List_5]], List=[[List153], [List325], [List_5], [List239], [List138], [List411]], Object=[[Object79], [Object96]], eq=[[List153, List153], [List153, List411], [List325, List325], [List325, List239], [List_5, List_5], [List239, List325], [List239, List239], [List138, List138], [List411, List153], [List411, List411]], car=[[List153, Object96], [List325, Object79], [List239, Object79], [List138, Object79], [List411, Object96]], cdr=[[List153, List239], [List325, List138], [List239, List138], [List138, List_5], [List411, List325]], lists=[[Memory42, List153], [Memory42, List325], [Memory42, List_5], [Memory42, List239], [Memory42, List138], [Memory42, List411]], objects=[[Memory42, Object79], [Memory42, Object96]]}
+ints: []
+
+---STATS---
+p cnf 1308 2761
+primary variables: 78
+translation time: 153 ms
+solving time: 0 ms
+
+
+Memory:         Memory42
+Nil:            List_5
+List:           List153, List325, List_5, List239, List138, List411
+Object:         Object79, Object96
+
+eq (List325, List239)
+eq (List239, List239)
+eq (List239, List325)
+eq (List_5, List_5)
+eq (List138, List138)
+eq (List153, List153)
+eq (List153, List411)
+eq (List411, List153)
+eq (List411, List411)
+eq (List325, List325)
+car (List325, Object79)
+car (List239, Object79)
+car (List138, Object79)
+car (List153, Object96)
+car (List411, Object96)
+cdr (List138, List_5)
+cdr (List239, List138)
+cdr (List411, List325)
+cdr (List153, List239)
+cdr (List325, List138)
+lists (Memory42, List239)
+lists (Memory42, List_5)
+lists (Memory42, List411)
+lists (Memory42, List138)
+lists (Memory42, List325)
+lists (Memory42, List153)
+objects (Memory42, Object79)
+objects (Memory42, Object96)

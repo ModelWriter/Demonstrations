@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tol:Specification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.requirementsmodels" xsi:schemaLocation="eu.modelwriter.examples.requirementsmodels RequirementsModel.ecore">
-  <requirements contains="//@requirements.2 //@requirements.3" name="Eunsuk"/>
-  <requirements contains="//@requirements.0" name="Daniel"/>
-  <requirements name="Sarfraz"/>
-  <requirements name="Emina"/>
+<tol:Specification
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tol="eu.modelwriter.examples.requirementsmodels"
+    xsi:schemaLocation="eu.modelwriter.examples.requirementsmodels RequirementsModel.ecore">
+  <requirements
+      contains="//@requirements.2 //@requirements.3"
+      equals="//@requirements.0"
+      name="Eunsuk"/>
+  <requirements
+      contains="//@requirements.0 //@requirements.2 //@requirements.3"
+      equals="//@requirements.1"
+      name="Daniel"/>
+  <requirements
+      equals="//@requirements.2"
+      name="Emina"/>
+  <requirements
+      equals="//@requirements.3"
+      name="Emina"/>
 </tol:Specification>

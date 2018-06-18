@@ -1,83 +1,83 @@
-[List284, List_5, Memory42, List198, Object96, Object79, List456, List370, List138]
+[Object96, List153, List_5, Object79, Memory42, List239, List411, List138, List325]
 
 relation bounds:
- Memory: [[[Memory42]]]
- List: [[[List284], [List_5], [List198], [List456], [List370], [List138]]]
  Nil: [[], [[List_5]]]
  Object: [[[Object96], [Object79]]]
- car: [[[List284, Object79], [List198, Object96], [List456, Object96], [List370, Object79], [List138, Object96]], [[List284, Object96], [List284, Object79], [List_5, Object96], [List_5, Object79], [List198, Object96], [List198, Object79], [List456, Object96], [List456, Object79], [List370, Object96], [List370, Object79], [List138, Object96], [List138, Object79]]]
- cdr: [[[List284, List138], [List198, List284], [List456, List370], [List370, List138]], [[List284, List284], [List284, List_5], [List284, List198], [List284, List456], [List284, List370], [List284, List138], [List_5, List284], [List_5, List_5], [List_5, List198], [List_5, List456], [List_5, List370], [List_5, List138], [List198, List284], [List198, List_5], [List198, List198], [List198, List456], [List198, List370], [List198, List138], [List456, List284], [List456, List_5], [List456, List198], [List456, List456], [List456, List370], [List456, List138], [List370, List284], [List370, List_5], [List370, List198], [List370, List456], [List370, List370], [List370, List138], [List138, List284], [List138, List_5], [List138, List198], [List138, List456], [List138, List370], [List138, List138]]]
- eq: [[], [[List284, List284], [List284, List_5], [List284, List198], [List284, List456], [List284, List370], [List284, List138], [List_5, List284], [List_5, List_5], [List_5, List198], [List_5, List456], [List_5, List370], [List_5, List138], [List198, List284], [List198, List_5], [List198, List198], [List198, List456], [List198, List370], [List198, List138], [List456, List284], [List456, List_5], [List456, List198], [List456, List456], [List456, List370], [List456, List138], [List370, List284], [List370, List_5], [List370, List198], [List370, List456], [List370, List370], [List370, List138], [List138, List284], [List138, List_5], [List138, List198], [List138, List456], [List138, List370], [List138, List138]]]
- lists: [[[Memory42, List284], [Memory42, List198], [Memory42, List456], [Memory42, List370], [Memory42, List138]], [[Memory42, List284], [Memory42, List_5], [Memory42, List198], [Memory42, List456], [Memory42, List370], [Memory42, List138]]]
+ Memory: [[[Memory42]]]
+ List: [[[List153], [List_5], [List239], [List411], [List138], [List325]]]
+ cdr: [[[List153, List239], [List239, List138], [List411, List325], [List325, List138]], [[List153, List153], [List153, List_5], [List153, List239], [List153, List411], [List153, List138], [List153, List325], [List_5, List153], [List_5, List_5], [List_5, List239], [List_5, List411], [List_5, List138], [List_5, List325], [List239, List153], [List239, List_5], [List239, List239], [List239, List411], [List239, List138], [List239, List325], [List411, List153], [List411, List_5], [List411, List239], [List411, List411], [List411, List138], [List411, List325], [List138, List153], [List138, List_5], [List138, List239], [List138, List411], [List138, List138], [List138, List325], [List325, List153], [List325, List_5], [List325, List239], [List325, List411], [List325, List138], [List325, List325]]]
  objects: [[[Memory42, Object96], [Memory42, Object79]]]
+ car: [[[List153, Object96], [List239, Object79], [List411, Object96], [List325, Object79]], [[List153, Object96], [List153, Object79], [List_5, Object96], [List_5, Object79], [List239, Object96], [List239, Object79], [List411, Object96], [List411, Object79], [List138, Object96], [List138, Object79], [List325, Object96], [List325, Object79]]]
+ eq: [[], [[List153, List153], [List153, List_5], [List153, List239], [List153, List411], [List153, List138], [List153, List325], [List_5, List153], [List_5, List_5], [List_5, List239], [List_5, List411], [List_5, List138], [List_5, List325], [List239, List153], [List239, List_5], [List239, List239], [List239, List411], [List239, List138], [List239, List325], [List411, List153], [List411, List_5], [List411, List239], [List411, List411], [List411, List138], [List411, List325], [List138, List153], [List138, List_5], [List138, List239], [List138, List411], [List138, List138], [List138, List325], [List325, List153], [List325, List_5], [List325, List239], [List325, List411], [List325, List138], [List325, List325]]]
+ lists: [[[Memory42, List153], [Memory42, List239], [Memory42, List411], [Memory42, List138], [Memory42, List325]], [[Memory42, List153], [Memory42, List_5], [Memory42, List239], [Memory42, List411], [Memory42, List138], [Memory42, List325]]]
 int bounds: 
  []
 
-no (Nil.car) 
-objects in (Memory -> Object) 
-one Nil 
-cdr in (List -> List) 
-(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
-(Memory.*(lists + objects)) = Object + Memory + List 
-eq in (List -> List) 
-no (Memory & Object) 
 (all m: Memory.objects | lone (m.~(lists + objects))) 
-no (Nil.cdr) 
-(all l: List | Nil in (l.*cdr)) 
-no (List & Object) 
-car in (List -> Object) 
-lists in (Memory -> List) 
-(all l: List | lone (l.cdr)) 
+cdr in (List -> List) 
+no (Object & List) 
 (all m: Memory.lists | lone (m.~(lists + objects))) 
-(all l: List | lone (l.car)) 
-no (Memory & List) 
+Nil in List 
+one Nil 
+car in (List -> Object) 
+no (Nil.car) 
 (all l: List - Nil | some (l.cdr) and some (l.car)) 
-Nil in List
+objects in (Memory -> Object) 
+no (Memory & List) 
+eq in (List -> List) 
+no (Nil.cdr) 
+(all l: List | lone (l.cdr)) 
+(all l: List | lone (l.car)) 
+(Memory.*(lists + objects)) = Object + List + Memory 
+(all a: List, b: List | a in (b.eq) <=> ((a.car) = (b.car) and  (a.cdr) in ((b.cdr).eq))) 
+no (Object & Memory) 
+lists in (Memory -> List) 
+(all l: List | Nil in (l.*cdr))
 
 ---OUTCOME---
 SATISFIABLE
 
 ---INSTANCE---
-relations: {Memory=[[Memory42]], List=[[List284], [List_5], [List198], [List456], [List370], [List138]], Nil=[[List_5]], Object=[[Object96], [Object79]], car=[[List284, Object79], [List198, Object96], [List456, Object96], [List370, Object79], [List138, Object96]], cdr=[[List284, List138], [List198, List284], [List456, List370], [List370, List138], [List138, List_5]], eq=[[List284, List284], [List284, List370], [List_5, List_5], [List198, List198], [List198, List456], [List456, List198], [List456, List456], [List370, List284], [List370, List370], [List138, List138]], lists=[[Memory42, List284], [Memory42, List_5], [Memory42, List198], [Memory42, List456], [Memory42, List370], [Memory42, List138]], objects=[[Memory42, Object96], [Memory42, Object79]]}
+relations: {Nil=[[List_5]], Object=[[Object96], [Object79]], Memory=[[Memory42]], List=[[List153], [List_5], [List239], [List411], [List138], [List325]], cdr=[[List153, List239], [List239, List138], [List411, List325], [List138, List_5], [List325, List138]], objects=[[Memory42, Object96], [Memory42, Object79]], car=[[List153, Object96], [List239, Object79], [List411, Object96], [List138, Object79], [List325, Object79]], eq=[[List153, List153], [List153, List411], [List_5, List_5], [List239, List239], [List239, List325], [List411, List153], [List411, List411], [List138, List138], [List325, List239], [List325, List325]], lists=[[Memory42, List153], [Memory42, List_5], [Memory42, List239], [Memory42, List411], [Memory42, List138], [Memory42, List325]]}
 ints: []
 
 ---STATS---
-p cnf 1299 2733
-primary variables: 77
-translation time: 34 ms
-solving time: 0 ms
+p cnf 1314 2762
+primary variables: 78
+translation time: 169 ms
+solving time: 1 ms
 
 
-Memory:         Memory42
-List:           List284, List_5, List198, List456, List370, List138
 Nil:            List_5
 Object:         Object96, Object79
+Memory:         Memory42
+List:           List153, List_5, List239, List411, List138, List325
 
-car (List456, Object96)
-car (List370, Object79)
-car (List284, Object79)
-car (List198, Object96)
-car (List138, Object96)
-cdr (List284, List138)
-cdr (List370, List138)
-cdr (List198, List284)
-cdr (List456, List370)
+cdr (List411, List325)
 cdr (List138, List_5)
-eq (List198, List456)
-eq (List456, List198)
-eq (List456, List456)
-eq (List370, List370)
-eq (List284, List284)
-eq (List_5, List_5)
-eq (List370, List284)
-eq (List138, List138)
-eq (List284, List370)
-eq (List198, List198)
-lists (Memory42, List456)
-lists (Memory42, List_5)
-lists (Memory42, List284)
-lists (Memory42, List198)
-lists (Memory42, List370)
-lists (Memory42, List138)
-objects (Memory42, Object96)
+cdr (List153, List239)
+cdr (List325, List138)
+cdr (List239, List138)
 objects (Memory42, Object79)
+objects (Memory42, Object96)
+car (List138, Object79)
+car (List411, Object96)
+car (List153, Object96)
+car (List239, Object79)
+car (List325, Object79)
+eq (List153, List153)
+eq (List_5, List_5)
+eq (List138, List138)
+eq (List325, List239)
+eq (List411, List411)
+eq (List239, List325)
+eq (List325, List325)
+eq (List153, List411)
+eq (List239, List239)
+eq (List411, List153)
+lists (Memory42, List153)
+lists (Memory42, List138)
+lists (Memory42, List325)
+lists (Memory42, List239)
+lists (Memory42, List411)
+lists (Memory42, List_5)

@@ -2,7 +2,7 @@
 <tol:Memory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tol="eu.modelwriter.examples.theoryoflists" xsi:schemaLocation="eu.modelwriter.examples.theoryoflists BasicList.ecore">
   <objects/>
   <objects/>
-  <lists car="//@objects.1"/>
+  <lists/>
   <lists car="//@objects.1" cdr="//@lists.2"/>
   <lists car="//@objects.0" cdr="//@lists.0"/>
   <lists car="//@objects.0" cdr="//@lists.0"/>
