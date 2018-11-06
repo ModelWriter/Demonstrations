@@ -8,6 +8,6 @@
   <lists xsi:type="tol:TruckList" identifier="3" car="//@vehicles.2" cdr="//@lists.3"/>
   <lists xsi:type="tol:TruckList" identifier="4" car="//@vehicles.1" cdr="//@lists.0"/>
   <lists xsi:type="tol:TruckList" identifier="5" car="//@vehicles.1" cdr="//@lists.0"/>
-  <lists xsi:type="tol:CarList" car="//@vehicles.0" cdr="//@lists.6"/>
+  <lists xsi:type="tol:TruckList" car="//@vehicles.0" cdr="//@lists.6"/>
   <lists xsi:type="tol:Nil"/>
 </tol:Memory>

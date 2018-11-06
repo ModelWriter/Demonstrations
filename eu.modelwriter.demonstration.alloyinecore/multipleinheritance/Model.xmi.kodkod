@@ -1,0 +1,56 @@
+[Object_1, Object_0, Object_3, Model58, Object_2]
+
+relation bounds:
+ A: [[], [[Object_1], [Object_0], [Object_3], [Object_2]]]
+ C: [[], [[Object_1], [Object_0], [Object_3], [Object_2]]]
+ Object: [[[Object_0]], [[Object_1], [Object_0], [Object_3], [Object_2]]]
+ B: [[], [[Object_1], [Object_0], [Object_3], [Object_2]]]
+ D: [[], [[Object_1], [Object_0], [Object_3], [Object_2]]]
+ Model: [[[Model58]]]
+ fieldOfB: [[], [[Object_1, Object_1], [Object_1, Object_0], [Object_1, Object_3], [Object_1, Object_2], [Object_0, Object_1], [Object_0, Object_0], [Object_0, Object_3], [Object_0, Object_2], [Object_3, Object_1], [Object_3, Object_0], [Object_3, Object_3], [Object_3, Object_2], [Object_2, Object_1], [Object_2, Object_0], [Object_2, Object_3], [Object_2, Object_2]]]
+ objects: [[], [[Model58, Object_1], [Model58, Object_0], [Model58, Object_3], [Model58, Object_2]]]
+ fieldOfA: [[], [[Object_1, Object_1], [Object_1, Object_0], [Object_1, Object_3], [Object_1, Object_2], [Object_0, Object_1], [Object_0, Object_0], [Object_0, Object_3], [Object_0, Object_2], [Object_3, Object_1], [Object_3, Object_0], [Object_3, Object_3], [Object_3, Object_2], [Object_2, Object_1], [Object_2, Object_0], [Object_2, Object_3], [Object_2, Object_2]]]
+int bounds: 
+ []
+
+objects in (Model -> Object) 
+C in B 
+one C 
+fieldOfB in (B -> D) 
+Object = A + D + B 
+no (A & D) 
+fieldOfA in (A -> D) 
+no (B & D) 
+no (Object & Model) 
+(all b: B | one (b.fieldOfB)) 
+one Model 
+(Model.*objects) = (Object + Model) 
+C in A 
+(all a: A | one (a.fieldOfA)) 
+(all m: Model.objects | lone (m.~objects))
+
+---OUTCOME---
+SATISFIABLE
+
+---INSTANCE---
+relations: {A=[[Object_0]], C=[[Object_0]], Object=[[Object_0], [Object_2]], B=[[Object_0]], D=[[Object_2]], Model=[[Model58]], fieldOfB=[[Object_0, Object_2]], objects=[[Model58, Object_0], [Model58, Object_2]], fieldOfA=[[Object_0, Object_2]]}
+ints: []
+
+---STATS---
+p cnf 372 566
+primary variables: 55
+translation time: 6 ms
+solving time: 0 ms
+
+
+A:              Object_0
+C:              Object_0
+Object:         Object_0, Object_2
+B:              Object_0
+D:              Object_2
+Model:          Model58
+
+fieldOfB (Object_0, Object_2)
+objects (Model58, Object_0)
+objects (Model58, Object_2)
+fieldOfA (Object_0, Object_2)
